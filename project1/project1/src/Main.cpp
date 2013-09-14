@@ -20,10 +20,10 @@ using namespace std;
  * Complexity: Time:  O(N^2)
  *             Space: O(N^2)
  **/
-vector<vector<long double>> createHilbertMatrix(int n){
+vector< vector<long double> > createHilbertMatrix(int n){
 	//create a dynamic 2D array of N size
 	vector<long double> row(n, 0.0L);
-	vector<vector<long double>> hilbert(n,row);
+	vector< vector<long double> > hilbert(n,row);
 
 	//loop through the entire array, create the values that we need
 	//equation for the values in a hibert matrix: A[i][j] = 1/(i + j - 1) i=1,2,...N, j=1,2,..N
@@ -53,7 +53,7 @@ vector<vector<long double>> createHilbertMatrix(int n){
 long calculateBinomial(int n, int k) {
 	//binom is a NxK matrix
 	vector<long double> row(k+1, 0.0L);
-	vector<vector<long double>> binom(n+1,row);
+	vector< vector<long double> > binom(n+1,row);
 
 	//binom[i][j] = binom[i-1][j-1] + binom[i-1][j]
 	for(int i = 0; i <= n; i++) {
@@ -135,7 +135,7 @@ long double calculateBTilde(int n, int i, int j) {
  **/
 long double calculateBentry(int n, int i, int j) {
 	long double bNormal = calculateBNormal(n,i,j);
-	if(bNormal <= pow(10.0L,50.0L)){
+	if(abs(bNormal) <= pow(10.0L,50.0L)){
 		return bNormal;
 	}
 	return calculateBTilde(n,i,j);
@@ -149,9 +149,9 @@ long double calculateBentry(int n, int i, int j) {
  * Complexity: Time:  O(N^4)
  *             Space: O(N^2)
  **/
-vector<vector<long double>> calculateBinomialCoefficientMatrix(int n){
+vector< vector<long double> > calculateBinomialCoefficientMatrix(int n){
 	vector<long double> row(n, 0.0L);
-	vector<vector<long double>> binomialMatrix(n,row);
+	vector< vector<long double> > binomialMatrix(n,row);
 
 	for(int i = 0; i < n; i++) {
 		for(int j = 0; j < n; j++) {
@@ -173,9 +173,9 @@ vector<vector<long double>> calculateBinomialCoefficientMatrix(int n){
  * Complexity: Time:  O(N^3)
  *             SpacE: O(N^2)
  **/
-vector<vector<long double>> multiplyMatricies(vector<vector<long double>> matrixA, vector<vector<long double>> matrixB, int n){
+vector< vector<long double> > multiplyMatricies(vector<vector<long double>> matrixA, vector<vector<long double>> matrixB, int n){
 	vector<long double> row(n, 0.0L);
-	vector<vector<long double>> resultant(n,row);
+	vector< vector<long double> > resultant(n,row);
 
 	for(int i = 0; i < n; i++){
 		for(int j = 0; j < n; j++){
@@ -201,11 +201,11 @@ vector<vector<long double>> multiplyMatricies(vector<vector<long double>> matrix
  * Complexity: Time:  O(N^3)
  *             Space: O(N^2)
  **/
-vector<vector<long double>> createMultipliedMatrix(vector<vector<long double>> matrixA, vector<vector<long double>> matrixB, int n) {
-	vector<vector<long double>> multipliedMatrix = multiplyMatricies(matrixA, matrixB, n);
+vector< vector<long double> > createMultipliedMatrix(vector<vector<long double>> matrixA, vector<vector<long double>> matrixB, int n) {
+	vector< vector<long double> > multipliedMatrix = multiplyMatricies(matrixA, matrixB, n);
 	for(int i = 0; i < n; i++) {
 		for(int j = 0; j < n; j++) {
-			if(multipliedMatrix[i][j] > pow(10.0L, 300.0L)){
+			if(abs(multipliedMatrix[i][j]) > pow(10.0L, 300.0L)){
 				multipliedMatrix[i][j] = cos((double)i + (double)j);
 			}
 		}
