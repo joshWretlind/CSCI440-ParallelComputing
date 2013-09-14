@@ -76,8 +76,8 @@ long calculateBinomial(int n, int k) {
 }
 
 /**
- * calculateBtilde
- * Purpose: This is to calculate a value known as "B" with a tilde on top of it.
+ * calculateBtildeUniqueCoefficient
+ * Purpose: This is to calculate a value that is used by a entry known as "B" with a tilde on top of it.
  *          This is a unique coefficient as far as I know, as I cannot think of something with a specific name for it.
  * Arguments: int n: the n argument to the B tilde function
  *            int k: the k argument to the B tilde argument
@@ -85,10 +85,89 @@ long calculateBinomial(int n, int k) {
  * Complexity: Time:  O(1)
  *             Space: O(1)
  */
-long double calculateBtilde(int n, int k){
+long double calculateBtildeUniqueCoefficient(int n, int k){
 	long double btilde = 0.0L;
 	btilde = cos((long double)n)/(cos((long double)k) * cos((long double)n - (long double)k));
 	return btilde;
+}
+
+/**
+ * calculateBNormal
+ * Purpose: this has the full computation/equation for the Bnormal(b entry without a tilde over it) value
+ * Arguments: int n: This is the size of the matrix that you're computing values for
+ *            int i: this is the row position for the entry you're computing the value for
+ *            int j: this is the column position for the entry you're computing the value for
+ * Returns: The value for BNormal
+ * Complexity: Time:  O(N^2)
+ *             Space: O(1)
+ **/
+long double calculateBNormal(int n, int i, int j) {
+	long double bNormal = pow(-1.0, i + j + 2);
+	bNormal *= (i + j + 1);
+	bNormal *= calculateBinomial(n + i , n - j - 1);
+	bNormal *= calculateBinomial(n + j , n - i - 1);
+	bNormal *= pow(calculateBinomial(i + j, i ), 2.0L);
+	return bNormal;
+}
+
+/**
+ * calculateBTilde
+ * Purpose: this has the full computation/equation for the Bnormal(b entry with a tilde over it) value
+ * Arguments: int n: This is the size of the matrix that you're computing values for
+ *            int i: this is the row position for the entry you're computing the value for
+ *            int j: this is the column position for the entry you're computing the value for
+ * Returns: The value for calculateBTilde
+ * Complexity: Time:  O(N^2)
+ *             Space: O(1)
+ **/
+long double calculateBTilde(int n, int i, int j) {
+	long double bNormal = pow(-1.0, i + j + 2);
+	bNormal *= (i + j + 1);
+	bNormal *= calculateBtildeUniqueCoefficient(n + i, n - j - 1);
+	bNormal *= calculateBtildeUniqueCoefficient(n + j, n - i - 1);
+	bNormal *= pow(calculateBtildeUniqueCoefficient(i + j, i), 2.0L);
+	return bNormal;
+}
+
+/**
+ * calculateBentry
+ * Purpose: This function calculates what the values for each entry in the BinomialCoefficientMatrix should be
+ * Arguments: int n: This is the size of the matrix
+ *            int i: This is the row index for the entry for which you're calculating the value for
+ *            int j: this is the column index for the entry for which you're calculating the value for
+ * Return: the value which should exsist for this entry
+ * Complexity: Time:  O(N^2)
+ *             Space: O(1)
+ **/
+long double calculateBentry(int n, int i, int j) {
+	long double bNormal = calculateBNormal(n,i,j);
+	if(bNormal <= 10.0E50L){
+		return bNormal;
+	}
+	return calculateBTilde(n,i,j);
+}
+
+/**
+ * calculateBinomialCoefficientMatrix
+ * Purpose: this function creates the entire binomial(B) matrix
+ * Arguments: int n: the size of the matrix you want to create
+ * Returns: the created matrix
+ * Complexity: Time:  O(N^4)
+ *             Space: O(N^2)
+ **/
+long double** calculateBinomialCoefficientMatrix(int n){
+	long double** binomialMatrix = new long double*[n];
+	for(int i = 0; i < n; i++){
+		binomialMatrix[i] = new long double[i];
+	}
+
+	for(int i = 0; i < n; i++) {
+		for(int j = 0; j < n; j++) {
+			binomialMatrix[i][j] = calculateBentry(n, i, j);
+		}
+	}
+
+	return binomialMatrix;
 }
 
 /**
