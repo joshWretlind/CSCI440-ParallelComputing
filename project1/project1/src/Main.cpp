@@ -171,6 +171,36 @@ long double** calculateBinomialCoefficientMatrix(int n){
 }
 
 /**
+ * multipleMatricies
+ * Purpose: This method is to handle the multiplicaiton of two matricies together(in the format of AB). Note that this only handles square matricies at the moment.
+ * Arguments: long double** matrixA: This is A in AB
+ *            long double** matrixB: this is B in AB
+ *            int n: this is the size of A and B
+ * Return value: The multiplied matrix.
+ * Complexity: Time:  O(N^3)
+ *             SpacE: O(N^2)
+ **/
+long double** multipleMatricies(long double** matrixA, long double** matrixB, int n){
+	long double** resultant = new long double*[n];
+	for(int i = 0; i < n; i++){
+		resultant[i] = new long double[i];
+	}
+
+	for(int i = 0; i < n; i++){
+		for(int j = 0; j < n; j++){
+			long double resultEntry = 0.0L;
+			for(int k = 0; k < n; k++){
+				resultEntry += matrixA[i][k]*matrixB[k][j];
+			}
+			resultant[i][j] = resultEntry;
+		}
+	}
+
+	return resultant;
+}
+
+
+/**
  * This is main, the main entry point for an applicaiton.
  *
  **/
