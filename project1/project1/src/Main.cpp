@@ -97,11 +97,11 @@ long double calculateBtildeUniqueCoefficient(int n, int k){
  *             Space: O(1)
  **/
 long double calculateBNormal(int n, int i, int j) {
-	long double bNormal = pow(-1.0, i + j + 2);
-	bNormal *= (i + j + 1);
-	bNormal *= calculateBinomial(n + i , n - j - 1);
-	bNormal *= calculateBinomial(n + j , n - i - 1);
-	bNormal *= pow(calculateBinomial(i + j, i ), 2.0L);
+	long double bNormal = pow(-1.0, i + j );
+	bNormal *= (i + j - 1);
+	bNormal *= calculateBinomial(n + i - 1, n - j );
+	bNormal *= calculateBinomial(n + j - 1, n - i );
+	bNormal *= pow(calculateBinomial(i + j - 2, i -1 ), 2.0L);
 	return bNormal;
 }
 
@@ -116,11 +116,11 @@ long double calculateBNormal(int n, int i, int j) {
  *             Space: O(1)
  **/
 long double calculateBTilde(int n, int i, int j) {
-	long double bNormal = pow(-1.0, i + j + 2);
-	bNormal *= (i + j + 1);
-	bNormal *= calculateBtildeUniqueCoefficient(n + i, n - j - 1);
-	bNormal *= calculateBtildeUniqueCoefficient(n + j, n - i - 1);
-	bNormal *= pow(calculateBtildeUniqueCoefficient(i + j, i), 2.0L);
+	long double bNormal = pow(-1.0, i + j );
+	bNormal *= (i + j - 1);
+	bNormal *= calculateBtildeUniqueCoefficient(n + i -1, n - j );
+	bNormal *= calculateBtildeUniqueCoefficient(n + j -1, n - i );
+	bNormal *= pow(calculateBtildeUniqueCoefficient(i + j - 2, i-1), 2.0L);
 	return bNormal;
 }
 
@@ -154,9 +154,9 @@ vector< vector<long double> > calculateBinomialCoefficientMatrix(int n){
 	vector<long double> row(n, 0.0L);
 	vector< vector<long double> > binomialMatrix(n,row);
 
-	for(int i = 0; i < n; i++) {
+	for(int i = 0; i < n; i++) { 
 		for(int j = 0; j < n; j++) {
-			binomialMatrix[i][j] = calculateBentry(n, i, j);
+			binomialMatrix[i][j] = calculateBentry(n, i +1 , j+1);
 		}
 		cout << " i " << i << endl;
 	}
