@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cmath>
+#include<vector>
 
 using namespace std;
 
@@ -19,12 +20,10 @@ using namespace std;
  * Complexity: Time:  O(N^2)
  *             Space: O(N^2)
  **/
-long double** createHilbertMatrix(int n){
+vector<vector<long double>> createHilbertMatrix(int n){
 	//create a dynamic 2D array of N size
-	long double** hilbert = new long double*[n];
-	for(int i = 0; i < n; i++){
-		hilbert[i] = new long double[i];
-	}
+	vector<long double> row(n, 0.0L);
+	vector<vector<long double>> hilbert(n,row);
 
 	//loop through the entire array, create the values that we need
 	//equation for the values in a hibert matrix: A[i][j] = 1/(i + j - 1) i=1,2,...N, j=1,2,..N
@@ -53,13 +52,8 @@ long double** createHilbertMatrix(int n){
  **/
 long calculateBinomial(int n, int k) {
 	//binom is a NxK matrix
-	long** binom = new long*[n+1];
-	for(int i = 0; i < (n+1); i++){
-		binom[i] = new long[k+1];
-		for(int j = 0; j <= k; j++){
-			binom[i][j] = 0L;
-		}
-	}
+	vector<long double> row(k+1, 0.0L);
+	vector<vector<long double>> binom(n+1,row);
 
 	//binom[i][j] = binom[i-1][j-1] + binom[i-1][j]
 	for(int i = 0; i <= n; i++) {
@@ -104,8 +98,8 @@ long double calculateBtildeUniqueCoefficient(int n, int k){
 long double calculateBNormal(int n, int i, int j) {
 	long double bNormal = pow(-1.0, i + j + 2);
 	bNormal *= (i + j + 1);
-	bNormal *= calculateBinomial(n + i , n - j - 1);
-	bNormal *= calculateBinomial(n + j , n - i - 1);
+	bNormal *= calculateBinomial(n + i , n - j + 1);
+	bNormal *= calculateBinomial(n + j , n - i + 1);
 	bNormal *= pow(calculateBinomial(i + j, i ), 2.0L);
 	return bNormal;
 }
@@ -123,8 +117,8 @@ long double calculateBNormal(int n, int i, int j) {
 long double calculateBTilde(int n, int i, int j) {
 	long double bNormal = pow(-1.0, i + j + 2);
 	bNormal *= (i + j + 1);
-	bNormal *= calculateBtildeUniqueCoefficient(n + i, n - j - 1);
-	bNormal *= calculateBtildeUniqueCoefficient(n + j, n - i - 1);
+	bNormal *= calculateBtildeUniqueCoefficient(n + i, n - j + 1);
+	bNormal *= calculateBtildeUniqueCoefficient(n + j, n - i + 1);
 	bNormal *= pow(calculateBtildeUniqueCoefficient(i + j, i), 2.0L);
 	return bNormal;
 }
@@ -155,16 +149,15 @@ long double calculateBentry(int n, int i, int j) {
  * Complexity: Time:  O(N^4)
  *             Space: O(N^2)
  **/
-long double** calculateBinomialCoefficientMatrix(int n){
-	long double** binomialMatrix = new long double*[n];
-	for(int i = 0; i < n; i++){
-		binomialMatrix[i] = new long double[i];
-	}
+vector<vector<long double>> calculateBinomialCoefficientMatrix(int n){
+	vector<long double> row(n, 0.0L);
+	vector<vector<long double>> binomialMatrix(n,row);
 
 	for(int i = 0; i < n; i++) {
 		for(int j = 0; j < n; j++) {
 			binomialMatrix[i][j] = calculateBentry(n, i, j);
 		}
+		cout << " i " << i << endl;
 	}
 
 	return binomialMatrix;
@@ -180,11 +173,9 @@ long double** calculateBinomialCoefficientMatrix(int n){
  * Complexity: Time:  O(N^3)
  *             SpacE: O(N^2)
  **/
-long double** multiplyMatricies(long double** matrixA, long double** matrixB, int n){
-	long double** resultant = new long double*[n];
-	for(int i = 0; i < n; i++){
-		resultant[i] = new long double[i];
-	}
+vector<vector<long double>> multiplyMatricies(vector<vector<long double>> matrixA, vector<vector<long double>> matrixB, int n){
+	vector<long double> row(n, 0.0L);
+	vector<vector<long double>> resultant(n,row);
 
 	for(int i = 0; i < n; i++){
 		for(int j = 0; j < n; j++){
@@ -192,6 +183,7 @@ long double** multiplyMatricies(long double** matrixA, long double** matrixB, in
 			for(int k = 0; k < n; k++){
 				resultEntry += matrixA[i][k]*matrixB[k][j];
 			}
+
 			resultant[i][j] = resultEntry;
 		}
 	}
@@ -209,8 +201,8 @@ long double** multiplyMatricies(long double** matrixA, long double** matrixB, in
  * Complexity: Time:  O(N^3)
  *             Space: O(N^2)
  **/
-long double** createMultipliedMatrix(long double** matrixA, long double** matrixB, int n) {
-	long double** multipliedMatrix = multiplyMatricies(matrixA, matrixB, n);
+vector<vector<long double>> createMultipliedMatrix(vector<vector<long double>> matrixA, vector<vector<long double>> matrixB, int n) {
+	vector<vector<long double>> multipliedMatrix = multiplyMatricies(matrixA, matrixB, n);
 	for(int i = 0; i < n; i++) {
 		for(int j = 0; j < n; j++) {
 			if(multipliedMatrix[i][j] > pow(10.0L, 300.0L)){
@@ -227,10 +219,13 @@ long double** createMultipliedMatrix(long double** matrixA, long double** matrix
  *
  **/
 int main(){
-	int size = 77;
-	long double** matrixA = createHilbertMatrix(size);
-	long double** matrixB = calculateBinomialCoefficientMatrix(size);
-	long double** matrixC = createMultipliedMatrix(matrixA, matrixB, size);
+	int size = 100;
+	cout << "Setting up A" << endl;
+	vector<vector<long double>> matrixA = createHilbertMatrix(size);
+	cout << "A should be good, setting up B" << endl;
+	vector<vector<long double>> matrixB = calculateBinomialCoefficientMatrix(size);
+	cout << "B got the green light, working on C" << endl;
+	vector<vector<long double>> matrixC = createMultipliedMatrix(matrixA, matrixB, size);
 	
 	cout << matrixC[size-1][size-1] << endl;
 	int foobar;
