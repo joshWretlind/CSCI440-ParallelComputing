@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cmath>
 
 using namespace std;
 
@@ -15,12 +16,14 @@ using namespace std;
  * Purpose: This is so that we can create a 2D array for a Hilbert matrix of N size
  * Arguments: int n: The size of the array that you would like to return
  * Return value: the 2D hilbert array of doubles
+ * Complexity: Time:  O(N^2)
+ *             Space: O(N^2)
  **/
-double** createHilbertMatrix(int n){
+long double** createHilbertMatrix(int n){
 	//create a dynamic 2D array of N size
-	double** hilbert = new double*[n];
+	long double** hilbert = new long double*[n];
 	for(int i = 0; i < n; i++){
-		hilbert[i] = new double[i];
+		hilbert[i] = new long double[i];
 	}
 
 	//loop through the entire array, create the values that we need
@@ -29,7 +32,7 @@ double** createHilbertMatrix(int n){
 	//this forces the equation to be A[i][j] = 1/(i + j + 1) i = 0...N-1, j = 0...N-1
 	for(int i = 0; i < n; i++){
 		for(int j = 0; j < n; j++) {
-			hilbert[i][j] = 1.0/(i + j + 1);
+			hilbert[i][j] = 1.0L/(i + j + 1);
 		}
 	}
 
@@ -37,9 +40,45 @@ double** createHilbertMatrix(int n){
 }
 
 /**
+ * calculateBinomial
+ * Purpose: Calculate the binomial of choose k from n. This is used by the calculation of the Bn matrix
+ *          This happens to use dynamic programming for the calculation, so that we don't neccisarily have to worry about overflow
+ * Arguments: int n: the total number of objects to choose from
+ *            int k: the number of objects to choose
+ * Return value: the calculated binomial
+ * See: http://www.csl.mtu.edu/cs4321/www/Lectures/Lecture%2015%20-%20Dynamic%20Programming%20Binomial%20Coefficients.htm
+ *      (we had covered this way of calculating the binomial coeeficients in our CSCI 406 class, but I didn't quite remember how it was done, I had to look it up
+ * Complexity: Time:  O(N^2)
+ *             Space: O(N^2) // this could be lessened to be K, if you only store the previous row as well as the row we're currently on.  
+ **/
+long calculateBinomial(int n, int k) {
+	//binom is a NxK matrix
+	long** binom = new long*[n+1];
+	for(int i = 0; i < (n+1); i++){
+		binom[i] = new long[k+1];
+		for(int j = 0; j <= k; j++){
+			binom[i][j] = 0L;
+		}
+	}
+
+	//binom[i][j] = binom[i-1][j-1] + binom[i-1][j]
+	for(int i = 0; i <= n; i++) {
+		for(int j = 0; j <= min(i,k); j++){
+			if(i == j || j == 0){
+				binom[i][j] = 1;
+			}
+			else { 
+				binom[i][j] = binom[i-1][j-1] + binom[i-1][j];
+			}
+		}
+	}
+	return binom[n][k];
+}
+
+/**
  * This is main, the main entry point for an applicaiton.
  *
  **/
 void main(){
-	
+
 }
