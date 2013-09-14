@@ -1,6 +1,7 @@
 #include<iostream>
 #include<cmath>
 #include<vector>
+#include<math.h>
 
 using namespace std;
 
@@ -98,8 +99,8 @@ long double calculateBtildeUniqueCoefficient(int n, int k){
 long double calculateBNormal(int n, int i, int j) {
 	long double bNormal = pow(-1.0, i + j + 2);
 	bNormal *= (i + j + 1);
-	bNormal *= calculateBinomial(n + i , n - j + 1);
-	bNormal *= calculateBinomial(n + j , n - i + 1);
+	bNormal *= calculateBinomial(n + i , n - j - 1);
+	bNormal *= calculateBinomial(n + j , n - i - 1);
 	bNormal *= pow(calculateBinomial(i + j, i ), 2.0L);
 	return bNormal;
 }
@@ -117,8 +118,8 @@ long double calculateBNormal(int n, int i, int j) {
 long double calculateBTilde(int n, int i, int j) {
 	long double bNormal = pow(-1.0, i + j + 2);
 	bNormal *= (i + j + 1);
-	bNormal *= calculateBtildeUniqueCoefficient(n + i, n - j + 1);
-	bNormal *= calculateBtildeUniqueCoefficient(n + j, n - i + 1);
+	bNormal *= calculateBtildeUniqueCoefficient(n + i, n - j - 1);
+	bNormal *= calculateBtildeUniqueCoefficient(n + j, n - i - 1);
 	bNormal *= pow(calculateBtildeUniqueCoefficient(i + j, i), 2.0L);
 	return bNormal;
 }
@@ -219,6 +220,7 @@ vector< vector<long double> > createMultipliedMatrix(vector< vector<long double>
  *
  **/
 int main(){
+	
 	int size = 100;
 	cout << "Setting up A" << endl;
 	vector< vector<long double> > matrixA = createHilbertMatrix(size);
@@ -228,6 +230,7 @@ int main(){
 	vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
 	
 	cout << matrixC[size-1][size-1] << endl;
+
 	int foobar;
 	cin >> foobar;
 	return 0;
