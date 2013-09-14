@@ -8,7 +8,7 @@ using namespace std;
  * Class: MATH/CSCI 440, Parallel Scientific Computing
  * Date: 09/13/2013
  * Assignment: 1) Serial Programming
- * Purpose: 
+ * Purpose: This calculates a few matricies, as well as does matrix-matrix multiplicaiton on them.
  **/
 
 /**
@@ -73,6 +73,22 @@ long calculateBinomial(int n, int k) {
 		}
 	}
 	return binom[n][k];
+}
+
+/**
+ * calculateBtilde
+ * Purpose: This is to calculate a value known as "B" with a tilde on top of it.
+ *          This is a unique coefficient as far as I know, as I cannot think of something with a specific name for it.
+ * Arguments: int n: the n argument to the B tilde function
+ *            int k: the k argument to the B tilde argument
+ * Returns: the value that B tilde should take.
+ * Complexity: Time:  O(1)
+ *             Space: O(1)
+ */
+long double calculateBtilde(int n, int k){
+	long double btilde = 0.0L;
+	btilde = cos((long double)n)/(cos((long double)k) * cos((long double)n - (long double)k));
+	return btilde;
 }
 
 /**
