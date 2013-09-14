@@ -173,7 +173,7 @@ vector< vector<long double> > calculateBinomialCoefficientMatrix(int n){
  * Complexity: Time:  O(N^3)
  *             SpacE: O(N^2)
  **/
-vector< vector<long double> > multiplyMatricies(vector<vector<long double>> matrixA, vector<vector<long double>> matrixB, int n){
+vector< vector<long double> > multiplyMatricies(vector< vector<long double> > matrixA, vector< vector<long double> > matrixB, int n){
 	vector<long double> row(n, 0.0L);
 	vector< vector<long double> > resultant(n,row);
 
@@ -201,7 +201,7 @@ vector< vector<long double> > multiplyMatricies(vector<vector<long double>> matr
  * Complexity: Time:  O(N^3)
  *             Space: O(N^2)
  **/
-vector< vector<long double> > createMultipliedMatrix(vector<vector<long double>> matrixA, vector<vector<long double>> matrixB, int n) {
+vector< vector<long double> > createMultipliedMatrix(vector< vector<long double> > matrixA, vector< vector<long double> > matrixB, int n) {
 	vector< vector<long double> > multipliedMatrix = multiplyMatricies(matrixA, matrixB, n);
 	for(int i = 0; i < n; i++) {
 		for(int j = 0; j < n; j++) {
@@ -221,11 +221,11 @@ vector< vector<long double> > createMultipliedMatrix(vector<vector<long double>>
 int main(){
 	int size = 100;
 	cout << "Setting up A" << endl;
-	vector<vector<long double>> matrixA = createHilbertMatrix(size);
+	vector< vector<long double> > matrixA = createHilbertMatrix(size);
 	cout << "A should be good, setting up B" << endl;
-	vector<vector<long double>> matrixB = calculateBinomialCoefficientMatrix(size);
+	vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
 	cout << "B got the green light, working on C" << endl;
-	vector<vector<long double>> matrixC = createMultipliedMatrix(matrixA, matrixB, size);
+	vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
 	
 	cout << matrixC[size-1][size-1] << endl;
 	int foobar;
