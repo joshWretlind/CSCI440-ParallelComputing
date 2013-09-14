@@ -141,7 +141,7 @@ long double calculateBTilde(int n, int i, int j) {
  **/
 long double calculateBentry(int n, int i, int j) {
 	long double bNormal = calculateBNormal(n,i,j);
-	if(bNormal <= 10.0E50L){
+	if(bNormal <= pow(10.0L,50.0L)){
 		return bNormal;
 	}
 	return calculateBTilde(n,i,j);
@@ -171,7 +171,7 @@ long double** calculateBinomialCoefficientMatrix(int n){
 }
 
 /**
- * multipleMatricies
+ * multiplyMatricies
  * Purpose: This method is to handle the multiplicaiton of two matricies together(in the format of AB). Note that this only handles square matricies at the moment.
  * Arguments: long double** matrixA: This is A in AB
  *            long double** matrixB: this is B in AB
@@ -180,7 +180,7 @@ long double** calculateBinomialCoefficientMatrix(int n){
  * Complexity: Time:  O(N^3)
  *             SpacE: O(N^2)
  **/
-long double** multipleMatricies(long double** matrixA, long double** matrixB, int n){
+long double** multiplyMatricies(long double** matrixA, long double** matrixB, int n){
 	long double** resultant = new long double*[n];
 	for(int i = 0; i < n; i++){
 		resultant[i] = new long double[i];
@@ -199,6 +199,28 @@ long double** multipleMatricies(long double** matrixA, long double** matrixB, in
 	return resultant;
 }
 
+/**
+ * createMultipliedMatrix
+ * Purpose: this is to create the full multiplied matrix, includeing the case where the entries are greater than 10^300
+ * Arguments: long double** matrixA: this is the first matrix to multiply together with B, in the equation AB
+ *            long double** matrixB: this is the second matrix to multiply together with A, in the equation AB
+ *            int n: this is the size of A and B as far as matricies go/
+ * Return Value: finalized multiplied matrix.
+ * Complexity: Time:  O(N^3)
+ *             Space: O(N^2)
+ **/
+long double** createMultipliedMatrix(long double** matrixA, long double** matrixB, int n) {
+	long double** multipliedMatrix = multiplyMatricies(matrixA, matrixB, n);
+	for(int i = 0; i < n; i++) {
+		for(int j = 0; j < n; j++) {
+			if(multipliedMatrix[i][j] > pow(10.0L, 300.0L)){
+				multipliedMatrix[i][j] = cos((double)i + (double)j);
+			}
+		}
+	}
+
+	return multipliedMatrix;
+}
 
 /**
  * This is main, the main entry point for an applicaiton.
