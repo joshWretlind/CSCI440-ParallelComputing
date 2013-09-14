@@ -136,10 +136,10 @@ long double calculateBTilde(int n, int i, int j) {
  **/
 long double calculateBentry(int n, int i, int j) {
 	long double bNormal = calculateBNormal(n,i,j);
-	if(abs(bNormal) <= pow(10.0L,50.0L)){
-		return bNormal;
+	if(abs(bNormal) > pow(10.0L,50.0L) || bNormal != bNormal){
+		return calculateBTilde(n,i,j);
 	}
-	return calculateBTilde(n,i,j);
+	return bNormal;
 }
 
 /**
@@ -206,8 +206,8 @@ vector< vector<long double> > createMultipliedMatrix(vector< vector<long double>
 	vector< vector<long double> > multipliedMatrix = multiplyMatricies(matrixA, matrixB, n);
 	for(int i = 0; i < n; i++) {
 		for(int j = 0; j < n; j++) {
-			if(abs(multipliedMatrix[i][j]) > pow(10.0L, 300.0L)){
-				multipliedMatrix[i][j] = cos((double)i + (double)j);
+			if(abs(multipliedMatrix[i][j]) > pow(10.0L, 300.0L) || multipliedMatrix[i][j] != multipliedMatrix[i][j]){
+				multipliedMatrix[i][j] = cos((double)(i+1) + (double)(j+1));
 			}
 		}
 	}
@@ -220,7 +220,9 @@ vector< vector<long double> > createMultipliedMatrix(vector< vector<long double>
  *
  **/
 int main(){
-	
+
+	cout << LDBL_MAX  << endl;
+
 	int size = 100;
 	cout << "Setting up A" << endl;
 	vector< vector<long double> > matrixA = createHilbertMatrix(size);
@@ -230,7 +232,7 @@ int main(){
 	vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
 	
 	cout << matrixC[size-1][size-1] << endl;
-
+	
 	int foobar;
 	cin >> foobar;
 	return 0;
