@@ -227,5 +227,13 @@ long double** createMultipliedMatrix(long double** matrixA, long double** matrix
  *
  **/
 void main(){
+	int size = 100;
+	long double** matrixA = createHilbertMatrix(size);
+	long double** matrixB = calculateBinomialCoefficientMatrix(size);
+	long double** matrixC = createMultipliedMatrix(matrixA, matrixB, size);
+	
+	cout << matrixC[size-1][size-1] << endl;
 
+	int foobar;
+	cin >> foobar;
 }
