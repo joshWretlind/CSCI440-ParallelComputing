@@ -443,6 +443,25 @@ void answerQuestion34(){
 }
 
 /**
+ * answerQuestion5
+ * Purpose: This is to output data for question #5 of the report(running it on 6400x6400 matricies
+ * Complexity: Time:  O(N^3)
+ *             Space: O(1)
+ **/
+void answerQuestion5(){
+	time_t startTime;
+	time_t endTime;
+	int size = 100*pow(2.0, 6);
+	time(&startTime);
+	vector< vector<long double> > matrixA = createHilbertMatrix(size);
+	vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
+	vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
+	time(&endTime);
+	cout << "----------------------------" << endl;
+	cout << "N: " << size << " Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << " Cn[N][N]: " << matrixC[size-1][size-1] << " T1Q1: " << difftime(endTime,startTime) << endl;
+}
+
+/**
  * This is main, the main entry point for an applicaiton.
  *
  **/
