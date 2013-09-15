@@ -231,7 +231,7 @@ int main(){
 
 	cout << LDBL_MAX  << endl;
 
-	int size = 20;
+	int size = 100;
 	cout << "Setting up A" << endl;
 	vector< vector<long double> > matrixA = createHilbertMatrix(size);
 	cout << "A should be good, setting up B" << endl;
