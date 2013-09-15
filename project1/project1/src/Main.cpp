@@ -468,4 +468,5 @@ void answerQuestion5(){
 int main(){
 	answerQuestion12();
 	answerQuestion34();
+	answerQuestion5();
 }
