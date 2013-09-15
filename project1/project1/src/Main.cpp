@@ -3,6 +3,8 @@
 #include<vector>
 #include<float.h>
 #include<ctime>
+#include<fstream>
+#include<sstream>
 
 using namespace std;
 
@@ -272,19 +274,179 @@ void answerQuestion1Small() {
 }
 
 /**
- * answerQuestion2
+ * answerQuestion12
  * Purpose: This method answers both parts of question 1 and 2 for the report
  * Complexity: Time:  O(N^3)
  *             Space: O(1)
  **/
 void answerQuestion12() {
+	cout << "------------------------------Answering questions 1 and 2-----------------------" << endl;
 	answerQuestion1Small();
 	answerQuestion2Large();
 }
+
+/**
+ * matrixToString
+ * Purpose: This method basically converts a matrix of long doubles to a string which can be written to disk.
+ * Arguments: vector< vector<long double> > matrix: This is the matrix which you want to convert to a string
+ * Return: The matrix converted to a string.
+ * Complexity: Time:  O(N^2)
+ *             Space: O(N^2)
+ **/
+string matrixToString(vector< vector<long double> > matrix){
+	stringstream output;
+
+	for(int i = 0; i < matrix.size();i++) {
+		for(int j = 0; j < matrix.size(); j++) {
+			output << matrix[i][j] << " ";
+		}
+		output << endl;
+	}
+
+	return output.str();
+}
+/**
+ * writeMatriciesToDisk
+ * Purpose: This creates and writes the A and B matricies to disk for 100, 200, 400, 800, 1600, 3200 sizes
+ * Complexity: Time:  O(N^3)
+ *             SpacE: O(N^2)
+ **/
+void writeMatriciesToDisk() {
+	time_t startTime;
+	time_t endTime;
+	int size_base = 100;
+	for(int i = 0; i < 6; i++){
+		int size = size_base*pow(2.0, i);
+		time(&startTime);
+		vector< vector<long double> > matrixA = createHilbertMatrix(size);
+		vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
+
+		//create files for writing
+		ofstream matrixAFile;
+		ofstream matrixBFile;
+
+		//make the file names
+		stringstream matrixAFileName;
+		matrixAFileName << "matrixA" << size << ".txt";
+
+		stringstream matrixBFileName;
+		matrixBFileName << "matrixB" << size << ".txt";
+		
+		//open files
+		matrixAFile.open(matrixAFileName.str());
+		matrixBFile.open(matrixBFileName.str());
+		
+		//write to the files
+		matrixAFile << matrixToString(matrixA);
+		matrixBFile << matrixToString(matrixB);
+
+		matrixAFile.close();
+		matrixBFile.close();
+
+		time(&endTime);
+		cout << "----------------------------" << endl;
+		cout << "N: " << size << " T1Q1: " << difftime(endTime,startTime) << endl;
+	}
+}
+
+/**
+ * convertRowToMatrix
+ * Purpose: This method is to convert a row from a string to a matrix.
+ * Arguments: int i: The row to be converted/the values should be put into
+ *            int n: the size of the matrix we are converting to
+ *            vector< vector<long double> > &matrix: this is the matrix which we want to put the values into
+ *            string input: the string of values we want to convert and put into the matrix
+ * Complexity: Time:  O(N)
+ *             Space: O(1)
+ **/
+void convertRowToMatrix(int i, int n, vector< vector<long double> > &matrix, string input){
+	istringstream stringStream(input);
+	string number = " ";
+	for(int j = 0; getline(stringStream, number, ' '); j++){		
+		stringstream  numberStream(number);
+		numberStream >> matrix[i][j];
+	}
+}
+
+/**
+ * readMatriciesFromDiskAndMultiply
+ * Purpose: This method reads in A and B matricies from the disk and then calculates C and then outputs some data
+ * Complexity: Time:  O(N^3)
+ *             Space: O(N^2)
+ **/
+void readMatriciesFromDiskAndMultiply(){
+	time_t startTime;
+	time_t endTime;
+	int size_base = 100;
+	for(int i = 0; i < 6; i++){
+		int size = size_base*pow(2.0, i);
+		time(&startTime);
+		vector<long double> matrixARow(size, 0.0L);
+		vector< vector<long double> > matrixA(size,matrixARow);
+
+		vector<long double> matrixBRow(size, 0.0L);
+		vector< vector<long double> > matrixB(size,matrixBRow);
+
+		//Open the files
+		ifstream matrixAFile;
+		ifstream matrixBFile;
+		string stringRow = " ";
+
+		stringstream matrixAFileName;
+		matrixAFileName << "matrixA" << size << ".txt";
+
+		stringstream matrixBFileName;
+		matrixBFileName << "matrixB" << size << ".txt";
+
+		matrixAFile.open(matrixAFileName.str());
+		matrixBFile.open(matrixBFileName.str());
+
+		//Create the matricies from the files
+		if(matrixAFile.is_open()){
+			for(int i = 0; getline(matrixAFile,stringRow); i++){
+				if(i != size){
+					convertRowToMatrix(i,size,matrixA,stringRow);
+				}
+			}
+		}
+		//we don't need this file to stay open
+		matrixAFile.close();
+		
+		if(matrixBFile.is_open()){
+			for(int i = 0; getline(matrixBFile,stringRow); i++){
+				if(i != size){
+					convertRowToMatrix(i,size,matrixB,stringRow);
+				}
+			}
+		}
+		//close the file since it's no longer needed
+		matrixBFile.close();
+
+		vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
+
+		time(&endTime);
+		cout << "----------------------------" << endl;
+		cout << "N: " << size << " Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << " Cn[N][N]: " << matrixC[size-1][size-1] << " T1Q1: " << difftime(endTime,startTime) << endl;
+	}
+}
+
+/**
+ * answerQuestion34
+ * Purpose: This method answers both parts of question 3 and 4 for the report
+ * Complexity: Time:  O(N^3)
+ *             Space: O(1)
+ **/
+void answerQuestion34(){
+	cout << "---------------------Writing and reading the Matricies to disk(questions 3 and 4)-----------------------------" << endl;
+	writeMatriciesToDisk();
+	readMatriciesFromDiskAndMultiply();
+}
+
 /**
  * This is main, the main entry point for an applicaiton.
  *
  **/
 int main(){
 	answerQuestion12();
+	answerQuestion34();
 }
