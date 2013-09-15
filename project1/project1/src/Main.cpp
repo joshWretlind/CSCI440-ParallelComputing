@@ -333,8 +333,8 @@ void writeMatriciesToDisk() {
 		matrixBFileName << "matrixB" << size << ".txt";
 		
 		//open files
-		matrixAFile.open(matrixAFileName.str());
-		matrixBFile.open(matrixBFileName.str());
+		matrixAFile.open(matrixAFileName.str().c_str());
+		matrixBFile.open(matrixBFileName.str().c_str);
 		
 		//write to the files
 		matrixAFile << matrixToString(matrixA);
@@ -398,8 +398,8 @@ void readMatriciesFromDiskAndMultiply(){
 		stringstream matrixBFileName;
 		matrixBFileName << "matrixB" << size << ".txt";
 
-		matrixAFile.open(matrixAFileName.str());
-		matrixBFile.open(matrixBFileName.str());
+		matrixAFile.open(matrixAFileName.str().c_str());
+		matrixBFile.open(matrixBFileName.str().c_str());
 
 		//Create the matricies from the files
 		if(matrixAFile.is_open()){
