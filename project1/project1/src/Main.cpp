@@ -215,6 +215,14 @@ vector< vector<long double> > createMultipliedMatrix(vector< vector<long double>
 	return multipliedMatrix;
 }
 
+void printMatrix(vector< vector<long double> > matrix){
+	for(int i = 0; i < matrix.size(); i++){
+		for(int j = 0; j < matrix.size(); j++){
+			cout << matrix[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
 /**
  * This is main, the main entry point for an applicaiton.
  *
@@ -231,7 +239,14 @@ int main(){
 	cout << "B got the green light, working on C" << endl;
 	vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
 	
-	cout << matrixC[size-1][size-1] << endl;
+	printMatrix(matrixA);
+	cout << endl;
+	printMatrix(matrixB);
+	cout << endl;
+	printMatrix(matrixC);
+	cout << endl;
+
+	cout << matrixC[(size)/2-1][(size/2)-1] << endl;
 	
 	int foobar;
 	cin >> foobar;
