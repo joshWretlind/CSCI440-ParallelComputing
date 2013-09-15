@@ -354,7 +354,7 @@ void writeMatriciesToDisk() {
 
 		time(&endTime);
 		cout << "----------------------------" << endl;
-		cout << "N: " << size << " T1Q1: " << difftime(endTime,startTime) << endl;
+		cout << "N: " << size << " T1Q3a: " << difftime(endTime,startTime) << endl;
 	}
 }
 
@@ -436,7 +436,7 @@ void readMatriciesFromDiskAndMultiply(){
 
 		time(&endTime);
 		cout << "----------------------------" << endl;
-		cout << "N: " << size << " Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << " Cn[N][N]: " << matrixC[size-1][size-1] << " T1Q1: " << difftime(endTime,startTime) << endl;
+		cout << "N: " << size << " Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << " Cn[N][N]: " << matrixC[size-1][size-1] << " T1Q3b: " << difftime(endTime,startTime) << endl;
 	}
 }
 
@@ -461,15 +461,18 @@ void answerQuestion34(){
 void answerQuestion5(){
 	time_t startTime;
 	time_t endTime;
-	int size = 100*pow(2.0, 6);
-	time(&startTime);
-	initializeFactorial(size);
-	vector< vector<long double> > matrixA = createHilbertMatrix(size);
-	vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
-	vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
-	time(&endTime);
-	cout << "----------------------------" << endl;
-	cout << "N: " << size << " Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << " Cn[N][N]: " << matrixC[size-1][size-1] << " T1Q1: " << difftime(endTime,startTime) << endl;
+	int size_base = 100;
+	for(int i = 6; i < 8; i++){
+		int size = size_base*pow(2.0, i);
+		time(&startTime);
+		initializeFactorial(size);
+		vector< vector<long double> > matrixA = createHilbertMatrix(size);
+		vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
+		vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
+		time(&endTime);
+		cout << "----------------------------" << endl;
+		cout << "N: " << size << " Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << " Cn[N][N]: " << matrixC[size-1][size-1] << " T1Q5: " << difftime(endTime,startTime) << endl;
+	}
 }
 
 /**
