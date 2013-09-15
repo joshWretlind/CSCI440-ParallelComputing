@@ -296,5 +296,5 @@ void answerQuestion12() {
  *
  **/
 int main(){
-	answerQuestion1();
+	answerQuestion12();
 }
