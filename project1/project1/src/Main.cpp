@@ -334,7 +334,7 @@ void writeMatriciesToDisk() {
 		
 		//open files
 		matrixAFile.open(matrixAFileName.str().c_str());
-		matrixBFile.open(matrixBFileName.str().c_str);
+		matrixBFile.open(matrixBFileName.str().c_str());
 		
 		//write to the files
 		matrixAFile << matrixToString(matrixA);
