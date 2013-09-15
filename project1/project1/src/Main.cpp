@@ -2,6 +2,7 @@
 #include<cmath>
 #include<vector>
 #include<float.h>
+#include<ctime>
 
 using namespace std;
 
@@ -215,6 +216,13 @@ vector< vector<long double> > createMultipliedMatrix(vector< vector<long double>
 	return multipliedMatrix;
 }
 
+/**
+ * printMatrix
+ * Purpose: what this method does is it prints out a matrix to stdout
+ * Arguments: vector<vector<long double>> matrix: This is the matrix which you want to print out
+ * Complexity: Time:  O(n^2);
+ *             Space: O(1);
+ **/
 void printMatrix(vector< vector<long double> > matrix){
 	for(unsigned int i = 0; i < matrix.size(); i++){
 		for(unsigned int j = 0; j < matrix.size(); j++){
@@ -223,32 +231,71 @@ void printMatrix(vector< vector<long double> > matrix){
 		cout << endl;
 	}
 }
+
+/**
+ * answerQuestion1Large
+ * Purpose: This is to answer the first question of our report for the larger matricies(100,200,400,800,1600,3200)
+ * Complexity: Time:  O(N^4)
+ *             Space: O(N^2)
+ **/
+void answerQuestion1Large(){
+	time_t startTime;
+	time_t endTime;
+	int size_base = 100;
+	for(int i = 0; i < 6; i++){
+		int size = size_base*pow(2.0, i);
+		time(&startTime);
+		vector< vector<long double> > matrixA = createHilbertMatrix(size);
+		vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
+		vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
+		time(&endTime);
+		cout << "N: " << size << "Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << "Cn[N][N]: " << matrixC[size-1][size-1] << "T1Q1: " << difftime(startTime,endTime) << endl;
+	}
+}
+
+/**
+ * answerQuestion1Small
+ * Purpose: This method is to provide all of the information needed to answer question 1 for smaller matrix sizes(1,2,4,8,16,32)
+ * Complexity: Time:  O(N^4)
+ *             Space: O(N^2)
+ **/
+void answerQuestion1Small() {
+	time_t startTime;
+	time_t endTime;
+	for(int i = 0; i < 6; i++){
+		int size = pow(2.0, i);
+
+		time(&startTime);
+		vector< vector<long double> > matrixA = createHilbertMatrix(size);
+		vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
+		vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
+		time(&endTime);
+
+		cout << "---------MatrixA-----------" << endl << endl;
+		printMatrix(matrixA);
+		cout << "---------MatrixB-----------" << endl << endl;
+		printMatrix(matrixB);
+		cout << "---------MatrixC-----------" << endl << endl;
+		printMatrix(matrixC);
+
+		cout << "N: " << size << "Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << "Cn[N][N]: " << matrixC[size-1][size-1] << "T1Q1: " << difftime(startTime,endTime) << endl;
+	}
+}
+
+/**
+ * answerQuestion1
+ * Purpose: This method answers both parts of question 1 for the report
+ * Complexity: Time:  O(N^4)
+ *             Space: O(1)
+ **/
+void answerQuestion1() {
+	answerQuestion1Small();
+	answerQuestion1Large();
+}
 /**
  * This is main, the main entry point for an applicaiton.
  *
  **/
 int main(){
-
-	cout << LDBL_MAX  << endl;
-
-	int size = 100;
-	cout << "Setting up A" << endl;
-	vector< vector<long double> > matrixA = createHilbertMatrix(size);
-	cout << "A should be good, setting up B" << endl;
-	vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
-	cout << "B got the green light, working on C" << endl;
-	vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
-	
-	printMatrix(matrixA);
-	cout << endl;
-	printMatrix(matrixB);
-	cout << endl;
-	printMatrix(matrixC);
-	cout << endl;
-
-	cout << matrixC[(size)/2-1][(size/2)-1] << endl;
-	
-	int foobar;
-	cin >> foobar;
-	return 0;
+	answerQuestion1();
 }
