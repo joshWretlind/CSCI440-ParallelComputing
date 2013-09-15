@@ -232,12 +232,12 @@ void printMatrix(vector< vector<long double> > matrix){
 }
 
 /**
- * answerQuestion1Large
- * Purpose: This is to answer the first question of our report for the larger matricies(100,200,400,800,1600,3200)
+ * answerQuestion2Large
+ * Purpose: This is to answer the second question of our report for the larger matricies(100,200,400,800,1600,3200)
  * Complexity: Time:  O(N^4)
  *             Space: O(N^2)
  **/
-void answerQuestion1Large(){
+void answerQuestion2Large(){
 	time_t startTime;
 	time_t endTime;
 	int size_base = 100;
@@ -277,19 +277,19 @@ void answerQuestion1Small() {
 		cout << "---------MatrixC-----------" << endl << endl;
 		printMatrix(matrixC);
 
-		cout << "N: " << size << "Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << "Cn[N][N]: " << matrixC[size-1][size-1] << "T1Q1: " << difftime(startTime,endTime) << endl;
+		cout << "N: " << size << " Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << " Cn[N][N]: " << matrixC[size-1][size-1] << " T1Q1: " << difftime(startTime,endTime) << endl;
 	}
 }
 
 /**
- * answerQuestion1
- * Purpose: This method answers both parts of question 1 for the report
+ * answerQuestion2
+ * Purpose: This method answers both parts of question 1 and 2 for the report
  * Complexity: Time:  O(N^4)
  *             Space: O(1)
  **/
-void answerQuestion1() {
+void answerQuestion12() {
 	answerQuestion1Small();
-	answerQuestion1Large();
+	answerQuestion2Large();
 }
 /**
  * This is main, the main entry point for an applicaiton.
