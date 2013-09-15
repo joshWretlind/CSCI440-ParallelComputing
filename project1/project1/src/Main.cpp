@@ -8,6 +8,7 @@
 
 using namespace std;
 
+
 /**
  * Author: Josh Wretlind
  * Class: MATH/CSCI 440, Parallel Scientific Computing
@@ -16,6 +17,16 @@ using namespace std;
  * Purpose: This calculates a few matricies, as well as does matrix-matrix multiplicaiton on them.
  **/
 
+//pre-calculate the factorials we need so that we can retrieve in O(1) time.
+long double* fact;
+
+void initializeFactorial(int size){
+	fact = new long double[2*size + 1];
+	fact[0] = 1;
+	for(int i = 1; i <= 2*size; i++){
+		fact[i] = fact[i-1]*i;
+	}
+}
 /**
  * createHilbertMatrix
  * Purpose: This is so that we can create a 2D array for a Hilbert matrix of N size
@@ -42,23 +53,17 @@ vector< vector<long double> > createHilbertMatrix(int n){
 	return hilbert;
 } 
 
-long double factorial(int n){
-	long double fact = 1;
-	for(int i = 1; i <= n; i++){
-		fact *= i;
-	}
-	return fact;
-}
+
 /**
  * calculateBinomial
  * Purpose: Calculates the binomial coefficient for choose k from n.
  * Arguments: int n: the total number of objects to choose from
  *            int k: the number of objects to choose
  * Return value: the calculated binomial
- * Complexity: Time:  O(N)
+ * Complexity: Time:  O(1)
  **/
 long double calculateBinomial(int n, int k) {
-	return ((factorial(n))/(factorial(k) * factorial(n-k)));
+	return (fact[n])/(fact[k] * fact[n-k]);
 }
 
 /**
@@ -84,7 +89,7 @@ long double calculateBtildeUniqueCoefficient(int n, int k){
  *            int i: this is the row position for the entry you're computing the value for
  *            int j: this is the column position for the entry you're computing the value for
  * Returns: The value for BNormal
- * Complexity: Time:  O(N)
+ * Complexity: Time:  O(1)
  *             Space: O(1)
  **/
 long double calculateBNormal(int n, int i, int j) {
@@ -103,7 +108,7 @@ long double calculateBNormal(int n, int i, int j) {
  *            int i: this is the row position for the entry you're computing the value for
  *            int j: this is the column position for the entry you're computing the value for
  * Returns: The value for calculateBTilde
- * Complexity: Time:  O(N)
+ * Complexity: Time:  O(1)
  *             Space: O(1)
  **/
 long double calculateBTilde(int n, int i, int j) {
@@ -122,7 +127,7 @@ long double calculateBTilde(int n, int i, int j) {
  *            int i: This is the row index for the entry for which you're calculating the value for
  *            int j: this is the column index for the entry for which you're calculating the value for
  * Return: the value which should exsist for this entry
- * Complexity: Time:  O(N)
+ * Complexity: Time:  O(1)
  *             Space: O(1)
  **/
 long double calculateBentry(int n, int i, int j) {
@@ -138,7 +143,7 @@ long double calculateBentry(int n, int i, int j) {
  * Purpose: this function creates the entire binomial(B) matrix
  * Arguments: int n: the size of the matrix you want to create
  * Returns: the created matrix
- * Complexity: Time:  O(N^3)
+ * Complexity: Time:  O(N^2)
  *             Space: O(N^2)
  **/
 vector< vector<long double> > calculateBinomialCoefficientMatrix(int n){
@@ -150,7 +155,7 @@ vector< vector<long double> > calculateBinomialCoefficientMatrix(int n){
 			binomialMatrix[i][j] = calculateBentry(n, i +1 , j+1);
 		}
 	}
-
+	delete[] fact;
 	return binomialMatrix;
 }
 
@@ -234,6 +239,8 @@ void answerQuestion2Large(){
 	for(int i = 0; i < 6; i++){
 		int size = size_base*pow(2.0, i);
 		time(&startTime);
+		initializeFactorial(size);
+		
 		vector< vector<long double> > matrixA = createHilbertMatrix(size);
 		vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
 		vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
@@ -256,6 +263,7 @@ void answerQuestion1Small() {
 		int size = pow(2.0, i);
 
 		time(&startTime);
+		initializeFactorial(size);
 		vector< vector<long double> > matrixA = createHilbertMatrix(size);
 		vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
 		vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
@@ -318,6 +326,7 @@ void writeMatriciesToDisk() {
 	for(int i = 0; i < 6; i++){
 		int size = size_base*pow(2.0, i);
 		time(&startTime);
+		initializeFactorial(size);
 		vector< vector<long double> > matrixA = createHilbertMatrix(size);
 		vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
 
@@ -381,6 +390,7 @@ void readMatriciesFromDiskAndMultiply(){
 	for(int i = 0; i < 6; i++){
 		int size = size_base*pow(2.0, i);
 		time(&startTime);
+		initializeFactorial(size);
 		vector<long double> matrixARow(size, 0.0L);
 		vector< vector<long double> > matrixA(size,matrixARow);
 
