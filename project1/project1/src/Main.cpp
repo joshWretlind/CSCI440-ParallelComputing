@@ -40,35 +40,23 @@ vector< vector<long double> > createHilbertMatrix(int n){
 	return hilbert;
 } 
 
+long double factorial(int n){
+	long double fact = 1;
+	for(int i = 1; i <= n; i++){
+		fact *= i;
+	}
+	return fact;
+}
 /**
  * calculateBinomial
- * Purpose: Calculate the binomial of choose k from n. This is used by the calculation of the Bn matrix
- *          This happens to use dynamic programming for the calculation, so that we don't neccisarily have to worry about overflow
+ * Purpose: Calculates the binomial coefficient for choose k from n.
  * Arguments: int n: the total number of objects to choose from
  *            int k: the number of objects to choose
  * Return value: the calculated binomial
- * See: http://www.csl.mtu.edu/cs4321/www/Lectures/Lecture%2015%20-%20Dynamic%20Programming%20Binomial%20Coefficients.htm
- *      (we had covered this way of calculating the binomial coeeficients in our CSCI 406 class, but I didn't quite remember how it was done, I had to look it up
- * Complexity: Time:  O(N^2)
- *             Space: O(N^2) // this could be lessened to be K, if you only store the previous row as well as the row we're currently on.  
+ * Complexity: Time:  O(N)
  **/
 long double calculateBinomial(int n, int k) {
-	//binom is a NxK matrix
-	vector<long double> row(k+1, 0.0L);
-	vector< vector<long double> > binom(n+1,row);
-
-	//binom[i][j] = binom[i-1][j-1] + binom[i-1][j]
-	for(int i = 0; i <= n; i++) {
-		for(int j = 0; j <= min(i,k); j++){
-			if(i == j || j == 0){
-				binom[i][j] = 1;
-			}
-			else { 
-				binom[i][j] = binom[i-1][j-1] + binom[i-1][j];
-			}
-		}
-	}
-	return binom[n][k];
+	return ((factorial(n))/(factorial(k) * factorial(n-k)));
 }
 
 /**
@@ -94,7 +82,7 @@ long double calculateBtildeUniqueCoefficient(int n, int k){
  *            int i: this is the row position for the entry you're computing the value for
  *            int j: this is the column position for the entry you're computing the value for
  * Returns: The value for BNormal
- * Complexity: Time:  O(N^2)
+ * Complexity: Time:  O(N)
  *             Space: O(1)
  **/
 long double calculateBNormal(int n, int i, int j) {
@@ -113,7 +101,7 @@ long double calculateBNormal(int n, int i, int j) {
  *            int i: this is the row position for the entry you're computing the value for
  *            int j: this is the column position for the entry you're computing the value for
  * Returns: The value for calculateBTilde
- * Complexity: Time:  O(N^2)
+ * Complexity: Time:  O(N)
  *             Space: O(1)
  **/
 long double calculateBTilde(int n, int i, int j) {
@@ -132,7 +120,7 @@ long double calculateBTilde(int n, int i, int j) {
  *            int i: This is the row index for the entry for which you're calculating the value for
  *            int j: this is the column index for the entry for which you're calculating the value for
  * Return: the value which should exsist for this entry
- * Complexity: Time:  O(N^2)
+ * Complexity: Time:  O(N)
  *             Space: O(1)
  **/
 long double calculateBentry(int n, int i, int j) {
@@ -148,7 +136,7 @@ long double calculateBentry(int n, int i, int j) {
  * Purpose: this function creates the entire binomial(B) matrix
  * Arguments: int n: the size of the matrix you want to create
  * Returns: the created matrix
- * Complexity: Time:  O(N^4)
+ * Complexity: Time:  O(N^3)
  *             Space: O(N^2)
  **/
 vector< vector<long double> > calculateBinomialCoefficientMatrix(int n){
@@ -234,7 +222,7 @@ void printMatrix(vector< vector<long double> > matrix){
 /**
  * answerQuestion2Large
  * Purpose: This is to answer the second question of our report for the larger matricies(100,200,400,800,1600,3200)
- * Complexity: Time:  O(N^4)
+ * Complexity: Time:  O(N^3)
  *             Space: O(N^2)
  **/
 void answerQuestion2Large(){
@@ -248,14 +236,15 @@ void answerQuestion2Large(){
 		vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
 		vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
 		time(&endTime);
-		cout << "N: " << size << "Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << "Cn[N][N]: " << matrixC[size-1][size-1] << "T1Q1: " << difftime(startTime,endTime) << endl;
+		cout << "----------------------------" << endl;
+		cout << "N: " << size << " Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << " Cn[N][N]: " << matrixC[size-1][size-1] << " T1Q1: " << difftime(endTime,startTime) << endl;
 	}
 }
 
 /**
  * answerQuestion1Small
  * Purpose: This method is to provide all of the information needed to answer question 1 for smaller matrix sizes(1,2,4,8,16,32)
- * Complexity: Time:  O(N^4)
+ * Complexity: Time:  O(N^3)
  *             Space: O(N^2)
  **/
 void answerQuestion1Small() {
@@ -277,14 +266,15 @@ void answerQuestion1Small() {
 		cout << "---------MatrixC-----------" << endl << endl;
 		printMatrix(matrixC);
 
-		cout << "N: " << size << " Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << " Cn[N][N]: " << matrixC[size-1][size-1] << " T1Q1: " << difftime(startTime,endTime) << endl;
+		cout << "----------------------------" << endl;
+		cout << "N: " << size << " Cn[N/2][N/2]: " << matrixC[(size)/2-1][(size/2)-1] << " Cn[N][N]: " << matrixC[size-1][size-1] << " T1Q1: " << difftime(endTime,startTime) << endl;
 	}
 }
 
 /**
  * answerQuestion2
  * Purpose: This method answers both parts of question 1 and 2 for the report
- * Complexity: Time:  O(N^4)
+ * Complexity: Time:  O(N^3)
  *             Space: O(1)
  **/
 void answerQuestion12() {
