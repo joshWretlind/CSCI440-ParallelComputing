@@ -37,7 +37,7 @@ vector< vector<long double> > createHilbertMatrix(int n){
 	}
 
 	return hilbert;
-}
+} 
 
 /**
  * calculateBinomial
@@ -51,7 +51,7 @@ vector< vector<long double> > createHilbertMatrix(int n){
  * Complexity: Time:  O(N^2)
  *             Space: O(N^2) // this could be lessened to be K, if you only store the previous row as well as the row we're currently on.  
  **/
-long calculateBinomial(int n, int k) {
+long double calculateBinomial(int n, int k) {
 	//binom is a NxK matrix
 	vector<long double> row(k+1, 0.0L);
 	vector< vector<long double> > binom(n+1,row);
@@ -82,7 +82,7 @@ long calculateBinomial(int n, int k) {
  */
 long double calculateBtildeUniqueCoefficient(int n, int k){
 	long double btilde = 0.0L;
-	btilde = cos((long double)n)/(cos((long double)k) * cos((long double)n - (long double)k));
+	btilde = long double(cos((long double)n))/long double(cos((long double)k) * cos((long double)n - (long double)k));
 	return btilde;
 }
 
@@ -207,7 +207,7 @@ vector< vector<long double> > createMultipliedMatrix(vector< vector<long double>
 	for(int i = 0; i < n; i++) {
 		for(int j = 0; j < n; j++) {
 			if(abs(multipliedMatrix[i][j]) > pow(10.0L, 300.0L) || multipliedMatrix[i][j] != multipliedMatrix[i][j]){
-				multipliedMatrix[i][j] = cos((double)(i+1) + (double)(j+1));
+				multipliedMatrix[i][j] = cos((long double)(i+1) + (long double)(j+1));
 			}
 		}
 	}
@@ -216,8 +216,8 @@ vector< vector<long double> > createMultipliedMatrix(vector< vector<long double>
 }
 
 void printMatrix(vector< vector<long double> > matrix){
-	for(int i = 0; i < matrix.size(); i++){
-		for(int j = 0; j < matrix.size(); j++){
+	for(unsigned int i = 0; i < matrix.size(); i++){
+		for(unsigned int j = 0; j < matrix.size(); j++){
 			cout << matrix[i][j] << " ";
 		}
 		cout << endl;
@@ -231,7 +231,7 @@ int main(){
 
 	cout << LDBL_MAX  << endl;
 
-	int size = 100;
+	int size = 13;
 	cout << "Setting up A" << endl;
 	vector< vector<long double> > matrixA = createHilbertMatrix(size);
 	cout << "A should be good, setting up B" << endl;
