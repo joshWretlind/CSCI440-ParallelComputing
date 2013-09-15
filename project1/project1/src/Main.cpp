@@ -159,7 +159,6 @@ vector< vector<long double> > calculateBinomialCoefficientMatrix(int n){
 		for(int j = 0; j < n; j++) {
 			binomialMatrix[i][j] = calculateBentry(n, i +1 , j+1);
 		}
-		cout << " i " << i << endl;
 	}
 
 	return binomialMatrix;
