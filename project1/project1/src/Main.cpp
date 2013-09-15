@@ -97,7 +97,7 @@ long double calculateBtildeUniqueCoefficient(int n, int k){
  *             Space: O(1)
  **/
 long double calculateBNormal(int n, int i, int j) {
-	long double bNormal = pow(-1.0, i + j );
+	long double bNormal = pow(-1.0L, i + j );
 	bNormal *= (i + j - 1);
 	bNormal *= calculateBinomial(n + i - 1, n - j );
 	bNormal *= calculateBinomial(n + j - 1, n - i );
@@ -116,7 +116,7 @@ long double calculateBNormal(int n, int i, int j) {
  *             Space: O(1)
  **/
 long double calculateBTilde(int n, int i, int j) {
-	long double bNormal = pow(-1.0, i + j );
+	long double bNormal = pow(-1.0L, i + j );
 	bNormal *= (i + j - 1);
 	bNormal *= calculateBtildeUniqueCoefficient(n + i -1, n - j );
 	bNormal *= calculateBtildeUniqueCoefficient(n + j -1, n - i );
@@ -231,7 +231,7 @@ int main(){
 
 	cout << LDBL_MAX  << endl;
 
-	int size = 13;
+	int size = 20;
 	cout << "Setting up A" << endl;
 	vector< vector<long double> > matrixA = createHilbertMatrix(size);
 	cout << "A should be good, setting up B" << endl;
