@@ -261,7 +261,7 @@ void answerQuestion1Large(){
 void answerQuestion1Small() {
 	time_t startTime;
 	time_t endTime;
-	for(int i = 0; i < 6; i++){
+	for(int i = 1; i < 6; i++){
 		int size = pow(2.0, i);
 
 		time(&startTime);
