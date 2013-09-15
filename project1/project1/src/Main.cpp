@@ -463,6 +463,7 @@ void answerQuestion5(){
 	time_t endTime;
 	int size = 100*pow(2.0, 6);
 	time(&startTime);
+	initializeFactorial(size);
 	vector< vector<long double> > matrixA = createHilbertMatrix(size);
 	vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
 	vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
