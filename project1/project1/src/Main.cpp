@@ -82,7 +82,7 @@ long double calculateBinomial(int n, int k) {
  */
 long double calculateBtildeUniqueCoefficient(int n, int k){
 	long double btilde = 0.0L;
-	btilde = long double(cos((long double)n))/long double(cos((long double)k) * cos((long double)n - (long double)k));
+	btilde = ((long double)(cos((long double)n)))/((long double)(cos((long double)k) * cos((long double)n - (long double)k)));
 	return btilde;
 }
 
