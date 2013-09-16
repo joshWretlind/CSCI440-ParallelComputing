@@ -20,6 +20,13 @@ using namespace std;
 //pre-calculate the factorials we need so that we can retrieve in O(1) time.
 long double* fact;
 
+/**
+ * initializeFactorial
+ * Purpose: this method basically calculates all of the factorials we will need before hand, so that we can access things in O(1) time later.
+ * Arguments: int size: This is the largest value for which we want to calculate the factorials for and all the values below this
+ * Complexity: Time:  O(N)
+ *             Space: O(N)
+ **/
 void initializeFactorial(int size){
 	fact = new long double[2*size + 1];
 	fact[0] = 1;
@@ -149,6 +156,7 @@ long double calculateBentry(int n, int i, int j) {
 vector< vector<long double> > calculateBinomialCoefficientMatrix(int n){
 	vector<long double> row(n, 0.0L);
 	vector< vector<long double> > binomialMatrix(n,row);
+	initializeFactorial(n);
 
 	for(int i = 0; i < n; i++) { 
 		for(int j = 0; j < n; j++) {
@@ -239,8 +247,6 @@ void answerQuestion2Large(){
 	for(int i = 0; i < 6; i++){
 		int size = size_base*pow(2.0, i);
 		time(&startTime);
-		initializeFactorial(size);
-		
 		vector< vector<long double> > matrixA = createHilbertMatrix(size);
 		vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
 		vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
@@ -263,7 +269,6 @@ void answerQuestion1Small() {
 		int size = pow(2.0, i);
 
 		time(&startTime);
-		initializeFactorial(size);
 		vector< vector<long double> > matrixA = createHilbertMatrix(size);
 		vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
 		vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
@@ -326,7 +331,6 @@ void writeMatriciesToDisk() {
 	for(int i = 0; i < 6; i++){
 		int size = size_base*pow(2.0, i);
 		time(&startTime);
-		initializeFactorial(size);
 		vector< vector<long double> > matrixA = createHilbertMatrix(size);
 		vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
 
@@ -390,7 +394,6 @@ void readMatriciesFromDiskAndMultiply(){
 	for(int i = 0; i < 6; i++){
 		int size = size_base*pow(2.0, i);
 		time(&startTime);
-		initializeFactorial(size);
 		vector<long double> matrixARow(size, 0.0L);
 		vector< vector<long double> > matrixA(size,matrixARow);
 
@@ -465,7 +468,6 @@ void answerQuestion5(){
 	for(int i = 6; i < 8; i++){
 		int size = size_base*pow(2.0, i);
 		time(&startTime);
-		initializeFactorial(size);
 		vector< vector<long double> > matrixA = createHilbertMatrix(size);
 		vector< vector<long double> > matrixB = calculateBinomialCoefficientMatrix(size);
 		vector< vector<long double> > matrixC = createMultipliedMatrix(matrixA, matrixB, size);
