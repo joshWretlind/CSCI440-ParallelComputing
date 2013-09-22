@@ -182,8 +182,8 @@ vector< vector<long double> > multiplyMatricies(vector< vector<long double> > ma
 	vector< vector<long double> > resultant(n,row);
 
 	for(int i = 0; i < n; i++){
-		for(int k = 0; k < n; j++){
-			for(int j = 0; j < n; k++){
+		for(int k = 0; k < n; k++){
+			for(int j = 0; j < n; j++){
 				resultant[i][j] += matrixA[i][k]*matrixB[k][j];
 			}
 		}
