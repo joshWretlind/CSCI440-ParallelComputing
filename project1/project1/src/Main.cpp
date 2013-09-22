@@ -182,13 +182,10 @@ vector< vector<long double> > multiplyMatricies(vector< vector<long double> > ma
 	vector< vector<long double> > resultant(n,row);
 
 	for(int i = 0; i < n; i++){
-		for(int j = 0; j < n; j++){
-			long double resultEntry = 0.0L;
-			for(int k = 0; k < n; k++){
-				resultEntry += matrixA[i][k]*matrixB[k][j];
+		for(int k = 0; k < n; j++){
+			for(int j = 0; j < n; k++){
+				resultant[i][j] += matrixA[i][k]*matrixB[k][j];
 			}
-
-			resultant[i][j] = resultEntry;
 		}
 	}
 
@@ -321,7 +318,7 @@ string matrixToString(vector< vector<long double> > matrix){
 /**
  * writeMatriciesToDisk
  * Purpose: This creates and writes the A and B matricies to disk for 100, 200, 400, 800, 1600, 3200 sizes
- * Complexity: Time:  O(N^3)
+ * Complexity: Time:  O(N^2)
  *             SpacE: O(N^2)
  **/
 void writeMatriciesToDisk() {
@@ -484,5 +481,5 @@ void answerQuestion5(){
 int main(){
 	answerQuestion12();
 	answerQuestion34();
-	answerQuestion5();
+	//answerQuestion5();
 }
