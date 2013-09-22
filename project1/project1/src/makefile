@@ -13,6 +13,6 @@ main = Main.cpp
 all: main_exe
 
 main_exe: $(main)
-	$(GCC) $(MAIN)
+	$(GCC) $(main)
 		  
 clean: rm main_exe
