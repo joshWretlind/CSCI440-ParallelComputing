@@ -1,0 +1,18 @@
+#Compiler
+#--------------------
+
+GCC = g++
+
+#Files
+#--------------------
+main = Main.cpp
+
+#Commands
+#--------------------
+
+all: main_exe
+
+main_exe: $(main)
+          $(GCC) $(MAIN)
+		  
+clean: rm main_exe
