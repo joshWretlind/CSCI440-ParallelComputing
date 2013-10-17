@@ -1,0 +1,35 @@
+#Compiler
+#--------------------
+
+GCC = g++
+
+#Files
+#--------------------
+main = main.cpp
+part1 = part1.cpp
+part2 = part2.cpp
+part3 = part3.cpp
+part4 = part4.cpp
+
+#Commands
+#--------------------
+
+all: main_exe part1 part2 part3 part4
+
+#main_exe: $(main)
+#	$(GCC) $(main) -o $@
+
+part1: $(part1)
+	$(GCC) $(part1) -o part1
+
+part2: $(part2)
+	$(GCC) $(part2) -o part2
+
+part3: $(part3)
+	$(GCC) $(part3) -o part3
+
+part4: $(part4)
+	$(GCC) $(part4) -o part4
+
+clean: rm main_exe part1 part2 part3 part4
+
