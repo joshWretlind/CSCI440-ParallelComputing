@@ -5,19 +5,13 @@ mpiCC = mpiCC
 
 #Files
 #--------------------
-main = main.cpp
-part1 = part1.cpp
-part2 = part2.cpp
 part3 = part3.cpp
-part4 = part4.cpp
+
 
 #Commands
 #--------------------
 
-all: main_exe part1 part2 part3 part4
-
-main_exe: $(main)
-	$(mpiCC) $(main) -o $@
+all: part3
 
 part1: $(part1)
 	$(mpiCC) $(part1) -o part1
