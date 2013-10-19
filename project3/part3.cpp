@@ -94,12 +94,14 @@ double calculateSimonRule(int K, vector<double> points, double(*fn)(int, double)
 	return ((2.0/3.0) * calculateMiddleRienmann(K,points,fn,qn) + (1.0/3.0) * calculateTrapazoidalRienmann(K,points,fn,qn));
 }
 /*************************************
- * 
- * 
- * 
- * 
- * 
- * 
+ * providePoints
+ * Purpose: This method produces a collection of points in the region we want to evaluate. 
+ * Parameters: double begin: The starting value for this range
+ *             double end: The ending value for this range
+ *             int region: The number of points that should be produced in this range
+ * Output: vector<double>: The collection of points in this range
+ * Complexity: Time:  O(N) where N is the number of regions
+ *             Space: O(N) where N is the number of regions
  *************************************/
 vector<double> providePoints(double begin, double end, int regions){
 	vector<double> points;
@@ -111,9 +113,16 @@ vector<double> providePoints(double begin, double end, int regions){
 }
 
 /***************************************
- * 
- * 
- * 
+ * calculateMiddleSum(int k, rank)
+ * Purpose: This calculates the middle rectangle sum which is needed for
+ *          this host
+ * Parameters: int k: This is the k value/the wave number/the number of
+ *                    regions the total range is split up to
+ *             int rank: The rank of this processor
+ * output: double: The middle sum for what this host was tasked to 
+ *                 calculate
+ * Complexity: Time:  O(N)
+ *             Space: O(1)
  **************************************/
 double calculateMiddleSum(int k, int rank){
 	double sum = 0;
@@ -125,10 +134,16 @@ double calculateMiddleSum(int k, int rank){
 }
 
 /**************************************
- * 
- * 
- * 
- * 
+ * calculateSimonSum(int k, rank)
+ * Purpose: This calculates the simposon's rule sum which is needed for
+ *          this host
+ * Parameters: int k: This is the k value/the wave number/the number of
+ *                    regions the total range is split up to
+ *             int rank: The rank of this processor
+ * output: double: The simpson's rule sum for what this host was tasked
+ *                 to calculate
+ * Complexity: Time:  O(N)
+ *             Space: O(1)
  **************************************/
 double calculateSimonSum(int k, int rank){
 	double sum = 0;
@@ -140,11 +155,16 @@ double calculateSimonSum(int k, int rank){
 }
 
 /**************************************
- * 
- * 
- * 
- * 
- * 
+ * calculateTrapazoidSum(int k, rank)
+ * Purpose: This calculates the trapazoidal sum which is needed for
+ *          this host
+ * Parameters: int k: This is the k value/the wave number/the number of
+ *                    regions the total range is split up to
+ *             int rank: The rank of this processor
+ * output: double: The trapazoidal sum for what this host was tasked to 
+ *                 calculate
+ * Complexity: Time:  O(N)
+ *             Space: O(1)
  **************************************/
 double calculateTrapazoidSum(int k, int rank){
 	double sum = 0;
@@ -156,10 +176,17 @@ double calculateTrapazoidSum(int k, int rank){
 }
 
 /***************************************
- *
- * 
- * 
- * 
+ * calculateIntegral
+ * Purpose: This method basically calculates the approcimate values that
+ *          this host needs to
+ * Input: int k: The wave number, as well as the total number of slices
+ *               the range for this integral is split into
+ *        int rank: This is the rank for this particular host.
+ * Output: double*: An array, with the first element being the middle
+ *                  sum, second being the trapazoidal sum, and the 3rd
+ *                  being the result from the simpson's rule.
+ * Complexity: Time:  O(N)
+ *             Space: O(1)
  ***************************************/
 double* calculateIntegral(int k, int rank){
 	kPerWorker = ceil(((double)k)/((double)totalSize));
@@ -182,7 +209,7 @@ double* calculateIntegral(int k, int rank){
 	static double results[3] = {0,0,0};
 	results[1] = calculateTrapazoidSum(k,rank);
 	results[2] = calculateSimonSum(k,rank);
-		results[0] = calculateMiddleSum(k,rank);
+	results[0] = calculateMiddleSum(k,rank);
 
 	return results;
 }
@@ -216,5 +243,5 @@ int main(int argc, char *argv[]){
 		outputFile.close();
 	}
 	MPI::Finalize();
-	return 0;
+	return 0; 
 }
