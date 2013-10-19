@@ -72,6 +72,7 @@ double calculateTrapazoidalRienmann(int K, vector<double> points, double(*fn)(in
 	double value = 0;
 	for(int i = 0; i < points.size(); i++){
 		value +=(fn(K, points[i-1]) + fn(K, points[i])) * (points[i] - points[i-1])/2;
+		cout << (points[i] - points[i-1]) << endl;
 	}
 	return value;
 }
@@ -161,7 +162,7 @@ int main(int argc, char *argv[]){
 	
 	totalSize = MPI::COMM_WORLD.Get_size();
 	int myRank = MPI::COMM_WORLD.Get_rank();
-	double *k = calculateIntegral(1100,myRank);
+	double *k = calculateIntegral(100,myRank);
 	
 	cout << myRank << "'s results: " << k[0] << " " << k[1] << " " << k[2] << endl;
 	double sum[3] = {0,0,0};
