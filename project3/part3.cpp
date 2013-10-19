@@ -31,7 +31,7 @@ double regionPerK;
  *             Space: O(1) 
  *************************************/
 double function(int k, double x){
-	return cos(100.0 * x - k * sin(x));
+	return cos(100.0 * x - ((double)k) * sin(x));
 }
 
 /*************************************
