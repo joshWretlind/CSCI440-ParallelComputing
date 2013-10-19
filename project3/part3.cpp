@@ -107,6 +107,7 @@ double calculateMiddleSum(int k, int rank){
 	for(int j = lowerKBound; j < upperBound; j++){
 		vector<double> points = providePoints(j*regionPerK,(j+1.0)*regionPerK,100);
 		sum += calculateMiddleRienmann(k,points,function,points.size());
+		cout << sum << endl;
 	}
 	return sum;
 }
