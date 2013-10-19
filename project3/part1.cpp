@@ -10,7 +10,6 @@
 #include<vector>
 
 using namespace std;
-using namespace MPI;
 
 /*************************************
  * function(int k, double x)

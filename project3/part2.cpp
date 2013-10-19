@@ -11,7 +11,6 @@
 #include<cmath>
 
 using namespace std;
-using namespace MPI;
 
 /*************************************
  * function(int k, vector<double> points)
