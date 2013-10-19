@@ -169,7 +169,7 @@ int main(int argc, char *argv[]){
 	
 		if(myRank == 0){
 			if(k%1000 == 0){
-				cout << k << results[0] << results[1] << results[2] << endl;
+				cout << k << sum[0] << sum[1] << sum[2] << endl;
 			}
 		}
 	}
