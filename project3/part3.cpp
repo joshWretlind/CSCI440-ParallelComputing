@@ -167,6 +167,7 @@ int main(int argc, char *argv[]){
 		cout << "K:            " << "MIDPOINT_H:              " << "TRAPAZOIDAL_H                     " << " SIMPSON_H                 " << endl;
 		outputFile.open("output.csv");
 		outputFile << "k,MIDPOINT_H,TRAPAZOIDAL_H,SIMPSON_H" << endl;
+		outputFile.precision(15)
 	}                 
 	for(int k = 100; k <= 10000; k++){
 		double *partialSum = calculateIntegral(k,myRank);	
@@ -175,7 +176,7 @@ int main(int argc, char *argv[]){
 	
 		if(myRank == master){
 			if(k%1000 == 0){
-				cout << k << "    " << sum[0] << "    " << sum[1] << "    " << sum[2] << endl;
+				cout << k << "          " << sum[0] << "      " << sum[1] << "          " << sum[2] << endl;
 			}
 			outputFile << k << "," << sum[0] << "," << sum[1] << "," << sum[2] << endl;
 		}
