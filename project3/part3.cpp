@@ -48,9 +48,9 @@ double function(int k, double x){
  *             Space: O(1)
  *************************************/
 double calculateMiddleRienmann(int K, vector<double> points, double(*fn)(int, double), int qn){
-	double value = 1;
+	double value = 0;
 	for(int i = 1; i < points.size(); i++){
-		value += (fn(K, points[i-1]*0.5 + points[i]*0.5) * (points[i] - points[i-1]));
+		value += (fn(K, (points[i-1] + points[i])/2) * (points[i] - points[i-1]);
 	}
 	return value;
 }
