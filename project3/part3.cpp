@@ -87,15 +87,23 @@ double calculateSimonRule(int K, vector<double> points, double(*fn)(int, double)
 	return ((2.0/3.0) * calculateMiddleRienmann(K,points,fn,qn) + (1.0/3.0) * calculateTrapazoidalRienmann(K,points,fn,qn));
 }
 
+double calculateMiddleSum(int k, int rank){
+}
+
+double calculateSimonSum(int k, int rank){
+}
+
+double calculateTrapazoidSum(int k, int rank){
+}
 
 int main(int argc, char *argv[]){
 	MPI::Init(argc, argv);
 	
 	int totalSize = MPI::COMM_WORLD.Get_size();
 	int myRank = MPI::COMM_WORLD.Get_rank();
-	int k = 100;
-	int sum = 0;
-	MPI::COMM_WORLD.Reduce(&k,&sum,1,MPI::INTEGER,MPI_SUM,master);
+	int k[3] = [100,100,100];
+	int *sum = new int[3];
+	MPI::COMM_WORLD.Reduce(&k,&sum,3,MPI::INTEGEr,MPI_SUM,master);
 	
 	if(myRank == 0){
 		cout << "Reduced count: " << sum << endl;
