@@ -161,7 +161,7 @@ int main(int argc, char *argv[]){
 	
 	totalSize = MPI::COMM_WORLD.Get_size();
 	int myRank = MPI::COMM_WORLD.Get_rank();
-	double *k = calculateIntegral(100,myRank);
+	double *k = calculateIntegral(1100,myRank);
 	
 	cout << myRank << "'s results: " << k[0] << " " << k[1] << " " << k[2] << endl;
 	double sum[3] = {0,0,0};
