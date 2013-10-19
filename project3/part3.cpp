@@ -147,7 +147,6 @@ double* calculateIntegral(int k, int rank){
 		return arr;
 	}
 	regionPerK = M_PI/((double)k);
-	cout << "My Rank: " << rank << " LowerBound: " << lowerKBound << " Upper: " << upperBound << " perK: " << regionPerK << endl;
 	static double results[3] = {0,0,0};
 	results[1] = calculateTrapazoidSum(k,rank);
 	results[2] = calculateSimonSum(k,rank);
@@ -161,9 +160,7 @@ int main(int argc, char *argv[]){
 	
 	totalSize = MPI::COMM_WORLD.Get_size();
 	int myRank = MPI::COMM_WORLD.Get_rank();
-	double *k = calculateIntegral(100,myRank);
-	
-	cout << myRank << "'s results: " << k[0] << " " << k[1] << " " << k[2] << endl;
+	double *k = calculateIntegral(1100,myRank);	
 	double sum[3] = {0,0,0};
 	MPI::COMM_WORLD.Reduce(k,&sum,3,MPI::DOUBLE,MPI_SUM,master);
 	
