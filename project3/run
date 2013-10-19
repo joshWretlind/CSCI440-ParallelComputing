@@ -1,3 +1,3 @@
 #!/bin/sh
 
-mpiexec -machinefile machines -np 4 ./part3
+mpiexec -machinefile machines -np 16 ./part3
