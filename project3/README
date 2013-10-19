@@ -1,0 +1,7 @@
+Author: Josh Wretlind
+
+Notes: To make, simply type "make"
+	part1.cpp contains the code for the dummy variables and methods that were required for part 1/question 1 of the assignment.
+	part2.cpp and part3.cpp are similar
+	To run the code for part3, run ./part3
+	
