@@ -13,6 +13,12 @@
 using namespace std;
 
 int master = 0;
+int totalSize;
+int kPerWorker;
+int lowerKBound;
+int upperBound;
+double regionPerK;
+
 
 /*************************************
  * function(int k, double points)
@@ -87,19 +93,61 @@ double calculateSimonRule(int K, vector<double> points, double(*fn)(int, double)
 	return ((2.0/3.0) * calculateMiddleRienmann(K,points,fn,qn) + (1.0/3.0) * calculateTrapazoidalRienmann(K,points,fn,qn));
 }
 
+vector<double> providePoints(double begin, double end, int regions){
+	vector<double> points;
+	points.resize(regions + 1);
+	for(int i = 0; i <= regions; i++){
+		points[i] = begin + i*(end - begin)/((double)regions);
+	}
+	return points;
+}
+
 double calculateMiddleSum(int k, int rank){
+	double sum = 0;
+	for(int j = lowerBound; j < upperBound; j++){
+		vector<double> points = providePoints(j*regionPerK,(j+1)regionPerK,100);
+		sum += calculateMiddleRienmann(k,points,function,points.size());
+	}
+	return sum;
 }
 
 double calculateSimonSum(int k, int rank){
+	double sum = 0;
+	for(int j = lowerBound; j < upperBound; j++){
+		vector<double> points = providePoints(j*regionPerK,(j+1)regionPerK,100);
+		sum += calculateSimonRule(k,points,function,points.size());
+	}
+	return sum;
 }
 
 double calculateTrapazoidSum(int k, int rank){
+	double sum = 0;
+	for(int j = lowerBound; j < upperBound; j++){
+		vector<double> points = providePoints(j*regionPerK,(j+1)regionPerK,100);
+		sum += calculateTrapazoidalRienmann(k,points,function,points.size());
+	}
+	return sum;
+}
+
+double* calculateIntegral(int k, int rank){
+	kPerWorker = ceil(((double)k)/((double)totalSize));
+	lowerKBound = rank*(kPerWorker);
+	upperBound = (rank+1)*(kPerWorker);
+	if((rank+1) == totalSize){
+		upperBound = k;
+	}
+	regionPerK = PI/((double)k);
+	
+	double results[3] = {0,0,0};
+	results[0] = calculateMiddleSum(k,rank);
+	results[1] = calculateTrapazoidSum(k,rank);
+	results[2] = calculateSimonSum(k,rank);
 }
 
 int main(int argc, char *argv[]){
 	MPI::Init(argc, argv);
 	
-	int totalSize = MPI::COMM_WORLD.Get_size();
+	totalSize = MPI::COMM_WORLD.Get_size();
 	int myRank = MPI::COMM_WORLD.Get_rank();
 	int k[3] = {100,100,100};
 	int sum[3] = {0,0,0};
