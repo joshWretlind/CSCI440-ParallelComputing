@@ -164,7 +164,7 @@ int main(int argc, char *argv[]){
 	
 	cout << myRank << "'s results: " << k[0] << " " << k[1] << " " << k[2] << endl;
 	double sum[3] = {0,0,0};
-	MPI::COMM_WORLD.Reduce(&k,&sum,3,MPI::DOUBLE,MPI_SUM,master);
+	MPI::COMM_WORLD.Reduce(&k,&sum,1,MPI::DOUBLE,MPI_SUM,master);
 	
 	if(myRank == 0){
 		cout << "Reduced count: " << sum[0] << " " << sum[1] << " " << sum[2] << endl;
