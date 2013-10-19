@@ -144,10 +144,10 @@ double* calculateIntegral(int k, int rank){
 	}
 	if(lowerKBound == upperBound){
 		double arr[3] = {0,0,0};
-		return arr;
+		return &arr;
 	}
 	regionPerK = M_PI/((double)k);
-	cout << "My Rank: " << rank << " LowerBound: " << lowerKBound << " Upper: " << upperBound << " perK: ",<< regionPerK << endl;
+	cout << "My Rank: " << rank << " LowerBound: " << lowerKBound << " Upper: " << upperBound << " perK: " << regionPerK << endl;
 	double results[3] = {0,0,0};
 	results[0] = calculateMiddleSum(k,rank);
 	results[1] = calculateTrapazoidSum(k,rank);
