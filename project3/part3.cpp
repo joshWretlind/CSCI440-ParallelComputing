@@ -95,7 +95,7 @@ int main(int argc, char *argv[]){
 	int myRank = MPI::COMM_WORLD.Get_rank();
 	int k = 100;
 	int sum = 0;
-	MPI::COMM_WORLD.Reduce(k,sum,1,MPI::INTEGER,MPI_SUM);
+	MPI::COMM_WORLD.Reduce(k,sum,1,MPI::INTEGER,MPI_SUM,master);
 		
 	MPI::Finalize();
 	return 0;
