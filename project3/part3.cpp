@@ -104,7 +104,7 @@ vector<double> providePoints(double begin, double end, int regions){
 
 double calculateMiddleSum(int k, int rank){
 	double sum = 0;
-	for(int j = lowerBound; j < upperBound; j++){
+	for(int j = lowerKBound; j < upperBound; j++){
 		vector<double> points = providePoints(j*regionPerK,(j+1)regionPerK,100);
 		sum += calculateMiddleRienmann(k,points,function,points.size());
 	}
@@ -113,7 +113,7 @@ double calculateMiddleSum(int k, int rank){
 
 double calculateSimonSum(int k, int rank){
 	double sum = 0;
-	for(int j = lowerBound; j < upperBound; j++){
+	for(int j = lowerKBound; j < upperBound; j++){
 		vector<double> points = providePoints(j*regionPerK,(j+1)regionPerK,100);
 		sum += calculateSimonRule(k,points,function,points.size());
 	}
@@ -122,7 +122,7 @@ double calculateSimonSum(int k, int rank){
 
 double calculateTrapazoidSum(int k, int rank){
 	double sum = 0;
-	for(int j = lowerBound; j < upperBound; j++){
+	for(int j = lowerKBound; j < upperBound; j++){
 		vector<double> points = providePoints(j*regionPerK,(j+1)regionPerK,100);
 		sum += calculateTrapazoidalRienmann(k,points,function,points.size());
 	}
@@ -136,7 +136,7 @@ double* calculateIntegral(int k, int rank){
 	if((rank+1) == totalSize){
 		upperBound = k;
 	}
-	regionPerK = PI/((double)k);
+	regionPerK = M_PI/((double)k);
 	
 	double results[3] = {0,0,0};
 	results[0] = calculateMiddleSum(k,rank);
