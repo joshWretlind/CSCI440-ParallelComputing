@@ -48,7 +48,7 @@ double calculateMiddleRienmann(int K, vector<double> points, double(*fn)(int, do
 }
 
 /*************************************
- * calculateMiddleRienmann(int K, vector<double> points, function* fn, int qn)
+ * calculateTrapazoidalRienmann(int K, vector<double> points, function* fn, int qn)
  * Purpose: This method calculates the trapazoidal sum for fn using the midpoints
  *          of points and a wave number of K.
  * Parameters: int K: This is the wave number for the function we're calculating the sum for
@@ -69,7 +69,7 @@ double calculateTrapazoidalRienmann(int K, vector<double> points, double(*fn)(in
 }
 
 /*************************************
- * calculateMiddleRienmann(int K, vector<double> points, function* fn, int qn)
+ * calculateSimonRule(int K, vector<double> points, function* fn, int qn)
  * Purpose: This method calculates the first order simon rule for fn using the midpoints
  *          of points and a wave number of K.
  * Parameters: int K: This is the wave number for the function we're calculating the sum for
