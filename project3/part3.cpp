@@ -160,12 +160,18 @@ int main(int argc, char *argv[]){
 	
 	totalSize = MPI::COMM_WORLD.Get_size();
 	int myRank = MPI::COMM_WORLD.Get_rank();
-	double *k = calculateIntegral(1100,myRank);	
-	double sum[3] = {0,0,0};
-	MPI::COMM_WORLD.Reduce(k,&sum,3,MPI::DOUBLE,MPI_SUM,master);
+	cout.precision(15);
+	cout << "K:            " << "MIDPOINT_H:      " << "TRAPAZOIDAL_H         " << " SIMPSON_H        " << endl;                 
+	for(int k = 100; k <= 10000; k++){
+		double *partialSum = calculateIntegral(k,myRank);	
+		double sum[3] = {0,0,0};
+		MPI::COMM_WORLD.Reduce(partialSum,&sum,3,MPI::DOUBLE,MPI_SUM,master);
 	
-	if(myRank == 0){
-		cout << "Reduced count: " << sum[0] << " " << sum[1] << " " << sum[2] << endl;
+		if(myRank == 0){
+			if(k%1000 == 0){
+				cout << k << results[0] << results[1] << results[2] << endl;
+			}
+		}
 	}
 	MPI::Finalize();
 	return 0;
