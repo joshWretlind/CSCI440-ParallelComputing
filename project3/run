@@ -1,3 +1,6 @@
 #!/bin/sh
 
+mpiexec -machinefile machines -np 8 ./part3 > output_for_8_cores.txt
+mv output.csv output8Core.csv
+
 mpiexec -machinefile machines -np 16 ./part3
