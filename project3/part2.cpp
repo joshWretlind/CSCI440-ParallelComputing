@@ -25,7 +25,7 @@ using namespace MPI;
  ***********************************/
 vector<double> function(int k, vector<double> points){
 	vector<double> results;
-	results.resize(points.size();
+	results.resize(points.size());
 	for(int i = 0; i < points.size(); i++){
 		results[i] = cos(100 * points[i] - k * sin(points[i]));
 	}
