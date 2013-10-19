@@ -102,7 +102,7 @@ int main(int argc, char *argv[]){
 	int totalSize = MPI::COMM_WORLD.Get_size();
 	int myRank = MPI::COMM_WORLD.Get_rank();
 	int k[3] = {100,100,100};
-	int sum = {0,0,0};
+	int sum[3] = {0,0,0};
 	MPI::COMM_WORLD.Reduce(&k,&sum,3,MPI::INTEGER,MPI_SUM,master);
 	
 	if(myRank == 0){
