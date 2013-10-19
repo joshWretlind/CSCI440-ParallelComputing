@@ -17,7 +17,7 @@ int totalSize;
 int kPerWorker;
 int lowerKBound;
 int upperBound;
-long double regionPerK;
+double regionPerK;
 
 
 /*************************************
@@ -30,7 +30,7 @@ long double regionPerK;
  * Complexity: Time:  O(N)
  *             Space: O(N) 
  *************************************/
-long double function(int k, long double x){
+double function(int k, double x){
 	return cos(100.0 * x - k * sin(x));
 }
 
@@ -47,7 +47,7 @@ long double function(int k, long double x){
  * Complexity: Time:  O(N) where N is the size of points
  *             Space: O(1)
  *************************************/
-long double calculateMiddleRienmann(int K, vector<long double> points, long double(*fn)(int, long double), int qn){
+double calculateMiddleRienmann(int K, vector<double> points, double(*fn)(int, double), int qn){
 	double value = 0;
 	for(int i = 1; i < points.size(); i++){
 		value += (fn(K, (points[i-1] + points[i])*0.5) * (points[i] - points[i-1]));
@@ -68,7 +68,7 @@ long double calculateMiddleRienmann(int K, vector<long double> points, long doub
  * Complexity: Time:  O(N) where N is the size of points
  *             Space: O(1)
  *************************************/
-long double calculateTrapazoidalRienmann(int K, vector<long double> points, long double(*fn)(int, long double), int qn){
+double calculateTrapazoidalRienmann(int K, vector<double> points, double(*fn)(int, double), int qn){
 	double value = 0;
 	for(int i = 0; i < points.size(); i++){
 		value += 0.5 * (fn(K, points[i-1]) + fn(K, points[i])) * (points[i] - points[i-1]);
@@ -89,49 +89,55 @@ long double calculateTrapazoidalRienmann(int K, vector<long double> points, long
  * Complexity: Time:  O(N) where N is the size of points
  *             Space: O(1)
  *************************************/
-long double calculateSimonRule(int K, vector<long double> points, long double(*fn)(int, long double) , int qn){
+double calculateSimonRule(int K, vector<double> points, double(*fn)(int, double) , int qn){
 	return ((2.0/3.0) * calculateMiddleRienmann(K,points,fn,qn) + (1.0/3.0) * calculateTrapazoidalRienmann(K,points,fn,qn));
 }
 
-vector<long double> providePoints(long double begin, long double end, int regions){
-	vector<long double> points;
+vector<double> providePoints(double begin, double end, int regions){
+	vector<double> points;
 	points.resize(regions + 1);
 	for(int i = 0; i <= regions; i++){
-		points[i] = begin + i*(end - begin)/((long double)regions);
+		points[i] = begin + i*(end - begin)/((double)regions);
 	}
-	
+	if(begin == 0){
+		cout << "size: " << points.size() << endl;
+		for(int i = 0; i < points.size(); i++){
+			cout << "i: " << i << " points: " << points[i] << endl;
+		}
+	}
 	return points;
+	
 }
 
-long double calculateMiddleSum(int k, int rank){
+double calculateMiddleSum(int k, int rank){
 	double sum = 0;
 	for(int j = lowerKBound; j < upperBound; j++){
-		vector<long double> points = providePoints(j*regionPerK,(j+1)*regionPerK,100);
+		vector<double> points = providePoints(j*regionPerK,(j+1)*regionPerK,100);
 		sum += calculateMiddleRienmann(k,points,function,points.size());
 	}
 	return sum;
 }
 
-long double calculateSimonSum(int k, int rank){
-	long double sum = 0;
+double calculateSimonSum(int k, int rank){
+	double sum = 0;
 	for(int j = lowerKBound; j < upperBound; j++){
-		vector<long double> points = providePoints(j*regionPerK,(j+1)*regionPerK,100);
+		vector<double> points = providePoints(j*regionPerK,(j+1)*regionPerK,100);
 		sum += calculateSimonRule(k,points,function,points.size());
 	}
 	return sum;
 }
 
-long double calculateTrapazoidSum(int k, int rank){
-	long double sum = 0;
+double calculateTrapazoidSum(int k, int rank){
+	double sum = 0;
 	for(int j = lowerKBound; j < upperBound; j++){
-		vector<long double> points = providePoints(j*regionPerK,(j+1)*regionPerK,100);
+		vector<double> points = providePoints(j*regionPerK,(j+1)*regionPerK,100);
 		sum += calculateTrapazoidalRienmann(k,points,function,points.size());
 	}
 	return sum;
 }
 
-long double* calculateIntegral(int k, int rank){
-	kPerWorker = ceil(((long double)k)/((long double)totalSize));
+double* calculateIntegral(int k, int rank){
+	kPerWorker = ceil(((double)k)/((double)totalSize));
 	lowerKBound = rank*(kPerWorker);
 	upperBound = (rank+1)*(kPerWorker);
 	if((rank+1) == totalSize){
@@ -144,12 +150,12 @@ long double* calculateIntegral(int k, int rank){
 		lowerKBound = k;
 	}
 	if(lowerKBound == upperBound){
-		static long double arr[3] = {0,0,0};
+		static double arr[3] = {0,0,0};
 		return arr;
 	}
-	regionPerK = M_PI/((long double)k);
+	regionPerK = M_PI/((double)k);
 	cout << "My Rank: " << rank << " LowerBound: " << lowerKBound << " Upper: " << upperBound << " perK: " << regionPerK << endl;
-	static long double results[3] = {0,0,0};
+	static double results[3] = {0,0,0};
 	results[0] = calculateMiddleSum(k,rank);
 	results[1] = calculateTrapazoidSum(k,rank);
 	results[2] = calculateSimonSum(k,rank);
@@ -161,9 +167,9 @@ int main(int argc, char *argv[]){
 	
 	totalSize = MPI::COMM_WORLD.Get_size();
 	int myRank = MPI::COMM_WORLD.Get_rank();
-	long double *k = calculateIntegral(100,myRank);
-	long double sum[3] = {0,0,0};
-	MPI::COMM_WORLD.Reduce(&k,&sum,3,MPI::LONG_DOUBLE,MPI_SUM,master);
+	double *k = calculateIntegral(100,myRank);
+	double sum[3] = {0,0,0};
+	MPI::COMM_WORLD.Reduce(&k,&sum,3,MPI::DOUBLE,MPI_SUM,master);
 	
 	if(myRank == 0){
 		cout << "Reduced count: " << sum[0] << " " << sum[1] << " " << sum[2] << endl;
