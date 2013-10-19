@@ -9,6 +9,7 @@
 #include<string>
 #include<cmath> 
 #include<vector>
+#include<fstream>
 
 using namespace std;
 
@@ -157,21 +158,30 @@ double* calculateIntegral(int k, int rank){
 
 int main(int argc, char *argv[]){
 	MPI::Init(argc, argv);
-	
+	ofstream outputFile;
+	  
 	totalSize = MPI::COMM_WORLD.Get_size();
 	int myRank = MPI::COMM_WORLD.Get_rank();
 	cout.precision(15);
-	cout << "K:            " << "MIDPOINT_H:      " << "TRAPAZOIDAL_H         " << " SIMPSON_H        " << endl;                 
+	if(myRank == master){
+		cout << "K:            " << "MIDPOINT_H:              " << "TRAPAZOIDAL_H                     " << " SIMPSON_H                 " << endl;
+		outputFile.open("output.csv");
+		outputFile << "k,MIDPOINT_H,TRAPAZOIDAL_H,SIMPSON_H" << endl;
+	}                 
 	for(int k = 100; k <= 10000; k++){
 		double *partialSum = calculateIntegral(k,myRank);	
 		double sum[3] = {0,0,0};
 		MPI::COMM_WORLD.Reduce(partialSum,&sum,3,MPI::DOUBLE,MPI_SUM,master);
 	
-		if(myRank == 0){
+		if(myRank == master){
 			if(k%1000 == 0){
-				cout << k << sum[0] << sum[1] << sum[2] << endl;
+				cout << k << "    " << sum[0] << "    " << sum[1] << "    " << sum[2] << endl;
 			}
+			outputFile << k << "," << sum[0] << "," << sum[1] << "," << sum[2] << endl;
 		}
+	}
+	if(myRank == master){
+		outputFile.close();
 	}
 	MPI::Finalize();
 	return 0;
