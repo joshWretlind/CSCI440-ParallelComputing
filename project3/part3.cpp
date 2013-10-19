@@ -31,7 +31,7 @@ double regionPerK;
  *             Space: O(N) 
  *************************************/
 double function(int k, double x){
-	return cos(100 * x - k * sin(x));
+	return cos(100.0 * x - k * sin(x));
 }
 
 /*************************************
@@ -99,6 +99,7 @@ vector<double> providePoints(double begin, double end, int regions){
 	for(int i = 0; i <= regions; i++){
 		points[i] = begin + i*(end - begin)/((double)regions);
 	}
+	
 	return points;
 }
 
@@ -144,7 +145,7 @@ double* calculateIntegral(int k, int rank){
 	}
 	if(lowerKBound == upperBound){
 		double arr[3] = {0,0,0};
-		return arr;
+		return *arr;
 	}
 	regionPerK = M_PI/((double)k);
 	cout << "My Rank: " << rank << " LowerBound: " << lowerKBound << " Upper: " << upperBound << " perK: " << regionPerK << endl;
@@ -152,7 +153,7 @@ double* calculateIntegral(int k, int rank){
 	results[0] = calculateMiddleSum(k,rank);
 	results[1] = calculateTrapazoidSum(k,rank);
 	results[2] = calculateSimonSum(k,rank);
-	return results;
+	return *results;
 }
 
 int main(int argc, char *argv[]){
