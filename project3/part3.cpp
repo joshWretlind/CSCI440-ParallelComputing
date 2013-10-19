@@ -106,7 +106,7 @@ int main(int argc, char *argv[]){
 	MPI::COMM_WORLD.Reduce(&k,&sum,3,MPI::INTEGER,MPI_SUM,master);
 	
 	if(myRank == 0){
-		cout << "Reduced count: " << sum << endl;
+		cout << "Reduced count: " << sum[0] << " " << sum[1] << " " << sum[2] << endl;
 	}
 	MPI::Finalize();
 	return 0;
