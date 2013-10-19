@@ -149,9 +149,9 @@ int main(int argc, char *argv[]){
 	
 	totalSize = MPI::COMM_WORLD.Get_size();
 	int myRank = MPI::COMM_WORLD.Get_rank();
-	int *k = calculateIntegral(100,myRank);
-	int sum[3] = {0,0,0};
-	MPI::COMM_WORLD.Reduce(&k,&sum,3,MPI::INTEGER,MPI_SUM,master);
+	double *k = calculateIntegral(100,myRank);
+	double sum[3] = {0,0,0};
+	MPI::COMM_WORLD.Reduce(&k,&sum,3,MPI::DOUBLE,MPI_SUM,master);
 	
 	if(myRank == 0){
 		cout << "Reduced count: " << sum[0] << " " << sum[1] << " " << sum[2] << endl;
