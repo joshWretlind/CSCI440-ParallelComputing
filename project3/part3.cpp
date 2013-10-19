@@ -7,6 +7,8 @@
 #include<iostream>
 #include "mpi.h"
 #include<string>
+#include<cmath> 
+#include<vector>
 
 using namespace std;
 
@@ -94,6 +96,7 @@ int main(int argc, char *argv[]){
 	int myRank = MPI::COMM_WORLD.Get_rank();
 	
 	cout << "Hello, I am " << myRank << " in a " << totalSize << " world " << endl;
+	
 	MPI::Finalize();
 	return 0;
 }
