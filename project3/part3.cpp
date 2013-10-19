@@ -88,15 +88,15 @@ double calculateSimonRule(int K, vector<double> points, double(*fn)(int, double)
 }
 
 
-
 int main(int argc, char *argv[]){
 	MPI::Init(argc, argv);
 	
 	int totalSize = MPI::COMM_WORLD.Get_size();
 	int myRank = MPI::COMM_WORLD.Get_rank();
-	
-	cout << "Hello, I am " << myRank << " in a " << totalSize << " world " << endl;
-	
+	int k = 100;
+	int sum = 0;
+	MPI::Reduce(k,sum,1,MPI::INTEGER,MPI_SUM);
+		
 	MPI::Finalize();
 	return 0;
 }
