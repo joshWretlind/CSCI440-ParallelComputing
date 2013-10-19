@@ -49,7 +49,7 @@ double function(int k, double x){
  *************************************/
 double calculateMiddleRienmann(int K, vector<double> points, double(*fn)(int, double), int qn){
 	double value = 0;
-	for(int i = 1; i < points.size(); i++){
+	for(int i = 0; i < points.size(); i++){
 		value += (fn(K, (points[i-1] + points[i])*0.5) * (points[i] - points[i-1]));
 	}
 	return value;
@@ -99,14 +99,7 @@ vector<double> providePoints(double begin, double end, int regions){
 	for(int i = 0; i <= regions; i++){
 		points[i] = begin + i*(end - begin)/((double)regions);
 	}
-	if(begin == 0){
-		cout << "size: " << points.size() << endl;
-		for(int i = 0; i < points.size(); i++){
-			cout << "i: " << i << " points: " << points[i] << endl;
-		}
-	}
 	return points;
-	
 }
 
 double calculateMiddleSum(int k, int rank){
