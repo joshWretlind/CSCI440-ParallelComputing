@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mpiexec -machinefile machines -np 28 ./main_exe
