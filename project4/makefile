@@ -27,7 +27,7 @@ part4: $(part4)
 	$(mpiCC) $(part4) -o part4
 
 main: $(main)
-       	$(mpiCC) $(main4) -o main_exe
+	$(mpiCC) $(main4) -o main_exe
 
 clean: rm main_exe part1 part2 part3 part4
 
