@@ -51,18 +51,20 @@ int main(int argc, char *argv[]){
     myRank = MPI::COMM_WORLD.Get_rank();
     p = totalSize;
     j = atoi(argv[1]);
-    double** wMatrix = new double[p][j];
+    const int j_size = j;
+    const int p_size = p;
+    double** wMatrix = new double[p_size][j_size];
 
 
     double* rOfK = generateRandomWeightedVector(j);
     
     if(myRank != master){
-        COMM_WORLD.send(rOfK,j,MPI_DOUBLE,master,myRank);
+        MPI::COMM_WORLD.send(rOfK,j,MPI_DOUBLE,master,myRank);
     }
     else{
         MPI::Status my_status;
         for(int i = 1; i < totalSize; i++){
-            COMM_WORLD.Recv(wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
+            MPI::COMM_WORLD.Recv(wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
         }
     }
     delete rOfK;
