@@ -128,6 +128,13 @@ int main(int argc, char *argv[]){
     }
     
     MPI::COMM_WORLD.Bcast(normalizedVector, j*p, MPI_DOUBLE, master);
+    if(myRank == master || myRank == 1){
+        cout << "MyRank: " << myRank;
+        for(int i = 0; i < p*j; i++){
+            cout << " " << normalizedVector[i];
+        }
+        cout << endl;
+    }
     
     double** xMatrix = generateXMatrix(j,p);
     
