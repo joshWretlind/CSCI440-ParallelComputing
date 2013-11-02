@@ -70,7 +70,7 @@ int main(int argc, char *argv[]){
         }
     }
     if(myRank != master){
-        MPI::COMM_WORLD.Send(&rOfK,j,MPI_DOUBLE,master,myRank);
+        MPI::COMM_WORLD.Send(rOfK,j,MPI_DOUBLE,master,myRank);
     }
     else{
         wMatrix[0] = rOfK;
