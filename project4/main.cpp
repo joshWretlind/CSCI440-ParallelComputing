@@ -163,7 +163,7 @@ int main(int argc, char *argv[]){
             if(myRank == master){
                 cout << " Normalized: " << normalizedVector[k] << " xMatrix: " << xMatrix[i][k] << " sample " << sampleMean[k];
             }
-            yMatrix[i][k] = normalizedVector[k] * (xMatrix[i][k] - sampleMean[k]);
+            yMatrix[i][k] = normalizedVector[k] * (xMatrix[i][k] - sampleMean[i]);
         }
         if(myRank == master){
             cout << endl;
