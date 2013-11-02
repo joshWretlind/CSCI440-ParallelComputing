@@ -56,8 +56,9 @@ int main(int argc, char *argv[]){
         wMatrix[i] = new double[j];
     }
 
-
-    double* rOfK = generateRandomWeightedVector(j);
+    double* rOfK = new double[j];
+    generateRandomWeightedVector(j);
+    
     if(myRank == 6 || myRank == 7){
         MPI::Status my_status;
         for(int i = 0; i < j; i++){
@@ -71,7 +72,7 @@ int main(int argc, char *argv[]){
         wMatrix[0] = rOfK;
         MPI::Status my_status;
         for(int i = 1; i < totalSize; i++){
-            MPI::COMM_WORLD.Recv(wMatrix[i],totalSize*j,MPI_DOUBLE,i,i,my_status);
+            MPI::COMM_WORLD.Recv(wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
         }
     }
     delete rOfK;
