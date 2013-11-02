@@ -39,6 +39,27 @@ int p;
     return rOfK;
  }
 
+double** generateXMatrix(int j, int p){
+    double** xMat = new double[j];
+    for(int i = 0; i < j; i++){
+        xMat[i] = new double[j*p];
+    }
+    
+    default_random_engine generator;
+    time_t currentTime;
+    time(&currentTime);
+    currentTime += 100*myRank;
+    generator.seed(currentTime);
+    
+    for(int i = 1; i <= j; i++){
+        for(int k = 1; k <= j*p; k++){
+            uniform_real_distribution<double> distribution(-1.0*i*k,((double)i)/((double)k));
+            xMat[i-1][k-1] = distribution(generator);
+        }
+    }
+    
+    return xMat;
+}
 
 int main(int argc, char *argv[]){
     time_t startTime;
@@ -108,6 +129,21 @@ int main(int argc, char *argv[]){
     
     double* weightedVector = new double[j];
     MPI::COMM_WORLD.Scatter(normalizedVector, j, MPI_DOUBLE, weightedVector, j, MPI_DOUBLE, master); 
+    
+    double** xMatrix = generateXMatrix(j,p);
+    
+    double** cMatrix = new double[j];
+    for(int i = 0; i < j; i++){
+        cMatrix[i] = new double[p*j];
+    }
+    
+    for(int i = 0; i < j; i++){
+        cout << " MyRank: " << myRank << " ";
+        for(int k = 0; k < p*j; k++){
+            cout << xMatrix[i][k] << " ";
+        }
+        cout << endl;
+    }
     
     time(&endTime);
 	MPI::Finalize();
