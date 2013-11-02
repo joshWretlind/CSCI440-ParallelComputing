@@ -127,8 +127,7 @@ int main(int argc, char *argv[]){
         
     }
     
-    double* weightedVector = new double[j];
-    MPI::COMM_WORLD.Scatter(normalizedVector, j, MPI_DOUBLE, weightedVector, j, MPI_DOUBLE, master); 
+    MPI::COMM_WORLD.Bcast(normalizedVector, n*p, MPI_DOUBLE, master);
     
     double** xMatrix = generateXMatrix(j,p);
     
@@ -148,13 +147,42 @@ int main(int argc, char *argv[]){
         sampleMean[i] = sampleSum/((double)j*p);
     }
     
-    cout << "MyRank: " << myRank;
-    for(int i = 0; i < j; i++){
-        cout << " " << sampleMean[i];
+    double weightSum = 0;
+    for(int i = 0; i < p*j; i++){
+        weightSum += normalizedVector[i]*normalizedVector[i];
     }
-    cout << endl;
     
+    double** yMatrix = new double*[j];
+    for(int i = 0; i < j; i++){
+        yMatrix[i] = new double[p*j];
+    }
     
+    //calculate yMatrix
+    for(int i = 0; i < j; i++){
+        for(int k = 0; k < p*j; k++){
+            yMatrix[i][k] = normalizedSum[k] * (xMatrix[i][k] - sampleMean[k]);
+        }
+    }
+    
+    double** yTranspose = new double*[p*j];
+    for(int i = 0; i < p*j; i++){
+        yTranspose[i] = new double[j];
+    }
+    
+    //Calculate the transpose
+    for(int i = 0; i < p*j; i++){
+        for(int k = 0; k < j; k++){
+            yTranspose[i][k] = yMatrix[k][i]; / (1 - weightSum);
+        }
+    }
+    
+    for(int i = 0; i < p*j; i++){
+        cout << "MyRank: " << myRank;
+        for(int k = 0; k < j; k++){
+            cout << " " << yTranspose[i][k];
+        }
+        cout << endl;
+    }
     time(&endTime);
 	MPI::Finalize();
 }
