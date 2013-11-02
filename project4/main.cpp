@@ -75,8 +75,9 @@ int main(int argc, char *argv[]){
         }
     }
     delete rOfK;
-    cout << sizeof(wMatrix) << endl;
-    /*if(myRank == master){
+    if(myRank == master){
+        cout << sizeof(wMatrix) << endl;
+    }/*if(myRank == master){
         for(int i = 0; i < p; i++){
             for(int k = 0; k < j; k++){
                 cout << wMatrix[i][k] << " ";
