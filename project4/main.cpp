@@ -128,13 +128,6 @@ int main(int argc, char *argv[]){
     }
     
     MPI::COMM_WORLD.Bcast(normalizedVector, j*p, MPI_DOUBLE, master);
-    if(myRank == master || myRank == 1){
-        cout << "MyRank: " << myRank;
-        for(int i = 0; i < p*j; i++){
-            cout << " " << normalizedVector[i];
-        }
-        cout << endl;
-    }
     
     double** xMatrix = generateXMatrix(j,p);
     
@@ -167,7 +160,13 @@ int main(int argc, char *argv[]){
     //calculate yMatrix
     for(int i = 0; i < j; i++){
         for(int k = 0; k < p*j; k++){
+            if(myRank == master){
+                cout << " Normalized: " << normalizedVector[k] << " xMatrix: " << xMatrix[i][k] << " sample " << sampleMean[k];
+            }
             yMatrix[i][k] = normalizedVector[k] * (xMatrix[i][k] - sampleMean[k]);
+        }
+        if(myRank == master){
+            cout << endl;
         }
     }
     
