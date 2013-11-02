@@ -25,6 +25,10 @@ int p;
  * ***************************************************/
  double* generateRandomWeightedVector(int size){
     default_random_engine generator;
+    time_t currentTime;
+    time(&currentTime);
+    currentTime + 100*myRank;
+    generator.seed(currentTime);
     double* rOfK = new double[size];
     
     for(int i = 0; i < size; i++){
@@ -37,12 +41,18 @@ int p;
 
 
 int main(int argc, char *argv[]){
-    MPI::Init(argc, argv);
+    time_t startTime;
+	time_t endTime;   
     
+    MPI::Init(argc, argv);
+    time(&startTime);
+    	
     totalSize = MPI::COMM_WORLD.Get_size();
     myRank = MPI::COMM_WORLD.Get_rank();
     p = totalSize;
-    cout << argv[1] << endl;
+    j = atoi(argv[1]);
     
+    
+    time(&endTime)
 	MPI::Finalize();
 }
