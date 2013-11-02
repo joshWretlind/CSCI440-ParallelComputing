@@ -79,10 +79,13 @@ int main(int argc, char *argv[]){
         for(int i = 1; i < totalSize; i++){
             double* recv = new double[j];
             MPI::COMM_WORLD.Recv(recv,j,MPI_DOUBLE,i,i,my_status);
+            for(int k = 0; k < j; k++){
+                cout << "recv from " << i << " " << k << " " << recv[k];
+            }
         }
         for(int i = 0; i < p; i++){
             for(int k = 0; k < j; k++){
-                cout << wMatrix[i][j] << " ";
+                cout << wMatrix[i][k] << " ";
             }
             cout << endl;
         }
