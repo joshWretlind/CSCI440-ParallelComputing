@@ -74,7 +74,7 @@ int main(int argc, char *argv[]){
     
     if(myRank == master){
         for(int i = 0; i < p; i++){
-            for(int k = 0; k < j; j++){
+            for(int k = 0; k < j; k++){
                 cout << wMatrix[i][k] << " ";
             }
             cout << endl;
