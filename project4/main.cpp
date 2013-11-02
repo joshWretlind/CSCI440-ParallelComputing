@@ -93,7 +93,9 @@ int main(int argc, char *argv[]){
         for(int i = 0; i < (p*j); i++){
             test += normalizedVector[i];
         }
-        cout << test << endl;
+        if(abs(test - 1.001) > 0.001){
+            MPI::COMM_WORLD.Abort(1);
+        }
     }
     time(&endTime);
 	MPI::Finalize();
