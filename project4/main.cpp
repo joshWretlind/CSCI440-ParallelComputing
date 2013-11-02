@@ -77,11 +77,7 @@ int main(int argc, char *argv[]){
         wMatrix[0] = rOfK;
         MPI::Status my_status;
         for(int i = 1; i < totalSize; i++){
-            double* recv = new double[j];
-            MPI::COMM_WORLD.Recv(recv,j,MPI_DOUBLE,i,i,my_status);
-            for(int k = 0; k < j; k++){
-                cout << "recv from " << i << " " << k << " " << recv[k];
-            }
+            MPI::COMM_WORLD.Recv(wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
         }
         for(int i = 0; i < p; i++){
             for(int k = 0; k < j; k++){
