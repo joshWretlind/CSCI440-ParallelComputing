@@ -139,9 +139,9 @@ int main(int argc, char *argv[]){
     
     //Calculate all of the sample means for the x matrix we've generated
     //Store it in it's own vector for easy access.
-    double* sampleMeans = new double[j];
+    double* sampleMean = new double[j];
     for(int i = 0; i < j; i++){
-        double samplesum = 0;
+        double sampleSum = 0;
         for(int k = 0; k < j*p; k++){
             sampleSum += xMatrix[i][k];
         }
@@ -150,7 +150,7 @@ int main(int argc, char *argv[]){
     
     cout << "MyRank: " << myRank;
     for(int i = 0; i < j; i++){
-        cout << " " << sampleMeans[i];
+        cout << " " << sampleMean[i];
     }
     cout << endl;
     
