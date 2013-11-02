@@ -27,7 +27,7 @@ int p;
     default_random_engine generator;
     time_t currentTime;
     time(&currentTime);
-    currentTime + 100*myRank;
+    currentTime += 100*myRank;
     generator.seed(currentTime);
     double* rOfK = new double[size];
     
@@ -65,6 +65,7 @@ int main(int argc, char *argv[]){
         MPI::COMM_WORLD.Send(rOfK,j,MPI_DOUBLE,master,myRank);
     }
     else{
+        wMatrix[0] = rOfK;
         MPI::Status my_status;
         for(int i = 1; i < totalSize; i++){
             MPI::COMM_WORLD.Recv(wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
