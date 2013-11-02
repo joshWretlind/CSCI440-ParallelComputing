@@ -183,7 +183,7 @@ int main(int argc, char *argv[]){
         }
     }
     
-    if(myRank == 1){
+    if(myRank == master){
         for(int i = 0; i < p*j; i++){
             cout << "MyRank: " << myRank;
             for(int k = 0; k < j; k++){
