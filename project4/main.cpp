@@ -55,20 +55,19 @@ int main(int argc, char *argv[]){
     for(int i = 0; i < p; i++){
         wMatrix[i] = new double[j];
     }
-   /* for(int i = 0; i < p; i++){
+    for(int i = 0; i < p; i++){
         for(int k = 0; k < j; k++){
             wMatrix[i][j] = 0;
         }
-    } */
+    }
 
 
     double* rOfK = generateRandomWeightedVector(j);
-    if(myRank == 6 || myRank == 7){
+    
+    if(myRank != master){
         for(int i = 0; i < j; i++){
             cout <<"MyRank: " << myRank << " " << rOfK[i] << " " << totalSize << " " << j << endl;
         }
-    }
-    if(myRank != master){
         MPI::COMM_WORLD.Send(rOfK,j,MPI_DOUBLE,master,myRank);
     }
     else{
