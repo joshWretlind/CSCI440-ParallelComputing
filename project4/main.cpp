@@ -90,7 +90,7 @@ int main(int argc, char *argv[]){
         }
         
         double test = 0;
-        for(int i = 0; i < (j*j); i++){
+        for(int i = 0; i < (p*j); i++){
             test += normalizedVector[i];
         }
         cout << test << endl;
