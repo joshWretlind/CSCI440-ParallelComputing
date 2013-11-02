@@ -76,7 +76,7 @@ int main(int argc, char *argv[]){
         wMatrix[0] = rOfK;
         MPI::Status my_status;
         for(int i = 1; i < totalSize; i++){
-            MPI::COMM_WORLD.Recv(wMatrix[i]*,j,MPI_DOUBLE,i,i,my_status);
+            MPI::COMM_WORLD.Recv(*wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
         }
     }
     delete rOfK;
