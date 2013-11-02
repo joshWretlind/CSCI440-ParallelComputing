@@ -105,11 +105,17 @@ int main(int argc, char *argv[]){
         }
         
     }
+    
+    //Deallocate the memory from above
+    delete[] rOfK;
+    for(int i = 0; i < p; i++){
+        delete[] wMatrix[i];
+    }
+    delete[] wMatrix;
+    
     double* weightedVector = new double[j];
     MPI::COMM_WORLD.Scatter(normalizedVector, j, MPI_DOUBLE, weightedVector, j, MPI_DOUBLE, master); 
     
-    cout << "My Rank " << myRank << " " << weightedVector[0] << endl;
-
     time(&endTime);
 	MPI::Finalize();
 }
