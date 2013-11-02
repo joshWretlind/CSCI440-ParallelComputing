@@ -53,13 +53,16 @@ int main(int argc, char *argv[]){
     j = atoi(argv[1]);
     const int j_size = j;
     const int p_size = p;
-    double** wMatrix = new double[p_size][j_size];
+    double** wMatrix = new double*[p];
+    for(int i = 0; i < j; i++){
+        wMatrix[i] = new double[j];
+    }
 
 
     double* rOfK = generateRandomWeightedVector(j);
     
     if(myRank != master){
-        MPI::COMM_WORLD.send(rOfK,j,MPI_DOUBLE,master,myRank);
+        MPI::COMM_WORLD.Send(rOfK,j,MPI_DOUBLE,master,myRank);
     }
     else{
         MPI::Status my_status;
