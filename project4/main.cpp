@@ -65,7 +65,7 @@ int main(int argc, char *argv[]){
     else{
         wMatrix[0] = rOfK;
         MPI::Status my_status;
-        for(int i = 1; i < totalSize; i++){
+        for(int i = 1; i < p; i++){
             MPI::COMM_WORLD.Recv(wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
         }
     }
