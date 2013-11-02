@@ -53,6 +53,6 @@ int main(int argc, char *argv[]){
     j = atoi(argv[1]);
     
     
-    time(&endTime)
+    time(&endTime);
 	MPI::Finalize();
 }
