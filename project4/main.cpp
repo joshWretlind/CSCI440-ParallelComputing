@@ -137,13 +137,23 @@ int main(int argc, char *argv[]){
         cMatrix[i] = new double[p*j];
     }
     
+    //Calculate all of the sample means for the x matrix we've generated
+    //Store it in it's own vector for easy access.
+    double* sampleMeans = new double[j];
     for(int i = 0; i < j; i++){
-        cout << " MyRank: " << myRank << " ";
-        for(int k = 0; k < p*j; k++){
-            cout << xMatrix[i][k] << " ";
+        double samplesum = 0;
+        for(int k = 0; k < j*p; k++){
+            sampleSum += xMatrix[i][k];
         }
-        cout << endl;
+        sampleMean[i] = sampleSum/((double)j*p);
     }
+    
+    cout << "MyRank: " << myRank;
+    for(int i = 0; i < j; i++){
+        cout << " " << sampleMeans[i];
+    }
+    cout << endl;
+    
     
     time(&endTime);
 	MPI::Finalize();
