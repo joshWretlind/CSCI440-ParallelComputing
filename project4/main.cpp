@@ -65,16 +65,11 @@ int main(int argc, char *argv[]){
     double* rOfK = generateRandomWeightedVector(j);
     
     if(myRank != master){
-        for(int i = 0; i < j; i++){
-            cout <<"MyRank: " << myRank << " " << rOfK[i] << " " << totalSize << " " << j << endl;
-        }
         MPI::COMM_WORLD.Send(rOfK,j,MPI_DOUBLE,master,myRank);
     }
     else{
-         for(int i = 0; i < j; i++){
-            cout <<"MyRank: " << myRank << " " << rOfK[i] << " " << totalSize << " " << j << endl;
-        }
         wMatrix[0] = rOfK;
+        wMatrix[0][0] = rOfK[0]
         MPI::Status my_status;
         for(int i = 1; i < totalSize; i++){
             MPI::COMM_WORLD.Recv(wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
