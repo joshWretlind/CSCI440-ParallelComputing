@@ -99,7 +99,7 @@ int main(int argc, char *argv[]){
             test += normalizedVector[i];
         }
         //if it's outside of .1% of what we'd expect, abort
-        if(abs(1.001 - test ) > 0.001){
+        if(test > 1.001 || test < 0.999){
             cout << "Aborting, normalized vector is too far off from what it should be(more than .1%)" << endl;
             MPI::COMM_WORLD.Abort(1);
         }
