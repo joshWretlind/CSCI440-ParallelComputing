@@ -31,7 +31,7 @@ int p;
     generator.seed(currentTime);
     double* rOfK = new double[size];
     
-    for(int i = 0; i < size; i++){
+    for(int i = 1; i <= size; i++){
         uniform_real_distribution<double> distribution(((double)myRank)/((double)i),i * myRank + 1.0);
         rOfK[i] = distribution(generator);
     }
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]){
     p = totalSize;
     j = atoi(argv[1]);
     double** wMatrix = new double*[p];
-    for(int i = 0; i < j+1; i++){
+    for(int i = 0; i < j; i++){
         wMatrix[i] = new double[j];
     }
 
