@@ -43,7 +43,7 @@ int p;
 int main(int argc, char *argv[]){
     time_t startTime;
 	time_t endTime;   
-    
+    //initialize Stuff
     MPI::Init(argc, argv);
     time(&startTime);
     	
@@ -61,43 +61,55 @@ int main(int argc, char *argv[]){
         }
     }
 
-
+    //generate random numbers
     double* rOfK = generateRandomWeightedVector(j);
-    double firstValOfR = rOfK[0];
     if(myRank != master){
+        //If we aren't the master, send out values to master
         MPI::COMM_WORLD.Send(rOfK,j,MPI_DOUBLE,master,myRank);
     }
     else{
+        //add our values to wMatrix
         wMatrix[0] = rOfK;
         MPI::Status my_status;
+        //recieve values from all of the other hosts, add them to wMatrix
         for(int i = 1; i < totalSize; i++){
             MPI::COMM_WORLD.Recv(wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
         }
     }
     
+    double* normalizedVector = new double[p*j];
     if(myRank == master){
+        //find the total/S
         double totalOfWeights;
         for(int i = 0; i < p; i++){
             for(int k = 0; k < j; k++){
                 totalOfWeights += wMatrix[i][k];
             }
         }
-        double* normalizedVector = new double[p*j];
+        //create w/the normalized weight vector
         for(int i = 0; i < p; i++){
             for(int k = 0; k < j; k++){
                 normalizedVector[i*j + k] = wMatrix[i][k]/totalOfWeights;
             }
         }
         
+        //Sanity check on the normalized vector to make sure that it's valid
         double test = 0;
         for(int i = 0; i < (p*j); i++){
             test += normalizedVector[i];
         }
+        //if it's outside of .1% of what we'd expect, abort
         if(abs(test - 1.001) > 0.001){
             cout << "Aborting, normalized vector is too far off from what it should be(more than .1%)" << endl;
             MPI::COMM_WORLD.Abort(1);
         }
+        
     }
+    double* weightedVector = new double[j];
+    MPI::COMM_WORLD.Scatter(normalizedVector, j, MPI_DOUBLE, weightedVector, j, MPI_DOUBLE, master); 
+    
+    cout << "My Rank " << myRank << " " << weightedVector[0] << endl;
+
     time(&endTime);
 	MPI::Finalize();
 }
