@@ -55,11 +55,11 @@ int main(int argc, char *argv[]){
     for(int i = 0; i < p; i++){
         wMatrix[i] = new double[j];
     }
-    for(int i = 0; i < p; i++){
+   /* for(int i = 0; i < p; i++){
         for(int k = 0; k < j; k++){
             wMatrix[i][j] = 0;
         }
-    }
+    } */
 
 
     double* rOfK = generateRandomWeightedVector(j);
