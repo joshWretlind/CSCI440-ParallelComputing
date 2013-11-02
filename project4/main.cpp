@@ -77,10 +77,7 @@ int main(int argc, char *argv[]){
             MPI::COMM_WORLD.Recv(wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
         }
     }
-    delete rOfK;
-    if(myRank == master){
-        wMatrix[0][0] = firstValOfR;
-    }
+    
     if(myRank == master){
         for(int i = 0; i < p; i++){
             for(int k = 0; k < j; k++){
