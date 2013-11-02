@@ -58,9 +58,15 @@ int main(int argc, char *argv[]){
 
 
     double* rOfK = generateRandomWeightedVector(j);
-    MPI::COMM_WORLD.Send(rOfK,j,MPI_DOUBLE,master,myRank);
     
-    if(myRank == master){
+    if(myRank != master){
+        MPI::COMM_WORLD.Send(rOfK,j,MPI_DOUBLE,master,myRank);
+    }
+    else{
+        for(int i = 0; i < j; i++){
+            cout << rOfK[i] << endl;
+        }
+        wMatrix[0] = rOfK;
         MPI::Status my_status;
         for(int i = 1; i < totalSize; i++){
             MPI::COMM_WORLD.Recv(wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
