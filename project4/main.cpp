@@ -52,7 +52,7 @@ int main(int argc, char *argv[]){
     p = totalSize;
     j = atoi(argv[1]);
     double** wMatrix = new double*[p];
-    for(int i = 0; i < j; i++){
+    for(int i = 0; i < p; i++){
         wMatrix[i] = new double[j];
     }
     for(int i = 0; i < p; i++){
@@ -75,7 +75,7 @@ int main(int argc, char *argv[]){
         wMatrix[0] = rOfK;
         MPI::Status my_status;
         for(int i = 1; i < totalSize; i++){
-            MPI::COMM_WORLD.Recv(&(wMatrix[i]),j,MPI_DOUBLE,i,i,my_status);
+            MPI::COMM_WORLD.Recv(wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
         }
         for(int i = 0; i < p; i++){
             for(int k = 0; k < j; k++){
