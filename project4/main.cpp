@@ -127,7 +127,7 @@ int main(int argc, char *argv[]){
         
     }
     
-    MPI::COMM_WORLD.Bcast(normalizedVector, n*p, MPI_DOUBLE, master);
+    MPI::COMM_WORLD.Bcast(normalizedVector, j*p, MPI_DOUBLE, master);
     
     double** xMatrix = generateXMatrix(j,p);
     
@@ -160,7 +160,7 @@ int main(int argc, char *argv[]){
     //calculate yMatrix
     for(int i = 0; i < j; i++){
         for(int k = 0; k < p*j; k++){
-            yMatrix[i][k] = normalizedSum[k] * (xMatrix[i][k] - sampleMean[k]);
+            yMatrix[i][k] = normalizedVector[k] * (xMatrix[i][k] - sampleMean[k]);
         }
     }
     
@@ -172,7 +172,7 @@ int main(int argc, char *argv[]){
     //Calculate the transpose
     for(int i = 0; i < p*j; i++){
         for(int k = 0; k < j; k++){
-            yTranspose[i][k] = yMatrix[k][i]; / (1 - weightSum);
+            yTranspose[i][k] = yMatrix[k][i] / (1 - weightSum);
         }
     }
     
