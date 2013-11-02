@@ -40,7 +40,7 @@ int p;
  }
 
 double** generateXMatrix(int j, int p){
-    double** xMat = new double[j];
+    double** xMat = new double*[j];
     for(int i = 0; i < j; i++){
         xMat[i] = new double[j*p];
     }
@@ -132,7 +132,7 @@ int main(int argc, char *argv[]){
     
     double** xMatrix = generateXMatrix(j,p);
     
-    double** cMatrix = new double[j];
+    double** cMatrix = new double*[j];
     for(int i = 0; i < j; i++){
         cMatrix[i] = new double[p*j];
     }
