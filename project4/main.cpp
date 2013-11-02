@@ -81,6 +81,14 @@ int main(int argc, char *argv[]){
     }
     delete rOfK;
     
+    if(myRank == master){
+        for(int i = 0; i < p; i++){
+            for(int k = 0; k < j; k++){
+                cout << wMatrix[i][j] << " ";
+            }
+            cout << endl;
+        }
+    }
     time(&endTime);
 	MPI::Finalize();
 }
