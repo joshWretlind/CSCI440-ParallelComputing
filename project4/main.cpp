@@ -33,7 +33,7 @@ int p;
     
     for(int i = 1; i <= size; i++){
         uniform_real_distribution<double> distribution(((double)myRank + 1)/((double)i),i * (myRank + 1) + 1.0);
-        rOfK[i] = distribution(generator);
+        rOfK[i-1] = distribution(generator);
     }
     
     return rOfK;
