@@ -42,7 +42,7 @@ int main(int argc, char *argv[]){
     totalSize = MPI::COMM_WORLD.Get_size();
     myRank = MPI::COMM_WORLD.Get_rank();
     p = totalSize;
-    cout << argv[0];
+    cout << argv[1] << endl;
     
 	MPI::Finalize();
 }
