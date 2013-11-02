@@ -63,7 +63,7 @@ int main(int argc, char *argv[]){
 
 
     double* rOfK = generateRandomWeightedVector(j);
-    
+    double firstValOfR = rOfK[0];
     if(myRank != master){
         MPI::COMM_WORLD.Send(rOfK,j,MPI_DOUBLE,master,myRank);
     }
@@ -78,7 +78,9 @@ int main(int argc, char *argv[]){
         }
     }
     delete rOfK;
-    
+    if(myRank == master){
+        wMatrix[0][0] = firstValOfR;
+    }
     if(myRank == master){
         for(int i = 0; i < p; i++){
             for(int k = 0; k < j; k++){
