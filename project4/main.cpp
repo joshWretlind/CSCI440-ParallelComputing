@@ -69,9 +69,6 @@ int main(int argc, char *argv[]){
     }
     else{
         wMatrix[0] = rOfK;
-        for(int i = 0; i < j; i++){
-            cout << "My Rank " << myRank << " " << rOfK[i] << endl;
-        }
         MPI::Status my_status;
         for(int i = 1; i < totalSize; i++){
             MPI::COMM_WORLD.Recv(wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
@@ -79,12 +76,24 @@ int main(int argc, char *argv[]){
     }
     
     if(myRank == master){
+        double totalOfWeights;
         for(int i = 0; i < p; i++){
             for(int k = 0; k < j; k++){
-                cout << wMatrix[i][k] << " ";
+                totalOfWeights += wMatrix[i][k];
             }
-            cout << endl;
         }
+        double* normalizedVector = new double[j*j];
+        for(int i = 0; i < p; i++){
+            for(int k = 0; k < j; k++){
+                normalizedVector[i*j + k] = wMatrix[i][k]/totalOfWeights;
+            }
+        }
+        
+        double test = 0;
+        for(int i = 0; i < (j*j); i++){
+            test += normalizedVector[i];
+        }
+        cout << test << endl;
     }
     time(&endTime);
 	MPI::Finalize();
