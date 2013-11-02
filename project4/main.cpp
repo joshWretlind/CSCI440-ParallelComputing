@@ -176,12 +176,21 @@ int main(int argc, char *argv[]){
         }
     }
     
-    for(int i = 0; i < p*j; i++){
-        cout << "MyRank: " << myRank;
-        for(int k = 0; k < j; k++){
-            cout << " " << yTranspose[i][k];
+    if(myRank == master){
+        for(int i = 0; i < p*j; i++){
+            cout << "MyRank: " << myRank;
+            for(int k = 0; k < j; k++){
+                cout << " " << yTranspose[i][k];
+            }
+            cout << endl;
         }
-        cout << endl;
+        for(int i = 0; i < j; i++){
+            cout << "MyRank: " << myRank;
+            for(int k = 0; k < p*j; k++){
+                cout << " " << yMatrix[i][k];
+            }
+            cout << endl;
+        }
     }
     time(&endTime);
 	MPI::Finalize();
