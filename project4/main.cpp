@@ -58,7 +58,7 @@ int main(int argc, char *argv[]){
 
 
     double* rOfK = generateRandomWeightedVector(j);
-    if(myRank == 2 || myRank == 3){
+    if(myRank == 6 || myRank == 7){
         MPI::Status my_status;
         for(int i = 0; i < j; i++){
             cout <<"MyRank: " << myRank << " " << rOfK[i] << " " << totalSize << " " << j << endl;
