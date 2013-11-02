@@ -236,7 +236,7 @@ int main(int argc, char *argv[]){
 			if(k%1000 == 0){
 				cout << k << "          " << sum[0] << "      " << sum[1] << "          " << sum[2] << endl;
 			}
-			outputFile << k << "," << sum[0] << "," << sum[1] << "," << sum[2] << endl;
+			cout << k << "," << sum[0] << "," << sum[1] << "," << sum[2] << endl;
 		}
 	}
 	if(myRank == master){

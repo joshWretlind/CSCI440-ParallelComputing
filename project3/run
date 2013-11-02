@@ -1,7 +1,5 @@
 #!/bin/sh
 
-mpiexec -machinefile machines -np 100 ./part3 > output_for_8_cores.txt
-mv output.csv output8Core.csv
+mpiexec -machinefile machines -np 100 ./part3 
 
-mpiexec -machinefile machines -np 150 ./part3 > output_for_16_cores.txt
-mv output.csv output16Core.csv
+mpiexec -machinefile machines -np 150 ./part3 
