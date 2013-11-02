@@ -2,3 +2,4 @@
 
 mpiexec -machinefile machines -np 4 ./main_exe 2
  
+mpiexec -machinefile machines -np 8 ./main_exe 4
