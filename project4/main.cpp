@@ -27,7 +27,7 @@ int p;
     default_random_engine generator;
     time_t currentTime;
     time(&currentTime);
-    currentTime += 1000*myRank;
+    currentTime += 100*myRank;
     generator.seed(currentTime);
     double* rOfK = new double[size];
     
@@ -58,9 +58,9 @@ int main(int argc, char *argv[]){
 
 
     double* rOfK = generateRandomWeightedVector(j);
-    if(myRank == 3){
+    if(myRank == 2 || myRank == 3){
         for(int i = 0; i < j; i++){
-            cout << rOfK[i] << endl;
+            cout <<"MyRank: " << myRank << " " << rOfK[i] << endl;
         }
     }
     if(myRank != master){
