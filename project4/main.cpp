@@ -82,7 +82,7 @@ int main(int argc, char *argv[]){
                 totalOfWeights += wMatrix[i][k];
             }
         }
-        double* normalizedVector = new double[j*j];
+        double* normalizedVector = new double[p*j];
         for(int i = 0; i < p; i++){
             for(int k = 0; k < j; k++){
                 normalizedVector[i*j + k] = wMatrix[i][k]/totalOfWeights;
