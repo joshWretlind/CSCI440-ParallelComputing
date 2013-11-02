@@ -52,7 +52,7 @@ int main(int argc, char *argv[]){
     p = totalSize;
     j = atoi(argv[1]);
     double** wMatrix = new double*[p];
-    for(int i = 0; i < p; i++){
+    for(int i = 0; i < j; i++){
         wMatrix[i] = new double[j];
     }
     for(int i = 0; i < p; i++){
