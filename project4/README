@@ -1,0 +1,15 @@
+Author: Josh Wretlind
+
+In order to compile, run make. Note: uses C++11 standards
+./RunJ2P4 will run the code with J=2 and P=4
+./run will run the  code for all of the J and P values we need
+
+format of command:
+
+-np option forms the P value we need to run with
+Pass the J value we're calculating as the first argument to ./main_exe
+ex:
+
+mpiexec -np 4 ./main_exe 2
+This will run the code with J=2, P=4
+

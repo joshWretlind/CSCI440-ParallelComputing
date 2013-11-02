@@ -51,8 +51,6 @@ int main(int argc, char *argv[]){
     myRank = MPI::COMM_WORLD.Get_rank();
     p = totalSize;
     j = atoi(argv[1]);
-    const int j_size = j;
-    const int p_size = p;
     double** wMatrix = new double*[p];
     for(int i = 0; i < j; i++){
         wMatrix[i] = new double[j];
@@ -65,13 +63,13 @@ int main(int argc, char *argv[]){
         MPI::COMM_WORLD.Send(rOfK,j,MPI_DOUBLE,master,myRank);
     }
     else{
-        wMatrix[0] = rOfK;
+        wMatrix[0] = &rOfK;
         MPI::Status my_status;
         for(int i = 1; i < totalSize; i++){
             MPI::COMM_WORLD.Recv(wMatrix[i],j,MPI_DOUBLE,i,i,my_status);
         }
     }
-    //delete rOfK;
+    delete rOfK;
     
     if(myRank == master){
         for(int i = 0; i < p; i++){
