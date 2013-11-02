@@ -60,7 +60,7 @@ int main(int argc, char *argv[]){
     double* rOfK = generateRandomWeightedVector(j);
     if(myRank == 2 || myRank == 3){
         for(int i = 0; i < j; i++){
-            cout <<"MyRank: " << myRank << " " << rOfK[i] << endl;
+            cout <<"MyRank: " << myRank << " " << rOfK[i] << " " << totalSize << " " << j << endl;
         }
     }
     if(myRank != master){
