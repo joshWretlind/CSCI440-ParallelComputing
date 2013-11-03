@@ -229,13 +229,7 @@ int main(int argc, char *argv[]){
             }
         }
     }
-        
-    //Container for the collected pairs
-    
-    double** collectedPairs;
-    if(myRank == master){
-        
-    }
+
     if(myRank == master){
         cout << "FOR J = " << j << " AND P = " << p << "--------------------------------" << endl;
     }
