@@ -219,6 +219,7 @@ int main(int argc, char *argv[]){
     
     for(int i =0; i < j; j++){
         for(int k = 0; k < p*j; k++){
+            cout << " trying i = " << i << " k = " << k << endl;
             if(cMatrix[i][k] > max){
                 max = cMatrix[i][j];
                 maxPair[0] = max;
@@ -273,7 +274,8 @@ int main(int argc, char *argv[]){
         double overallMax[4];
         double overallMin[4];
         
-        for(int i = 0; i < p; i++){
+        collectedPairs[0] = maxPair;
+        for(int i = 1; i < p; i++){
             MPI::Status myStatus;
             MPI::COMM_WORLD.Recv(collectedPairs[i],4,MPI_DOUBLE,i,i,myStatus);
         }
@@ -298,7 +300,8 @@ int main(int argc, char *argv[]){
         double overallMax[4];
         double overallMin[4];
         
-        for(int i = 0; i < p; i++){
+        collectedPairs[0] = minPair;
+        for(int i = 1; i < p; i++){
             MPI::Status myStatus;
             MPI::COMM_WORLD.Recv(collectedPairs[i],4,MPI_DOUBLE,i,i,myStatus);
         }
