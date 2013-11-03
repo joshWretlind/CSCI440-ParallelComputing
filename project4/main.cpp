@@ -78,7 +78,7 @@ int main(int argc, char *argv[]){
     }
 
     //generate random numbers
-    double* rOfK = new double[1*j];
+    double* rOfK = new double[j];
     rOfK = generateRandomWeightedVector(j);
     if(myRank != master){
         //If we aren't the master, send out values to master
