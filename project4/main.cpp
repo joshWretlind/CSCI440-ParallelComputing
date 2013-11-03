@@ -85,7 +85,7 @@ int main(int argc, char *argv[]){
     //generate random numbers
     double* rOfK = generateRandomWeightedVector(j);
     if(myRank != master){
-        cout << "sending weights to master "
+        cout << "sending weights to master " << endl;
         //If we aren't the master, send out values to master
         MPI::COMM_WORLD.Send(rOfK,j,MPI_DOUBLE,master,myRank);
     }
