@@ -219,7 +219,6 @@ int main(int argc, char *argv[]){
     
     for(int i =0; i < j; i++){
         for(int k = 0; k < p*j; k++){
-            cout << " trying i = " << i << " k = " << k << endl;
             if(cMatrix[i][k] > max){
                 max = cMatrix[i][j];
                 maxPair[0] = max;
