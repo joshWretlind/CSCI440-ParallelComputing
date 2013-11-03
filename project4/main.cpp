@@ -210,6 +210,42 @@ int main(int argc, char *argv[]){
         }
     }
     
+    double min = cMatrix[0][0];
+    double max = cMatrix[0][0];
+    
+    //Format of this: [minimum, i_min, j_min, core]
+    double minPair[4] = {min,0,0,myRank};
+    double maxPair[4] = {max,0,0,myRank};
+    
+    for(int i =0; i < j; j++){
+        for(int k = 0; k < p*j; k++){
+            if(cMatrix[i][k] > max){
+                max = cMatrix[i][j];
+                maxPair[0] = max;
+                maxPair[1] = i;
+                maxPair[2] = k;
+            }
+            if(cMatrix[i][k] < min){
+                min = cMatrix[i][j];
+                minPair[0] = min;
+                minPair[1] = i;
+                minPair[2] = k;
+            }
+        }
+    }
+    
+    //Container for the collected pairs
+    
+    double** collectedPairs;
+    if(myRank == master){
+        collectedPairs = new double[p];
+        for(int i = 0; i < p; i++){
+            collectedPairs[i] = new double[4];
+        }
+    }
+    
+    
+    //Handle collection of the final C for the case of j=2 p=4
     if(j == 2 && p == 4){
         if(myRank != master){
             for(int i = 0; i < j; i++){
@@ -218,13 +254,9 @@ int main(int argc, char *argv[]){
         } else {
             for(int i = j; i < p*j; i++){
                 MPI::Status myStatus;
-                MPI::COMM_WORLD.Recv(cMatrix[i],p*j,MPI_DOUBLE,floor(((double)i)/j),i,myStatus);
-                for(int k = 0; k < p*j; k++){
-                    cout << cMatrix[i][k] << " ";
-                }
-                cout << endl;
+                MPI::COMM_WORLD.Recv(cMatrix[i],p*j,MPI_DOUBLE,floor(((double)i)/j),i,myStatus);                
             }
-            cout << "c[7] " << cMatrix[0][0] << endl;
+            cout << "C Matrix ------------: " << endl;
             for(int i = 0; i < j*p; i++){
                 for(int k = 0; k  < j*p; k++){
                     cout << cMatrix[i][k] << " ";
@@ -235,6 +267,49 @@ int main(int argc, char *argv[]){
         }
     }
     
+    if(myRank != master){
+        MPI::COMM_WORLD.Send(&maxPair,4,MPI_DOUBLE,master,myRank,myRank);
+    } else {
+        double overallMax[4];
+        double overallMin[4];
+        
+        for(int i = 0; i < p; i++){
+            MPI::Status myStatus;
+            MPI::COMM_WORLD.Recv(collectedPairs[i],4,MPI_DOUBLE,i,i,myStatus);
+        }
+        
+        overallMax[0] = collectedPairs[0][0];
+        
+        for(int i = 0; i < p; i++){
+            if(collectedPairs[i][0] > overallMax[0]){
+                overallMax = collectedPairs[i];
+            }
+        }
+        cout << "Cmax: " << overallMax[0] << " CoreMax: " << overallMax[3];
+        cout << " i_max: " << overallMax[1] << " j_max " << overallMax[2] << endl;
+    }
+    
+    if(myRank != master){
+        MPI::COMM_WORLD.Send(&minPair,4,MPI_DOUBLE,master,myRank,myRank);
+    } else {
+        double overallMax[4];
+        double overallMin[4];
+        
+        for(int i = 0; i < p; i++){
+            MPI::Status myStatus;
+            MPI::COMM_WORLD.Recv(collectedPairs[i],4,MPI_DOUBLE,i,i,myStatus);
+        }
+        
+        overallMin[0] = collectedPairs[0][0];
+        
+        for(int i = 0; i < p; i++){
+            if(collectedPairs[i][0] < overallMin[0]){
+                overallMin = collectedPairs[i];
+            }
+        }
+        cout << "Cmin: " << overallMax[0] << " CoreMin: " << overallMax[3];
+        cout << " i_min: " << overallMax[1] << " j_min " << overallMax[2] << endl;
+    }
     time(&endTime);
 	MPI::Finalize();
 }
