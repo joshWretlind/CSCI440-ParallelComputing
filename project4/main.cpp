@@ -270,7 +270,8 @@ int main(int argc, char *argv[]){
     if(myRank != master){
         MPI::COMM_WORLD.Send(&maxPair,4,MPI_DOUBLE,master,myRank);
     } else {
-        double overallMax[4] = maxPair;
+        double overallMax[4];
+        overallMax = maxPair;
         
         collectedPairs[0][0] = maxPair[0];
         collectedPairs[0][1] = maxPair[1];
@@ -299,7 +300,8 @@ int main(int argc, char *argv[]){
     if(myRank != master){
         MPI::COMM_WORLD.Send(&minPair,4,MPI_DOUBLE,master,myRank);
     } else {
-        double overallMin[4] = minPair;
+        double overallMin[4];
+        overallMin = minPair;
         
         collectedPairs[0][0] = minPair[0];
         collectedPairs[0][1] = minPair[1];
@@ -320,8 +322,8 @@ int main(int argc, char *argv[]){
                 overallMin[3] = collectedPairs[i][3];
             }
         }
-        cout << "Cmin: " << overallMax[0] << " CoreMin: " << overallMax[3];
-        cout << " i_min: " << overallMax[1] << " j_min " << overallMax[2] << endl;
+        cout << "Cmin: " << overallMin[0] << " CoreMin: " << overallMin[3];
+        cout << " i_min: " << overallMin[1] << " j_min " << overallMin[2] << endl;
     }
     time(&endTime);
 	MPI::Finalize();
