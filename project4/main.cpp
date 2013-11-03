@@ -62,12 +62,12 @@ double** generateXMatrix(int j, int p){
 }
 
 int main(int argc, char *argv[]){
-    time_t startTime;
-	time_t endTime;   
+    double startTime;
+	double endTime;   
     //initialize Stuff
     MPI::Init(argc, argv);
-    time(&startTime);
-    	
+    startTime = MPI::Wtime();
+    
     totalSize = MPI::COMM_WORLD.Get_size();
     myRank = MPI::COMM_WORLD.Get_rank();
     p = totalSize;
@@ -244,7 +244,7 @@ int main(int argc, char *argv[]){
         }
     }
     
-    
+    cout << "FOR J = " << j << " AND P = " << p << "--------------------------------" << endl;
     //Handle collection of the final C for the case of j=2 p=4
     if(j == 2 && p == 4){
         if(myRank != master){
@@ -331,6 +331,10 @@ int main(int argc, char *argv[]){
         cout << "Cmin: " << overallMin[0] << " CoreMin: " << overallMin[3];
         cout << " i_min: " << overallMin[1] << " j_min " << overallMin[2] << endl;
     }
-    time(&endTime);
+    endTime = MPI::WTime();
 	MPI::Finalize();
+    
+    if(j != 2 || p != 4){
+        cout << "Total Time elapsed: " << startTime-endTime << endl ; 
+    }
 }
