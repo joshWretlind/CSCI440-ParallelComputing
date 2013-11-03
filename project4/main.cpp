@@ -226,8 +226,10 @@ int main(int argc, char *argv[]){
             }
             cout << "c[7] " << cMatrix[0][0] << endl;
             for(int i = 0; i < j*p; i++){
-                cout
-                cout << cMatrix[0][i] << " ";
+                for(int k = 0; k  < j*p; k++){
+                    cout << cMatrix[i][k] << " ";
+                }
+                cout << endl;
             }
             cout << endl;
         }
