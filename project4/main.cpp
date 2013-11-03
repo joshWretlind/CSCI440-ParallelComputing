@@ -152,7 +152,7 @@ int main(int argc, char *argv[]){
         weightSum += normalizedVector[i]*normalizedVector[i];
     }
     
-    double** yMatrix = new double*[j];
+    double** yMatrix = new double*[p*j];
     for(int i = 0; i < j; i++){
         yMatrix[i] = new double[p*j];
     }
@@ -166,7 +166,7 @@ int main(int argc, char *argv[]){
     
     double** yTranspose = new double*[p*j];
     for(int i = 0; i < p*j; i++){
-        yTranspose[i] = new double[p*j];
+        yTranspose[i] = new double[j];
     }
     
     //Calculate the transpose
@@ -177,16 +177,16 @@ int main(int argc, char *argv[]){
     }
     
     if(myRank != master){
-        for(int i = 0; i < p*j; i++){
+        for(int i = 0; i < j; i++){
             cout << "Sent " <<  myRank*j*p + i << " From " << myRank << endl;
-            MPI::COMM_WORLD.Send(yTranspose[i],j,MPI_DOUBLE,master,myRank*j*p + i);
+            MPI::COMM_WORLD.Send(yMatrix[i],p*j,MPI_DOUBLE,master,myRank*j*p + i);
         }
     }
     else{
-        for(int i = j; i < p*j*(j); i++){
-            cout << " trying to recv " << j*(p-1) + i << " from " << ceil(((double)i)/p) << endl;
+        for(int i = j; i < p*j; i++){
+            cout << " trying to recv " << j*(p-1) + i << " from " << ceil(((double)i)/j*p) << endl;
             MPI::Status myStatus;
-            MPI::COMM_WORLD.Recv(yTranspose[i],j,MPI_DOUBLE,ceil(((double)i)/(j*p)),j*(p-1) + i,myStatus);
+            MPI::COMM_WORLD.Recv(yMatrix[i],p*j,MPI_DOUBLE,ceil(((double)i)/(j*p)),j*(p-1) + i,myStatus);
         }
     }
     
