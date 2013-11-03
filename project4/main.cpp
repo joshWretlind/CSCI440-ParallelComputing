@@ -331,7 +331,7 @@ int main(int argc, char *argv[]){
         cout << "Cmin: " << overallMin[0] << " CoreMin: " << overallMin[3];
         cout << " i_min: " << overallMin[1] << " j_min " << overallMin[2] << endl;
     }
-    endTime = MPI::WTime();
+    endTime = MPI::Wtime();
 	MPI::Finalize();
     
     if(j != 2 || p != 4){
