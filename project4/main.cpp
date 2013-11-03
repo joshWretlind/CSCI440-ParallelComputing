@@ -271,7 +271,10 @@ int main(int argc, char *argv[]){
         MPI::COMM_WORLD.Send(&maxPair,4,MPI_DOUBLE,master,myRank);
     } else {
         double overallMax[4];
-        overallMax = maxPair;
+        overallMax[0] = maxPair[0];
+        overallMax[1] = maxPair[1];
+        overallMax[2] = maxPair[2];
+        overallMax[3] = maxPair[3];
         
         collectedPairs[0][0] = maxPair[0];
         collectedPairs[0][1] = maxPair[1];
@@ -301,7 +304,10 @@ int main(int argc, char *argv[]){
         MPI::COMM_WORLD.Send(&minPair,4,MPI_DOUBLE,master,myRank);
     } else {
         double overallMin[4];
-        overallMin = minPair;
+        overallMin[0] = minPair[0];
+        overallMin[1] = minPair[1];
+        overallMin[2] = minPair[2];
+        overallMin[3] = minPair[3];
         
         collectedPairs[0][0] = minPair[0];
         collectedPairs[0][1] = minPair[1];
