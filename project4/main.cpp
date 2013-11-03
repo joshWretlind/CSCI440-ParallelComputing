@@ -348,4 +348,6 @@ int main(int argc, char *argv[]){
     if(j != 2 || p != 4){
         cout << "My Rank was: "  << myRank << " and I took " << endTime-startTime << " seconds" << endl ; 
     }
+    
+    delete[] rOfK;
 }
