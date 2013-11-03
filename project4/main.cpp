@@ -351,7 +351,7 @@ int main(int argc, char *argv[]){
     
     delete[] rOfK;
     cout << "deleted R" << endl;
-    cout << " deleting x" << endl;
+    cout << "deleting x" << endl;
     for(int i = 0; i < j; ++i){
         delete[] xMatrix[i];
     }
@@ -363,6 +363,12 @@ int main(int argc, char *argv[]){
     }
     delete[] yMatrix;
     cout << "deleted y" << endl;
+    cout << "deleting yTranspose" << endl;
+    for(int i = 0; i < p*j; i++){
+        delete[] yTranspose[i];
+    }
+    delete[] yTranspose[];
+    cout << "deleted yTranspose" << endl;
     /*for(int i = 0; i < p; ++i){
         delete[] wMatrix[i];
     }
