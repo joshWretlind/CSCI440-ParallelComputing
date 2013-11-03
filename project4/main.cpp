@@ -214,8 +214,8 @@ int main(int argc, char *argv[]){
     double max = cMatrix[0][0];
     
     //Format of this: [minimum, i_min, j_min, core]
-    double minPair[4] = {min,0,0,myRank};
-    double maxPair[4] = {max,0,0,myRank};
+    double minPair[4] = {min,0,0,((double)myRank)};
+    double maxPair[4] = {max,0,0,((double)myRank)};
     
     for(int i =0; i < j; j++){
         for(int k = 0; k < p*j; k++){
@@ -238,7 +238,7 @@ int main(int argc, char *argv[]){
     
     double** collectedPairs;
     if(myRank == master){
-        collectedPairs = new double[p];
+        collectedPairs = new double*[p];
         for(int i = 0; i < p; i++){
             collectedPairs[i] = new double[4];
         }
@@ -268,7 +268,7 @@ int main(int argc, char *argv[]){
     }
     
     if(myRank != master){
-        MPI::COMM_WORLD.Send(&maxPair,4,MPI_DOUBLE,master,myRank,myRank);
+        MPI::COMM_WORLD.Send(&maxPair,4,MPI_DOUBLE,master,myRank);
     } else {
         double overallMax[4];
         double overallMin[4];
@@ -282,7 +282,7 @@ int main(int argc, char *argv[]){
         
         for(int i = 0; i < p; i++){
             if(collectedPairs[i][0] > overallMax[0]){
-                overallMax = collectedPairs[i];
+                overallMax = *collectedPairs[i];
             }
         }
         cout << "Cmax: " << overallMax[0] << " CoreMax: " << overallMax[3];
@@ -290,7 +290,7 @@ int main(int argc, char *argv[]){
     }
     
     if(myRank != master){
-        MPI::COMM_WORLD.Send(&minPair,4,MPI_DOUBLE,master,myRank,myRank);
+        MPI::COMM_WORLD.Send(&minPair,4,MPI_DOUBLE,master,myRank);
     } else {
         double overallMax[4];
         double overallMin[4];
@@ -304,7 +304,7 @@ int main(int argc, char *argv[]){
         
         for(int i = 0; i < p; i++){
             if(collectedPairs[i][0] < overallMin[0]){
-                overallMin = collectedPairs[i];
+                overallMin = *collectedPairs[i];
             }
         }
         cout << "Cmin: " << overallMax[0] << " CoreMin: " << overallMax[3];
