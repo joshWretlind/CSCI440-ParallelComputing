@@ -270,10 +270,13 @@ int main(int argc, char *argv[]){
     if(myRank != master){
         MPI::COMM_WORLD.Send(&maxPair,4,MPI_DOUBLE,master,myRank);
     } else {
-        double overallMax[4];
-        double overallMin[4];
+        double overallMax[4] = maxPair;
         
-        collectedPairs[0] = maxPair;
+        collectedPairs[0][0] = maxPair[0];
+        collectedPairs[0][1] = maxPair[1];
+        collectedPairs[0][2] = maxPair[2];
+        collectedPairs[0][3] = maxPair[3];
+
         for(int i = 1; i < p; i++){
             MPI::Status myStatus;
             MPI::COMM_WORLD.Recv(collectedPairs[i],4,MPI_DOUBLE,i,i,myStatus);
@@ -296,10 +299,12 @@ int main(int argc, char *argv[]){
     if(myRank != master){
         MPI::COMM_WORLD.Send(&minPair,4,MPI_DOUBLE,master,myRank);
     } else {
-        double overallMax[4];
-        double overallMin[4];
+        double overallMin[4] = minPair;
         
-        collectedPairs[0] = minPair;
+        collectedPairs[0][0] = minPair[0];
+        collectedPairs[0][1] = minPair[1];
+        collectedPairs[0][2] = minPair[2];
+        collectedPairs[0][3] = minPair[3];
         for(int i = 1; i < p; i++){
             MPI::Status myStatus;
             MPI::COMM_WORLD.Recv(collectedPairs[i],4,MPI_DOUBLE,i,i,myStatus);
