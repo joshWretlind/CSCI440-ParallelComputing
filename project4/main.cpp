@@ -201,7 +201,7 @@ int main(int argc, char *argv[]){
     }
     
     //calculate C
-    for(int i = 0; i < j; i++){
+    for(int i = myRank*j; i < myRank*(j+1); i++){
         for(int k = 0; k < p*j; k++){
             cMatrix[i][k] = 0;
             for(int l = 0; l < p*j; l++){
@@ -212,7 +212,7 @@ int main(int argc, char *argv[]){
     
     if(j == 2 && p == 4){
         if(myRank != master){
-            for(int i = 0; i < j; i++){
+            for(int i = myRank*j; i < myRank*(j+1); i++){
                 MPI::COMM_WORLD.Send(cMatrix[i],p*j,MPI_DOUBLE,master,myRank*j + i);            
             }
         } else {
@@ -226,7 +226,7 @@ int main(int argc, char *argv[]){
                 cout << endl;
             }
             cout << "c[7] " << cMatrix[0][0] << endl;
-            for(int i = 0; i < j*p-2; i++){
+            for(int i = 0; i < j*p; i++){
                 cout << cMatrix[0][i] << " ";
             }
             cout << endl;
