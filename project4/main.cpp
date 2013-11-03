@@ -201,7 +201,7 @@ int main(int argc, char *argv[]){
     
     //calculate C
     for(int i = 0; i < j; i++){
-        for(int k = 0;; k < p*j; k++){
+        for(int k = 0; k < p*j; k++){
             cMatrix[i][k] = 0;
             for(int l = 0; l < p*j; l++){
                 cMatrix[i][k] += yMatrix[i][j] * yTranspose[j][k]
