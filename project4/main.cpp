@@ -201,11 +201,11 @@ int main(int argc, char *argv[]){
     }
     
     //calculate C
-    for(int i = myRank*j; i < myRank*(j+1); i++){
+    for(int i = 0; i < j; i++){
         for(int k = 0; k < p*j; k++){
             cMatrix[i][k] = 0;
             for(int l = 0; l < p*j; l++){
-                cMatrix[i][k] += yMatrix[i][l] * yTranspose[l][k];
+                cMatrix[i][k] += yMatrix[myRank*i + i][l] * yTranspose[l][myRank*k + k];
             }
         }
     }
