@@ -203,7 +203,7 @@ int main(int argc, char *argv[]){
             for(int l = 0; l < p*j; l++){
                 cMatrix[i][k] += normalizedVector[k] * yMatrix[myRank*j + i][l] * yTranspose[l][myRank*j + k];
             }
-            cMatrix[i][k] = cMatrix[i][k]/(1 - weightSum)
+            cMatrix[i][k] = cMatrix[i][k]/(1 - weightSum);
         }
     }
     
