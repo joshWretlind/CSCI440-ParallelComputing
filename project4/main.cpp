@@ -176,7 +176,7 @@ int main(int argc, char *argv[]){
         }
     }
     
-    for(int i = 0; i < p*j; i++)
+    for(int i = 0; i < p*j; i++){
         MPI::COMM_WORLD.Bcast(yMatrix[i], j*p, MPI_DOUBLE, master);
     }
     
