@@ -213,6 +213,7 @@ int main(int argc, char *argv[]){
     if(j == 2 && p == 4){
         if(myRank != master){
             for(int i = myRank*j; i < myRank*(j+1); i++){
+                cout << "We've at least gotten this far" << endl;
                 MPI::COMM_WORLD.Send(cMatrix[i],p*j,MPI_DOUBLE,master,myRank*j + i);            
             }
         } else {
