@@ -161,10 +161,6 @@ int main(int argc, char *argv[]){
         yMatrix[i] = new double[p*j];
     }
     
-    for(int i = 0; i < p*j; i++){
-        cout << normalizedVector[i] << " " ;
-    }
-    cout << endl;
     //calculate yMatrix
     for(int i = 0; i < j; i++){
         for(int k = 0; k < p*j; k++){
