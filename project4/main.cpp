@@ -178,7 +178,7 @@ int main(int argc, char *argv[]){
     
     if(myRank != master){
         for(int i = 0; i < j; i++){
-            cout << "Sent " <<  myRank*p + i << " From " << myRank << endl;
+            cout << "Sent " <<  myRank*j + i << " From " << myRank << endl;
             MPI::COMM_WORLD.Send(yMatrix[i],p*j,MPI_DOUBLE,master,myRank*j + i);
         }
     }
