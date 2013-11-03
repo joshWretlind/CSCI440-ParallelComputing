@@ -179,14 +179,14 @@ int main(int argc, char *argv[]){
     if(myRank != master){
         for(int i = 0; i < j; i++){
             cout << "Sent " <<  myRank*p + i << " From " << myRank << endl;
-            MPI::COMM_WORLD.Send(yMatrix[i],p*j,MPI_DOUBLE,master,myRank*p + i);
+            MPI::COMM_WORLD.Send(yMatrix[i],p*j,MPI_DOUBLE,master,myRank*j + i);
         }
     }
     else{
         for(int i = j; i < p*j; i++){
             cout << " trying to recv " << j + i << " from " << ceil(((double)i)/p) << endl;
             MPI::Status myStatus;
-            MPI::COMM_WORLD.Recv(yMatrix[i],p*j,MPI_DOUBLE,ceil(((double)i)/p),j+i,myStatus);
+            MPI::COMM_WORLD.Recv(yMatrix[i],p*j,MPI_DOUBLE,ceil(((double)i)/j),j+i,myStatus);
         }
     }
     
