@@ -132,7 +132,7 @@ int main(int argc, char *argv[]){
     double** xMatrix = generateXMatrix(j,p);
     
     double** cMatrix;
-    if(myRank == master && j == 2 && p == 4){
+    if( j == 2 && p == 4){
         cMatrix = new double*[p*j];
         for(int i = 0; i < p*j; i++){
             cMatrix[i] = new double[p*j];
