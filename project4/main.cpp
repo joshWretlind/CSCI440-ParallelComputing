@@ -196,7 +196,6 @@ int main(int argc, char *argv[]){
         }
     }
     
-    cout << "Calculating C" << endl;
     //calculate C
     for(int i = 0; i < j; i++){
         for(int k = 0; k < p*j; k++){
@@ -337,6 +336,7 @@ int main(int argc, char *argv[]){
         cout << "My Rank was: "  << myRank << " and I took " << endTime-startTime << " seconds" << endl ; 
     }
     
+    //clean up our memory
     delete[] rOfK;
     for(int i = 0; i < j; ++i){
         delete[] xMatrix[i];
