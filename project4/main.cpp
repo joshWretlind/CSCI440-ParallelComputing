@@ -164,7 +164,7 @@ int main(int argc, char *argv[]){
     //calculate yMatrix
     for(int i = 0; i < j; i++){
         for(int k = 0; k < p*j; k++){
-            yMatrix[i][k] = (sqrt(normalizedVector[k]) * (xMatrix[i][k] - sampleMean[i])) / sqrt((1 - weightSum));
+            yMatrix[i][k] = ((xMatrix[i][k] - sampleMean[i]));
         }
     }
     
@@ -201,8 +201,9 @@ int main(int argc, char *argv[]){
         for(int k = 0; k < p*j; k++){
             cMatrix[i][k] = 0;
             for(int l = 0; l < p*j; l++){
-                cMatrix[i][k] += yMatrix[myRank*j + i][l] * yTranspose[l][myRank*j + k];
+                cMatrix[i][k] += normalizedVector[k] * yMatrix[myRank*j + i][l] * yTranspose[l][myRank*j + k];
             }
+            cMatrix[i][k] = cMatrix[i][k]/(1 - weightSum)
         }
     }
     
