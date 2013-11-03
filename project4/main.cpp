@@ -32,7 +32,6 @@ int p;
     double* rOfK = new double[size];
     
     for(int i = 1; i <= size; i++){
-        cout << "myRank: "  << myRank << " i = " << i << endl;
         uniform_real_distribution<double> distribution(((double)myRank + 1)/((double)i),i * (myRank + 1) + 1.0);
         rOfK[i-1] = distribution(generator);
     }
@@ -78,13 +77,10 @@ int main(int argc, char *argv[]){
         wMatrix[i] = new double[j];
     }
 
-    cout << "Random numbers generated, j = " << j<< endl;;
     //generate random numbers
     double* rOfK = new double[1*j];
-    cout << " initialized vector for size " << j << " and rank " << myRank << endl;
     rOfK = generateRandomWeightedVector(j);
     if(myRank != master){
-        cout << "sending weights to master " << endl;
         //If we aren't the master, send out values to master
         MPI::COMM_WORLD.Send(rOfK,j,MPI_DOUBLE,master,myRank);
     }
@@ -98,7 +94,6 @@ int main(int argc, char *argv[]){
         }
     }
     
-    cout << "Generating and scattering weights " << endl;
     double* normalizedVector = new double[p*j];
     if(myRank == master){
         //find the total/S
@@ -173,7 +168,6 @@ int main(int argc, char *argv[]){
         }
     }
     
-    cout << " sending yMatrix to master" << endl;
     if(myRank != master){
         for(int i = 0; i < j; i++){
             MPI::COMM_WORLD.Send(yMatrix[i],p*j,MPI_DOUBLE,master,myRank*j + i);            
@@ -186,7 +180,6 @@ int main(int argc, char *argv[]){
         }
     }
     
-    cout << " sending yMatrix back out to hosts " << endl;
     for(int i = 0; i < p*j; i++){
         MPI::COMM_WORLD.Bcast(yMatrix[i], j*p, MPI_DOUBLE, master);
     }
@@ -221,7 +214,6 @@ int main(int argc, char *argv[]){
     double minPair[4] = {min,0,0,((double)myRank)};
     double maxPair[4] = {max,0,0,((double)myRank)};
     
-    cout << "finding min/max pairs" << endl;
     for(int i =0; i < j; i++){
         for(int k = 0; k < p*j; k++){
             if(cMatrix[i][k] > max){
@@ -346,39 +338,18 @@ int main(int argc, char *argv[]){
     }
     
     delete[] rOfK;
-    cout << "deleted R" << endl;
-    cout << "deleting x" << endl;
     for(int i = 0; i < j; ++i){
         delete[] xMatrix[i];
     }
     delete[] xMatrix;
-    cout << "deleted x" << endl;
-    cout << "deleting y" << endl;
     for(int i = 0; i < p*j; i++){
         delete[] yMatrix[i];
     }
     delete[] yMatrix;
-    cout << "deleted y" << endl;
-    cout << "deleting yTranspose" << endl;
     for(int i = 0; i < p*j; i++){
         delete[] yTranspose[i];
     }
     delete[] yTranspose;
-    cout << "deleted yTranspose" << endl;
-    /*cout << "deleting cMatrix" << endl;
-    for(int i = 0; i < j; i++){
-        delete[] cMatrix[j];
-    }
-    delete[] cMatrix; */
-    cout << "deleted c" << endl;
-    cout << "deleting normalizedVector" << endl;
     delete[] normalizedVector;
     delete[] sampleMean;
-    
-    /*cout << "deleting w" << endl;
-    for(int i = 0; i < p; ++i){
-        delete[] wMatrix[i];
-    }
-    delete[] wMatrix;
-    cout << "deleted w" << endl; */
 }
