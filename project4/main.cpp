@@ -367,7 +367,7 @@ int main(int argc, char *argv[]){
     for(int i = 0; i < p*j; i++){
         delete[] yTranspose[i];
     }
-    delete[] yTranspose[];
+    delete[] yTranspose;
     cout << "deleted yTranspose" << endl;
     /*for(int i = 0; i < p; ++i){
         delete[] wMatrix[i];
