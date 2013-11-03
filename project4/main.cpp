@@ -186,7 +186,7 @@ int main(int argc, char *argv[]){
         for(int i = j; i < p*j*(j); i++){
             cout << " trying to recv " << j*(p-1) + i << " from " << ceil(((double)i)/p) << endl;
             MPI::Status myStatus;
-            MPI::COMM_WORLD.Recv(yTranspose[i],j,MPI_DOUBLE,ceil(((double)i)/p),j*(p-1) + i,myStatus);
+            MPI::COMM_WORLD.Recv(yTranspose[i],j,MPI_DOUBLE,ceil(((double)i)/(j*p)),j*(p-1) + i,myStatus);
         }
     }
     
