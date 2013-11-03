@@ -153,7 +153,7 @@ int main(int argc, char *argv[]){
     }
     
     double** yMatrix = new double*[p*j];
-    for(int i = 0; i < j; i++){
+    for(int i = 0; i < p*j; i++){
         yMatrix[i] = new double[p*j];
     }
     
@@ -180,6 +180,7 @@ int main(int argc, char *argv[]){
         for(int i = 0; i < j; i++){
             cout << "Sent " <<  myRank*j + i << " From " << myRank << endl;
             MPI::COMM_WORLD.Send(yMatrix[i],p*j,MPI_DOUBLE,master,myRank*j + i);
+            
         }
     }
     else{
