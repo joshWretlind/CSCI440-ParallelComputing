@@ -84,7 +84,7 @@ int main(int argc, char *argv[]){
     }
     cout << "Random numbers generated" << endl;;
     //generate random numbers
-    double* rOfK = new double[j];
+    double* rOfK = new double[1*j];
     cout << " initialized vector for size " << j << " and rank " << myRank << endl;
     rOfK = generateRandomWeightedVector(j);
     if(myRank != master){
