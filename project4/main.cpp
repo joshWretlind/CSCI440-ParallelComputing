@@ -161,6 +161,7 @@ int main(int argc, char *argv[]){
         yMatrix[i] = new double[p*j];
     }
     
+    cout << 1 - weightSum << endl;
     //calculate yMatrix
     for(int i = 0; i < j; i++){
         for(int k = 0; k < p*j; k++){
