@@ -216,6 +216,7 @@ int main(int argc, char *argv[]){
                 MPI::COMM_WORLD.Send(cMatrix[i],p*j,MPI_DOUBLE,master,myRank*j + i);            
             }
         } else {
+            cout << "Address 7: " << cMatrix[7];
             for(int i = j; i < p*j; i++){
                 cout << "got here " << i << endl;
                 MPI::Status myStatus;
