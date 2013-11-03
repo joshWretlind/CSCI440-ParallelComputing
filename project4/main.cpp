@@ -356,9 +356,16 @@ int main(int argc, char *argv[]){
         delete[] xMatrix[i];
     }
     delete[] xMatrix;
-    cout << "deleted x, deleting w" << endl;
-    for(int i = 0; i < p; ++i){
+    cout << "deleted x" << endl;
+    cout << "deleting y" << endl;
+    for(int i = 0; i < p*j; i++){
+        delete[] yMatrix[i];
+    }
+    delete[] yMatrix;
+    cout << "deleted y" << endl;
+    /*for(int i = 0; i < p; ++i){
         delete[] wMatrix[i];
     }
-    delete[] wMatrix;
+    delete[] wMatrix; */
+    
 }
