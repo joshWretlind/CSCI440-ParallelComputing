@@ -216,11 +216,13 @@ int main(int argc, char *argv[]){
                 MPI::COMM_WORLD.Send(cMatrix[i],p*j,MPI_DOUBLE,master,myRank*j + i);            
             }
         } else {
-            cout << "Address 7: " << cMatrix[7];
             for(int i = j; i < p*j; i++){
-                cout << "got here " << i << endl;
                 MPI::Status myStatus;
                 MPI::COMM_WORLD.Recv(cMatrix[i],p*j,MPI_DOUBLE,floor(((double)i)/j),i,myStatus);
+                for(int k = 0; k < p*j; k++){
+                    cout << cMatrix[i][k] << " "
+                }
+                cout << endl;
             }
             cout << "C Matrix";
             for(int i = 0; i < j*p; i++){
