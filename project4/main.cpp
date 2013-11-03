@@ -203,6 +203,7 @@ int main(int argc, char *argv[]){
             for(int l = 0; l < p*j; l++){
                 cMatrix[i][k] +=  yMatrix[myRank*j + i][l] * yTranspose[l][myRank*j + k];
             }
+        }
     }
     
     double min = cMatrix[0][0];
