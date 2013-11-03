@@ -1,134 +1,134 @@
 FOR J = 2 AND P = 4--------------------------------
 C Matrix ------------: 
-0.210247 0.191564 0.04596 0.491737 0.20035 0.0114402 0.0360627 0.45682 
-0.191564 0.811039 -0.386264 0.0404797 0.182271 -0.590998 -0.395557 -0.189446 
-0.577527 1.09994 0.0686669 0.980627 0.600234 1.04343 0 -8.11206e-320 
-1.09994 4.32924 0.498134 2.90834 1.10633 2.9467 0 -9.56343e-319 
-0.20201 0.0358811 0.0703267 0.509705 0 -6.53155e-321 0.0143314 -0.17687 
-0.0358811 2.8928 1.00507 1.64249 0 -5.01674e-320 0.0108462 0.173251 
-0.634498 1.09632 0 -8.16789e-320 0.0268053 -0.011355 0.249086 1.3045 
-1.09632 3.03994 0 -4.21769e-319 0.1465 -0.495268 1.01638 3.05444 
+9.07263 5.36182 1.39671 1.41325 4.36812 -3.0984 1.59212 -5.21176 
+5.36182 11.2321 1.44929 3.5555 6.13477 9.76123 1.34745 7.67079 
+1.67229 2.85702 3.05561 -4.41193 1.4867 -1.98591 0 4.29442e-319 
+2.85702 7.57428 5.48574 -3.08822 2.53082 -0.729092 0 2.27809e-319 
+7.36257 -4.27902 3.10837 -0.947266 0 4.00243e-320 -2.04018 1.15422 
+-4.27902 41.7035 -3.95151 24.9003 0 -2.59083e-319 2.01506 4.49036 
+1.65326 -2.10939 0 4.0375e-319 -1.32835 0.516266 -0.880799 -1.92039 
+-2.10939 20.388 0 -2.63215e-318 1.35958 -1.47545 -1.88263 -3.19014 
 
-Cmax: 4.32924 CoreMax: 1 i_max: 3 j_max 1
-Cmin: -0.590998 CoreMin: 0 i_min: 1 j_min 5
+Cmax: 41.7035 CoreMax: 2 i_max: 5 j_max 1
+Cmin: -5.21176 CoreMin: 0 i_min: 0 j_min 7
 FOR J = 100 AND P = 16--------------------------------
-Cmax: 3.32431e+06 CoreMax: 7 i_max: 799 j_max 99
-Cmin: -1.0857e-315 CoreMin: 1 i_min: 194 j_min 1501
-My Rank was: 0 and I took 6.67946 seconds
-My Rank was: 5 and I took 4.93479 seconds
-My Rank was: 2 and I took 6.67915 seconds
-My Rank was: 8 and I took 4.70594 seconds
-My Rank was: 6 and I took 4.67303 seconds
-My Rank was: 14 and I took 4.64841 seconds
-My Rank was: 9 and I took 4.68678 seconds
-My Rank was: 12 and I took 4.65466 seconds
-My Rank was: 10 and I took 4.67718 seconds
-My Rank was: 13 and I took 4.6862 seconds
-My Rank was: 1 and I took 4.66887 seconds
-My Rank was: 7 and I took 4.69807 seconds
-My Rank was: 4 and I took 4.67933 seconds
-My Rank was: 11 and I took 4.67744 seconds
-My Rank was: 3 and I took 4.65237 seconds
-My Rank was: 15 and I took 4.63924 seconds
+Cmax: 1.77567e+09 CoreMax: 12 i_max: 1299 j_max 99
+Cmin: -2.01368e-314 CoreMin: 9 i_min: 996 j_min 701
+My Rank was: 5 and I took 7.29528 seconds
+My Rank was: 2 and I took 7.27472 seconds
+My Rank was: 15 and I took 4.65761 seconds
+My Rank was: 11 and I took 4.67121 seconds
+My Rank was: 10 and I took 4.6807 seconds
+My Rank was: 6 and I took 4.67135 seconds
+My Rank was: 14 and I took 4.64737 seconds
+My Rank was: 7 and I took 4.67919 seconds
+My Rank was: 12 and I took 4.72344 seconds
+My Rank was: 0 and I took 7.29555 seconds
+My Rank was: 1 and I took 4.66689 seconds
+My Rank was: 8 and I took 4.80717 seconds
+My Rank was: 13 and I took 4.64854 seconds
+My Rank was: 9 and I took 4.84117 seconds
+My Rank was: 4 and I took 4.64779 seconds
+My Rank was: 3 and I took 4.68697 seconds
 FOR J = 50 AND P = 32--------------------------------
-Cmax: 885716 CoreMax: 17 i_max: 898 j_max 48
-Cmin: -4.84266e-316 CoreMin: 4 i_min: 249 j_min 1401
-My Rank was: 21 and I took 4.35189 seconds
-My Rank was: 0 and I took 4.39907 seconds
-My Rank was: 23 and I took 4.32714 seconds
-My Rank was: 4 and I took 3.06843 seconds
-My Rank was: 16 and I took 3.01452 seconds
-My Rank was: 2 and I took 4.38132 seconds
-My Rank was: 27 and I took 3.09322 seconds
-My Rank was: 25 and I took 3.07757 seconds
-My Rank was: 12 and I took 3.01217 seconds
-My Rank was: 18 and I took 3.01669 seconds
-My Rank was: 3 and I took 3.07244 seconds
-My Rank was: 22 and I took 3.10402 seconds
-My Rank was: 13 and I took 3.02825 seconds
-My Rank was: 31 and I took 3.07333 seconds
-My Rank was: 24 and I took 3.07214 seconds
-My Rank was: 11 and I took 3.04239 seconds
-My Rank was: 6 and I took 3.08186 seconds
-My Rank was: 1 and I took 3.07927 seconds
-My Rank was: 10 and I took 3.08534 seconds
-My Rank was: 14 and I took 3.01499 seconds
-My Rank was: 28 and I took 3.07265 seconds
-My Rank was: 9 and I took 3.07638 seconds
-My Rank was: 30 and I took 3.08447 seconds
-My Rank was: 7 and I took 3.08086 seconds
-My Rank was: 20 and I took 3.41095 seconds
-My Rank was: 17 and I took 3.14315 seconds
-My Rank was: 15 and I took 3.01618 seconds
-My Rank was: 5 and I took 4.21674 seconds
-My Rank was: 26 and I took 4.00278 seconds
-My Rank was: 19 and I took 3.01947 seconds
-My Rank was: 8 and I took 3.09022 seconds
-My Rank was: 29 and I took 3.0887 seconds
+Cmax: 4.51114e+08 CoreMax: 8 i_max: 449 j_max 49
+Cmin: -1.00796e-314 CoreMin: 17 i_min: 896 j_min 751
+My Rank was: 21 and I took 4.48848 seconds
+My Rank was: 0 and I took 4.48521 seconds
+My Rank was: 15 and I took 2.986 seconds
+My Rank was: 16 and I took 2.9976 seconds
+My Rank was: 27 and I took 3.0454 seconds
+My Rank was: 10 and I took 3.05092 seconds
+My Rank was: 18 and I took 2.98547 seconds
+My Rank was: 13 and I took 2.98404 seconds
+My Rank was: 22 and I took 3.06706 seconds
+My Rank was: 31 and I took 3.04277 seconds
+My Rank was: 1 and I took 3.05317 seconds
+My Rank was: 23 and I took 3.29682 seconds
+My Rank was: 2 and I took 3.94546 seconds
+My Rank was: 12 and I took 3.03094 seconds
+My Rank was: 6 and I took 3.04953 seconds
+My Rank was: 8 and I took 3.17674 seconds
+My Rank was: 29 and I took 3.16777 seconds
+My Rank was: 26 and I took 4.15217 seconds
+My Rank was: 19 and I took 3.04527 seconds
+My Rank was: 5 and I took 3.87979 seconds
+My Rank was: 4 and I took 3.10558 seconds
+My Rank was: 25 and I took 3.10945 seconds
+My Rank was: 14 and I took 2.98316 seconds
+My Rank was: 7 and I took 3.1176 seconds
+My Rank was: 28 and I took 3.11821 seconds
+My Rank was: 11 and I took 2.99129 seconds
+My Rank was: 17 and I took 3.08648 seconds
+My Rank was: 3 and I took 3.03707 seconds
+My Rank was: 24 and I took 3.05462 seconds
+My Rank was: 9 and I took 3.07418 seconds
+My Rank was: 30 and I took 3.07552 seconds
+My Rank was: 20 and I took 3.34086 seconds
 FOR J = 25 AND P = 64--------------------------------
-Cmax: 205198 CoreMax: 9 i_max: 249 j_max 24
-Cmin: -2.57928e-316 CoreMin: 9 i_min: 249 j_min 1376
-My Rank was: 21 and I took 3.58327 seconds
-My Rank was: 6 and I took 2.96404 seconds
-My Rank was: 26 and I took 3.60671 seconds
-My Rank was: 27 and I took 2.96058 seconds
-My Rank was: 48 and I took 2.96395 seconds
-My Rank was: 1 and I took 2.96978 seconds
-My Rank was: 16 and I took 2.95583 seconds
-My Rank was: 8 and I took 2.96699 seconds
-My Rank was: 43 and I took 2.95909 seconds
-My Rank was: 37 and I took 2.96616 seconds
-My Rank was: 29 and I took 2.96812 seconds
-My Rank was: 18 and I took 2.95581 seconds
-My Rank was: 60 and I took 2.95486 seconds
-My Rank was: 3 and I took 2.96703 seconds
-My Rank was: 58 and I took 2.95519 seconds
-My Rank was: 15 and I took 2.95117 seconds
-My Rank was: 50 and I took 2.97039 seconds
-My Rank was: 22 and I took 2.96356 seconds
-My Rank was: 45 and I took 2.96639 seconds
-My Rank was: 36 and I took 2.95742 seconds
-My Rank was: 0 and I took 4.05021 seconds
-My Rank was: 57 and I took 2.95213 seconds
-My Rank was: 39 and I took 2.95314 seconds
-My Rank was: 24 and I took 2.96342 seconds
-My Rank was: 13 and I took 2.95137 seconds
-My Rank was: 34 and I took 2.95988 seconds
-My Rank was: 19 and I took 2.96622 seconds
-My Rank was: 35 and I took 2.95354 seconds
-My Rank was: 40 and I took 2.95517 seconds
-My Rank was: 56 and I took 2.95588 seconds
-My Rank was: 10 and I took 2.96201 seconds
-My Rank was: 31 and I took 2.96985 seconds
-My Rank was: 61 and I took 2.9558 seconds
-My Rank was: 55 and I took 2.95647 seconds
-My Rank was: 5 and I took 3.58371 seconds
-My Rank was: 52 and I took 2.97499 seconds
-My Rank was: 20 and I took 3.2006 seconds
-My Rank was: 41 and I took 3.19761 seconds
-My Rank was: 9 and I took 2.9671 seconds
-My Rank was: 25 and I took 2.96942 seconds
-My Rank was: 14 and I took 2.95412 seconds
-My Rank was: 51 and I took 2.96866 seconds
-My Rank was: 46 and I took 2.96255 seconds
-My Rank was: 30 and I took 2.96492 seconds
-My Rank was: 7 and I took 2.96608 seconds
-My Rank was: 4 and I took 2.96714 seconds
-My Rank was: 28 and I took 2.96724 seconds
-My Rank was: 32 and I took 2.96698 seconds
-My Rank was: 47 and I took 3.58841 seconds
-My Rank was: 49 and I took 2.96571 seconds
-My Rank was: 53 and I took 2.96083 seconds
-My Rank was: 12 and I took 2.95916 seconds
-My Rank was: 62 and I took 3.18719 seconds
-My Rank was: 33 and I took 2.9543 seconds
-My Rank was: 54 and I took 2.95405 seconds
-My Rank was: 11 and I took 3.02585 seconds
-My Rank was: 63 and I took 3.59037 seconds
-My Rank was: 44 and I took 3.53111 seconds
-My Rank was: 17 and I took 3.00393 seconds
-My Rank was: 59 and I took 3.00481 seconds
-My Rank was: 2 and I took 3.59511 seconds
-My Rank was: 38 and I took 3.00957 seconds
-My Rank was: 23 and I took 3.54305 seconds
-My Rank was: 42 and I took 4.05004 seconds
+Cmax: 1.11711e+08 CoreMax: 22 i_max: 574 j_max 24
+Cmin: -4.87794e-315 CoreMin: 27 i_min: 698 j_min 926
+My Rank was: 21 and I took 3.66869 seconds
+My Rank was: 63 and I took 3.66754 seconds
+My Rank was: 42 and I took 3.68754 seconds
+My Rank was: 2 and I took 3.68096 seconds
+My Rank was: 6 and I took 3.05052 seconds
+My Rank was: 27 and I took 3.04491 seconds
+My Rank was: 48 and I took 3.04155 seconds
+My Rank was: 1 and I took 3.04437 seconds
+My Rank was: 15 and I took 3.03817 seconds
+My Rank was: 22 and I took 3.05124 seconds
+My Rank was: 57 and I took 3.04053 seconds
+My Rank was: 0 and I took 3.69863 seconds
+My Rank was: 43 and I took 3.0502 seconds
+My Rank was: 39 and I took 3.04922 seconds
+My Rank was: 36 and I took 3.04079 seconds
+My Rank was: 19 and I took 3.04004 seconds
+My Rank was: 60 and I took 3.03879 seconds
+My Rank was: 61 and I took 3.04215 seconds
+My Rank was: 18 and I took 3.04754 seconds
+My Rank was: 23 and I took 3.67477 seconds
+My Rank was: 11 and I took 3.04472 seconds
+My Rank was: 3 and I took 3.04924 seconds
+My Rank was: 10 and I took 3.04788 seconds
+My Rank was: 40 and I took 3.04812 seconds
+My Rank was: 9 and I took 3.04063 seconds
+My Rank was: 41 and I took 3.2736 seconds
+My Rank was: 32 and I took 3.05665 seconds
+My Rank was: 45 and I took 3.05011 seconds
+My Rank was: 52 and I took 3.04487 seconds
+My Rank was: 51 and I took 3.05444 seconds
+My Rank was: 62 and I took 3.29184 seconds
+My Rank was: 24 and I took 3.05231 seconds
+My Rank was: 30 and I took 3.0534 seconds
+My Rank was: 44 and I took 3.67818 seconds
+My Rank was: 13 and I took 3.0716 seconds
+My Rank was: 55 and I took 3.04335 seconds
+My Rank was: 53 and I took 3.04945 seconds
+My Rank was: 17 and I took 3.07462 seconds
+My Rank was: 38 and I took 3.06814 seconds
+My Rank was: 34 and I took 3.04494 seconds
+My Rank was: 31 and I took 3.05568 seconds
+My Rank was: 29 and I took 3.10149 seconds
+My Rank was: 50 and I took 3.11825 seconds
+My Rank was: 20 and I took 3.28856 seconds
+My Rank was: 14 and I took 3.06785 seconds
+My Rank was: 8 and I took 3.12038 seconds
+My Rank was: 35 and I took 3.04046 seconds
+My Rank was: 16 and I took 3.04072 seconds
+My Rank was: 58 and I took 3.05216 seconds
+My Rank was: 59 and I took 3.08636 seconds
+My Rank was: 56 and I took 3.04116 seconds
+My Rank was: 37 and I took 3.04981 seconds
+My Rank was: 12 and I took 3.05583 seconds
+My Rank was: 33 and I took 3.05233 seconds
+My Rank was: 54 and I took 3.0538 seconds
+My Rank was: 7 and I took 3.05169 seconds
+My Rank was: 49 and I took 3.04797 seconds
+My Rank was: 28 and I took 3.04194 seconds
+My Rank was: 5 and I took 3.68263 seconds
+My Rank was: 26 and I took 3.66758 seconds
+My Rank was: 47 and I took 3.41069 seconds
+My Rank was: 4 and I took 3.04044 seconds
+My Rank was: 25 and I took 3.04268 seconds
+My Rank was: 46 and I took 3.04077 seconds
