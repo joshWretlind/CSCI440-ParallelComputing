@@ -1,330 +1,706 @@
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Generating and scattering weights 
+Generating and scattering weights 
+ sending yMatrix to master
+Generating and scattering weights 
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+Calculating C
+finding min/max pairs
 FOR J = 2 AND P = 4--------------------------------
+Calculating C
+finding min/max pairs
+Random numbers generated
+Generating and scattering weights 
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+Calculating C
+finding min/max pairs
 C Matrix ------------: 
-1.92697 -1.09402 1.37534 4.25159 1.92839 3.53146 1.91997 0.363552 
--1.09402 1.17677 -0.471184 -1.89509 -1.0917 -2.02817 -0.575792 0.362703 
-1.35205 3.29247 1.38493 2.53276 1.99665 1.38801 0 -7.07789e-319 
-3.29247 10.3758 4.2337 7.84878 4.85012 0.928504 0 -2.01339e-318 
-1.93705 3.55167 1.92326 0.424123 0 -5.02114e-319 -0.314904 0.232177 
-3.55167 6.56892 3.57007 0.779113 0 -9.23972e-319 -0.586364 0.452079 
-3.07279 2.20174 0 -1.02071e-318 0.805028 -0.541533 0.594051 2.01271 
-2.20174 4.23814 0 -4.08237e-319 2.6828 -1.49951 1.92789 6.08974 
+Calculating C
+finding min/max pairs
+1.30308 1.47873 1.33907 0.204829 1.31952 -0.666647 1.74678 3.42537 
+1.47873 1.91804 1.41491 0.280443 1.48114 -0.867793 1.81555 4.2276 
+1.97246 -0.223248 1.38582 -0.643033 1.65903 4.30826 0 -7.00768e-319 
+-0.223248 1.27836 0.198552 0.0769233 0.0859061 -0.012678 0 -2.54938e-320 
+1.34565 -0.650832 1.75663 3.46747 0 -5.00736e-320 0.189481 0.228785 
+-0.650832 0.581745 -0.95317 -2.06013 0 3.01133e-320 -0.0653897 -0.039992 
+2.70429 4.01338 0 -1.0288e-318 -0.248763 -0.197999 -0.0839877 -0.0506478 
+4.01338 11.3146 0 -1.90631e-318 1.75552 1.88394 1.64083 -0.138666 
 
-Cmax: 10.3758 CoreMax: 1 i_max: 3 j_max 1
-Cmin: -2.02817 CoreMin: 0 i_min: 1 j_min 5
+Cmax: 11.3146 CoreMax: 3 i_max: 7 j_max 1
+Cmin: -2.06013 CoreMin: 2 i_min: 5 j_min 3
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Generating and scattering weights 
+Generating and scattering weights 
+Random numbers generated
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Generating and scattering weights 
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
 FOR J = 100 AND P = 16--------------------------------
-Cmax: 3.31181e+06 CoreMax: 6 i_max: 696 j_max 96
-Cmin: -9.53981e-316 CoreMin: 3 i_min: 397 j_min 1301
-My Rank was: 0 and I took 7.47073 seconds
-My Rank was: 5 and I took 6.79148 seconds
-My Rank was: 4 and I took 4.64613 seconds
-My Rank was: 9 and I took 4.62035 seconds
-My Rank was: 12 and I took 4.61484 seconds
-My Rank was: 13 and I took 4.64313 seconds
-My Rank was: 14 and I took 4.6459 seconds
-My Rank was: 11 and I took 4.64174 seconds
-My Rank was: 2 and I took 5.65488 seconds
-My Rank was: 10 and I took 4.64088 seconds
-My Rank was: 6 and I took 4.62343 seconds
-My Rank was: 1 and I took 4.6409 seconds
-My Rank was: 15 and I took 4.6439 seconds
-My Rank was: 3 and I took 4.61454 seconds
-My Rank was: 8 and I took 4.66659 seconds
-My Rank was: 7 and I took 4.62075 seconds
+finding min/max pairs
+finding min/max pairs
+Cmax: 3.28873e+06 CoreMax: 5 i_max: 599 j_max 99
+Cmin: -1.10347e-315 CoreMin: 10 i_min: 1094 j_min 601
+My Rank was: 0 and I took 7.21114 seconds
+My Rank was: 5 and I took 5.90335 seconds
+My Rank was: 2 and I took 7.21095 seconds
+My Rank was: 7 and I took 4.70708 seconds
+My Rank was: 12 and I took 4.6788 seconds
+My Rank was: 15 and I took 4.65393 seconds
+My Rank was: 10 and I took 4.69469 seconds
+My Rank was: 11 and I took 4.67182 seconds
+My Rank was: 13 and I took 4.66755 seconds
+My Rank was: 14 and I took 4.68956 seconds
+My Rank was: 6 and I took 4.70539 seconds
+My Rank was: 1 and I took 4.66733 seconds
+My Rank was: 9 and I took 4.69649 seconds
+My Rank was: 3 and I took 4.67846 seconds
+My Rank was: 4 and I took 4.67422 seconds
+My Rank was: 8 and I took 4.69193 seconds
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+Random numbers generated
+Generating and scattering weights 
+Random numbers generated
+Generating and scattering weights 
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+ sending yMatrix back out to hosts 
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+Calculating C
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
 FOR J = 50 AND P = 32--------------------------------
-Cmax: 863024 CoreMax: 24 i_max: 1249 j_max 49
-Cmin: -4.88863e-316 CoreMin: 25 i_min: 1298 j_min 351
-My Rank was: 21 and I took 4.48617 seconds
-My Rank was: 0 and I took 4.55699 seconds
-My Rank was: 23 and I took 4.55567 seconds
-My Rank was: 13 and I took 3.23435 seconds
-My Rank was: 3 and I took 3.26187 seconds
-My Rank was: 2 and I took 4.54323 seconds
-My Rank was: 28 and I took 3.27656 seconds
-My Rank was: 11 and I took 3.20473 seconds
-My Rank was: 4 and I took 3.26699 seconds
-My Rank was: 9 and I took 3.26917 seconds
-My Rank was: 5 and I took 3.47548 seconds
-My Rank was: 10 and I took 3.28897 seconds
-My Rank was: 15 and I took 3.20325 seconds
-My Rank was: 29 and I took 3.28108 seconds
-My Rank was: 12 and I took 3.21188 seconds
-My Rank was: 18 and I took 3.20452 seconds
-My Rank was: 24 and I took 3.26313 seconds
-My Rank was: 7 and I took 3.29591 seconds
-My Rank was: 25 and I took 3.27933 seconds
-My Rank was: 30 and I took 3.28154 seconds
-My Rank was: 26 and I took 4.16183 seconds
-My Rank was: 31 and I took 3.29998 seconds
-My Rank was: 8 and I took 3.27065 seconds
-My Rank was: 14 and I took 3.20071 seconds
-My Rank was: 19 and I took 3.22893 seconds
-My Rank was: 16 and I took 3.22191 seconds
-My Rank was: 17 and I took 3.33275 seconds
-My Rank was: 6 and I took 3.26503 seconds
-My Rank was: 27 and I took 3.27764 seconds
-My Rank was: 1 and I took 3.26352 seconds
-My Rank was: 22 and I took 3.29064 seconds
-My Rank was: 20 and I took 3.55934 seconds
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-01:23563] *** Process received signal ***
-[ch120-01:23563] Signal: Aborted (6)
-[ch120-01:23563] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-01:23565] *** Process received signal ***
-[ch120-01:23565] Signal: Aborted (6)
-[ch120-01:23565] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-11:15279] *** Process received signal ***
-[ch120-11:15279] Signal: Aborted (6)
-[ch120-11:15279] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-06:16281] *** Process received signal ***
-[ch120-06:16281] Signal: Aborted (6)
-[ch120-06:16281] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-15:30282] *** Process received signal ***
-[ch120-15:30282] Signal: Aborted (6)
-[ch120-15:30282] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-05:11794] *** Process received signal ***
-[ch120-05:11794] Signal: Aborted (6)
-[ch120-05:11794] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-16:02871] *** Process received signal ***
-[ch120-16:02871] Signal: Aborted (6)
-[ch120-16:02871] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-04:07583] *** Process received signal ***
-[ch120-04:07583] Signal: Aborted (6)
-[ch120-04:07583] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-02:06319] *** Process received signal ***
-[ch120-02:06319] Signal: Aborted (6)
-[ch120-02:06319] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-12:04636] *** Process received signal ***
-[ch120-12:04636] Signal: Aborted (6)
-[ch120-12:04636] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-08:17327] *** Process received signal ***
-[ch120-08:17327] Signal: Aborted (6)
-[ch120-08:17327] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-19:06906] *** Process received signal ***
-[ch120-19:06906] Signal: Aborted (6)
-[ch120-19:06906] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-10:32155] *** Process received signal ***
-[ch120-10:32155] Signal: Aborted (6)
-[ch120-10:32155] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-17:01681] *** Process received signal ***
-[ch120-17:01681] Signal: Aborted (6)
-[ch120-17:01681] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-21:29843] *** Process received signal ***
-[ch120-21:29843] Signal: Aborted (6)
-[ch120-21:29843] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-01:23562] *** Process received signal ***
-[ch120-01:23562] Signal: Aborted (6)
-[ch120-01:23562] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-11:15280] *** Process received signal ***
-[ch120-11:15280] Signal: Aborted (6)
-[ch120-11:15280] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-06:16282] *** Process received signal ***
-[ch120-06:16282] Signal: Aborted (6)
-[ch120-06:16282] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-15:30284] *** Process received signal ***
-[ch120-15:30284] Signal: Aborted (6)
-[ch120-15:30284] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-05:11796] *** Process received signal ***
-[ch120-05:11796] Signal: Aborted (6)
-[ch120-05:11796] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-16:02872] *** Process received signal ***
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-09:07016] *** Process received signal ***
-[ch120-09:07016] Signal: Aborted (6)
-[ch120-09:07016] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-02:06321] *** Process received signal ***
-[ch120-02:06321] Signal: Aborted (6)
-[ch120-02:06321] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-12:04637] *** Process received signal ***
-[ch120-12:04637] Signal: Aborted (6)
-[ch120-12:04637] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-08:17328] *** Process received signal ***
-[ch120-08:17328] Signal: Aborted (6)
-[ch120-08:17328] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-19:06908] *** Process received signal ***
-[ch120-19:06908] Signal: Aborted (6)
-[ch120-19:06908] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-14:16736] *** Process received signal ***
-[ch120-14:16736] Signal: Aborted (6)
-[ch120-14:16736] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-10:32157] *** Process received signal ***
-[ch120-10:32157] Signal: Aborted (6)
-[ch120-10:32157] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-17:01682] *** Process received signal ***
-[ch120-17:01682] Signal: Aborted (6)
-[ch120-17:01682] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-22:20852] *** Process received signal ***
-[ch120-22:20852] Signal: Aborted (6)
-[ch120-22:20852] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-20:19998] *** Process received signal ***
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-21:29845] *** Process received signal ***
-[ch120-21:29845] Signal: Aborted (6)
-[ch120-21:29845] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-11:15281] *** Process received signal ***
-[ch120-11:15281] Signal: Aborted (6)
-[ch120-11:15281] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-06:16283] *** Process received signal ***
-[ch120-06:16283] Signal: Aborted (6)
-[ch120-06:16283] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-15:30283] *** Process received signal ***
-[ch120-15:30283] Signal: Aborted (6)
-[ch120-15:30283] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-05:11795] *** Process received signal ***
-[ch120-05:11795] Signal: Aborted (6)
-[ch120-05:11795] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-16:02873] *** Process received signal ***
-[ch120-16:02873] Signal: Aborted (6)
-[ch120-16:02873] Signal code:  (-6)
-[ch120-04:07585] *** Process received signal ***
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-09:07017] *** Process received signal ***
-[ch120-09:07017] Signal: Aborted (6)
-[ch120-09:07017] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-02:06320] *** Process received signal ***
-[ch120-02:06320] Signal: Aborted (6)
-[ch120-02:06320] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-12:04638] *** Process received signal ***
-[ch120-12:04638] Signal: Aborted (6)
-[ch120-12:04638] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-08:17329] *** Process received signal ***
-[ch120-08:17329] Signal: Aborted (6)
-[ch120-08:17329] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-19:06907] *** Process received signal ***
-[ch120-19:06907] Signal: Aborted (6)
-[ch120-19:06907] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-14:16737] *** Process received signal ***
-[ch120-14:16737] Signal: Aborted (6)
-[ch120-14:16737] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-10:32156] *** Process received signal ***
-[ch120-10:32156] Signal: Aborted (6)
-[ch120-10:32156] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-17:01683] *** Process received signal ***
-[ch120-17:01683] Signal: Aborted (6)
-[ch120-17:01683] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-22:20854] *** Process received signal ***
-[ch120-22:20854] Signal: Aborted (6)
-[ch120-22:20854] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-07:30387] *** Process received signal ***
-[ch120-07:30387] Signal: Aborted (6)
-[ch120-07:30387] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-21:29844] *** Process received signal ***
-[ch120-21:29844] Signal: Aborted (6)
-[ch120-21:29844] Signal code:  (-6)
-[ch120-16:02872] Signal: Aborted (6)
-[ch120-16:02872] Signal code:  (-6)
-[ch120-04:07585] Signal: Aborted (6)
-[ch120-04:07585] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-09:07018] *** Process received signal ***
-[ch120-09:07018] Signal: Aborted (6)
-[ch120-09:07018] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-14:16738] *** Process received signal ***
-[ch120-14:16738] Signal: Aborted (6)
-[ch120-14:16738] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-22:20853] *** Process received signal ***
-[ch120-22:20853] Signal: Aborted (6)
-[ch120-22:20853] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-18:28388] *** Process received signal ***
-[ch120-18:28388] Signal: Aborted (6)
-[ch120-18:28388] Signal code:  (-6)
-[ch120-07:30386] *** Process received signal ***
-[ch120-07:30386] Signal: Aborted (6)
-[ch120-07:30386] Signal code:  (-6)
-[ch120-20:19998] Signal: Aborted (6)
-[ch120-20:19998] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-23:09089] *** Process received signal ***
-[ch120-23:09089] Signal: Aborted (6)
-[ch120-23:09089] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-18:28389] *** Process received signal ***
-[ch120-18:28389] Signal: Aborted (6)
-[ch120-18:28389] Signal code:  (-6)
-[ch120-07:30388] *** Process received signal ***
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-23:09091] *** Process received signal ***
-[ch120-23:09091] Signal: Aborted (6)
-[ch120-23:09091] Signal code:  (-6)
-[ch120-04:07584] *** Process received signal ***
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-18:28390] *** Process received signal ***
-[ch120-18:28390] Signal: Aborted (6)
-[ch120-18:28390] Signal code:  (-6)
-[ch120-07:30388] Signal: Aborted (6)
-[ch120-07:30388] Signal code:  (-6)
-[ch120-20:20000] *** Process received signal ***
-[ch120-20:20000] Signal: Aborted (6)
-[ch120-20:20000] Signal code:  (-6)
-[ch120-04:07584] Signal: Aborted (6)
-[ch120-04:07584] Signal code:  (-6)
-[ch120-20:19999] *** Process received signal ***
-[ch120-20:19999] Signal: Aborted (6)
-[ch120-20:19999] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-23:09092] *** Process received signal ***
-[ch120-23:09092] Signal: Aborted (6)
-[ch120-23:09092] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-01:23564] *** Process received signal ***
-[ch120-01:23564] Signal: Aborted (6)
-[ch120-01:23564] Signal code:  (-6)
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+finding min/max pairs
+Cmax: 892316 CoreMax: 22 i_max: 1149 j_max 49
+Cmin: -5.16132e-316 CoreMin: 16 i_min: 849 j_min 801
+My Rank was: 21 and I took 3.22753 seconds
+My Rank was: 30 and I took 3.06415 seconds
+My Rank was: 0 and I took 4.34117 seconds
+My Rank was: 9 and I took 3.0641 seconds
+My Rank was: 23 and I took 4.29342 seconds
+My Rank was: 27 and I took 3.06097 seconds
+My Rank was: 3 and I took 3.05654 seconds
+My Rank was: 28 and I took 3.05327 seconds
+My Rank was: 4 and I took 3.07372 seconds
+My Rank was: 13 and I took 2.99739 seconds
+My Rank was: 5 and I took 4.30192 seconds
+My Rank was: 29 and I took 3.06628 seconds
+My Rank was: 10 and I took 3.06376 seconds
+My Rank was: 15 and I took 3.00496 seconds
+My Rank was: 12 and I took 2.99231 seconds
+My Rank was: 6 and I took 3.05976 seconds
+My Rank was: 24 and I took 3.0509 seconds
+My Rank was: 7 and I took 3.04896 seconds
+My Rank was: 25 and I took 3.06068 seconds
+My Rank was: 26 and I took 4.34063 seconds
+My Rank was: 8 and I took 3.06414 seconds
+My Rank was: 31 and I took 3.05992 seconds
+My Rank was: 14 and I took 2.9912 seconds
+My Rank was: 17 and I took 3.1156 seconds
+My Rank was: 16 and I took 3.00591 seconds
+My Rank was: 18 and I took 2.99827 seconds
+My Rank was: 11 and I took 3.00394 seconds
+My Rank was: 19 and I took 2.99736 seconds
+My Rank was: 1 and I took 3.08517 seconds
+My Rank was: 22 and I took 3.05766 seconds
+My Rank was: 2 and I took 4.3213 seconds
+My Rank was: 20 and I took 3.37887 seconds
+Random numbers generated
+Random numbers generated
+Random numbers generated
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-01:23683] *** Process received signal ***
+[ch120-01:23683] Signal: Aborted (6)
+[ch120-01:23683] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-01:23684] *** Process received signal ***
+[ch120-01:23684] Signal: Aborted (6)
+[ch120-01:23684] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-01:23682] *** Process received signal ***
+[ch120-01:23682] Signal: Aborted (6)
+[ch120-01:23682] Signal code:  (-6)
+Random numbers generated
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-04:08199] *** Process received signal ***
+[ch120-04:08199] Signal: Aborted (6)
+[ch120-04:08199] Signal code:  (-6)
+Random numbers generated
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-01:23685] *** Process received signal ***
+[ch120-01:23685] Signal: Aborted (6)
+[ch120-01:23685] Signal code:  (-6)
+Random numbers generated
+Random numbers generated
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-07:30860] *** Process received signal ***
+[ch120-07:30860] Signal: Aborted (6)
+[ch120-07:30860] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-07:30859] *** Process received signal ***
+[ch120-07:30859] Signal: Aborted (6)
+[ch120-07:30859] Signal code:  (-6)
+Random numbers generated
+Random numbers generated
+Random numbers generated
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-06:16739] *** Process received signal ***
+[ch120-06:16739] Signal: Aborted (6)
+[ch120-06:16739] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-10:32615] *** Process received signal ***
+[ch120-10:32615] Signal: Aborted (6)
+[ch120-10:32615] Signal code:  (-6)
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-02:06927] *** Process received signal ***
+[ch120-02:06927] Signal: Aborted (6)
+[ch120-02:06927] Signal code:  (-6)
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-12:05093] *** Process received signal ***
+[ch120-12:05093] Signal: Aborted (6)
+[ch120-12:05093] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-05:12402] *** Process received signal ***
+[ch120-05:12402] Signal: Aborted (6)
+[ch120-05:12402] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-19:07235] *** Process received signal ***
+[ch120-19:07235] Signal: Aborted (6)
+[ch120-19:07235] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-06:16740] *** Process received signal ***
+[ch120-06:16740] Signal: Aborted (6)
+[ch120-06:16740] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-21:30157] *** Process received signal ***
+[ch120-21:30157] Signal: Aborted (6)
+[ch120-21:30157] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-15:30745] *** Process received signal ***
+[ch120-15:30745] Signal: Aborted (6)
+[ch120-15:30745] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-20:20303] *** Process received signal ***
+[ch120-20:20303] Signal: Aborted (6)
+[ch120-20:20303] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-08:17785] *** Process received signal ***
+[ch120-08:17785] Signal: Aborted (6)
+[ch120-08:17785] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-16:03328] *** Process received signal ***
+[ch120-16:03328] Signal: Aborted (6)
+[ch120-16:03328] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-09:07474] *** Process received signal ***
+[ch120-09:07474] Signal: Aborted (6)
+[ch120-09:07474] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-11:15736] *** Process received signal ***
+[ch120-11:15736] Signal: Aborted (6)
+[ch120-11:15736] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-02:06929] *** Process received signal ***
+[ch120-02:06929] Signal: Aborted (6)
+[ch120-02:06929] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-22:21158] *** Process received signal ***
+[ch120-22:21158] Signal: Aborted (6)
+[ch120-22:21158] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-14:17191] *** Process received signal ***
+[ch120-14:17191] Signal: Aborted (6)
+[ch120-14:17191] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-06:16741] *** Process received signal ***
+[ch120-06:16741] Signal: Aborted (6)
+[ch120-06:16741] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-10:32616] *** Process received signal ***
+[ch120-10:32616] Signal: Aborted (6)
+[ch120-10:32616] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-17:04304] *** Process received signal ***
+[ch120-17:04304] Signal: Aborted (6)
+[ch120-17:04304] Signal code:  (-6)
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-12:05094] *** Process received signal ***
+[ch120-12:05094] Signal: Aborted (6)
+[ch120-12:05094] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-05:12403] *** Process received signal ***
+[ch120-05:12403] Signal: Aborted (6)
+[ch120-05:12403] Signal code:  (-6)
+[ch120-04:08198] *** Process received signal ***
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-07:30861] *** Process received signal ***
+[ch120-07:30861] Signal: Aborted (6)
+[ch120-07:30861] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-19:07236] *** Process received signal ***
+[ch120-19:07236] Signal: Aborted (6)
+[ch120-19:07236] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-18:28844] *** Process received signal ***
+[ch120-18:28844] Signal: Aborted (6)
+[ch120-18:28844] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-15:30746] *** Process received signal ***
+[ch120-15:30746] Signal: Aborted (6)
+[ch120-15:30746] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-20:20304] *** Process received signal ***
+[ch120-20:20304] Signal: Aborted (6)
+[ch120-20:20304] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-08:17786] *** Process received signal ***
+[ch120-08:17786] Signal: Aborted (6)
+[ch120-08:17786] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-16:03329] *** Process received signal ***
+[ch120-16:03329] Signal: Aborted (6)
+[ch120-16:03329] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-09:07476] *** Process received signal ***
+[ch120-09:07476] Signal: Aborted (6)
+[ch120-09:07476] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-11:15738] *** Process received signal ***
+[ch120-11:15738] Signal: Aborted (6)
+[ch120-11:15738] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-02:06928] *** Process received signal ***
+[ch120-02:06928] Signal: Aborted (6)
+[ch120-02:06928] Signal code:  (-6)
+[ch120-04:08198] Signal: Aborted (6)
+[ch120-04:08198] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-22:21159] *** Process received signal ***
+[ch120-22:21159] Signal: Aborted (6)
+[ch120-22:21159] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-14:17193] *** Process received signal ***
+[ch120-14:17193] Signal: Aborted (6)
+[ch120-14:17193] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-10:32617] *** Process received signal ***
+[ch120-10:32617] Signal: Aborted (6)
+[ch120-10:32617] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-21:30158] *** Process received signal ***
+[ch120-21:30158] Signal: Aborted (6)
+[ch120-21:30158] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-17:04305] *** Process received signal ***
+[ch120-17:04305] Signal: Aborted (6)
+[ch120-17:04305] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-23:09411] *** Process received signal ***
+[ch120-23:09411] Signal: Aborted (6)
+[ch120-23:09411] Signal code:  (-6)
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-08:17787] *** Process received signal ***
+[ch120-08:17787] Signal: Aborted (6)
+[ch120-08:17787] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-12:05095] *** Process received signal ***
+[ch120-12:05095] Signal: Aborted (6)
+[ch120-12:05095] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-05:12404] *** Process received signal ***
+[ch120-05:12404] Signal: Aborted (6)
+[ch120-05:12404] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-19:07237] *** Process received signal ***
+[ch120-19:07237] Signal: Aborted (6)
+[ch120-19:07237] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-18:28845] *** Process received signal ***
+[ch120-18:28845] Signal: Aborted (6)
+[ch120-18:28845] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-21:30159] *** Process received signal ***
+[ch120-21:30159] Signal: Aborted (6)
+[ch120-21:30159] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-15:30747] *** Process received signal ***
+[ch120-15:30747] Signal: Aborted (6)
+[ch120-15:30747] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-20:20305] *** Process received signal ***
+[ch120-20:20305] Signal: Aborted (6)
+[ch120-20:20305] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-23:09410] *** Process received signal ***
+[ch120-23:09410] Signal: Aborted (6)
+[ch120-23:09410] Signal code:  (-6)
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+Random numbers generated
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-16:03330] *** Process received signal ***
+[ch120-16:03330] Signal: Aborted (6)
+[ch120-16:03330] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-09:07475] *** Process received signal ***
+[ch120-09:07475] Signal: Aborted (6)
+[ch120-09:07475] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-11:15737] *** Process received signal ***
+[ch120-11:15737] Signal: Aborted (6)
+[ch120-11:15737] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-22:21157] *** Process received signal ***
+[ch120-22:21157] Signal: Aborted (6)
+[ch120-22:21157] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-14:17192] *** Process received signal ***
+[ch120-14:17192] Signal: Aborted (6)
+[ch120-14:17192] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-17:04306] *** Process received signal ***
+[ch120-17:04306] Signal: Aborted (6)
+[ch120-17:04306] Signal code:  (-6)
+Random numbers generated
+Random numbers generated
+Random numbers generated
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-04:08200] *** Process received signal ***
+[ch120-04:08200] Signal: Aborted (6)
+[ch120-04:08200] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-18:28846] *** Process received signal ***
+[ch120-18:28846] Signal: Aborted (6)
+[ch120-18:28846] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-23:09412] *** Process received signal ***
+[ch120-23:09412] Signal: Aborted (6)
+[ch120-23:09412] Signal code:  (-6)
 mpiexec: killing job...
 
 --------------------------------------------------------------------------
-mpiexec noticed that process rank 0 with PID 23562 on node ch120-01 exited on signal 0 (Unknown signal 0).
+mpiexec noticed that process rank 0 with PID 23682 on node ch120-01 exited on signal 0 (Unknown signal 0).
 --------------------------------------------------------------------------
 mpiexec: clean termination accomplished
 
