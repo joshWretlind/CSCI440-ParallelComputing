@@ -243,8 +243,10 @@ int main(int argc, char *argv[]){
             collectedPairs[i] = new double[4];
         }
     }
+    if(myRank == master){
+        cout << "FOR J = " << j << " AND P = " << p << "--------------------------------" << endl;
+    }
     
-    cout << "FOR J = " << j << " AND P = " << p << "--------------------------------" << endl;
     //Handle collection of the final C for the case of j=2 p=4
     if(j == 2 && p == 4){
         if(myRank != master){
@@ -335,6 +337,6 @@ int main(int argc, char *argv[]){
 	MPI::Finalize();
     
     if(j != 2 || p != 4){
-        cout << "Total Time elapsed: " << startTime-endTime << endl ; 
+        cout << "My Rank was: "  << myRank << " and I took " << endTime-startTime << " seconds" << endl ; 
     }
 }
