@@ -205,7 +205,7 @@ int main(int argc, char *argv[]){
         for(int k = 0; k < p*j; k++){
             cMatrix[i][k] = 0;
             for(int l = 0; l < p*j; l++){
-                cMatrix[i][k] += yMatrix[myRank*i + i][l] * yTranspose[l][myRank*k + k];
+                cMatrix[i][k] += yMatrix[myRank*j + i][l] * yTranspose[l][myRank*j + k];
             }
         }
     }
