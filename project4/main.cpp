@@ -234,10 +234,7 @@ int main(int argc, char *argv[]){
     
     double** collectedPairs;
     if(myRank == master){
-        collectedPairs = new double*[p];
-        for(int i = 0; i < p; i++){
-            collectedPairs[i] = new double[4];
-        }
+        
     }
     if(myRank == master){
         cout << "FOR J = " << j << " AND P = " << p << "--------------------------------" << endl;
@@ -269,6 +266,12 @@ int main(int argc, char *argv[]){
         MPI::COMM_WORLD.Send(&maxPair,4,MPI_DOUBLE,master,myRank);
     } else {
         double overallMax[4];
+        
+        double** collectedPairs = new double*[p];
+        for(int i = 0; i < p; i++){
+            collectedPairs[i] = new double[4];
+        }
+        
         overallMax[0] = maxPair[0];
         overallMax[1] = maxPair[1];
         overallMax[2] = maxPair[2];
@@ -296,11 +299,21 @@ int main(int argc, char *argv[]){
         }
         cout << "Cmax: " << overallMax[0] << " CoreMax: " << overallMax[3];
         cout << " i_max: " << overallMax[1] << " j_max " << overallMax[2] << endl;
+        for(int i = 0; i < p; i++){
+            delete[] collectedPairs[i];
+        }
+        delete[] collectedPairs;
     }
     
     if(myRank != master){
         MPI::COMM_WORLD.Send(&minPair,4,MPI_DOUBLE,master,myRank);
     } else {
+        double** collectedPairs = new double*[p];
+        
+        for(int i = 0; i < p; i++){
+            collectedPairs[i] = new double[4];
+        }
+        
         double overallMin[4];
         overallMin[0] = minPair[0];
         overallMin[1] = minPair[1];
@@ -328,6 +341,11 @@ int main(int argc, char *argv[]){
         }
         cout << "Cmin: " << overallMin[0] << " CoreMin: " << overallMin[3];
         cout << " i_min: " << overallMin[1] << " j_min " << overallMin[2] << endl;
+        
+        for(int i = 0; i < p; i++){
+            delete[] collectedPairs[i];
+        }
+        delete[] collectedPairs;
     }
     endTime = MPI::Wtime();
 	MPI::Finalize();
