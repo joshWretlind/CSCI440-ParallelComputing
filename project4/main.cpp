@@ -222,13 +222,13 @@ int main(int argc, char *argv[]){
             if(cMatrix[i][k] > max){
                 max = cMatrix[i][j];
                 maxPair[0] = max;
-                maxPair[1] = i;
+                maxPair[1] = myRank*j + i;
                 maxPair[2] = k;
             }
             if(cMatrix[i][k] < min){
                 min = cMatrix[i][j];
                 minPair[0] = min;
-                minPair[1] = i;
+                minPair[1] = myRank*j + i;
                 minPair[2] = k;
             }
         }
