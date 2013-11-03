@@ -77,11 +77,7 @@ int main(int argc, char *argv[]){
     for(int i = 0; i < p; i++){
         wMatrix[i] = new double[j];
     }
-    for(int i = 0; i < p; i++){
-        for(int k = 0; k < j; k++){
-            wMatrix[i][j] = 0;
-        }
-    }
+
     cout << "Random numbers generated, j = " << j<< endl;;
     //generate random numbers
     double* rOfK = new double[1*j];
@@ -369,9 +365,10 @@ int main(int argc, char *argv[]){
     }
     delete[] yTranspose;
     cout << "deleted yTranspose" << endl;
-    /*for(int i = 0; i < p; ++i){
+    cout << "deleting w"
+    for(int i = 0; i < p; ++i){
         delete[] wMatrix[i];
     }
-    delete[] wMatrix; */
-    
+    delete[] wMatrix;
+    cout << "deleted w" << endl;
 }
