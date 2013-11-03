@@ -131,13 +131,14 @@ int main(int argc, char *argv[]){
     
     double** xMatrix = generateXMatrix(j,p);
     
+    double** cMatrix;
     if(myRank == master && j == 2 && p == 4){
-        double** cMatrix = new double*[p*j];
+        cMatrix = new double*[p*j];
         for(int i = 0; i < p*j; i++){
             cMatrix[i] = new double[p*j];
         }
     } else {
-        double** cMatrix = new double*[j];
+        cMatrix = new double*[j];
         for(int i = 0; i < j; i++){
             cMatrix[i] = new double[p*j];
         }
@@ -219,7 +220,7 @@ int main(int argc, char *argv[]){
                 MPI::Status myStatus;
                 MPI::COMM_WORLD.Recv(cMatrix[i],p*j,MPI_DOUBLE,floor(((double)i)/j),i,myStatus);
             }
-            cout << "C Matrix"
+            cout << "C Matrix";
             for(int i = 0; i < j*p; i++){
                 for(int k = 0; k < j*p; i++){
                     cout << cMatrix[i][k] << " ";
