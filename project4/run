@@ -2,4 +2,9 @@
 
 mpiexec -machinefile machines -np 4 ./main_exe 2
  
-mpiexec -machinefile machines -np 8 ./main_exe 4
+mpiexec -machinefile machines -np 16 ./main_exe 100
+
+mpiexec -machinefile machines -np 32 ./main_exe 50
+
+mpiexec -machinefile machines -np 64 ./main_exe 25
+

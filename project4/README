@@ -13,3 +13,4 @@ ex:
 mpiexec -np 4 ./main_exe 2
 This will run the code with J=2, P=4
 
+The i_min, i_max, j_min, j_max assume that the first index of the array is 0
