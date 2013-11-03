@@ -131,9 +131,16 @@ int main(int argc, char *argv[]){
     
     double** xMatrix = generateXMatrix(j,p);
     
-    double** cMatrix = new double*[j];
-    for(int i = 0; i < j; i++){
-        cMatrix[i] = new double[p*j];
+    if(myRank == master && j == 2 && p == 4){
+        double** cMatrix = new double*[p*j];
+        for(int i = 0; i < p*j; i++){
+            cMatrix[i] = new double[p*j];
+        }
+    } else {
+        double** cMatrix = new double*[j];
+        for(int i = 0; i < j; i++){
+            cMatrix[i] = new double[p*j];
+        }
     }
     
     //Calculate all of the sample means for the x matrix we've generated
@@ -160,7 +167,7 @@ int main(int argc, char *argv[]){
     //calculate yMatrix
     for(int i = 0; i < j; i++){
         for(int k = 0; k < p*j; k++){
-            yMatrix[i][k] = normalizedVector[k] * (xMatrix[i][k] - sampleMean[i]);
+            yMatrix[i][k] = (normalizedVector[k] * (xMatrix[i][k] - sampleMean[i])) / sqrt((1 - weightSum));
         }
     }
     
@@ -188,19 +195,40 @@ int main(int argc, char *argv[]){
     //Calculate the transpose
     for(int i = 0; i < p*j; i++){
         for(int k = 0; k < p*j; k++){
-            yTranspose[i][k] = yMatrix[k][i]; // (1 - weightSum);
+            yTranspose[i][k] = yMatrix[k][i];
         }
     }
-    cout << "-----------------" << endl;
-    for(int k = 0; k < j*p; k++){
-        cout << yMatrix[0][k] << " ";
+    
+    //calculate C
+    for(int i = 0; i < j; i++){
+        for(int k = 0;; k < p*j; k++){
+            cMatrix[i][k] = 0;
+            for(int l = 0; l < p*j; l++){
+                cMatrix[i][k] += yMatrix[i][j] * yTranspose[j][k]
+            }
+        }
     }
-    cout << endl;
-    cout << "-------Transpose---------" << endl;
-    for(int k = 0; k < j*p; k++){
-        cout << yTranspose[k][0] << " ";
+    
+    if(j == 2 && p == 4){
+        if(myRank != master){
+            for(int i = 0; i < j; i++){
+                MPI::COMM_WORLD.Send(cMatrix[i],p*j,MPI_DOUBLE,master,myRank*j + i);            
+            }
+        } else {
+            for(int i = j; i < p*j; i++){
+                MPI::Status myStatus;
+                MPI::COMM_WORLD.Recv(cMatrix[i],p*j,MPI_DOUBLE,floor(((double)i)/j),i,myStatus);
+            }
+            cout << "C Matrix"
+            for(int i = 0; i < j*p; i++){
+                for(int k = 0; k < j*p; i++){
+                    cout << cMatrix[i][k] << " ";
+                }
+                cout << endl;
+            }
+        }
     }
-    cout << endl;
+    
     time(&endTime);
 	MPI::Finalize();
 }
