@@ -350,4 +350,8 @@ int main(int argc, char *argv[]){
     }
     
     delete[] rOfK;
+    for(int i = 0; i < j; i++){
+        delete[] wMatrix[i];
+    }
+    delete[] wMatrix;
 }
