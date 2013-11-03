@@ -160,46 +160,35 @@ int main(int argc, char *argv[]){
     //calculate yMatrix
     for(int i = 0; i < j; i++){
         for(int k = 0; k < p*j; k++){
-            if(myRank == master){
-                cout << " Normalized: " << normalizedVector[k] << " xMatrix: " << xMatrix[i][k] << " sample " << sampleMean[k];
-            }
             yMatrix[i][k] = normalizedVector[k] * (xMatrix[i][k] - sampleMean[i]);
-        }
-        if(myRank == master){
-            cout << endl;
         }
     }
     
     double** yTranspose = new double*[p*j];
     for(int i = 0; i < p*j; i++){
-        yTranspose[i] = new double[j];
+        yTranspose[i] = new double[p*j];
     }
     
     //Calculate the transpose
     for(int i = 0; i < p*j; i++){
         for(int k = 0; k < j; k++){
-            yTranspose[i][k] = yMatrix[k][i]; /// (1 - weightSum);
+            yTranspose[i][k] = yMatrix[k][i] / (1 - weightSum);
         }
     }
     
-    if(myRank == master){
+    if(myRank != master){
         for(int i = 0; i < p*j; i++){
-            cout << "MyRank: " << myRank;
-            for(int k = 0; k < j; k++){
-                cout << " " << yTranspose[i][k];
-            }
-            cout << endl;
+            MPI::COMM_WORLD.Send(yTranspose[i],j,MPI_DOUBLE,master,myRank*j*p + i);
         }
-        cout << "-----------------------------------------" << endl;
-        for(int i = 0; i < j; i++){
-            cout << "MyRank: " << myRank;
-            for(int k = 0; k < p*j; k++){
-                cout << " " << yMatrix[i][k];
-            }
-            cout << endl;
-        }
-        cout << "---------------------------------------------" << endl;
     }
+    else{
+        for(int i = j; i < p*j; i++){
+            MPI::Status myStatus;
+            MPI::COMM_WORLD.Recv(yTranspose[i],j,MPI_DOUBLE,floor(i/p),i*j*p + i,myStatus);
+        }
+    }
+    
+    
     time(&endTime);
 	MPI::Finalize();
 }
