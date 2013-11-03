@@ -32,6 +32,7 @@ int p;
     double* rOfK = new double[size];
     
     for(int i = 1; i <= size; i++){
+        cout << "myRank: "  << myRank << " i = " << i << endl;
         uniform_real_distribution<double> distribution(((double)myRank + 1)/((double)i),i * (myRank + 1) + 1.0);
         rOfK[i-1] = distribution(generator);
     }
