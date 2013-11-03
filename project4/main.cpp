@@ -178,11 +178,13 @@ int main(int argc, char *argv[]){
     
     if(myRank != master){
         for(int i = 0; i < p*j; i++){
+            cout << "Sent " <<  myRank*j*p + i << " From " << myRank << endl;
             MPI::COMM_WORLD.Send(yTranspose[i],j,MPI_DOUBLE,master,myRank*j*p + i);
         }
     }
     else{
         for(int i = j; i < p*j; i++){
+            cout << " trying to recv " << i*j*p + i << " from " << floor(i/p) << endl;
             MPI::Status myStatus;
             MPI::COMM_WORLD.Recv(yTranspose[i],j,MPI_DOUBLE,floor(i/p),i*j*p + i,myStatus);
         }
