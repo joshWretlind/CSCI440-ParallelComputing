@@ -191,15 +191,10 @@ int main(int argc, char *argv[]){
             yTranspose[i][k] = yMatrix[k][i] / (1 - weightSum);
         }
     }
-    if(myRank == master){
-        for(int i = 0; i < j*p; i++){
-            cout << "-------------" << endl;
             for(int k = 0; k < j*p; k++){
-                cout << yMatrix[i][k] << " ";
+                cout << yMatrix[0][k] << " ";
             }
             cout << endl;
-        }
-    }
     
     time(&endTime);
 	MPI::Finalize();
