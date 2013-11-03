@@ -220,20 +220,20 @@ int main(int argc, char *argv[]){
     for(int i =0; i < j; i++){
         for(int k = 0; k < p*j; k++){
             if(cMatrix[i][k] > max){
-                max = cMatrix[i][j];
+                max = cMatrix[i][k];
                 maxPair[0] = max;
                 maxPair[1] = myRank*j + i;
                 maxPair[2] = k;
             }
             if(cMatrix[i][k] < min){
-                min = cMatrix[i][j];
+                min = cMatrix[i][k];
                 minPair[0] = min;
                 minPair[1] = myRank*j + i;
                 minPair[2] = k;
             }
         }
     }
-    
+        
     //Container for the collected pairs
     
     double** collectedPairs;
