@@ -178,7 +178,7 @@ int main(int argc, char *argv[]){
     
     if(myRank != master){
         for(int i = 0; i < j; i++){
-            cout << "Sent " <<  myRank*j*p + i << " From " << myRank << endl;
+            cout << "Sent " <<  myRank*p + i << " From " << myRank << endl;
             MPI::COMM_WORLD.Send(yMatrix[i],p*j,MPI_DOUBLE,master,myRank*p + i);
         }
     }
@@ -186,7 +186,7 @@ int main(int argc, char *argv[]){
         for(int i = j; i < p*j; i++){
             cout << " trying to recv " << j*(p-1) + i << " from " << ceil(((double)i)/p) << endl;
             MPI::Status myStatus;
-            MPI::COMM_WORLD.Recv(yMatrix[i],p*j,MPI_DOUBLE,ceil(((double)i)/(p)),j*(p-1) + i,myStatus);
+            MPI::COMM_WORLD.Recv(yMatrix[i],p*j,MPI_DOUBLE,l(((double)i)/p),j*(p-1) + i,myStatus);
         }
     }
     
