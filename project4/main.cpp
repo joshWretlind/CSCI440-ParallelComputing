@@ -188,14 +188,19 @@ int main(int argc, char *argv[]){
     //Calculate the transpose
     for(int i = 0; i < p*j; i++){
         for(int k = 0; k < p*j; k++){
-            yTranspose[i][k] = yMatrix[k][i] / (1 - weightSum);
+            yTranspose[i][k] = yMatrix[k][i]; // (1 - weightSum);
         }
     }
-            for(int k = 0; k < j*p; k++){
-                cout << yMatrix[0][k] << " ";
-            }
-            cout << endl;
-    
+    cout << "-----------------" << endl;
+    for(int k = 0; k < j*p; k++){
+        cout << yMatrix[0][k] << " ";
+    }
+    cout << endl;
+    cout << "-------Transpose---------" << endl;
+    for(int k = 0; k < j*p; k++){
+        cout << yTranspose[k][0] << " ";
+    }
+    cout << endl;
     time(&endTime);
 	MPI::Finalize();
 }
