@@ -81,7 +81,7 @@ int main(int argc, char *argv[]){
             wMatrix[i][j] = 0;
         }
     }
-
+    cout << "Random numbers generated" << endl;;
     //generate random numbers
     double* rOfK = generateRandomWeightedVector(j);
     if(myRank != master){
@@ -98,6 +98,7 @@ int main(int argc, char *argv[]){
         }
     }
     
+    cout << "Generating and scattering weights " << endl;
     double* normalizedVector = new double[p*j];
     if(myRank == master){
         //find the total/S
@@ -172,6 +173,7 @@ int main(int argc, char *argv[]){
         }
     }
     
+    cout << " sending yMatrix to master" << endl;
     if(myRank != master){
         for(int i = 0; i < j; i++){
             MPI::COMM_WORLD.Send(yMatrix[i],p*j,MPI_DOUBLE,master,myRank*j + i);            
@@ -184,6 +186,7 @@ int main(int argc, char *argv[]){
         }
     }
     
+    cout << " sending yMatrix back out to hosts " << endl;
     for(int i = 0; i < p*j; i++){
         MPI::COMM_WORLD.Bcast(yMatrix[i], j*p, MPI_DOUBLE, master);
     }
@@ -200,6 +203,7 @@ int main(int argc, char *argv[]){
         }
     }
     
+    cout << "Calculating C" << endl;
     //calculate C
     for(int i = 0; i < j; i++){
         for(int k = 0; k < p*j; k++){
@@ -217,6 +221,7 @@ int main(int argc, char *argv[]){
     double minPair[4] = {min,0,0,((double)myRank)};
     double maxPair[4] = {max,0,0,((double)myRank)};
     
+    cout << "finding min/max pairs" << endl;
     for(int i =0; i < j; i++){
         for(int k = 0; k < p*j; k++){
             if(cMatrix[i][k] > max){
