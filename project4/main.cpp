@@ -217,6 +217,7 @@ int main(int argc, char *argv[]){
             }
         } else {
             for(int i = j; i < p*j; i++){
+                cout << "got here" << endl;
                 MPI::Status myStatus;
                 MPI::COMM_WORLD.Recv(cMatrix[i],p*j,MPI_DOUBLE,floor(((double)i)/j),i,myStatus);
             }
