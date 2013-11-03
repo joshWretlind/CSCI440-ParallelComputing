@@ -365,11 +365,11 @@ int main(int argc, char *argv[]){
     }
     delete[] yTranspose;
     cout << "deleted yTranspose" << endl;
-    cout << "deleting cMatrix" << endl;
+    /*cout << "deleting cMatrix" << endl;
     for(int i = 0; i < j; i++){
         delete[] cMatrix[j];
     }
-    delete[] cMatrix;
+    delete[] cMatrix; */
     cout << "deleted c" << endl;
     cout << "deleting normalizedVector" << endl;
     delete[] normalizedVector;
