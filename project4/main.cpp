@@ -282,7 +282,7 @@ int main(int argc, char *argv[]){
         
         for(int i = 0; i < p; i++){
             if(collectedPairs[i][0] > overallMax[0]){
-                overallMax = *collectedPairs[i];
+                overallMax = &collectedPairs[i];
             }
         }
         cout << "Cmax: " << overallMax[0] << " CoreMax: " << overallMax[3];
@@ -304,7 +304,7 @@ int main(int argc, char *argv[]){
         
         for(int i = 0; i < p; i++){
             if(collectedPairs[i][0] < overallMin[0]){
-                overallMin = *collectedPairs[i];
+                overallMin = &collectedPairs[i];
             }
         }
         cout << "Cmin: " << overallMax[0] << " CoreMin: " << overallMax[3];
