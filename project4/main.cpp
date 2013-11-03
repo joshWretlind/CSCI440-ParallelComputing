@@ -82,7 +82,7 @@ int main(int argc, char *argv[]){
             wMatrix[i][j] = 0;
         }
     }
-    cout << "Random numbers generated" << endl;;
+    cout << "Random numbers generated, j = " << j<< endl;;
     //generate random numbers
     double* rOfK = new double[1*j];
     cout << " initialized vector for size " << j << " and rank " << myRank << endl;
