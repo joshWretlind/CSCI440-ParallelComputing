@@ -217,7 +217,7 @@ int main(int argc, char *argv[]){
     double minPair[4] = {min,0,0,((double)myRank)};
     double maxPair[4] = {max,0,0,((double)myRank)};
     
-    for(int i =0; i < j; j++){
+    for(int i =0; i < j; i++){
         for(int k = 0; k < p*j; k++){
             cout << " trying i = " << i << " k = " << k << endl;
             if(cMatrix[i][k] > max){
