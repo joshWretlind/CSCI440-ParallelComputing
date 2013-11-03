@@ -184,9 +184,9 @@ int main(int argc, char *argv[]){
     }
     else{
         for(int i = j; i < p*j; i++){
-            cout << " trying to recv " << j*(p-1) + i << " from " << ceil(((double)i)/p) << endl;
+            cout << " trying to recv " << (p-1) + i << " from " << ceil(((double)i)/p) << endl;
             MPI::Status myStatus;
-            MPI::COMM_WORLD.Recv(yMatrix[i],p*j,MPI_DOUBLE,ceil(((double)i)/p),j*(p-1) + i,myStatus);
+            MPI::COMM_WORLD.Recv(yMatrix[i],p*j,MPI_DOUBLE,ceil(((double)i)/p),(p-1) + i,myStatus);
         }
     }
     
