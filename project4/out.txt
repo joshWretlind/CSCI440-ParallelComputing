@@ -1,4 +1,4 @@
-Random numbers generated
+Random numbers generated, j = 2
  initialized vector for size 2 and rank 0
 myRank: 0 i = 1
 myRank: 0 i = 2
@@ -9,153 +9,710 @@ Calculating C
 finding min/max pairs
 FOR J = 2 AND P = 4--------------------------------
 C Matrix ------------: 
-0.580056 0.508859 0.427043 0.630562 0.561164 -0.266212 0.398708 -0.492667 
-0.508859 2.17095 0.502558 0.285345 0.455854 -0.841435 0.843458 -0.715979 
-1.08372 0.467383 0.623814 1.26146 1.14409 0.958821 0 -4.05455e-319 
-0.467383 1.30283 0.747881 -0.567042 0.14505 -0.584435 0 -4.39294e-319 
-0.683292 0.0796037 0.56236 -0.335208 0 -3.2717e-320 0.0375771 0.435857 
-0.0796037 4.3399 1.3973 3.56116 0 1.00938e-320 1.1757 2.09085 
-1.43648 1.00383 0 -4.59066e-319 0.518152 0.671602 0.266631 0.323318 
-1.00383 4.02234 0 4.83201e-319 0.902376 1.874 0.762977 0.929403 
+0.358052 -0.510366 -0.0306481 0.143208 0.141191 0.049142 -0.0110792 -0.489718 
+-0.510366 2.90025 -0.317593 0.298718 -0.354523 -0.0466131 -0.425381 2.73399 
+0.43884 0.217522 0.1858 0.0593931 0.429678 -0.0333038 0 7.90357e-320 
+0.217522 1.22316 0.516346 0.103518 0.137953 2.14672 0 -2.67438e-319 
+0.312989 0.0555474 0.163817 0.379255 0 3.83889e-321 -0.0102404 -0.112535 
+0.0555474 0.188923 0.0559344 0.258384 0 -3.98217e-321 0.121025 0.224474 
+0.430564 -0.202383 0 1.182e-319 -0.239204 0.854794 0.0913238 0.0100795 
+-0.202383 8.7415 0 -1.70003e-318 -0.197961 -0.528695 0.787322 -0.348357 
 
-Cmax: 4.3399 CoreMax: 2 i_max: 5 j_max 1
-Cmin: -0.841435 CoreMin: 0 i_min: 1 j_min 5
-Random numbers generated
- initialized vector for size 2 and rank 1
-myRank: 1 i = 1
-myRank: 1 i = 2
-sending weights to master 
-Random numbers generated
+Cmax: 8.7415 CoreMax: 3 i_max: 7 j_max 1
+Cmin: -0.528695 CoreMin: 3 i_min: 7 j_min 5
+Random numbers generated, j = 2
+ initialized vector for size 2 and rank 2
+Random numbers generated, j = 2
  initialized vector for size 2 and rank 3
 myRank: 3 i = 1
 myRank: 3 i = 2
 sending weights to master 
-Generating and scattering weights 
-Random numbers generated
- initialized vector for size 2 and rank 2
-myRank: 2 i = 1
-myRank: 2 i = 2
+Random numbers generated, j = 2
+ initialized vector for size 2 and rank 1
+myRank: 1 i = 1
+myRank: 1 i = 2
 sending weights to master 
+myRank: 2 i = 1
 Generating and scattering weights 
- sending yMatrix to master
- sending yMatrix back out to hosts 
-Calculating C
-finding min/max pairs
 Generating and scattering weights 
+myRank: 2 i = 2
  sending yMatrix to master
  sending yMatrix to master
+sending weights to master 
  sending yMatrix back out to hosts 
  sending yMatrix back out to hosts 
+Generating and scattering weights 
 Calculating C
 finding min/max pairs
 Calculating C
 finding min/max pairs
-Random numbers generated
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
+Calculating C
+finding min/max pairs
+Random numbers generated, j = 100
+ initialized vector for size 100 and rank 0
+myRank: 0 i = 1
+myRank: 0 i = 2
+myRank: 0 i = 3
+Random numbers generated, j = 100
  initialized vector for size 100 and rank 2
 myRank: 2 i = 1
 myRank: 2 i = 2
 myRank: 2 i = 3
 myRank: 2 i = 4
-Random numbers generated
- initialized vector for size 100 and rank 5
 myRank: 2 i = 5
-myRank: 5 i = 1
-myRank: 5 i = 2
-myRank: 5 i = 3
-myRank: 5 i = 4
+myRank: 0 i = 4
 myRank: 2 i = 6
-myRank: 5 i = 5
-myRank: 5 i = 6
-myRank: 5 i = 7
 myRank: 2 i = 7
-myRank: 5 i = 8
-myRank: 5 i = 9
-myRank: 5 i = 10
-myRank: 5 i = 11
 myRank: 2 i = 8
-myRank: 5 i = 12
-myRank: 5 i = 13
-myRank: 5 i = 14
-myRank: 5 i = 15
-myRank: 5 i = 16
-myRank: 5 i = 17
 myRank: 2 i = 9
-myRank: 5 i = 18
-myRank: 5 i = 19
-myRank: 5 i = 20
 myRank: 2 i = 10
-myRank: 5 i = 21
-myRank: 5 i = 22
-myRank: 5 i = 23
+Random numbers generated, j = 100
 myRank: 2 i = 11
-myRank: 5 i = 24
-myRank: 5 i = 25
-myRank: 5 i = 26
-myRank: 5 i = 27
-myRank: 5 i = 28
-myRank: 5 i = 29
-myRank: 5 i = 30
-myRank: 5 i = 31
+ initialized vector for size 100 and rank 5
 myRank: 2 i = 12
-myRank: 5 i = 32
-myRank: 5 i = 33
-myRank: 5 i = 34
-myRank: 5 i = 35
-myRank: 2 i = 13
-myRank: 5 i = 36
-myRank: 5 i = 37
-myRank: 5 i = 38
-myRank: 5 i = 39
-myRank: 5 i = 40
-myRank: 2 i = 14
-myRank: 5 i = 41
-myRank: 5 i = 42
-myRank: 5 i = 43
-Random numbers generated
+Random numbers generated, j = 100
  initialized vector for size 100 and rank 1
+myRank: 5 i = 1
+myRank: 2 i = 13
+myRank: 5 i = 2
+myRank: 2 i = 14
 myRank: 1 i = 1
 myRank: 1 i = 2
 myRank: 1 i = 3
-Random numbers generated
- initialized vector for size 100 and rank 8
-myRank: 8 i = 1
-myRank: 8 i = 2
+myRank: 5 i = 3
 myRank: 2 i = 15
-myRank: 5 i = 44
-myRank: 5 i = 45
-myRank: 5 i = 46
-myRank: 5 i = 47
-Random numbers generated
- initialized vector for size 100 and rank 4
-myRank: 4 i = 1
-myRank: 4 i = 2
-myRank: 4 i = 3
 myRank: 1 i = 4
 myRank: 1 i = 5
 myRank: 1 i = 6
 myRank: 1 i = 7
 myRank: 1 i = 8
+Random numbers generated, j = 100
+ initialized vector for size 100 and rank 4
+myRank: 4 i = 1
+myRank: 4 i = 2
+myRank: 4 i = 3
+myRank: 4 i = 4
+myRank: 4 i = 5
+myRank: 4 i = 6
+myRank: 4 i = 7
+myRank: 4 i = 8
+myRank: 4 i = 9
 myRank: 1 i = 9
 myRank: 1 i = 10
 myRank: 1 i = 11
 myRank: 1 i = 12
-myRank: 8 i = 3
-myRank: 8 i = 4
-myRank: 8 i = 5
-myRank: 8 i = 6
-myRank: 8 i = 7
-myRank: 8 i = 8
-myRank: 8 i = 9
-myRank: 8 i = 10
-myRank: 8 i = 11
-myRank: 8 i = 12
+myRank: 1 i = 13
+myRank: 5 i = 4
+myRank: 4 i = 10
+myRank: 4 i = 11
+myRank: 4 i = 12
+myRank: 4 i = 13
+myRank: 4 i = 14
+myRank: 4 i = 15
+myRank: 4 i = 16
+myRank: 4 i = 17
+myRank: 4 i = 18
+myRank: 4 i = 19
 myRank: 2 i = 16
-Random numbers generated
- initialized vector for size 100 and rank 0
-myRank: 0 i = 1
-myRank: 0 i = 2
-myRank: 0 i = 3
-myRank: 0 i = 4
+myRank: 1 i = 14
+myRank: 1 i = 15
+myRank: 1 i = 16
+myRank: 1 i = 17
+myRank: 5 i = 5
+myRank: 4 i = 20
+myRank: 4 i = 21
+myRank: 4 i = 22
+myRank: 4 i = 23
+myRank: 4 i = 24
+myRank: 2 i = 17
+myRank: 1 i = 18
+myRank: 1 i = 19
+myRank: 1 i = 20
+myRank: 1 i = 21
+myRank: 1 i = 22
+Random numbers generated, j = 100
+ initialized vector for size 100 and rank 6
+myRank: 6 i = 1
+myRank: 6 i = 2
+myRank: 6 i = 3
+myRank: 6 i = 4
+myRank: 5 i = 6
+Random numbers generated, j = 100
+ initialized vector for size 100 and rank 9
+myRank: 9 i = 1
+myRank: 9 i = 2
+Random numbers generated, j = 100
+ initialized vector for size 100 and rank 3
+myRank: 3 i = 1
+myRank: 3 i = 2
+myRank: 3 i = 3
+myRank: 3 i = 4
+myRank: 3 i = 5
+myRank: 3 i = 6
+myRank: 4 i = 25
+myRank: 4 i = 26
+myRank: 4 i = 27
+myRank: 4 i = 28
+myRank: 4 i = 29
+myRank: 2 i = 18
+myRank: 1 i = 23
+myRank: 1 i = 24
+myRank: 1 i = 25
+myRank: 1 i = 26
+myRank: 6 i = 5
+myRank: 6 i = 6
+myRank: 6 i = 7
+myRank: 6 i = 8
+myRank: 6 i = 9
+myRank: 6 i = 10
+myRank: 6 i = 11
+myRank: 6 i = 12
+myRank: 6 i = 13
+myRank: 6 i = 14
+myRank: 5 i = 7
+myRank: 9 i = 3
+myRank: 9 i = 4
+myRank: 9 i = 5
+myRank: 9 i = 6
+myRank: 9 i = 7
+myRank: 9 i = 8
+myRank: 9 i = 9
+myRank: 9 i = 10
+Random numbers generated, j = 100
+ initialized vector for size 100 and rank 10
+myRank: 10 i = 1
+myRank: 10 i = 2
+myRank: 10 i = 3
+myRank: 10 i = 4
+myRank: 10 i = 5
+myRank: 10 i = 6
+Random numbers generated, j = 100
+ initialized vector for size 100 and rank 7
+myRank: 7 i = 1
+myRank: 7 i = 2
+myRank: 7 i = 3
+myRank: 7 i = 4
+myRank: 3 i = 7
+myRank: 3 i = 8
+myRank: 3 i = 9
+myRank: 3 i = 10
+myRank: 3 i = 11
+myRank: 3 i = 12
+myRank: 3 i = 13
+myRank: 3 i = 14
+myRank: 4 i = 30
+myRank: 4 i = 31
+myRank: 4 i = 32
+myRank: 4 i = 33
+myRank: 4 i = 34
+myRank: 4 i = 35
+myRank: 4 i = 36
+myRank: 4 i = 37
+myRank: 2 i = 19
+myRank: 1 i = 27
+myRank: 1 i = 28
+myRank: 1 i = 29
+myRank: 1 i = 30
+myRank: 6 i = 15
+myRank: 6 i = 16
+myRank: 6 i = 17
+myRank: 6 i = 18
+myRank: 6 i = 19
+myRank: 6 i = 20
+Random numbers generated, j = 100
+ initialized vector for size 100 and rank 14
+myRank: 14 i = 1
+myRank: 14 i = 2
+myRank: 14 i = 3
+myRank: 14 i = 4
+myRank: 14 i = 5
+myRank: 14 i = 6
+myRank: 5 i = 8
+Random numbers generated, j = 100
+ initialized vector for size 100 and rank 15
+myRank: 15 i = 1
+myRank: 15 i = 2
+myRank: 15 i = 3
+myRank: 15 i = 4
+myRank: 15 i = 5
+myRank: 15 i = 6
+myRank: 9 i = 11
+myRank: 9 i = 12
+myRank: 9 i = 13
+myRank: 9 i = 14
+myRank: 9 i = 15
+Random numbers generated, j = 100
+ initialized vector for size 100 and rank 11
+myRank: 11 i = 1
+myRank: 11 i = 2
+myRank: 11 i = 3
+myRank: 11 i = 4
+myRank: 11 i = 5
+Random numbers generated, j = 100
+ initialized vector for size 100 and rank 13
+myRank: 13 i = 1
+myRank: 13 i = 2
+myRank: 13 i = 3
+myRank: 13 i = 4
+myRank: 13 i = 5
+myRank: 13 i = 6
+myRank: 10 i = 7
+myRank: 10 i = 8
+myRank: 10 i = 9
+myRank: 10 i = 10
+myRank: 10 i = 11
+myRank: 10 i = 12
+myRank: 10 i = 13
+myRank: 10 i = 14
+myRank: 10 i = 15
+myRank: 10 i = 16
+myRank: 7 i = 5
+myRank: 7 i = 6
+myRank: 7 i = 7
+myRank: 7 i = 8
+myRank: 7 i = 9
+myRank: 7 i = 10
+myRank: 7 i = 11
+myRank: 7 i = 12
+myRank: 3 i = 15
+myRank: 3 i = 16
+myRank: 3 i = 17
+myRank: 3 i = 18
+myRank: 3 i = 19
+myRank: 3 i = 20
+myRank: 3 i = 21
+myRank: 4 i = 38
+myRank: 4 i = 39
+myRank: 4 i = 40
+myRank: 4 i = 41
+myRank: 2 i = 20
+myRank: 1 i = 31
+myRank: 1 i = 32
+myRank: 1 i = 33
+myRank: 1 i = 34
+myRank: 6 i = 21
+myRank: 6 i = 22
+myRank: 6 i = 23
+myRank: 6 i = 24
+myRank: 6 i = 25
+myRank: 6 i = 26
+myRank: 14 i = 7
+myRank: 14 i = 8
+myRank: 14 i = 9
+myRank: 14 i = 10
+myRank: 14 i = 11
+myRank: 14 i = 12
+myRank: 14 i = 13
+myRank: 14 i = 14
+myRank: 5 i = 9
+myRank: 15 i = 7
+myRank: 15 i = 8
+myRank: 15 i = 9
+myRank: 15 i = 10
+myRank: 15 i = 11
+myRank: 15 i = 12
+myRank: 15 i = 13
+myRank: 15 i = 14
+myRank: 15 i = 15
+myRank: 15 i = 16
+myRank: 15 i = 17
+myRank: 9 i = 16
+myRank: 9 i = 17
+myRank: 9 i = 18
+myRank: 9 i = 19
+myRank: 11 i = 6
+myRank: 11 i = 7
+myRank: 11 i = 8
+myRank: 11 i = 9
+myRank: 11 i = 10
+myRank: 11 i = 11
+myRank: 11 i = 12
+myRank: 11 i = 13
+myRank: 11 i = 14
+myRank: 13 i = 7
+myRank: 13 i = 8
+myRank: 13 i = 9
+myRank: 13 i = 10
+myRank: 13 i = 11
+myRank: 13 i = 12
+myRank: 13 i = 13
+myRank: 13 i = 14
+myRank: 10 i = 17
+myRank: 10 i = 18
+myRank: 10 i = 19
+myRank: 10 i = 20
+myRank: 10 i = 21
+myRank: 7 i = 13
+myRank: 7 i = 14
+myRank: 7 i = 15
+myRank: 3 i = 22
+myRank: 3 i = 23
+myRank: 3 i = 24
+myRank: 3 i = 25
+myRank: 4 i = 42
+myRank: 4 i = 43
+myRank: 4 i = 44
+myRank: 4 i = 45
+myRank: 4 i = 46
+myRank: 2 i = 21
+myRank: 1 i = 35
+myRank: 1 i = 36
+myRank: 6 i = 27
+myRank: 6 i = 28
+myRank: 6 i = 29
+myRank: 6 i = 30
+myRank: 14 i = 15
+myRank: 14 i = 16
+myRank: 14 i = 17
+myRank: 14 i = 18
+myRank: 14 i = 19
+myRank: 14 i = 20
+myRank: 5 i = 10
+myRank: 15 i = 18
+myRank: 15 i = 19
+myRank: 15 i = 20
+myRank: 15 i = 21
+myRank: 15 i = 22
+myRank: 15 i = 23
+myRank: 15 i = 24
+myRank: 15 i = 25
+myRank: 15 i = 26
+myRank: 9 i = 20
+myRank: 9 i = 21
+myRank: 9 i = 22
+myRank: 9 i = 23
+myRank: 9 i = 24
+myRank: 9 i = 25
+myRank: 11 i = 15
+myRank: 11 i = 16
+myRank: 11 i = 17
+myRank: 11 i = 18
+myRank: 11 i = 19
+myRank: 11 i = 20
+myRank: 11 i = 21
+myRank: 13 i = 15
+myRank: 13 i = 16
+myRank: 13 i = 17
+myRank: 13 i = 18
+myRank: 10 i = 22
+myRank: 10 i = 23
+myRank: 10 i = 24
+myRank: 10 i = 25
+myRank: 10 i = 26
+myRank: 7 i = 16
+myRank: 7 i = 17
+myRank: 7 i = 18
+myRank: 7 i = 19
+myRank: 7 i = 20
+myRank: 3 i = 26
+myRank: 3 i = 27
+myRank: 3 i = 28
+myRank: 3 i = 29
+myRank: 3 i = 30
+myRank: 3 i = 31
+myRank: 3 i = 32
+myRank: 3 i = 33
+myRank: 4 i = 47
+myRank: 4 i = 48
+myRank: 4 i = 49
+myRank: 2 i = 22
+myRank: 1 i = 37
+myRank: 1 i = 38
+myRank: 1 i = 39
+myRank: 6 i = 31
+myRank: 6 i = 32
+myRank: 6 i = 33
+myRank: 6 i = 34
+myRank: 6 i = 35
+myRank: 6 i = 36
+myRank: 14 i = 21
+myRank: 14 i = 22
+myRank: 14 i = 23
+myRank: 14 i = 24
+myRank: 5 i = 11
+myRank: 15 i = 27
+myRank: 15 i = 28
+myRank: 15 i = 29
+myRank: 15 i = 30
+myRank: 15 i = 31
+myRank: 9 i = 26
+myRank: 9 i = 27
+myRank: 9 i = 28
+myRank: 11 i = 22
+myRank: 11 i = 23
+myRank: 11 i = 24
+myRank: 11 i = 25
+myRank: 11 i = 26
+myRank: 11 i = 27
+myRank: 13 i = 19
+myRank: 13 i = 20
+myRank: 13 i = 21
+myRank: 13 i = 22
+myRank: 13 i = 23
+myRank: 13 i = 24
+myRank: 13 i = 25
+myRank: 13 i = 26
+myRank: 10 i = 27
+myRank: 10 i = 28
+myRank: 10 i = 29
+myRank: 10 i = 30
+myRank: 10 i = 31
+myRank: 10 i = 32
+myRank: 7 i = 21
+myRank: 7 i = 22
+myRank: 7 i = 23
+myRank: 7 i = 24
+myRank: 3 i = 34
+myRank: 3 i = 35
+myRank: 3 i = 36
+myRank: 3 i = 37
+myRank: 4 i = 50
+myRank: 4 i = 51
+myRank: 4 i = 52
+myRank: 4 i = 53
+myRank: 4 i = 54
+myRank: 4 i = 55
+myRank: 2 i = 23
+myRank: 1 i = 40
+myRank: 1 i = 41
+myRank: 1 i = 42
+myRank: 1 i = 43
+myRank: 1 i = 44
+myRank: 1 i = 45
+myRank: 1 i = 46
+myRank: 1 i = 47
+myRank: 1 i = 48
+myRank: 1 i = 49
+myRank: 6 i = 37
+myRank: 6 i = 38
+myRank: 6 i = 39
+myRank: 6 i = 40
+myRank: 6 i = 41
+myRank: 6 i = 42
+myRank: 6 i = 43
+myRank: 6 i = 44
+myRank: 14 i = 25
+myRank: 14 i = 26
+myRank: 14 i = 27
+myRank: 14 i = 28
+myRank: 14 i = 29
+myRank: 14 i = 30
+myRank: 14 i = 31
+myRank: 5 i = 12
+myRank: 15 i = 32
+myRank: 15 i = 33
+myRank: 15 i = 34
+myRank: 15 i = 35
+myRank: 15 i = 36
+myRank: 15 i = 37
+myRank: 15 i = 38
+myRank: 9 i = 29
+myRank: 9 i = 30
+myRank: 9 i = 31
+myRank: 9 i = 32
+myRank: 9 i = 33
+myRank: 11 i = 28
+myRank: 11 i = 29
+myRank: 11 i = 30
+myRank: 11 i = 31
+myRank: 11 i = 32
+myRank: 13 i = 27
+myRank: 13 i = 28
+myRank: 13 i = 29
+myRank: 13 i = 30
+myRank: 13 i = 31
+myRank: 13 i = 32
+myRank: 13 i = 33
+myRank: 10 i = 33
+myRank: 10 i = 34
+myRank: 10 i = 35
+myRank: 10 i = 36
+myRank: 10 i = 37
+myRank: 10 i = 38
+myRank: 10 i = 39
+myRank: 10 i = 40
+myRank: 7 i = 25
+myRank: 7 i = 26
+myRank: 7 i = 27
+myRank: 7 i = 28
+myRank: 7 i = 29
+myRank: 7 i = 30
+myRank: 7 i = 31
+myRank: 7 i = 32
+myRank: 3 i = 38
+myRank: 3 i = 39
+myRank: 3 i = 40
+myRank: 3 i = 41
+myRank: 3 i = 42
+myRank: 3 i = 43
+myRank: 4 i = 56
+myRank: 4 i = 57
+myRank: 4 i = 58
+myRank: 4 i = 59
+myRank: 2 i = 24
+myRank: 1 i = 50
+myRank: 1 i = 51
+myRank: 1 i = 52
+myRank: 1 i = 53
+myRank: 1 i = 54
+myRank: 1 i = 55
+myRank: 1 i = 56
+myRank: 1 i = 57
+myRank: 1 i = 58
+myRank: 6 i = 45
+myRank: 6 i = 46
+myRank: 6 i = 47
+myRank: 6 i = 48
+myRank: 6 i = 49
+myRank: 14 i = 32
+myRank: 14 i = 33
+myRank: 14 i = 34
+myRank: 14 i = 35
+myRank: 14 i = 36
+myRank: 14 i = 37
+myRank: 14 i = 38
+myRank: 5 i = 13
+myRank: 15 i = 39
+myRank: 15 i = 40
+myRank: 15 i = 41
+myRank: 15 i = 42
+myRank: 15 i = 43
+myRank: 15 i = 44
+myRank: 9 i = 34
+myRank: 9 i = 35
+myRank: 9 i = 36
+myRank: 9 i = 37
+myRank: 11 i = 33
+myRank: 11 i = 34
+myRank: 11 i = 35
+myRank: 11 i = 36
+myRank: 11 i = 37
+myRank: 11 i = 38
+myRank: 11 i = 39
+myRank: 11 i = 40
+myRank: 11 i = 41
+myRank: 13 i = 34
+myRank: 13 i = 35
+myRank: 13 i = 36
+myRank: 13 i = 37
+myRank: 13 i = 38
+myRank: 13 i = 39
+myRank: 13 i = 40
+myRank: 13 i = 41
+myRank: 10 i = 41
+myRank: 10 i = 42
+myRank: 10 i = 43
+myRank: 10 i = 44
+myRank: 10 i = 45
+myRank: 10 i = 46
+myRank: 7 i = 33
+myRank: 7 i = 34
+myRank: 7 i = 35
+myRank: 7 i = 36
+myRank: 7 i = 37
+myRank: 7 i = 38
+myRank: 3 i = 44
+myRank: 3 i = 45
+myRank: 3 i = 46
+myRank: 3 i = 47
+myRank: 3 i = 48
+myRank: 4 i = 60
+myRank: 4 i = 61
+myRank: 4 i = 62
+myRank: 2 i = 25
+myRank: 1 i = 59
+myRank: 1 i = 60
+myRank: 1 i = 61
+myRank: 1 i = 62
+myRank: 6 i = 50
+myRank: 6 i = 51
+myRank: 6 i = 52
+myRank: 6 i = 53
+myRank: 14 i = 39
+myRank: 14 i = 40
+myRank: 14 i = 41
+myRank: 14 i = 42
+myRank: 5 i = 14
+myRank: 15 i = 45
+myRank: 15 i = 46
+myRank: 15 i = 47
+myRank: 15 i = 48
+myRank: 9 i = 38
+myRank: 9 i = 39
+myRank: 9 i = 40
+myRank: 9 i = 41
+myRank: 9 i = 42
+myRank: 9 i = 43
+myRank: 9 i = 44
+myRank: 11 i = 42
+myRank: 11 i = 43
+myRank: 11 i = 44
+myRank: 11 i = 45
+myRank: 11 i = 46
+myRank: 13 i = 42
+myRank: 13 i = 43
+myRank: 13 i = 44
+myRank: 10 i = 47
+myRank: 10 i = 48
+myRank: 10 i = 49
+myRank: 10 i = 50
+myRank: 10 i = 51
+myRank: 10 i = 52
+myRank: 7 i = 39
+myRank: 7 i = 40
+myRank: 7 i = 41
+myRank: 7 i = 42
+myRank: 7 i = 43
+myRank: 7 i = 44
+myRank: 3 i = 49
+myRank: 3 i = 50
+myRank: 3 i = 51
+myRank: 3 i = 52
+myRank: 4 i = 63
+myRank: 4 i = 64
+myRank: 4 i = 65
+myRank: 4 i = 66
+myRank: 4 i = 67
+myRank: 2 i = 26
+myRank: 1 i = 63
+myRank: 1 i = 64
+myRank: 1 i = 65
+myRank: 1 i = 66
+myRank: 6 i = 54
+myRank: 6 i = 55
+myRank: 6 i = 56
+myRank: 6 i = 57
+myRank: 14 i = 43
+myRank: 14 i = 44
+myRank: 14 i = 45
+myRank: 14 i = 46
+myRank: 5 i = 15
+myRank: 15 i = 49
+myRank: 15 i = 50
+myRank: 15 i = 51
+myRank: 15 i = 52
+myRank: 15 i = 53
+myRank: 9 i = 45
+myRank: 9 i = 46
+myRank: 9 i = 47
+myRank: 9 i = 48
+myRank: 9 i = 49
+myRank: 9 i = 50
+myRank: 11 i = 47
+myRank: 11 i = 48
+myRank: 11 i = 49
+myRank: 13 i = 45
+myRank: 13 i = 46
+myRank: 13 i = 47
+myRank: 13 i = 48
+myRank: 13 i = 49
+myRank: 10 i = 53
+myRank: 10 i = 54
+myRank: 10 i = 55
+myRank: 10 i = 56
+myRank: 10 i = 57
 myRank: 0 i = 5
 myRank: 0 i = 6
 myRank: 0 i = 7
@@ -177,6 +734,57 @@ myRank: 0 i = 22
 myRank: 0 i = 23
 myRank: 0 i = 24
 myRank: 0 i = 25
+myRank: 7 i = 45
+myRank: 7 i = 46
+myRank: 7 i = 47
+myRank: 7 i = 48
+myRank: 3 i = 53
+myRank: 3 i = 54
+myRank: 3 i = 55
+myRank: 4 i = 68
+myRank: 4 i = 69
+myRank: 4 i = 70
+myRank: 2 i = 27
+myRank: 1 i = 67
+myRank: 1 i = 68
+myRank: 1 i = 69
+myRank: 6 i = 58
+myRank: 6 i = 59
+myRank: 6 i = 60
+myRank: 6 i = 61
+myRank: 6 i = 62
+myRank: 14 i = 47
+myRank: 14 i = 48
+myRank: 14 i = 49
+myRank: 14 i = 50
+myRank: 14 i = 51
+myRank: 14 i = 52
+myRank: 14 i = 53
+myRank: 5 i = 16
+myRank: 15 i = 54
+myRank: 15 i = 55
+myRank: 15 i = 56
+myRank: 15 i = 57
+myRank: 9 i = 51
+myRank: 9 i = 52
+myRank: 9 i = 53
+myRank: 9 i = 54
+myRank: 9 i = 55
+myRank: 11 i = 50
+myRank: 11 i = 51
+myRank: 11 i = 52
+myRank: 11 i = 53
+myRank: 11 i = 54
+myRank: 11 i = 55
+myRank: 13 i = 50
+myRank: 13 i = 51
+myRank: 13 i = 52
+myRank: 13 i = 53
+myRank: 13 i = 54
+myRank: 10 i = 58
+myRank: 10 i = 59
+myRank: 10 i = 60
+myRank: 10 i = 61
 myRank: 0 i = 26
 myRank: 0 i = 27
 myRank: 0 i = 28
@@ -199,6 +807,65 @@ myRank: 0 i = 44
 myRank: 0 i = 45
 myRank: 0 i = 46
 myRank: 0 i = 47
+myRank: 7 i = 49
+myRank: 7 i = 50
+myRank: 7 i = 51
+myRank: 7 i = 52
+myRank: 7 i = 53
+myRank: 7 i = 54
+myRank: 3 i = 56
+myRank: 3 i = 57
+myRank: 3 i = 58
+myRank: 3 i = 59
+myRank: 3 i = 60
+myRank: 3 i = 61
+myRank: 3 i = 62
+myRank: 4 i = 71
+myRank: 4 i = 72
+myRank: 4 i = 73
+myRank: 4 i = 74
+myRank: 2 i = 28
+myRank: 1 i = 70
+myRank: 1 i = 71
+myRank: 1 i = 72
+myRank: 1 i = 73
+myRank: 6 i = 63
+myRank: 6 i = 64
+myRank: 6 i = 65
+myRank: 6 i = 66
+myRank: 6 i = 67
+myRank: 6 i = 68
+myRank: 6 i = 69
+myRank: 14 i = 54
+myRank: 14 i = 55
+myRank: 14 i = 56
+myRank: 5 i = 17
+myRank: 15 i = 58
+myRank: 15 i = 59
+myRank: 15 i = 60
+myRank: 15 i = 61
+myRank: 15 i = 62
+myRank: 15 i = 63
+myRank: 9 i = 56
+myRank: 9 i = 57
+myRank: 9 i = 58
+myRank: 9 i = 59
+myRank: 11 i = 56
+myRank: 11 i = 57
+myRank: 11 i = 58
+myRank: 11 i = 59
+myRank: 11 i = 60
+myRank: 11 i = 61
+myRank: 11 i = 62
+myRank: 13 i = 55
+myRank: 13 i = 56
+myRank: 13 i = 57
+myRank: 10 i = 62
+myRank: 10 i = 63
+myRank: 10 i = 64
+myRank: 10 i = 65
+myRank: 10 i = 66
+myRank: 10 i = 67
 myRank: 0 i = 48
 myRank: 0 i = 49
 myRank: 0 i = 50
@@ -221,6 +888,65 @@ myRank: 0 i = 66
 myRank: 0 i = 67
 myRank: 0 i = 68
 myRank: 0 i = 69
+myRank: 7 i = 55
+myRank: 7 i = 56
+myRank: 7 i = 57
+myRank: 7 i = 58
+myRank: 3 i = 63
+myRank: 3 i = 64
+myRank: 3 i = 65
+myRank: 3 i = 66
+myRank: 3 i = 67
+myRank: 3 i = 68
+myRank: 3 i = 69
+myRank: 4 i = 75
+myRank: 4 i = 76
+myRank: 4 i = 77
+myRank: 4 i = 78
+myRank: 2 i = 29
+myRank: 1 i = 74
+myRank: 1 i = 75
+myRank: 1 i = 76
+myRank: 1 i = 77
+myRank: 1 i = 78
+myRank: 6 i = 70
+myRank: 6 i = 71
+myRank: 6 i = 72
+myRank: 6 i = 73
+myRank: 6 i = 74
+myRank: 14 i = 57
+myRank: 14 i = 58
+myRank: 14 i = 59
+myRank: 14 i = 60
+myRank: 14 i = 61
+myRank: 14 i = 62
+myRank: 14 i = 63
+myRank: 5 i = 18
+myRank: 15 i = 64
+myRank: 15 i = 65
+myRank: 15 i = 66
+myRank: 15 i = 67
+myRank: 15 i = 68
+myRank: 15 i = 69
+myRank: 9 i = 60
+myRank: 9 i = 61
+myRank: 9 i = 62
+myRank: 9 i = 63
+myRank: 9 i = 64
+myRank: 9 i = 65
+myRank: 11 i = 63
+myRank: 11 i = 64
+myRank: 11 i = 65
+myRank: 11 i = 66
+myRank: 11 i = 67
+myRank: 13 i = 58
+myRank: 13 i = 59
+myRank: 13 i = 60
+myRank: 13 i = 61
+myRank: 10 i = 68
+myRank: 10 i = 69
+myRank: 10 i = 70
+myRank: 10 i = 71
 myRank: 0 i = 70
 myRank: 0 i = 71
 myRank: 0 i = 72
@@ -246,208 +972,414 @@ myRank: 0 i = 91
 myRank: 0 i = 92
 myRank: 0 i = 93
 myRank: 0 i = 94
+myRank: 7 i = 59
+myRank: 7 i = 60
+myRank: 7 i = 61
+myRank: 7 i = 62
+myRank: 7 i = 63
+myRank: 7 i = 64
+myRank: 3 i = 70
+myRank: 3 i = 71
+myRank: 3 i = 72
+myRank: 4 i = 79
+myRank: 4 i = 80
+myRank: 4 i = 81
+myRank: 4 i = 82
+myRank: 4 i = 83
+myRank: 2 i = 30
+myRank: 1 i = 79
+myRank: 1 i = 80
+myRank: 1 i = 81
+myRank: 6 i = 75
+myRank: 6 i = 76
+myRank: 6 i = 77
+myRank: 6 i = 78
+myRank: 6 i = 79
+myRank: 14 i = 64
+myRank: 14 i = 65
+myRank: 14 i = 66
+myRank: 14 i = 67
+myRank: 14 i = 68
+myRank: 14 i = 69
+myRank: 14 i = 70
+myRank: 5 i = 19
+myRank: 15 i = 70
+myRank: 15 i = 71
+myRank: 15 i = 72
+myRank: 15 i = 73
+myRank: 9 i = 66
+myRank: 9 i = 67
+myRank: 9 i = 68
+myRank: 9 i = 69
+myRank: 11 i = 68
+myRank: 11 i = 69
+myRank: 11 i = 70
+myRank: 13 i = 62
+myRank: 13 i = 63
+myRank: 13 i = 64
+myRank: 13 i = 65
+myRank: 13 i = 66
+myRank: 10 i = 72
+myRank: 10 i = 73
+myRank: 10 i = 74
+myRank: 10 i = 75
+myRank: 10 i = 76
+myRank: 10 i = 77
 myRank: 0 i = 95
 myRank: 0 i = 96
 myRank: 0 i = 97
 myRank: 0 i = 98
 myRank: 0 i = 99
 myRank: 0 i = 100
-myRank: 5 i = 48
-myRank: 5 i = 49
-myRank: 5 i = 50
-myRank: 4 i = 4
-myRank: 4 i = 5
-myRank: 4 i = 6
-myRank: 4 i = 7
-myRank: 4 i = 8
-myRank: 4 i = 9
-myRank: 4 i = 10
-myRank: 4 i = 11
-myRank: 4 i = 12
-myRank: 4 i = 13
-Random numbers generated
- initialized vector for size 100 and rank 6
-myRank: 6 i = 1
-myRank: 6 i = 2
-myRank: 6 i = 3
-myRank: 6 i = 4
-myRank: 6 i = 5
-myRank: 1 i = 13
-myRank: 1 i = 14
-myRank: 1 i = 15
-myRank: 1 i = 16
-myRank: 1 i = 17
-myRank: 1 i = 18
-myRank: 1 i = 19
-myRank: 1 i = 20
-myRank: 1 i = 21
-Random numbers generated
- initialized vector for size 100 and rank 10
-myRank: 10 i = 1
-myRank: 10 i = 2
-myRank: 10 i = 3
-myRank: 10 i = 4
-myRank: 10 i = 5
-myRank: 8 i = 13
-myRank: 8 i = 14
-myRank: 8 i = 15
-myRank: 8 i = 16
-myRank: 8 i = 17
-myRank: 8 i = 18
-myRank: 8 i = 19
-myRank: 8 i = 20
-myRank: 2 i = 17
-myRank: 5 i = 51
-myRank: 5 i = 52
-myRank: 5 i = 53
-myRank: 5 i = 54
-myRank: 4 i = 14
-myRank: 4 i = 15
-myRank: 4 i = 16
-myRank: 4 i = 17
-myRank: 4 i = 18
-myRank: 4 i = 19
-myRank: 4 i = 20
-myRank: 4 i = 21
-myRank: 6 i = 6
-myRank: 6 i = 7
-myRank: 6 i = 8
-myRank: 6 i = 9
-myRank: 6 i = 10
-myRank: 6 i = 11
-myRank: 6 i = 12
-myRank: 6 i = 13
-myRank: 1 i = 22
-myRank: 1 i = 23
-myRank: 1 i = 24
-myRank: 1 i = 25
-myRank: 1 i = 26
-myRank: 1 i = 27
-myRank: 10 i = 6
-myRank: 10 i = 7
-myRank: 10 i = 8
-myRank: 10 i = 9
-myRank: 10 i = 10
-myRank: 10 i = 11
-myRank: 10 i = 12
-myRank: 10 i = 13
-myRank: 10 i = 14
-myRank: 10 i = 15
-Random numbers generated
- initialized vector for size 100 and rank 3
-myRank: 3 i = 1
-myRank: 3 i = 2
-myRank: 3 i = 3
-myRank: 3 i = 4
-myRank: 3 i = 5
-Random numbers generated
- initialized vector for size 100 and rank 7
-myRank: 7 i = 1
-myRank: 7 i = 2
-myRank: 7 i = 3
-myRank: 8 i = 21
-myRank: 8 i = 22
-myRank: 8 i = 23
-myRank: 8 i = 24
-myRank: 8 i = 25
-myRank: 8 i = 26
-myRank: 8 i = 27
-Random numbers generated
- initialized vector for size 100 and rank 13
-myRank: 13 i = 1
-myRank: 13 i = 2
-myRank: 2 i = 18
-Random numbers generated
- initialized vector for size 100 and rank 11
-myRank: 11 i = 1
-myRank: 11 i = 2
-myRank: 11 i = 3
-myRank: 11 i = 4
-myRank: 11 i = 5
-Random numbers generated
+myRank: 7 i = 65
+myRank: 7 i = 66
+myRank: 7 i = 67
+myRank: 7 i = 68
+myRank: 7 i = 69
+myRank: 7 i = 70
+myRank: 3 i = 73
+myRank: 3 i = 74
+myRank: 3 i = 75
+myRank: 3 i = 76
+myRank: 3 i = 77
+myRank: 3 i = 78
+myRank: 4 i = 84
+myRank: 4 i = 85
+myRank: 4 i = 86
+myRank: 2 i = 31
+myRank: 1 i = 82
+myRank: 1 i = 83
+myRank: 1 i = 84
+myRank: 1 i = 85
+myRank: 1 i = 86
+myRank: 6 i = 80
+myRank: 6 i = 81
+myRank: 6 i = 82
+myRank: 6 i = 83
+myRank: 14 i = 71
+myRank: 14 i = 72
+myRank: 14 i = 73
+myRank: 14 i = 74
+myRank: 14 i = 75
+myRank: 14 i = 76
+myRank: 5 i = 20
+myRank: 15 i = 74
+myRank: 15 i = 75
+myRank: 15 i = 76
+myRank: 9 i = 70
+myRank: 9 i = 71
+myRank: 9 i = 72
+myRank: 9 i = 73
+myRank: 9 i = 74
+myRank: 9 i = 75
+myRank: 11 i = 71
+myRank: 11 i = 72
+myRank: 11 i = 73
+myRank: 11 i = 74
+myRank: 13 i = 67
+myRank: 13 i = 68
+myRank: 13 i = 69
+myRank: 10 i = 78
+myRank: 10 i = 79
+myRank: 10 i = 80
+myRank: 10 i = 81
+myRank: 10 i = 82
+myRank: 10 i = 83
+myRank: 7 i = 71
+myRank: 7 i = 72
+myRank: 7 i = 73
+myRank: 7 i = 74
+myRank: 3 i = 79
+myRank: 3 i = 80
+myRank: 3 i = 81
+myRank: 3 i = 82
+myRank: 3 i = 83
+myRank: 3 i = 84
+myRank: 4 i = 87
+myRank: 4 i = 88
+myRank: 4 i = 89
+myRank: 4 i = 90
+myRank: 4 i = 91
+myRank: 2 i = 32
+myRank: 1 i = 87
+myRank: 1 i = 88
+myRank: 1 i = 89
+myRank: 1 i = 90
+myRank: 6 i = 84
+myRank: 6 i = 85
+myRank: 6 i = 86
+myRank: 6 i = 87
+myRank: 6 i = 88
+myRank: 6 i = 89
+myRank: 14 i = 77
+myRank: 14 i = 78
+myRank: 14 i = 79
+myRank: 14 i = 80
+myRank: 5 i = 21
+myRank: 15 i = 77
+myRank: 15 i = 78
+myRank: 15 i = 79
+myRank: 15 i = 80
+myRank: 15 i = 81
+myRank: 15 i = 82
+myRank: 9 i = 76
+myRank: 9 i = 77
+myRank: 9 i = 78
+myRank: 9 i = 79
+myRank: 9 i = 80
+myRank: 11 i = 75
+myRank: 11 i = 76
+myRank: 11 i = 77
+myRank: 11 i = 78
+myRank: 13 i = 70
+myRank: 13 i = 71
+myRank: 13 i = 72
+myRank: 13 i = 73
+myRank: 10 i = 84
+myRank: 10 i = 85
+myRank: 10 i = 86
+myRank: 10 i = 87
+myRank: 7 i = 75
+myRank: 7 i = 76
+myRank: 7 i = 77
+myRank: 7 i = 78
+myRank: 7 i = 79
+myRank: 3 i = 85
+myRank: 3 i = 86
+myRank: 3 i = 87
+myRank: 3 i = 88
+myRank: 4 i = 92
+myRank: 4 i = 93
+myRank: 4 i = 94
+myRank: 4 i = 95
+myRank: 2 i = 33
+myRank: 1 i = 91
+myRank: 1 i = 92
+myRank: 1 i = 93
+myRank: 1 i = 94
+myRank: 6 i = 90
+myRank: 6 i = 91
+myRank: 6 i = 92
+myRank: 14 i = 81
+myRank: 14 i = 82
+myRank: 14 i = 83
+myRank: 5 i = 22
+myRank: 15 i = 83
+myRank: 15 i = 84
+myRank: 15 i = 85
+myRank: 15 i = 86
+myRank: 9 i = 81
+myRank: 9 i = 82
+myRank: 9 i = 83
+myRank: 9 i = 84
+myRank: 9 i = 85
+myRank: 9 i = 86
+myRank: 9 i = 87
+myRank: 11 i = 79
+myRank: 11 i = 80
+myRank: 11 i = 81
+myRank: 11 i = 82
+myRank: 13 i = 74
+myRank: 13 i = 75
+myRank: 13 i = 76
+myRank: 13 i = 77
+myRank: 10 i = 88
+myRank: 10 i = 89
+myRank: 10 i = 90
+myRank: 7 i = 80
+myRank: 7 i = 81
+myRank: 7 i = 82
+myRank: 3 i = 89
+myRank: 3 i = 90
+myRank: 3 i = 91
+myRank: 3 i = 92
+myRank: 3 i = 93
+myRank: 3 i = 94
+myRank: 4 i = 96
+myRank: 4 i = 97
+myRank: 4 i = 98
+myRank: 4 i = 99
+myRank: 4 i = 100
+sending weights to master 
+myRank: 2 i = 34
+myRank: 1 i = 95
+myRank: 1 i = 96
+myRank: 1 i = 97
+myRank: 1 i = 98
+myRank: 6 i = 93
+myRank: 6 i = 94
+myRank: 6 i = 95
+myRank: 6 i = 96
+myRank: 6 i = 97
+myRank: 6 i = 98
+myRank: 6 i = 99
+myRank: 14 i = 84
+myRank: 14 i = 85
+myRank: 14 i = 86
+myRank: 14 i = 87
+myRank: 14 i = 88
+myRank: 14 i = 89
+myRank: 5 i = 23
+myRank: 15 i = 87
+myRank: 15 i = 88
+myRank: 15 i = 89
+myRank: 15 i = 90
+myRank: 15 i = 91
+myRank: 15 i = 92
+myRank: 15 i = 93
+myRank: 9 i = 88
+myRank: 9 i = 89
+myRank: 9 i = 90
+myRank: 9 i = 91
+myRank: 9 i = 92
+myRank: 11 i = 83
+myRank: 11 i = 84
+myRank: 11 i = 85
+myRank: 11 i = 86
+myRank: 11 i = 87
+myRank: 13 i = 78
+myRank: 13 i = 79
+myRank: 13 i = 80
+myRank: 13 i = 81
+myRank: 13 i = 82
+myRank: 10 i = 91
+myRank: 10 i = 92
+myRank: 10 i = 93
+myRank: 10 i = 94
+myRank: 7 i = 83
+myRank: 7 i = 84
+myRank: 7 i = 85
+myRank: 7 i = 86
+myRank: 3 i = 95
+myRank: 3 i = 96
+myRank: 3 i = 97
+Generating and scattering weights 
+myRank: 2 i = 35
+myRank: 1 i = 99
+myRank: 1 i = 100
+sending weights to master 
+myRank: 6 i = 100
+sending weights to master 
+myRank: 14 i = 90
+myRank: 14 i = 91
+myRank: 14 i = 92
+myRank: 14 i = 93
+myRank: 14 i = 94
+myRank: 14 i = 95
+myRank: 5 i = 24
+myRank: 15 i = 94
+myRank: 15 i = 95
+myRank: 15 i = 96
+myRank: 15 i = 97
+myRank: 15 i = 98
+myRank: 15 i = 99
+myRank: 9 i = 93
+myRank: 9 i = 94
+myRank: 9 i = 95
+myRank: 9 i = 96
+myRank: 9 i = 97
+myRank: 9 i = 98
+myRank: 11 i = 88
+myRank: 11 i = 89
+myRank: 11 i = 90
+myRank: 11 i = 91
+myRank: 11 i = 92
+myRank: 13 i = 83
+myRank: 13 i = 84
+myRank: 13 i = 85
+myRank: 13 i = 86
+myRank: 10 i = 95
+myRank: 10 i = 96
+myRank: 10 i = 97
+Generating and scattering weights 
+myRank: 7 i = 87
+myRank: 7 i = 88
+myRank: 7 i = 89
+myRank: 7 i = 90
+myRank: 7 i = 91
+myRank: 7 i = 92
+myRank: 7 i = 93
+myRank: 3 i = 98
+myRank: 3 i = 99
+myRank: 3 i = 100
+sending weights to master 
+myRank: 2 i = 36
+Generating and scattering weights 
+Generating and scattering weights 
+myRank: 14 i = 96
+myRank: 14 i = 97
+myRank: 14 i = 98
+myRank: 5 i = 25
+myRank: 15 i = 100
+sending weights to master 
+myRank: 9 i = 99
+myRank: 9 i = 100
+sending weights to master 
+myRank: 11 i = 93
+myRank: 11 i = 94
+myRank: 11 i = 95
+myRank: 13 i = 87
+myRank: 13 i = 88
+myRank: 13 i = 89
+myRank: 13 i = 90
+myRank: 13 i = 91
+myRank: 10 i = 98
+myRank: 10 i = 99
+myRank: 10 i = 100
+sending weights to master 
+myRank: 7 i = 94
+myRank: 7 i = 95
+myRank: 7 i = 96
+myRank: 7 i = 97
+myRank: 7 i = 98
+myRank: 7 i = 99
+Generating and scattering weights 
+myRank: 2 i = 37
+myRank: 14 i = 99
+myRank: 14 i = 100
+sending weights to master 
+myRank: 5 i = 26
+Generating and scattering weights 
+Generating and scattering weights 
+myRank: 11 i = 96
+myRank: 11 i = 97
+myRank: 11 i = 98
+myRank: 13 i = 92
+myRank: 13 i = 93
+myRank: 13 i = 94
+Generating and scattering weights 
+myRank: 7 i = 100
+sending weights to master 
+myRank: 2 i = 38
+Generating and scattering weights 
+myRank: 5 i = 27
+myRank: 11 i = 99
+myRank: 11 i = 100
+sending weights to master 
+myRank: 13 i = 95
+myRank: 13 i = 96
+myRank: 13 i = 97
+myRank: 13 i = 98
+myRank: 13 i = 99
+myRank: 13 i = 100
+Generating and scattering weights 
+myRank: 2 i = 39
+myRank: 5 i = 28
+Generating and scattering weights 
+sending weights to master 
+myRank: 2 i = 40
+myRank: 5 i = 29
+Generating and scattering weights 
+myRank: 2 i = 41
+myRank: 5 i = 30
+myRank: 2 i = 42
+myRank: 5 i = 31
+Random numbers generated, j = 100
  initialized vector for size 100 and rank 12
 myRank: 12 i = 1
 myRank: 12 i = 2
 myRank: 12 i = 3
 myRank: 12 i = 4
-Random numbers generated
- initialized vector for size 100 and rank 14
-myRank: 14 i = 1
-myRank: 14 i = 2
-myRank: 14 i = 3
-myRank: 5 i = 55
-myRank: 5 i = 56
-myRank: 5 i = 57
-myRank: 5 i = 58
-myRank: 5 i = 59
-myRank: 5 i = 60
-myRank: 4 i = 22
-myRank: 4 i = 23
-myRank: 4 i = 24
-myRank: 4 i = 25
-myRank: 4 i = 26
-myRank: 6 i = 14
-myRank: 6 i = 15
-myRank: 6 i = 16
-myRank: 6 i = 17
-myRank: 6 i = 18
-myRank: 6 i = 19
-myRank: 6 i = 20
-myRank: 1 i = 28
-myRank: 1 i = 29
-myRank: 1 i = 30
-myRank: 1 i = 31
-myRank: 1 i = 32
-myRank: 10 i = 16
-myRank: 10 i = 17
-myRank: 10 i = 18
-myRank: 10 i = 19
-myRank: 10 i = 20
-myRank: 10 i = 21
-myRank: 3 i = 6
-myRank: 3 i = 7
-myRank: 3 i = 8
-myRank: 3 i = 9
-myRank: 3 i = 10
-myRank: 3 i = 11
-myRank: 3 i = 12
-myRank: 3 i = 13
-myRank: 3 i = 14
-myRank: 3 i = 15
-myRank: 7 i = 4
-myRank: 7 i = 5
-myRank: 7 i = 6
-myRank: 7 i = 7
-myRank: 7 i = 8
-myRank: 7 i = 9
-myRank: 7 i = 10
-myRank: 7 i = 11
-myRank: 8 i = 28
-myRank: 8 i = 29
-myRank: 8 i = 30
-myRank: 8 i = 31
-myRank: 8 i = 32
-myRank: 13 i = 3
-myRank: 13 i = 4
-myRank: 13 i = 5
-myRank: 13 i = 6
-myRank: 13 i = 7
-myRank: 13 i = 8
-myRank: 13 i = 9
-myRank: 13 i = 10
-myRank: 13 i = 11
-myRank: 2 i = 19
-myRank: 11 i = 6
-myRank: 11 i = 7
-myRank: 11 i = 8
-myRank: 11 i = 9
-myRank: 11 i = 10
-myRank: 11 i = 11
-myRank: 11 i = 12
-myRank: 11 i = 13
-myRank: 11 i = 14
-myRank: 11 i = 15
-myRank: 11 i = 16
 myRank: 12 i = 5
 myRank: 12 i = 6
 myRank: 12 i = 7
@@ -457,78 +1389,6 @@ myRank: 12 i = 10
 myRank: 12 i = 11
 myRank: 12 i = 12
 myRank: 12 i = 13
-myRank: 14 i = 4
-myRank: 14 i = 5
-myRank: 14 i = 6
-myRank: 14 i = 7
-myRank: 14 i = 8
-myRank: 14 i = 9
-myRank: 14 i = 10
-myRank: 14 i = 11
-myRank: 14 i = 12
-myRank: 5 i = 61
-myRank: 5 i = 62
-myRank: 5 i = 63
-myRank: 4 i = 27
-myRank: 4 i = 28
-myRank: 4 i = 29
-myRank: 4 i = 30
-myRank: 4 i = 31
-myRank: 4 i = 32
-myRank: 6 i = 21
-myRank: 6 i = 22
-myRank: 6 i = 23
-myRank: 6 i = 24
-myRank: 1 i = 33
-myRank: 1 i = 34
-myRank: 1 i = 35
-myRank: 10 i = 22
-myRank: 10 i = 23
-myRank: 10 i = 24
-myRank: 10 i = 25
-myRank: 10 i = 26
-myRank: 10 i = 27
-myRank: 10 i = 28
-myRank: 10 i = 29
-myRank: 3 i = 16
-myRank: 3 i = 17
-myRank: 3 i = 18
-myRank: 3 i = 19
-myRank: 3 i = 20
-myRank: 3 i = 21
-myRank: 3 i = 22
-myRank: 3 i = 23
-myRank: 3 i = 24
-myRank: 3 i = 25
-myRank: 7 i = 12
-myRank: 7 i = 13
-myRank: 7 i = 14
-myRank: 7 i = 15
-myRank: 7 i = 16
-myRank: 7 i = 17
-myRank: 8 i = 33
-myRank: 8 i = 34
-myRank: 8 i = 35
-myRank: 8 i = 36
-myRank: 8 i = 37
-myRank: 8 i = 38
-myRank: 8 i = 39
-myRank: 8 i = 40
-myRank: 13 i = 12
-myRank: 13 i = 13
-myRank: 13 i = 14
-myRank: 13 i = 15
-myRank: 13 i = 16
-myRank: 2 i = 20
-myRank: 11 i = 17
-myRank: 11 i = 18
-myRank: 11 i = 19
-myRank: 11 i = 20
-myRank: 11 i = 21
-myRank: 11 i = 22
-myRank: 11 i = 23
-myRank: 11 i = 24
-myRank: 11 i = 25
 myRank: 12 i = 14
 myRank: 12 i = 15
 myRank: 12 i = 16
@@ -538,148 +1398,11 @@ myRank: 12 i = 19
 myRank: 12 i = 20
 myRank: 12 i = 21
 myRank: 12 i = 22
-myRank: 14 i = 13
-myRank: 14 i = 14
-myRank: 14 i = 15
-myRank: 5 i = 64
-myRank: 5 i = 65
-myRank: 5 i = 66
-myRank: 4 i = 33
-myRank: 4 i = 34
-myRank: 4 i = 35
-myRank: 4 i = 36
-myRank: 4 i = 37
-myRank: 4 i = 38
-myRank: 4 i = 39
-myRank: 6 i = 25
-myRank: 6 i = 26
-myRank: 6 i = 27
-myRank: 6 i = 28
-myRank: 6 i = 29
-myRank: 6 i = 30
-myRank: 6 i = 31
-myRank: 6 i = 32
-myRank: 1 i = 36
-myRank: 1 i = 37
-myRank: 1 i = 38
-myRank: 1 i = 39
-myRank: 10 i = 30
-myRank: 10 i = 31
-myRank: 10 i = 32
-myRank: 10 i = 33
-myRank: 10 i = 34
-myRank: 10 i = 35
-myRank: 3 i = 26
-myRank: 3 i = 27
-myRank: 3 i = 28
-myRank: 3 i = 29
-myRank: 3 i = 30
-myRank: 3 i = 31
-myRank: 7 i = 18
-myRank: 7 i = 19
-myRank: 7 i = 20
-myRank: 7 i = 21
-myRank: 7 i = 22
-myRank: 7 i = 23
-myRank: 7 i = 24
-myRank: 7 i = 25
-myRank: 7 i = 26
-myRank: 7 i = 27
-myRank: 7 i = 28
-myRank: 8 i = 41
-myRank: 8 i = 42
-myRank: 8 i = 43
-myRank: 8 i = 44
-myRank: 8 i = 45
-myRank: 8 i = 46
-myRank: 13 i = 17
-myRank: 13 i = 18
-myRank: 13 i = 19
-myRank: 13 i = 20
-myRank: 13 i = 21
-myRank: 13 i = 22
-myRank: 13 i = 23
-myRank: 13 i = 24
-myRank: 2 i = 21
-myRank: 11 i = 26
-myRank: 11 i = 27
-myRank: 11 i = 28
-myRank: 11 i = 29
-myRank: 11 i = 30
-myRank: 11 i = 31
 myRank: 12 i = 23
 myRank: 12 i = 24
 myRank: 12 i = 25
 myRank: 12 i = 26
 myRank: 12 i = 27
-myRank: 14 i = 16
-myRank: 14 i = 17
-myRank: 14 i = 18
-myRank: 14 i = 19
-myRank: 14 i = 20
-myRank: 14 i = 21
-myRank: 5 i = 67
-myRank: 5 i = 68
-myRank: 5 i = 69
-myRank: 5 i = 70
-myRank: 5 i = 71
-myRank: 5 i = 72
-myRank: 4 i = 40
-myRank: 4 i = 41
-myRank: 4 i = 42
-myRank: 4 i = 43
-myRank: 4 i = 44
-myRank: 6 i = 33
-myRank: 6 i = 34
-myRank: 6 i = 35
-myRank: 6 i = 36
-myRank: 6 i = 37
-myRank: 1 i = 40
-myRank: 1 i = 41
-myRank: 1 i = 42
-myRank: 1 i = 43
-myRank: 1 i = 44
-myRank: 1 i = 45
-myRank: 1 i = 46
-myRank: 10 i = 36
-myRank: 10 i = 37
-myRank: 10 i = 38
-myRank: 10 i = 39
-myRank: 10 i = 40
-myRank: 10 i = 41
-myRank: 3 i = 32
-myRank: 3 i = 33
-myRank: 3 i = 34
-myRank: 3 i = 35
-myRank: 3 i = 36
-myRank: 3 i = 37
-myRank: 3 i = 38
-myRank: 7 i = 29
-myRank: 7 i = 30
-myRank: 7 i = 31
-myRank: 7 i = 32
-myRank: 7 i = 33
-myRank: 7 i = 34
-myRank: 8 i = 47
-myRank: 8 i = 48
-myRank: 8 i = 49
-myRank: 8 i = 50
-myRank: 8 i = 51
-myRank: 8 i = 52
-myRank: 8 i = 53
-myRank: 13 i = 25
-myRank: 13 i = 26
-myRank: 13 i = 27
-myRank: 13 i = 28
-myRank: 13 i = 29
-myRank: 13 i = 30
-myRank: 2 i = 22
-myRank: 11 i = 32
-myRank: 11 i = 33
-myRank: 11 i = 34
-myRank: 11 i = 35
-myRank: 11 i = 36
-myRank: 11 i = 37
 myRank: 12 i = 28
 myRank: 12 i = 29
 myRank: 12 i = 30
@@ -687,146 +1410,11 @@ myRank: 12 i = 31
 myRank: 12 i = 32
 myRank: 12 i = 33
 myRank: 12 i = 34
-myRank: 14 i = 22
-myRank: 14 i = 23
-myRank: 14 i = 24
-myRank: 14 i = 25
-myRank: 14 i = 26
-myRank: 14 i = 27
-myRank: 14 i = 28
-myRank: 14 i = 29
-myRank: 14 i = 30
-myRank: 5 i = 73
-myRank: 5 i = 74
-myRank: 5 i = 75
-myRank: 5 i = 76
-myRank: 4 i = 45
-myRank: 4 i = 46
-myRank: 4 i = 47
-myRank: 4 i = 48
-myRank: 6 i = 38
-myRank: 6 i = 39
-myRank: 6 i = 40
-myRank: 6 i = 41
-myRank: 1 i = 47
-myRank: 1 i = 48
-myRank: 1 i = 49
-myRank: 1 i = 50
-myRank: 1 i = 51
-myRank: 1 i = 52
-myRank: 10 i = 42
-myRank: 10 i = 43
-myRank: 10 i = 44
-myRank: 10 i = 45
-myRank: 10 i = 46
-myRank: 10 i = 47
-myRank: 10 i = 48
-myRank: 10 i = 49
-myRank: 10 i = 50
-myRank: 3 i = 39
-myRank: 3 i = 40
-myRank: 3 i = 41
-myRank: 3 i = 42
-myRank: 3 i = 43
-myRank: 3 i = 44
-myRank: 3 i = 45
-myRank: 3 i = 46
-myRank: 7 i = 35
-myRank: 7 i = 36
-myRank: 7 i = 37
-myRank: 7 i = 38
-myRank: 7 i = 39
-myRank: 7 i = 40
-myRank: 7 i = 41
-myRank: 8 i = 54
-myRank: 8 i = 55
-myRank: 8 i = 56
-myRank: 8 i = 57
-myRank: 8 i = 58
-myRank: 13 i = 31
-myRank: 13 i = 32
-myRank: 13 i = 33
-myRank: 13 i = 34
-myRank: 13 i = 35
-myRank: 13 i = 36
-myRank: 2 i = 23
-myRank: 11 i = 38
-myRank: 11 i = 39
-myRank: 11 i = 40
-myRank: 11 i = 41
-myRank: 11 i = 42
-myRank: 11 i = 43
 myRank: 12 i = 35
 myRank: 12 i = 36
 myRank: 12 i = 37
 myRank: 12 i = 38
 myRank: 12 i = 39
-myRank: 14 i = 31
-myRank: 14 i = 32
-myRank: 14 i = 33
-myRank: 14 i = 34
-myRank: 14 i = 35
-myRank: 14 i = 36
-myRank: 5 i = 77
-myRank: 5 i = 78
-myRank: 5 i = 79
-myRank: 5 i = 80
-myRank: 5 i = 81
-myRank: 5 i = 82
-myRank: 5 i = 83
-myRank: 4 i = 49
-myRank: 4 i = 50
-myRank: 4 i = 51
-myRank: 4 i = 52
-myRank: 4 i = 53
-myRank: 4 i = 54
-myRank: 6 i = 42
-myRank: 6 i = 43
-myRank: 6 i = 44
-myRank: 6 i = 45
-myRank: 6 i = 46
-myRank: 6 i = 47
-myRank: 1 i = 53
-myRank: 1 i = 54
-myRank: 1 i = 55
-myRank: 1 i = 56
-myRank: 10 i = 51
-myRank: 10 i = 52
-myRank: 10 i = 53
-myRank: 10 i = 54
-myRank: 10 i = 55
-myRank: 3 i = 47
-myRank: 3 i = 48
-myRank: 3 i = 49
-myRank: 3 i = 50
-myRank: 3 i = 51
-myRank: 7 i = 42
-myRank: 7 i = 43
-myRank: 7 i = 44
-myRank: 7 i = 45
-myRank: 7 i = 46
-myRank: 7 i = 47
-myRank: 7 i = 48
-myRank: 8 i = 59
-myRank: 8 i = 60
-myRank: 8 i = 61
-myRank: 8 i = 62
-myRank: 13 i = 37
-myRank: 13 i = 38
-myRank: 13 i = 39
-myRank: 13 i = 40
-myRank: 13 i = 41
-myRank: 2 i = 24
-myRank: 11 i = 44
-myRank: 11 i = 45
-myRank: 11 i = 46
-myRank: 11 i = 47
-myRank: 11 i = 48
-myRank: 11 i = 49
-myRank: 11 i = 50
-myRank: 11 i = 51
-myRank: 11 i = 52
-myRank: 11 i = 53
 myRank: 12 i = 40
 myRank: 12 i = 41
 myRank: 12 i = 42
@@ -834,137 +1422,12 @@ myRank: 12 i = 43
 myRank: 12 i = 44
 myRank: 12 i = 45
 myRank: 12 i = 46
-myRank: 14 i = 37
-myRank: 14 i = 38
-myRank: 14 i = 39
-myRank: 14 i = 40
-myRank: 5 i = 84
-myRank: 5 i = 85
-myRank: 5 i = 86
-myRank: 5 i = 87
-myRank: 4 i = 55
-myRank: 4 i = 56
-myRank: 4 i = 57
-myRank: 4 i = 58
-myRank: 4 i = 59
-myRank: 4 i = 60
-myRank: 4 i = 61
-myRank: 6 i = 48
-myRank: 6 i = 49
-myRank: 6 i = 50
-myRank: 6 i = 51
-myRank: 6 i = 52
-myRank: 6 i = 53
-myRank: 1 i = 57
-myRank: 1 i = 58
-myRank: 1 i = 59
-myRank: 1 i = 60
-myRank: 1 i = 61
-myRank: 1 i = 62
-myRank: 10 i = 56
-myRank: 10 i = 57
-myRank: 10 i = 58
-myRank: 10 i = 59
-myRank: 10 i = 60
-myRank: 3 i = 52
-myRank: 3 i = 53
-myRank: 3 i = 54
-myRank: 3 i = 55
-myRank: 3 i = 56
-myRank: 3 i = 57
-myRank: 7 i = 49
-myRank: 7 i = 50
-myRank: 7 i = 51
-myRank: 7 i = 52
-myRank: 7 i = 53
-myRank: 7 i = 54
-myRank: 8 i = 63
-myRank: 8 i = 64
-myRank: 8 i = 65
-myRank: 8 i = 66
-myRank: 13 i = 42
-myRank: 13 i = 43
-myRank: 13 i = 44
-myRank: 13 i = 45
-myRank: 13 i = 46
-myRank: 13 i = 47
-myRank: 13 i = 48
-myRank: 2 i = 25
-myRank: 11 i = 54
-myRank: 11 i = 55
-myRank: 11 i = 56
-myRank: 11 i = 57
-myRank: 11 i = 58
-myRank: 11 i = 59
-myRank: 11 i = 60
-myRank: 11 i = 61
 myRank: 12 i = 47
 myRank: 12 i = 48
 myRank: 12 i = 49
 myRank: 12 i = 50
 myRank: 12 i = 51
 myRank: 12 i = 52
-myRank: 14 i = 41
-myRank: 14 i = 42
-myRank: 14 i = 43
-myRank: 14 i = 44
-myRank: 14 i = 45
-myRank: 14 i = 46
-myRank: 14 i = 47
-Generating and scattering weights 
-myRank: 5 i = 88
-myRank: 5 i = 89
-myRank: 5 i = 90
-myRank: 5 i = 91
-myRank: 5 i = 92
-myRank: 5 i = 93
-myRank: 5 i = 94
-myRank: 4 i = 62
-myRank: 4 i = 63
-myRank: 4 i = 64
-myRank: 4 i = 65
-myRank: 4 i = 66
-myRank: 4 i = 67
-myRank: 6 i = 54
-myRank: 6 i = 55
-myRank: 6 i = 56
-myRank: 6 i = 57
-myRank: 6 i = 58
-myRank: 1 i = 63
-myRank: 1 i = 64
-myRank: 1 i = 65
-myRank: 1 i = 66
-myRank: 1 i = 67
-myRank: 10 i = 61
-myRank: 10 i = 62
-myRank: 10 i = 63
-myRank: 3 i = 58
-myRank: 3 i = 59
-myRank: 3 i = 60
-myRank: 3 i = 61
-myRank: 7 i = 55
-myRank: 7 i = 56
-myRank: 7 i = 57
-myRank: 7 i = 58
-myRank: 7 i = 59
-myRank: 7 i = 60
-myRank: 8 i = 67
-myRank: 8 i = 68
-myRank: 8 i = 69
-myRank: 8 i = 70
-myRank: 8 i = 71
-myRank: 8 i = 72
-myRank: 13 i = 49
-myRank: 13 i = 50
-myRank: 13 i = 51
-myRank: 13 i = 52
-myRank: 13 i = 53
-myRank: 2 i = 26
-myRank: 11 i = 62
-myRank: 11 i = 63
-myRank: 11 i = 64
-myRank: 11 i = 65
-myRank: 11 i = 66
 myRank: 12 i = 53
 myRank: 12 i = 54
 myRank: 12 i = 55
@@ -972,745 +1435,282 @@ myRank: 12 i = 56
 myRank: 12 i = 57
 myRank: 12 i = 58
 myRank: 12 i = 59
-myRank: 14 i = 48
-myRank: 14 i = 49
-myRank: 14 i = 50
-myRank: 14 i = 51
-myRank: 14 i = 52
-myRank: 14 i = 53
-myRank: 5 i = 95
-myRank: 5 i = 96
-myRank: 5 i = 97
-myRank: 5 i = 98
-myRank: 4 i = 68
-myRank: 4 i = 69
-myRank: 4 i = 70
-myRank: 6 i = 59
-myRank: 6 i = 60
-myRank: 6 i = 61
-myRank: 6 i = 62
-myRank: 6 i = 63
-myRank: 6 i = 64
-myRank: 6 i = 65
-myRank: 1 i = 68
-myRank: 1 i = 69
-myRank: 1 i = 70
-myRank: 1 i = 71
-myRank: 10 i = 64
-myRank: 10 i = 65
-myRank: 10 i = 66
-myRank: 10 i = 67
-myRank: 10 i = 68
-myRank: 3 i = 62
-myRank: 3 i = 63
-myRank: 3 i = 64
-myRank: 3 i = 65
-myRank: 3 i = 66
-myRank: 3 i = 67
-myRank: 3 i = 68
-myRank: 7 i = 61
-myRank: 7 i = 62
-myRank: 7 i = 63
-myRank: 7 i = 64
-myRank: 7 i = 65
-myRank: 8 i = 73
-myRank: 8 i = 74
-myRank: 8 i = 75
-myRank: 8 i = 76
-myRank: 13 i = 54
-myRank: 13 i = 55
-myRank: 13 i = 56
-myRank: 13 i = 57
-myRank: 13 i = 58
-myRank: 2 i = 27
-myRank: 11 i = 67
-myRank: 11 i = 68
-myRank: 11 i = 69
-myRank: 11 i = 70
-myRank: 11 i = 71
-myRank: 11 i = 72
 myRank: 12 i = 60
 myRank: 12 i = 61
 myRank: 12 i = 62
 myRank: 12 i = 63
 myRank: 12 i = 64
-myRank: 14 i = 54
-myRank: 14 i = 55
-myRank: 14 i = 56
-myRank: 14 i = 57
-myRank: 14 i = 58
-myRank: 14 i = 59
-myRank: 14 i = 60
-myRank: 5 i = 99
-myRank: 5 i = 100
-sending weights to master 
-myRank: 4 i = 71
-myRank: 4 i = 72
-myRank: 4 i = 73
-myRank: 4 i = 74
-myRank: 4 i = 75
-myRank: 6 i = 66
-myRank: 6 i = 67
-myRank: 6 i = 68
-myRank: 6 i = 69
-myRank: 6 i = 70
-myRank: 6 i = 71
-myRank: 6 i = 72
-myRank: 6 i = 73
-myRank: 1 i = 72
-myRank: 1 i = 73
-myRank: 1 i = 74
-myRank: 1 i = 75
-myRank: 1 i = 76
-myRank: 10 i = 69
-myRank: 10 i = 70
-myRank: 10 i = 71
-myRank: 3 i = 69
-myRank: 3 i = 70
-myRank: 3 i = 71
-myRank: 3 i = 72
-myRank: 3 i = 73
-myRank: 7 i = 66
-myRank: 7 i = 67
-myRank: 7 i = 68
-myRank: 7 i = 69
-myRank: 8 i = 77
-myRank: 8 i = 78
-myRank: 8 i = 79
-myRank: 8 i = 80
-myRank: 13 i = 59
-myRank: 13 i = 60
-myRank: 13 i = 61
-myRank: 13 i = 62
-myRank: 13 i = 63
-myRank: 2 i = 28
-myRank: 11 i = 73
-myRank: 11 i = 74
-myRank: 11 i = 75
-myRank: 11 i = 76
-myRank: 11 i = 77
-myRank: 11 i = 78
 myRank: 12 i = 65
 myRank: 12 i = 66
-myRank: 14 i = 61
-myRank: 14 i = 62
-myRank: 14 i = 63
-myRank: 14 i = 64
-myRank: 14 i = 65
-Generating and scattering weights 
-myRank: 4 i = 76
-myRank: 4 i = 77
-myRank: 4 i = 78
-myRank: 4 i = 79
-myRank: 4 i = 80
-myRank: 4 i = 81
-myRank: 6 i = 74
-myRank: 6 i = 75
-myRank: 6 i = 76
-myRank: 6 i = 77
-myRank: 6 i = 78
-myRank: 6 i = 79
-myRank: 1 i = 77
-myRank: 1 i = 78
-myRank: 1 i = 79
-myRank: 1 i = 80
-myRank: 10 i = 72
-myRank: 10 i = 73
-myRank: 10 i = 74
-myRank: 10 i = 75
-myRank: 10 i = 76
-myRank: 10 i = 77
-myRank: 3 i = 74
-myRank: 3 i = 75
-myRank: 3 i = 76
-myRank: 3 i = 77
-myRank: 3 i = 78
-myRank: 7 i = 70
-myRank: 7 i = 71
-myRank: 7 i = 72
-myRank: 7 i = 73
-myRank: 7 i = 74
-myRank: 7 i = 75
-myRank: 8 i = 81
-myRank: 8 i = 82
-myRank: 8 i = 83
-myRank: 8 i = 84
-myRank: 13 i = 64
-myRank: 13 i = 65
-myRank: 13 i = 66
-myRank: 13 i = 67
-myRank: 2 i = 29
-myRank: 11 i = 79
-myRank: 11 i = 80
-myRank: 11 i = 81
 myRank: 12 i = 67
 myRank: 12 i = 68
 myRank: 12 i = 69
 myRank: 12 i = 70
-myRank: 14 i = 66
-myRank: 14 i = 67
-myRank: 14 i = 68
-myRank: 14 i = 69
-myRank: 4 i = 82
-myRank: 4 i = 83
-myRank: 4 i = 84
-myRank: 4 i = 85
-myRank: 6 i = 80
-myRank: 6 i = 81
-myRank: 6 i = 82
-myRank: 6 i = 83
-myRank: 1 i = 81
-myRank: 1 i = 82
-myRank: 1 i = 83
-myRank: 10 i = 78
-myRank: 10 i = 79
-myRank: 10 i = 80
-myRank: 10 i = 81
-myRank: 3 i = 79
-myRank: 3 i = 80
-myRank: 3 i = 81
-myRank: 3 i = 82
-myRank: 7 i = 76
-myRank: 7 i = 77
-myRank: 7 i = 78
-myRank: 7 i = 79
-myRank: 7 i = 80
-myRank: 8 i = 85
-myRank: 8 i = 86
-myRank: 8 i = 87
-myRank: 8 i = 88
-myRank: 13 i = 68
-myRank: 13 i = 69
-myRank: 13 i = 70
-myRank: 13 i = 71
-myRank: 13 i = 72
-myRank: 2 i = 30
-myRank: 11 i = 82
-myRank: 11 i = 83
-myRank: 11 i = 84
-myRank: 11 i = 85
-myRank: 11 i = 86
 myRank: 12 i = 71
 myRank: 12 i = 72
 myRank: 12 i = 73
 myRank: 12 i = 74
-myRank: 14 i = 70
-myRank: 14 i = 71
-myRank: 14 i = 72
-myRank: 14 i = 73
-myRank: 14 i = 74
-myRank: 14 i = 75
-myRank: 4 i = 86
-myRank: 4 i = 87
-myRank: 4 i = 88
-myRank: 6 i = 84
-myRank: 6 i = 85
-myRank: 6 i = 86
-myRank: 6 i = 87
-myRank: 6 i = 88
-myRank: 1 i = 84
-myRank: 1 i = 85
-myRank: 1 i = 86
-myRank: 1 i = 87
-myRank: 1 i = 88
-myRank: 10 i = 82
-myRank: 10 i = 83
-myRank: 10 i = 84
-myRank: 3 i = 83
-myRank: 3 i = 84
-myRank: 3 i = 85
-myRank: 3 i = 86
-myRank: 3 i = 87
-myRank: 3 i = 88
-myRank: 7 i = 81
-myRank: 7 i = 82
-myRank: 7 i = 83
-myRank: 7 i = 84
-myRank: 8 i = 89
-myRank: 8 i = 90
-myRank: 8 i = 91
-myRank: 8 i = 92
-myRank: 13 i = 73
-myRank: 13 i = 74
-myRank: 13 i = 75
-myRank: 13 i = 76
-myRank: 13 i = 77
-myRank: 13 i = 78
-myRank: 2 i = 31
-myRank: 11 i = 87
-myRank: 11 i = 88
-myRank: 11 i = 89
-myRank: 11 i = 90
 myRank: 12 i = 75
 myRank: 12 i = 76
 myRank: 12 i = 77
 myRank: 12 i = 78
 myRank: 12 i = 79
 myRank: 12 i = 80
-myRank: 14 i = 76
-myRank: 14 i = 77
-myRank: 14 i = 78
-myRank: 14 i = 79
-myRank: 4 i = 89
-myRank: 4 i = 90
-myRank: 4 i = 91
-myRank: 4 i = 92
-myRank: 6 i = 89
-myRank: 6 i = 90
-myRank: 6 i = 91
-myRank: 6 i = 92
-myRank: 6 i = 93
-myRank: 1 i = 89
-myRank: 1 i = 90
-myRank: 1 i = 91
-myRank: 1 i = 92
-myRank: 10 i = 85
-myRank: 10 i = 86
-myRank: 10 i = 87
-myRank: 10 i = 88
-myRank: 10 i = 89
-myRank: 10 i = 90
-myRank: 3 i = 89
-myRank: 3 i = 90
-myRank: 3 i = 91
-myRank: 3 i = 92
-myRank: 3 i = 93
-myRank: 3 i = 94
-myRank: 7 i = 85
-myRank: 7 i = 86
-myRank: 7 i = 87
-myRank: 7 i = 88
-myRank: 8 i = 93
-myRank: 8 i = 94
-myRank: 8 i = 95
-myRank: 8 i = 96
-myRank: 8 i = 97
-myRank: 13 i = 79
-myRank: 13 i = 80
-myRank: 13 i = 81
-myRank: 13 i = 82
-myRank: 2 i = 32
-myRank: 11 i = 91
-myRank: 11 i = 92
-myRank: 11 i = 93
 myRank: 12 i = 81
 myRank: 12 i = 82
 myRank: 12 i = 83
 myRank: 12 i = 84
-myRank: 14 i = 80
-myRank: 14 i = 81
-myRank: 14 i = 82
-myRank: 14 i = 83
-myRank: 14 i = 84
-myRank: 4 i = 93
-myRank: 4 i = 94
-myRank: 4 i = 95
-myRank: 4 i = 96
-myRank: 6 i = 94
-myRank: 6 i = 95
-myRank: 6 i = 96
-myRank: 6 i = 97
-myRank: 1 i = 93
-myRank: 1 i = 94
-myRank: 1 i = 95
-myRank: 1 i = 96
-myRank: 1 i = 97
-myRank: 1 i = 98
-myRank: 10 i = 91
-myRank: 10 i = 92
-myRank: 10 i = 93
-myRank: 10 i = 94
-myRank: 10 i = 95
-myRank: 10 i = 96
-myRank: 3 i = 95
-myRank: 3 i = 96
-myRank: 3 i = 97
-myRank: 3 i = 98
-myRank: 7 i = 89
-myRank: 7 i = 90
-myRank: 7 i = 91
-myRank: 7 i = 92
-myRank: 7 i = 93
-myRank: 7 i = 94
-myRank: 8 i = 98
-myRank: 8 i = 99
-myRank: 8 i = 100
-sending weights to master 
-myRank: 13 i = 83
-myRank: 13 i = 84
-myRank: 13 i = 85
-myRank: 2 i = 33
-myRank: 11 i = 94
-myRank: 11 i = 95
-myRank: 11 i = 96
-myRank: 11 i = 97
-myRank: 11 i = 98
-myRank: 11 i = 99
 myRank: 12 i = 85
 myRank: 12 i = 86
 myRank: 12 i = 87
 myRank: 12 i = 88
 myRank: 12 i = 89
-myRank: 14 i = 85
-myRank: 14 i = 86
-myRank: 14 i = 87
-myRank: 4 i = 97
-myRank: 4 i = 98
-myRank: 4 i = 99
-myRank: 4 i = 100
-myRank: 6 i = 98
-myRank: 6 i = 99
-myRank: 6 i = 100
-sending weights to master 
-myRank: 1 i = 99
-myRank: 1 i = 100
-sending weights to master 
-myRank: 10 i = 97
-myRank: 10 i = 98
-myRank: 10 i = 99
-myRank: 10 i = 100
-myRank: 3 i = 99
-myRank: 3 i = 100
-sending weights to master 
-myRank: 7 i = 95
-myRank: 7 i = 96
-myRank: 7 i = 97
-myRank: 7 i = 98
-myRank: 7 i = 99
-myRank: 7 i = 100
-Generating and scattering weights 
-myRank: 13 i = 86
-myRank: 13 i = 87
-myRank: 13 i = 88
-myRank: 13 i = 89
-myRank: 2 i = 34
-myRank: 11 i = 100
-sending weights to master 
 myRank: 12 i = 90
 myRank: 12 i = 91
 myRank: 12 i = 92
 myRank: 12 i = 93
-myRank: 14 i = 88
-myRank: 14 i = 89
-myRank: 14 i = 90
-myRank: 14 i = 91
-sending weights to master 
-Generating and scattering weights 
-Generating and scattering weights 
-sending weights to master 
-Generating and scattering weights 
-sending weights to master 
-myRank: 13 i = 90
-myRank: 13 i = 91
-myRank: 13 i = 92
-myRank: 2 i = 35
-Generating and scattering weights 
 myRank: 12 i = 94
 myRank: 12 i = 95
 myRank: 12 i = 96
 myRank: 12 i = 97
 myRank: 12 i = 98
 myRank: 12 i = 99
-myRank: 14 i = 92
-myRank: 14 i = 93
-myRank: 14 i = 94
-myRank: 14 i = 95
-Generating and scattering weights 
-Generating and scattering weights 
-Generating and scattering weights 
-myRank: 13 i = 93
-myRank: 13 i = 94
-myRank: 13 i = 95
-myRank: 13 i = 96
-myRank: 13 i = 97
-myRank: 13 i = 98
-myRank: 13 i = 99
-myRank: 13 i = 100
-myRank: 2 i = 36
 myRank: 12 i = 100
 sending weights to master 
-myRank: 14 i = 96
-myRank: 14 i = 97
-myRank: 14 i = 98
-sending weights to master 
-myRank: 2 i = 37
 Generating and scattering weights 
-myRank: 14 i = 99
-myRank: 14 i = 100
-sending weights to master 
-Generating and scattering weights 
-myRank: 2 i = 38
-Generating and scattering weights 
-myRank: 2 i = 39
-myRank: 2 i = 40
-myRank: 2 i = 41
-myRank: 2 i = 42
 myRank: 2 i = 43
+myRank: 5 i = 32
 myRank: 2 i = 44
+myRank: 5 i = 33
 myRank: 2 i = 45
+myRank: 5 i = 34
 myRank: 2 i = 46
+myRank: 5 i = 35
 myRank: 2 i = 47
+myRank: 5 i = 36
 myRank: 2 i = 48
+myRank: 5 i = 37
 myRank: 2 i = 49
+myRank: 5 i = 38
 myRank: 2 i = 50
+myRank: 5 i = 39
 myRank: 2 i = 51
+myRank: 5 i = 40
 myRank: 2 i = 52
+myRank: 5 i = 41
 myRank: 2 i = 53
+myRank: 5 i = 42
 myRank: 2 i = 54
+myRank: 5 i = 43
 myRank: 2 i = 55
+myRank: 5 i = 44
 myRank: 2 i = 56
+myRank: 5 i = 45
 myRank: 2 i = 57
+myRank: 5 i = 46
 myRank: 2 i = 58
+myRank: 5 i = 47
 myRank: 2 i = 59
+myRank: 5 i = 48
 myRank: 2 i = 60
+myRank: 5 i = 49
 myRank: 2 i = 61
+myRank: 5 i = 50
 myRank: 2 i = 62
+myRank: 5 i = 51
 myRank: 2 i = 63
+myRank: 5 i = 52
 myRank: 2 i = 64
+myRank: 5 i = 53
 myRank: 2 i = 65
+myRank: 5 i = 54
 myRank: 2 i = 66
+myRank: 5 i = 55
 myRank: 2 i = 67
+myRank: 5 i = 56
 myRank: 2 i = 68
+myRank: 5 i = 57
 myRank: 2 i = 69
-Random numbers generated
- initialized vector for size 100 and rank 9
-myRank: 9 i = 1
-myRank: 9 i = 2
-myRank: 9 i = 3
-myRank: 9 i = 4
-myRank: 9 i = 5
-myRank: 9 i = 6
-myRank: 9 i = 7
-myRank: 9 i = 8
-myRank: 9 i = 9
-myRank: 9 i = 10
-myRank: 9 i = 11
-myRank: 9 i = 12
-myRank: 9 i = 13
-myRank: 9 i = 14
-myRank: 9 i = 15
-myRank: 9 i = 16
-myRank: 9 i = 17
-myRank: 9 i = 18
-myRank: 9 i = 19
-myRank: 9 i = 20
-myRank: 9 i = 21
-myRank: 9 i = 22
-myRank: 9 i = 23
-myRank: 9 i = 24
-myRank: 9 i = 25
-myRank: 9 i = 26
-myRank: 9 i = 27
-myRank: 9 i = 28
-myRank: 9 i = 29
-myRank: 9 i = 30
-myRank: 9 i = 31
-myRank: 9 i = 32
-myRank: 9 i = 33
-myRank: 9 i = 34
-myRank: 9 i = 35
-myRank: 9 i = 36
-myRank: 9 i = 37
-myRank: 9 i = 38
-myRank: 9 i = 39
-myRank: 9 i = 40
-myRank: 9 i = 41
-myRank: 9 i = 42
-myRank: 9 i = 43
-myRank: 9 i = 44
-myRank: 9 i = 45
-myRank: 9 i = 46
-myRank: 9 i = 47
-myRank: 9 i = 48
-myRank: 9 i = 49
-myRank: 9 i = 50
-myRank: 9 i = 51
-myRank: 9 i = 52
-myRank: 9 i = 53
-myRank: 9 i = 54
-myRank: 9 i = 55
-myRank: 9 i = 56
-myRank: 9 i = 57
-myRank: 9 i = 58
-myRank: 9 i = 59
-myRank: 9 i = 60
-myRank: 9 i = 61
-myRank: 9 i = 62
-myRank: 9 i = 63
-myRank: 9 i = 64
-myRank: 9 i = 65
-myRank: 9 i = 66
-myRank: 9 i = 67
-myRank: 9 i = 68
-myRank: 9 i = 69
-myRank: 9 i = 70
-myRank: 9 i = 71
-myRank: 9 i = 72
-myRank: 9 i = 73
-myRank: 9 i = 74
-myRank: 9 i = 75
-myRank: 9 i = 76
-myRank: 9 i = 77
-myRank: 9 i = 78
-myRank: 9 i = 79
-myRank: 9 i = 80
-myRank: 9 i = 81
-myRank: 9 i = 82
-myRank: 9 i = 83
-myRank: 9 i = 84
-myRank: 9 i = 85
-myRank: 9 i = 86
-myRank: 9 i = 87
-myRank: 9 i = 88
-myRank: 9 i = 89
-myRank: 9 i = 90
-myRank: 9 i = 91
-myRank: 9 i = 92
-myRank: 9 i = 93
-myRank: 9 i = 94
-myRank: 9 i = 95
-myRank: 9 i = 96
-myRank: 9 i = 97
-myRank: 9 i = 98
-myRank: 9 i = 99
-myRank: 9 i = 100
-sending weights to master 
-Generating and scattering weights 
+myRank: 5 i = 58
 myRank: 2 i = 70
+myRank: 5 i = 59
 myRank: 2 i = 71
+myRank: 5 i = 60
 myRank: 2 i = 72
+myRank: 5 i = 61
 myRank: 2 i = 73
+myRank: 5 i = 62
 myRank: 2 i = 74
+myRank: 5 i = 63
 myRank: 2 i = 75
+myRank: 5 i = 64
 myRank: 2 i = 76
+myRank: 5 i = 65
 myRank: 2 i = 77
+myRank: 5 i = 66
 myRank: 2 i = 78
+myRank: 5 i = 67
 myRank: 2 i = 79
+myRank: 5 i = 68
 myRank: 2 i = 80
+myRank: 5 i = 69
 myRank: 2 i = 81
+myRank: 5 i = 70
 myRank: 2 i = 82
+myRank: 5 i = 71
 myRank: 2 i = 83
+myRank: 5 i = 72
 myRank: 2 i = 84
+myRank: 5 i = 73
 myRank: 2 i = 85
+myRank: 5 i = 74
 myRank: 2 i = 86
+myRank: 5 i = 75
 myRank: 2 i = 87
+myRank: 5 i = 76
 myRank: 2 i = 88
+myRank: 5 i = 77
 myRank: 2 i = 89
+myRank: 5 i = 78
 myRank: 2 i = 90
+myRank: 5 i = 79
 myRank: 2 i = 91
+myRank: 5 i = 80
 myRank: 2 i = 92
+myRank: 5 i = 81
 myRank: 2 i = 93
+myRank: 5 i = 82
 myRank: 2 i = 94
+myRank: 5 i = 83
 myRank: 2 i = 95
+myRank: 5 i = 84
 myRank: 2 i = 96
+myRank: 5 i = 85
 myRank: 2 i = 97
+myRank: 5 i = 86
 myRank: 2 i = 98
+myRank: 5 i = 87
 myRank: 2 i = 99
+myRank: 5 i = 88
 myRank: 2 i = 100
+myRank: 5 i = 89
+sending weights to master 
+myRank: 5 i = 90
+Generating and scattering weights 
+myRank: 5 i = 91
+myRank: 5 i = 92
+myRank: 5 i = 93
+myRank: 5 i = 94
+myRank: 5 i = 95
+myRank: 5 i = 96
+myRank: 5 i = 97
+myRank: 5 i = 98
+myRank: 5 i = 99
+myRank: 5 i = 100
 sending weights to master 
 Generating and scattering weights 
-Random numbers generated
- initialized vector for size 100 and rank 15
-myRank: 15 i = 1
-myRank: 15 i = 2
-myRank: 15 i = 3
-myRank: 15 i = 4
-myRank: 15 i = 5
-myRank: 15 i = 6
-myRank: 15 i = 7
-myRank: 15 i = 8
-myRank: 15 i = 9
-myRank: 15 i = 10
-myRank: 15 i = 11
-myRank: 15 i = 12
-myRank: 15 i = 13
-myRank: 15 i = 14
-myRank: 15 i = 15
-myRank: 15 i = 16
-myRank: 15 i = 17
-myRank: 15 i = 18
-myRank: 15 i = 19
-myRank: 15 i = 20
-myRank: 15 i = 21
-myRank: 15 i = 22
-myRank: 15 i = 23
-myRank: 15 i = 24
-myRank: 15 i = 25
-myRank: 15 i = 26
-myRank: 15 i = 27
-myRank: 15 i = 28
-myRank: 15 i = 29
-myRank: 15 i = 30
-myRank: 15 i = 31
-myRank: 15 i = 32
-myRank: 15 i = 33
-myRank: 15 i = 34
-myRank: 15 i = 35
-myRank: 15 i = 36
-myRank: 15 i = 37
-myRank: 15 i = 38
-myRank: 15 i = 39
-myRank: 15 i = 40
-myRank: 15 i = 41
-myRank: 15 i = 42
-myRank: 15 i = 43
-myRank: 15 i = 44
-myRank: 15 i = 45
-myRank: 15 i = 46
-myRank: 15 i = 47
-myRank: 15 i = 48
-myRank: 15 i = 49
-myRank: 15 i = 50
-myRank: 15 i = 51
-myRank: 15 i = 52
-myRank: 15 i = 53
-myRank: 15 i = 54
-myRank: 15 i = 55
-myRank: 15 i = 56
-myRank: 15 i = 57
-myRank: 15 i = 58
-myRank: 15 i = 59
-myRank: 15 i = 60
-myRank: 15 i = 61
-myRank: 15 i = 62
-myRank: 15 i = 63
-myRank: 15 i = 64
-myRank: 15 i = 65
-myRank: 15 i = 66
-myRank: 15 i = 67
-myRank: 15 i = 68
-myRank: 15 i = 69
-myRank: 15 i = 70
-myRank: 15 i = 71
-myRank: 15 i = 72
-myRank: 15 i = 73
-myRank: 15 i = 74
-myRank: 15 i = 75
-myRank: 15 i = 76
-myRank: 15 i = 77
-myRank: 15 i = 78
-myRank: 15 i = 79
-myRank: 15 i = 80
-myRank: 15 i = 81
-myRank: 15 i = 82
-myRank: 15 i = 83
-myRank: 15 i = 84
-myRank: 15 i = 85
-myRank: 15 i = 86
-myRank: 15 i = 87
-myRank: 15 i = 88
-myRank: 15 i = 89
-myRank: 15 i = 90
-myRank: 15 i = 91
-myRank: 15 i = 92
-myRank: 15 i = 93
-myRank: 15 i = 94
-myRank: 15 i = 95
-myRank: 15 i = 96
-myRank: 15 i = 97
-myRank: 15 i = 98
-myRank: 15 i = 99
-myRank: 15 i = 100
+Random numbers generated, j = 100
+ initialized vector for size 100 and rank 8
+myRank: 8 i = 1
+myRank: 8 i = 2
+myRank: 8 i = 3
+myRank: 8 i = 4
+myRank: 8 i = 5
+myRank: 8 i = 6
+myRank: 8 i = 7
+myRank: 8 i = 8
+myRank: 8 i = 9
+myRank: 8 i = 10
+myRank: 8 i = 11
+myRank: 8 i = 12
+myRank: 8 i = 13
+myRank: 8 i = 14
+myRank: 8 i = 15
+myRank: 8 i = 16
+myRank: 8 i = 17
+myRank: 8 i = 18
+myRank: 8 i = 19
+myRank: 8 i = 20
+myRank: 8 i = 21
+myRank: 8 i = 22
+myRank: 8 i = 23
+myRank: 8 i = 24
+myRank: 8 i = 25
+myRank: 8 i = 26
+myRank: 8 i = 27
+myRank: 8 i = 28
+myRank: 8 i = 29
+myRank: 8 i = 30
+myRank: 8 i = 31
+myRank: 8 i = 32
+myRank: 8 i = 33
+myRank: 8 i = 34
+myRank: 8 i = 35
+myRank: 8 i = 36
+myRank: 8 i = 37
+myRank: 8 i = 38
+myRank: 8 i = 39
+myRank: 8 i = 40
+myRank: 8 i = 41
+myRank: 8 i = 42
+myRank: 8 i = 43
+myRank: 8 i = 44
+myRank: 8 i = 45
+myRank: 8 i = 46
+myRank: 8 i = 47
+myRank: 8 i = 48
+myRank: 8 i = 49
+myRank: 8 i = 50
+myRank: 8 i = 51
+myRank: 8 i = 52
+myRank: 8 i = 53
+myRank: 8 i = 54
+myRank: 8 i = 55
+myRank: 8 i = 56
+myRank: 8 i = 57
+myRank: 8 i = 58
+myRank: 8 i = 59
+myRank: 8 i = 60
+myRank: 8 i = 61
+myRank: 8 i = 62
+myRank: 8 i = 63
+myRank: 8 i = 64
+myRank: 8 i = 65
+myRank: 8 i = 66
+myRank: 8 i = 67
+myRank: 8 i = 68
+myRank: 8 i = 69
+myRank: 8 i = 70
+myRank: 8 i = 71
+myRank: 8 i = 72
+myRank: 8 i = 73
+myRank: 8 i = 74
+myRank: 8 i = 75
+myRank: 8 i = 76
+myRank: 8 i = 77
+myRank: 8 i = 78
+myRank: 8 i = 79
+myRank: 8 i = 80
+myRank: 8 i = 81
+myRank: 8 i = 82
+myRank: 8 i = 83
+myRank: 8 i = 84
+myRank: 8 i = 85
+myRank: 8 i = 86
+myRank: 8 i = 87
+myRank: 8 i = 88
+myRank: 8 i = 89
+myRank: 8 i = 90
+myRank: 8 i = 91
+myRank: 8 i = 92
+myRank: 8 i = 93
+myRank: 8 i = 94
+myRank: 8 i = 95
+myRank: 8 i = 96
+myRank: 8 i = 97
+myRank: 8 i = 98
+myRank: 8 i = 99
+myRank: 8 i = 100
 sending weights to master 
 Generating and scattering weights 
  sending yMatrix to master
@@ -1737,8 +1737,8 @@ Generating and scattering weights
  sending yMatrix to master
  sending yMatrix back out to hosts 
  sending yMatrix to master
- sending yMatrix back out to hosts 
  sending yMatrix to master
+ sending yMatrix back out to hosts 
  sending yMatrix back out to hosts 
  sending yMatrix back out to hosts 
  sending yMatrix back out to hosts 
@@ -1778,25 +1778,25 @@ finding min/max pairs
 finding min/max pairs
 finding min/max pairs
 FOR J = 100 AND P = 16--------------------------------
-Cmax: 3.36379e+06 CoreMax: 5 i_max: 599 j_max 99
-Cmin: -1.13966e-315 CoreMin: 1 i_min: 197 j_min 1501
-My Rank was: 0 and I took 7.15899 seconds
-My Rank was: 2 and I took 6.33571 seconds
-My Rank was: 9 and I took 4.64035 seconds
-My Rank was: 10 and I took 4.65495 seconds
-My Rank was: 12 and I took 4.61923 seconds
-My Rank was: 6 and I took 4.6251 seconds
-My Rank was: 13 and I took 4.60405 seconds
-My Rank was: 11 and I took 4.60989 seconds
-My Rank was: 7 and I took 4.61871 seconds
-My Rank was: 15 and I took 4.59533 seconds
-My Rank was: 5 and I took 4.81596 seconds
-My Rank was: 14 and I took 4.59563 seconds
-My Rank was: 1 and I took 4.65698 seconds
-My Rank was: 8 and I took 4.64914 seconds
-My Rank was: 4 and I took 4.60334 seconds
-My Rank was: 3 and I took 4.60248 seconds
-Random numbers generated
+Cmax: 3.25351e+06 CoreMax: 9 i_max: 996 j_max 96
+Cmin: -9.52814e-316 CoreMin: 9 i_min: 996 j_min 701
+My Rank was: 0 and I took 7.15977 seconds
+My Rank was: 2 and I took 6.29107 seconds
+My Rank was: 5 and I took 4.84348 seconds
+My Rank was: 8 and I took 4.64131 seconds
+My Rank was: 12 and I took 4.63315 seconds
+My Rank was: 3 and I took 4.61887 seconds
+My Rank was: 6 and I took 4.66798 seconds
+My Rank was: 13 and I took 4.6275 seconds
+My Rank was: 11 and I took 4.60923 seconds
+My Rank was: 9 and I took 4.64355 seconds
+My Rank was: 4 and I took 4.6291 seconds
+My Rank was: 1 and I took 4.62529 seconds
+My Rank was: 10 and I took 4.65055 seconds
+My Rank was: 14 and I took 4.60862 seconds
+My Rank was: 7 and I took 4.65658 seconds
+My Rank was: 15 and I took 4.59486 seconds
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 21
 myRank: 21 i = 1
 myRank: 21 i = 2
@@ -1850,7 +1850,7 @@ myRank: 21 i = 49
 myRank: 21 i = 50
 sending weights to master 
 Generating and scattering weights 
-Random numbers generated
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 0
 myRank: 0 i = 1
 myRank: 0 i = 2
@@ -1903,13 +1903,62 @@ myRank: 0 i = 48
 myRank: 0 i = 49
 myRank: 0 i = 50
 Generating and scattering weights 
-Random numbers generated
-Random numbers generated
- initialized vector for size 50 and rank 6
-myRank: 6 i = 1
-myRank: 6 i = 2
-myRank: 6 i = 3
-Random numbers generated
+Random numbers generated, j = 50
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 3
+myRank: 3 i = 1
+myRank: 3 i = 2
+myRank: 3 i = 3
+myRank: 3 i = 4
+myRank: 3 i = 5
+myRank: 3 i = 6
+myRank: 3 i = 7
+myRank: 3 i = 8
+myRank: 3 i = 9
+myRank: 3 i = 10
+myRank: 3 i = 11
+myRank: 3 i = 12
+myRank: 3 i = 13
+myRank: 3 i = 14
+myRank: 3 i = 15
+myRank: 3 i = 16
+myRank: 3 i = 17
+myRank: 3 i = 18
+myRank: 3 i = 19
+myRank: 3 i = 20
+myRank: 3 i = 21
+myRank: 3 i = 22
+myRank: 3 i = 23
+myRank: 3 i = 24
+myRank: 3 i = 25
+myRank: 3 i = 26
+myRank: 3 i = 27
+myRank: 3 i = 28
+myRank: 3 i = 29
+myRank: 3 i = 30
+myRank: 3 i = 31
+myRank: 3 i = 32
+myRank: 3 i = 33
+myRank: 3 i = 34
+myRank: 3 i = 35
+myRank: 3 i = 36
+myRank: 3 i = 37
+myRank: 3 i = 38
+myRank: 3 i = 39
+myRank: 3 i = 40
+myRank: 3 i = 41
+myRank: 3 i = 42
+myRank: 3 i = 43
+myRank: 3 i = 44
+myRank: 3 i = 45
+myRank: 3 i = 46
+myRank: 3 i = 47
+myRank: 3 i = 48
+myRank: 3 i = 49
+myRank: 3 i = 50
+sending weights to master 
+Generating and scattering weights 
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 10
 myRank: 10 i = 1
 myRank: 10 i = 2
@@ -1962,7 +2011,8 @@ myRank: 10 i = 48
 myRank: 10 i = 49
 myRank: 10 i = 50
 sending weights to master 
-Random numbers generated
+Generating and scattering weights 
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 4
 myRank: 4 i = 1
 myRank: 4 i = 2
@@ -2015,12 +2065,123 @@ myRank: 4 i = 48
 myRank: 4 i = 49
 myRank: 4 i = 50
 sending weights to master 
-Random numbers generated
- initialized vector for size 50 and rank 7
-myRank: 7 i = 1
-myRank: 7 i = 2
-myRank: 7 i = 3
-Random numbers generated
+Generating and scattering weights 
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 6
+myRank: 6 i = 1
+myRank: 6 i = 2
+myRank: 6 i = 3
+myRank: 6 i = 4
+myRank: 6 i = 5
+myRank: 6 i = 6
+myRank: 6 i = 7
+myRank: 6 i = 8
+myRank: 6 i = 9
+myRank: 6 i = 10
+myRank: 6 i = 11
+myRank: 6 i = 12
+myRank: 6 i = 13
+myRank: 6 i = 14
+myRank: 6 i = 15
+myRank: 6 i = 16
+myRank: 6 i = 17
+myRank: 6 i = 18
+myRank: 6 i = 19
+myRank: 6 i = 20
+myRank: 6 i = 21
+myRank: 6 i = 22
+myRank: 6 i = 23
+myRank: 6 i = 24
+myRank: 6 i = 25
+myRank: 6 i = 26
+myRank: 6 i = 27
+myRank: 6 i = 28
+myRank: 6 i = 29
+myRank: 6 i = 30
+myRank: 6 i = 31
+myRank: 6 i = 32
+myRank: 6 i = 33
+myRank: 6 i = 34
+myRank: 6 i = 35
+myRank: 6 i = 36
+myRank: 6 i = 37
+myRank: 6 i = 38
+myRank: 6 i = 39
+myRank: 6 i = 40
+myRank: 6 i = 41
+myRank: 6 i = 42
+myRank: 6 i = 43
+myRank: 6 i = 44
+myRank: 6 i = 45
+myRank: 6 i = 46
+myRank: 6 i = 47
+myRank: 6 i = 48
+myRank: 6 i = 49
+myRank: 6 i = 50
+sending weights to master 
+Generating and scattering weights 
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 11
+myRank: 11 i = 1
+myRank: 11 i = 2
+myRank: 11 i = 3
+myRank: 11 i = 4
+myRank: 11 i = 5
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 1
+myRank: 1 i = 1
+myRank: 1 i = 2
+myRank: 1 i = 3
+myRank: 1 i = 4
+myRank: 1 i = 5
+myRank: 1 i = 6
+myRank: 1 i = 7
+myRank: 1 i = 8
+myRank: 1 i = 9
+myRank: 1 i = 10
+myRank: 1 i = 11
+myRank: 1 i = 12
+myRank: 1 i = 13
+myRank: 1 i = 14
+myRank: 1 i = 15
+myRank: 1 i = 16
+myRank: 1 i = 17
+myRank: 1 i = 18
+myRank: 1 i = 19
+myRank: 1 i = 20
+myRank: 1 i = 21
+myRank: 1 i = 22
+myRank: 1 i = 23
+myRank: 1 i = 24
+myRank: 1 i = 25
+myRank: 1 i = 26
+myRank: 1 i = 27
+myRank: 1 i = 28
+myRank: 1 i = 29
+myRank: 1 i = 30
+myRank: 1 i = 31
+myRank: 1 i = 32
+myRank: 1 i = 33
+myRank: 1 i = 34
+myRank: 1 i = 35
+myRank: 1 i = 36
+myRank: 1 i = 37
+myRank: 1 i = 38
+myRank: 1 i = 39
+myRank: 1 i = 40
+myRank: 1 i = 41
+myRank: 1 i = 42
+myRank: 1 i = 43
+myRank: 1 i = 44
+myRank: 1 i = 45
+myRank: 1 i = 46
+myRank: 1 i = 47
+myRank: 1 i = 48
+myRank: 1 i = 49
+myRank: 1 i = 50
+sending weights to master 
+Generating and scattering weights 
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 9
 myRank: 9 i = 1
 myRank: 9 i = 2
@@ -2073,119 +2234,24 @@ myRank: 9 i = 48
 myRank: 9 i = 49
 myRank: 9 i = 50
 sending weights to master 
-Random numbers generated
+Generating and scattering weights 
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 13
 myRank: 13 i = 1
 myRank: 13 i = 2
 myRank: 13 i = 3
-Random numbers generated
- initialized vector for size 50 and rank 19
-myRank: 19 i = 1
-myRank: 19 i = 2
-myRank: 19 i = 3
-myRank: 19 i = 4
-myRank: 19 i = 5
-myRank: 19 i = 6
-myRank: 19 i = 7
-myRank: 19 i = 8
-myRank: 19 i = 9
-myRank: 19 i = 10
-myRank: 19 i = 11
-myRank: 19 i = 12
-myRank: 19 i = 13
-myRank: 19 i = 14
-myRank: 19 i = 15
-myRank: 19 i = 16
-myRank: 19 i = 17
-myRank: 19 i = 18
-myRank: 19 i = 19
-myRank: 19 i = 20
-myRank: 19 i = 21
-myRank: 19 i = 22
-myRank: 19 i = 23
-myRank: 19 i = 24
-myRank: 19 i = 25
-myRank: 19 i = 26
-myRank: 19 i = 27
-myRank: 19 i = 28
-myRank: 19 i = 29
-myRank: 19 i = 30
-myRank: 19 i = 31
-myRank: 19 i = 32
-myRank: 19 i = 33
-myRank: 19 i = 34
-myRank: 19 i = 35
-myRank: 19 i = 36
-myRank: 19 i = 37
-myRank: 19 i = 38
-myRank: 19 i = 39
-myRank: 19 i = 40
-myRank: 19 i = 41
-myRank: 19 i = 42
-myRank: 19 i = 43
-myRank: 19 i = 44
-myRank: 19 i = 45
-myRank: 19 i = 46
-myRank: 19 i = 47
-myRank: 19 i = 48
-myRank: 19 i = 49
-myRank: 19 i = 50
-sending weights to master 
-Generating and scattering weights 
-Random numbers generated
- initialized vector for size 50 and rank 12
-myRank: 12 i = 1
-myRank: 12 i = 2
-myRank: 12 i = 3
-myRank: 12 i = 4
-myRank: 12 i = 5
-myRank: 12 i = 6
-myRank: 12 i = 7
-myRank: 12 i = 8
-myRank: 12 i = 9
-myRank: 12 i = 10
-myRank: 12 i = 11
-myRank: 12 i = 12
-myRank: 12 i = 13
-myRank: 12 i = 14
-myRank: 12 i = 15
-myRank: 12 i = 16
-myRank: 12 i = 17
-myRank: 12 i = 18
-myRank: 12 i = 19
-myRank: 12 i = 20
-myRank: 12 i = 21
-myRank: 12 i = 22
-myRank: 12 i = 23
-myRank: 12 i = 24
-myRank: 12 i = 25
-myRank: 12 i = 26
-myRank: 12 i = 27
-myRank: 12 i = 28
-myRank: 12 i = 29
-myRank: 12 i = 30
-myRank: 12 i = 31
-myRank: 12 i = 32
-myRank: 12 i = 33
-myRank: 12 i = 34
-myRank: 12 i = 35
-myRank: 12 i = 36
-myRank: 12 i = 37
-myRank: 12 i = 38
-myRank: 12 i = 39
-myRank: 12 i = 40
-myRank: 12 i = 41
-myRank: 12 i = 42
-myRank: 12 i = 43
-myRank: 12 i = 44
-myRank: 12 i = 45
-myRank: 12 i = 46
-myRank: 12 i = 47
-myRank: 12 i = 48
-myRank: 12 i = 49
-myRank: 12 i = 50
-sending weights to master 
-Random numbers generated
+myRank: 13 i = 4
+myRank: 13 i = 5
+myRank: 13 i = 6
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 15
+myRank: 15 i = 1
+myRank: 15 i = 2
+myRank: 15 i = 3
+myRank: 15 i = 4
+myRank: 15 i = 5
+myRank: 15 i = 6
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 2
 myRank: 2 i = 1
 myRank: 2 i = 2
@@ -2239,78 +2305,92 @@ myRank: 2 i = 49
 myRank: 2 i = 50
 sending weights to master 
 Generating and scattering weights 
-Random numbers generated
- initialized vector for size 50 and rank 15
-myRank: 15 i = 1
-myRank: 15 i = 2
-myRank: 15 i = 3
-myRank: 15 i = 4
-Random numbers generated
- initialized vector for size 50 and rank 18
-myRank: 18 i = 1
-myRank: 18 i = 2
-myRank: 18 i = 3
-myRank: 18 i = 4
-myRank: 18 i = 5
-myRank: 18 i = 6
-myRank: 18 i = 7
-myRank: 18 i = 8
-myRank: 18 i = 9
-myRank: 18 i = 10
-myRank: 18 i = 11
-myRank: 18 i = 12
-myRank: 18 i = 13
-myRank: 18 i = 14
-myRank: 18 i = 15
-myRank: 18 i = 16
-myRank: 18 i = 17
-myRank: 18 i = 18
-myRank: 18 i = 19
-myRank: 18 i = 20
-myRank: 18 i = 21
-myRank: 18 i = 22
-myRank: 18 i = 23
-myRank: 18 i = 24
-myRank: 18 i = 25
-myRank: 18 i = 26
-myRank: 18 i = 27
-myRank: 18 i = 28
-myRank: 18 i = 29
-myRank: 18 i = 30
-myRank: 18 i = 31
-myRank: 18 i = 32
-myRank: 18 i = 33
-myRank: 18 i = 34
-myRank: 18 i = 35
-myRank: 18 i = 36
-myRank: 18 i = 37
-myRank: 18 i = 38
-myRank: 18 i = 39
-myRank: 18 i = 40
-myRank: 18 i = 41
-myRank: 18 i = 42
-myRank: 18 i = 43
-myRank: 18 i = 44
-myRank: 18 i = 45
-myRank: 18 i = 46
-myRank: 18 i = 47
-myRank: 18 i = 48
-myRank: 18 i = 49
-myRank: 18 i = 50
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 7
+myRank: 7 i = 1
+myRank: 7 i = 2
+myRank: 7 i = 3
+myRank: 7 i = 4
+myRank: 7 i = 5
+myRank: 7 i = 6
+myRank: 7 i = 7
+myRank: 7 i = 8
+myRank: 7 i = 9
+myRank: 7 i = 10
+myRank: 7 i = 11
+myRank: 7 i = 12
+myRank: 7 i = 13
+myRank: 7 i = 14
+myRank: 7 i = 15
+myRank: 7 i = 16
+myRank: 7 i = 17
+myRank: 7 i = 18
+myRank: 7 i = 19
+myRank: 7 i = 20
+myRank: 7 i = 21
+myRank: 7 i = 22
+myRank: 7 i = 23
+myRank: 7 i = 24
+myRank: 7 i = 25
+myRank: 7 i = 26
+myRank: 7 i = 27
+myRank: 7 i = 28
+myRank: 7 i = 29
+myRank: 7 i = 30
+myRank: 7 i = 31
+myRank: 7 i = 32
+myRank: 7 i = 33
+myRank: 7 i = 34
+myRank: 7 i = 35
+myRank: 7 i = 36
+myRank: 7 i = 37
+myRank: 7 i = 38
+myRank: 7 i = 39
+myRank: 7 i = 40
+myRank: 7 i = 41
+myRank: 7 i = 42
+myRank: 7 i = 43
+myRank: 7 i = 44
+myRank: 7 i = 45
+myRank: 7 i = 46
+myRank: 7 i = 47
+myRank: 7 i = 48
+myRank: 7 i = 49
+myRank: 7 i = 50
 sending weights to master 
-Random numbers generated
- initialized vector for size 50 and rank 11
-myRank: 11 i = 1
-myRank: 11 i = 2
-myRank: 11 i = 3
-myRank: 11 i = 4
-myRank: 11 i = 5
-Random numbers generated
+Generating and scattering weights 
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 19
+myRank: 19 i = 1
+myRank: 19 i = 2
+myRank: 19 i = 3
+myRank: 19 i = 4
+myRank: 19 i = 5
+myRank: 19 i = 6
+ initialized vector for size 50 and rank 5
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 12
+myRank: 12 i = 1
+myRank: 12 i = 2
+myRank: 12 i = 3
+myRank: 12 i = 4
+myRank: 12 i = 5
+myRank: 12 i = 6
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 16
 myRank: 16 i = 1
 myRank: 16 i = 2
 myRank: 16 i = 3
-Random numbers generated
+myRank: 16 i = 4
+myRank: 16 i = 5
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 14
+myRank: 14 i = 1
+myRank: 14 i = 2
+myRank: 14 i = 3
+myRank: 14 i = 4
+myRank: 14 i = 5
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 8
 myRank: 8 i = 1
 myRank: 8 i = 2
@@ -2363,15 +2443,16 @@ myRank: 8 i = 48
 myRank: 8 i = 49
 myRank: 8 i = 50
 sending weights to master 
-Random numbers generated
- initialized vector for size 50 and rank 14
-myRank: 14 i = 1
-myRank: 14 i = 2
-myRank: 14 i = 3
-Random numbers generated
- initialized vector for size 50 and rank 26
-myRank: 26 i = 1
-Random numbers generated
+Generating and scattering weights 
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 18
+myRank: 18 i = 1
+myRank: 18 i = 2
+myRank: 18 i = 3
+myRank: 18 i = 4
+myRank: 18 i = 5
+myRank: 18 i = 6
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 17
 myRank: 17 i = 1
 myRank: 17 i = 2
@@ -2424,122 +2505,65 @@ myRank: 17 i = 48
 myRank: 17 i = 49
 myRank: 17 i = 50
 sending weights to master 
-Random numbers generated
- initialized vector for size 50 and rank 3
-myRank: 3 i = 1
-myRank: 3 i = 2
-myRank: 3 i = 3
-myRank: 3 i = 4
-myRank: 3 i = 5
-myRank: 3 i = 6
-myRank: 3 i = 7
-myRank: 3 i = 8
-myRank: 3 i = 9
-myRank: 3 i = 10
-myRank: 3 i = 11
-myRank: 3 i = 12
-myRank: 3 i = 13
-myRank: 3 i = 14
-myRank: 3 i = 15
-myRank: 3 i = 16
-myRank: 3 i = 17
-myRank: 3 i = 18
-myRank: 3 i = 19
-myRank: 3 i = 20
-myRank: 3 i = 21
-myRank: 3 i = 22
-myRank: 3 i = 23
-myRank: 3 i = 24
-myRank: 3 i = 25
-myRank: 3 i = 26
-myRank: 3 i = 27
-myRank: 3 i = 28
-myRank: 3 i = 29
-myRank: 3 i = 30
-myRank: 3 i = 31
-myRank: 3 i = 32
-myRank: 3 i = 33
-myRank: 3 i = 34
-myRank: 3 i = 35
-myRank: 3 i = 36
-myRank: 3 i = 37
-myRank: 3 i = 38
-myRank: 3 i = 39
-myRank: 3 i = 40
-myRank: 3 i = 41
-myRank: 3 i = 42
-myRank: 3 i = 43
-myRank: 3 i = 44
-myRank: 3 i = 45
-myRank: 3 i = 46
-myRank: 3 i = 47
-myRank: 3 i = 48
-myRank: 3 i = 49
-myRank: 3 i = 50
-sending weights to master 
-Random numbers generated
- initialized vector for size 50 and rank 1
-myRank: 1 i = 1
-myRank: 1 i = 2
-myRank: 1 i = 3
-myRank: 1 i = 4
-myRank: 1 i = 5
-myRank: 1 i = 6
-myRank: 1 i = 7
-myRank: 1 i = 8
-myRank: 1 i = 9
-myRank: 1 i = 10
-myRank: 1 i = 11
-myRank: 1 i = 12
-myRank: 1 i = 13
-myRank: 1 i = 14
-myRank: 1 i = 15
-myRank: 1 i = 16
-myRank: 1 i = 17
-myRank: 1 i = 18
-myRank: 1 i = 19
-myRank: 1 i = 20
-myRank: 1 i = 21
-myRank: 1 i = 22
-myRank: 1 i = 23
-myRank: 1 i = 24
-myRank: 1 i = 25
-myRank: 1 i = 26
-myRank: 1 i = 27
-myRank: 1 i = 28
-myRank: 1 i = 29
-myRank: 1 i = 30
-myRank: 1 i = 31
-myRank: 1 i = 32
-myRank: 1 i = 33
-myRank: 1 i = 34
-myRank: 1 i = 35
-myRank: 1 i = 36
-myRank: 1 i = 37
-myRank: 1 i = 38
-myRank: 1 i = 39
-myRank: 1 i = 40
-myRank: 1 i = 41
-myRank: 1 i = 42
-myRank: 1 i = 43
-myRank: 1 i = 44
-myRank: 1 i = 45
-myRank: 1 i = 46
-myRank: 1 i = 47
-myRank: 1 i = 48
-myRank: 1 i = 49
-myRank: 1 i = 50
-sending weights to master 
-Random numbers generated
+Generating and scattering weights 
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 20
 myRank: 20 i = 1
-Random numbers generated
- initialized vector for size 50 and rank 27
-myRank: 27 i = 1
-myRank: 27 i = 2
-myRank: 27 i = 3
-myRank: 27 i = 4
-Random numbers generated
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 24
+myRank: 24 i = 1
+myRank: 24 i = 2
+myRank: 24 i = 3
+myRank: 24 i = 4
+myRank: 24 i = 5
+myRank: 24 i = 6
+myRank: 24 i = 7
+myRank: 24 i = 8
+myRank: 24 i = 9
+myRank: 24 i = 10
+myRank: 24 i = 11
+myRank: 24 i = 12
+myRank: 24 i = 13
+myRank: 24 i = 14
+myRank: 24 i = 15
+myRank: 24 i = 16
+myRank: 24 i = 17
+myRank: 24 i = 18
+myRank: 24 i = 19
+myRank: 24 i = 20
+myRank: 24 i = 21
+myRank: 24 i = 22
+myRank: 24 i = 23
+myRank: 24 i = 24
+myRank: 24 i = 25
+myRank: 24 i = 26
+myRank: 24 i = 27
+myRank: 24 i = 28
+myRank: 24 i = 29
+myRank: 24 i = 30
+myRank: 24 i = 31
+myRank: 24 i = 32
+myRank: 24 i = 33
+myRank: 24 i = 34
+myRank: 24 i = 35
+myRank: 24 i = 36
+myRank: 24 i = 37
+myRank: 24 i = 38
+myRank: 24 i = 39
+myRank: 24 i = 40
+myRank: 24 i = 41
+myRank: 24 i = 42
+myRank: 24 i = 43
+myRank: 24 i = 44
+myRank: 24 i = 45
+myRank: 24 i = 46
+myRank: 24 i = 47
+myRank: 24 i = 48
+myRank: 24 i = 49
+myRank: 24 i = 50
+sending weights to master 
+Generating and scattering weights 
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 31
 myRank: 31 i = 1
 myRank: 31 i = 2
@@ -2592,7 +2616,8 @@ myRank: 31 i = 48
 myRank: 31 i = 49
 myRank: 31 i = 50
 sending weights to master 
-Random numbers generated
+Generating and scattering weights 
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 25
 myRank: 25 i = 1
 myRank: 25 i = 2
@@ -2645,14 +2670,126 @@ myRank: 25 i = 48
 myRank: 25 i = 49
 myRank: 25 i = 50
 sending weights to master 
-Random numbers generated
- initialized vector for size 50 and rank 28
-myRank: 28 i = 1
-myRank: 28 i = 2
-myRank: 28 i = 3
-myRank: 28 i = 4
-myRank: 28 i = 5
-Random numbers generated
+Generating and scattering weights 
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 27
+myRank: 27 i = 1
+myRank: 27 i = 2
+myRank: 27 i = 3
+myRank: 27 i = 4
+myRank: 27 i = 5
+myRank: 27 i = 6
+myRank: 27 i = 7
+myRank: 27 i = 8
+myRank: 27 i = 9
+myRank: 27 i = 10
+myRank: 27 i = 11
+myRank: 27 i = 12
+myRank: 27 i = 13
+myRank: 27 i = 14
+myRank: 27 i = 15
+myRank: 27 i = 16
+myRank: 27 i = 17
+myRank: 27 i = 18
+myRank: 27 i = 19
+myRank: 27 i = 20
+myRank: 27 i = 21
+myRank: 27 i = 22
+myRank: 27 i = 23
+myRank: 27 i = 24
+myRank: 27 i = 25
+myRank: 27 i = 26
+myRank: 27 i = 27
+myRank: 27 i = 28
+myRank: 27 i = 29
+myRank: 27 i = 30
+myRank: 27 i = 31
+myRank: 27 i = 32
+myRank: 27 i = 33
+myRank: 27 i = 34
+myRank: 27 i = 35
+myRank: 27 i = 36
+myRank: 27 i = 37
+myRank: 27 i = 38
+myRank: 27 i = 39
+myRank: 27 i = 40
+myRank: 27 i = 41
+myRank: 27 i = 42
+myRank: 27 i = 43
+myRank: 27 i = 44
+myRank: 27 i = 45
+myRank: 27 i = 46
+myRank: 27 i = 47
+myRank: 27 i = 48
+myRank: 27 i = 49
+myRank: 27 i = 50
+sending weights to master 
+Generating and scattering weights 
+myRank: 11 i = 6
+myRank: 11 i = 7
+myRank: 11 i = 8
+myRank: 11 i = 9
+myRank: 11 i = 10
+myRank: 11 i = 11
+myRank: 11 i = 12
+myRank: 11 i = 13
+myRank: 11 i = 14
+myRank: 11 i = 15
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 22
+myRank: 22 i = 1
+myRank: 22 i = 2
+myRank: 22 i = 3
+myRank: 22 i = 4
+myRank: 22 i = 5
+myRank: 22 i = 6
+myRank: 22 i = 7
+myRank: 22 i = 8
+myRank: 22 i = 9
+myRank: 22 i = 10
+myRank: 22 i = 11
+myRank: 22 i = 12
+myRank: 22 i = 13
+myRank: 22 i = 14
+myRank: 22 i = 15
+myRank: 22 i = 16
+myRank: 22 i = 17
+myRank: 22 i = 18
+myRank: 22 i = 19
+myRank: 22 i = 20
+myRank: 22 i = 21
+myRank: 22 i = 22
+myRank: 22 i = 23
+myRank: 22 i = 24
+myRank: 22 i = 25
+myRank: 22 i = 26
+myRank: 22 i = 27
+myRank: 22 i = 28
+myRank: 22 i = 29
+myRank: 22 i = 30
+myRank: 22 i = 31
+myRank: 22 i = 32
+myRank: 22 i = 33
+myRank: 22 i = 34
+myRank: 22 i = 35
+myRank: 22 i = 36
+myRank: 22 i = 37
+myRank: 22 i = 38
+myRank: 22 i = 39
+myRank: 22 i = 40
+myRank: 22 i = 41
+myRank: 22 i = 42
+myRank: 22 i = 43
+myRank: 22 i = 44
+myRank: 22 i = 45
+myRank: 22 i = 46
+myRank: 22 i = 47
+myRank: 22 i = 48
+myRank: 22 i = 49
+myRank: 22 i = 50
+sending weights to master 
+Generating and scattering weights 
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 30
 myRank: 30 i = 1
 myRank: 30 i = 2
@@ -2705,16 +2842,24 @@ myRank: 30 i = 48
 myRank: 30 i = 49
 myRank: 30 i = 50
 sending weights to master 
-myRank: 13 i = 4
-myRank: 13 i = 5
-myRank: 13 i = 6
+Generating and scattering weights 
 myRank: 13 i = 7
 myRank: 13 i = 8
 myRank: 13 i = 9
 myRank: 13 i = 10
 myRank: 13 i = 11
-Generating and scattering weights 
-Random numbers generated
+myRank: 13 i = 12
+myRank: 13 i = 13
+myRank: 13 i = 14
+myRank: 15 i = 7
+myRank: 15 i = 8
+myRank: 15 i = 9
+myRank: 15 i = 10
+myRank: 15 i = 11
+myRank: 15 i = 12
+myRank: 15 i = 13
+myRank: 15 i = 14
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 23
 myRank: 23 i = 1
 myRank: 23 i = 2
@@ -2768,25 +2913,77 @@ myRank: 23 i = 49
 myRank: 23 i = 50
 sending weights to master 
 Generating and scattering weights 
-myRank: 15 i = 5
-myRank: 15 i = 6
-myRank: 15 i = 7
-myRank: 15 i = 8
-myRank: 15 i = 9
-myRank: 15 i = 10
-myRank: 15 i = 11
-myRank: 15 i = 12
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 28
+myRank: 28 i = 1
+myRank: 28 i = 2
+myRank: 28 i = 3
+myRank: 28 i = 4
+myRank: 28 i = 5
+myRank: 28 i = 6
+myRank: 28 i = 7
+myRank: 28 i = 8
+myRank: 28 i = 9
+myRank: 28 i = 10
+myRank: 28 i = 11
+myRank: 28 i = 12
+myRank: 28 i = 13
+myRank: 28 i = 14
+myRank: 28 i = 15
+myRank: 28 i = 16
+myRank: 28 i = 17
+myRank: 28 i = 18
+myRank: 28 i = 19
+myRank: 28 i = 20
+myRank: 28 i = 21
+myRank: 28 i = 22
+myRank: 28 i = 23
+myRank: 28 i = 24
+myRank: 28 i = 25
+myRank: 28 i = 26
+myRank: 28 i = 27
+myRank: 28 i = 28
+myRank: 28 i = 29
+myRank: 28 i = 30
+myRank: 28 i = 31
+myRank: 28 i = 32
+myRank: 28 i = 33
+myRank: 28 i = 34
+myRank: 28 i = 35
+myRank: 28 i = 36
+myRank: 28 i = 37
+myRank: 28 i = 38
+myRank: 28 i = 39
+myRank: 28 i = 40
+myRank: 28 i = 41
+myRank: 28 i = 42
+myRank: 28 i = 43
+myRank: 28 i = 44
+myRank: 28 i = 45
+myRank: 28 i = 46
+myRank: 28 i = 47
+myRank: 28 i = 48
+myRank: 28 i = 49
+myRank: 28 i = 50
+sending weights to master 
 Generating and scattering weights 
-myRank: 11 i = 6
-myRank: 11 i = 7
-myRank: 11 i = 8
-myRank: 11 i = 9
-myRank: 11 i = 10
-myRank: 11 i = 11
-myRank: 11 i = 12
-myRank: 11 i = 13
-myRank: 16 i = 4
-myRank: 16 i = 5
+myRank: 19 i = 7
+myRank: 19 i = 8
+myRank: 19 i = 9
+myRank: 19 i = 10
+myRank: 19 i = 11
+myRank: 19 i = 12
+myRank: 19 i = 13
+myRank: 19 i = 14
+myRank: 5 i = 1
+myRank: 12 i = 7
+myRank: 12 i = 8
+myRank: 12 i = 9
+myRank: 12 i = 10
+myRank: 12 i = 11
+myRank: 12 i = 12
+myRank: 12 i = 13
+myRank: 12 i = 14
 myRank: 16 i = 6
 myRank: 16 i = 7
 myRank: 16 i = 8
@@ -2794,7 +2991,17 @@ myRank: 16 i = 9
 myRank: 16 i = 10
 myRank: 16 i = 11
 myRank: 16 i = 12
-Random numbers generated
+myRank: 16 i = 13
+myRank: 14 i = 6
+myRank: 14 i = 7
+myRank: 14 i = 8
+myRank: 14 i = 9
+myRank: 14 i = 10
+myRank: 14 i = 11
+myRank: 14 i = 12
+myRank: 14 i = 13
+myRank: 14 i = 14
+Random numbers generated, j = 50
  initialized vector for size 50 and rank 29
 myRank: 29 i = 1
 myRank: 29 i = 2
@@ -2847,125 +3054,16 @@ myRank: 29 i = 48
 myRank: 29 i = 49
 myRank: 29 i = 50
 sending weights to master 
-myRank: 14 i = 4
-myRank: 14 i = 5
-myRank: 14 i = 6
-myRank: 14 i = 7
-myRank: 14 i = 8
-myRank: 14 i = 9
-myRank: 14 i = 10
-myRank: 14 i = 11
-myRank: 26 i = 2
-myRank: 26 i = 3
-myRank: 26 i = 4
-myRank: 26 i = 5
 Generating and scattering weights 
-Random numbers generated
- initialized vector for size 50 and rank 24
-myRank: 24 i = 1
-myRank: 24 i = 2
-myRank: 24 i = 3
-myRank: 24 i = 4
-myRank: 24 i = 5
-myRank: 24 i = 6
-myRank: 24 i = 7
-myRank: 24 i = 8
-myRank: 24 i = 9
-myRank: 24 i = 10
-myRank: 24 i = 11
-myRank: 24 i = 12
-myRank: 24 i = 13
-myRank: 24 i = 14
-myRank: 24 i = 15
-myRank: 24 i = 16
-myRank: 24 i = 17
-myRank: 24 i = 18
-myRank: 24 i = 19
-myRank: 24 i = 20
-myRank: 24 i = 21
-myRank: 24 i = 22
-myRank: 24 i = 23
-myRank: 24 i = 24
-myRank: 24 i = 25
-myRank: 24 i = 26
-myRank: 24 i = 27
-myRank: 24 i = 28
-myRank: 24 i = 29
-myRank: 24 i = 30
-myRank: 24 i = 31
-myRank: 24 i = 32
-myRank: 24 i = 33
-myRank: 24 i = 34
-myRank: 24 i = 35
-myRank: 24 i = 36
-myRank: 24 i = 37
-myRank: 24 i = 38
-myRank: 24 i = 39
-myRank: 24 i = 40
-myRank: 24 i = 41
-myRank: 24 i = 42
-myRank: 24 i = 43
-myRank: 24 i = 44
-myRank: 24 i = 45
-myRank: 24 i = 46
-myRank: 24 i = 47
-myRank: 24 i = 48
-myRank: 24 i = 49
-myRank: 24 i = 50
-sending weights to master 
-Random numbers generated
- initialized vector for size 50 and rank 22
-myRank: 22 i = 1
-myRank: 22 i = 2
-myRank: 22 i = 3
-myRank: 22 i = 4
-myRank: 22 i = 5
-myRank: 22 i = 6
-myRank: 22 i = 7
-myRank: 22 i = 8
-myRank: 22 i = 9
-myRank: 22 i = 10
-myRank: 22 i = 11
-myRank: 22 i = 12
-myRank: 22 i = 13
-myRank: 22 i = 14
-myRank: 22 i = 15
-myRank: 22 i = 16
-myRank: 22 i = 17
-myRank: 22 i = 18
-myRank: 22 i = 19
-myRank: 22 i = 20
-myRank: 22 i = 21
-myRank: 22 i = 22
-myRank: 22 i = 23
-myRank: 22 i = 24
-myRank: 22 i = 25
-myRank: 22 i = 26
-myRank: 22 i = 27
-myRank: 22 i = 28
-myRank: 22 i = 29
-myRank: 22 i = 30
-myRank: 22 i = 31
-myRank: 22 i = 32
-myRank: 22 i = 33
-myRank: 22 i = 34
-myRank: 22 i = 35
-myRank: 22 i = 36
-myRank: 22 i = 37
-myRank: 22 i = 38
-myRank: 22 i = 39
-myRank: 22 i = 40
-myRank: 22 i = 41
-myRank: 22 i = 42
-myRank: 22 i = 43
-myRank: 22 i = 44
-myRank: 22 i = 45
-myRank: 22 i = 46
-myRank: 22 i = 47
-myRank: 22 i = 48
-myRank: 22 i = 49
-myRank: 22 i = 50
-sending weights to master 
+myRank: 18 i = 7
+myRank: 18 i = 8
+myRank: 18 i = 9
+myRank: 18 i = 10
+myRank: 18 i = 11
+myRank: 18 i = 12
+myRank: 18 i = 13
+myRank: 18 i = 14
+myRank: 18 i = 15
 myRank: 20 i = 2
 myRank: 20 i = 3
 myRank: 20 i = 4
@@ -2973,244 +3071,169 @@ myRank: 20 i = 5
 myRank: 20 i = 6
 myRank: 20 i = 7
 myRank: 20 i = 8
-myRank: 20 i = 9
-myRank: 6 i = 4
-myRank: 6 i = 5
-myRank: 6 i = 6
-myRank: 6 i = 7
-myRank: 6 i = 8
-myRank: 6 i = 9
-myRank: 6 i = 10
-myRank: 6 i = 11
-myRank: 6 i = 12
-myRank: 6 i = 13
-myRank: 6 i = 14
-myRank: 6 i = 15
-myRank: 6 i = 16
-myRank: 6 i = 17
-Generating and scattering weights 
-Generating and scattering weights 
-myRank: 7 i = 4
-myRank: 7 i = 5
-myRank: 7 i = 6
-myRank: 7 i = 7
-myRank: 7 i = 8
-myRank: 7 i = 9
-myRank: 7 i = 10
-myRank: 7 i = 11
-myRank: 7 i = 12
-myRank: 7 i = 13
-myRank: 7 i = 14
-myRank: 7 i = 15
-myRank: 7 i = 16
-myRank: 7 i = 17
-Generating and scattering weights 
-myRank: 13 i = 12
-myRank: 13 i = 13
-myRank: 13 i = 14
-myRank: 13 i = 15
-myRank: 13 i = 16
-myRank: 13 i = 17
-myRank: 15 i = 13
-myRank: 15 i = 14
-myRank: 15 i = 15
-myRank: 15 i = 16
-myRank: 15 i = 17
-myRank: 15 i = 18
-myRank: 11 i = 14
-myRank: 11 i = 15
 myRank: 11 i = 16
 myRank: 11 i = 17
 myRank: 11 i = 18
 myRank: 11 i = 19
-myRank: 16 i = 13
+myRank: 11 i = 20
+myRank: 13 i = 15
+myRank: 13 i = 16
+myRank: 13 i = 17
+myRank: 13 i = 18
+myRank: 13 i = 19
+myRank: 13 i = 20
+myRank: 15 i = 15
+myRank: 15 i = 16
+myRank: 15 i = 17
+myRank: 15 i = 18
+myRank: 15 i = 19
+myRank: 15 i = 20
+myRank: 15 i = 21
+myRank: 19 i = 15
+myRank: 19 i = 16
+myRank: 19 i = 17
+myRank: 19 i = 18
+myRank: 19 i = 19
+myRank: 19 i = 20
+myRank: 5 i = 2
+myRank: 12 i = 15
+myRank: 12 i = 16
+myRank: 12 i = 17
+myRank: 12 i = 18
+myRank: 12 i = 19
+myRank: 12 i = 20
+myRank: 12 i = 21
+myRank: 12 i = 22
 myRank: 16 i = 14
 myRank: 16 i = 15
 myRank: 16 i = 16
 myRank: 16 i = 17
-Generating and scattering weights 
-myRank: 14 i = 12
-myRank: 14 i = 13
-myRank: 14 i = 14
-myRank: 14 i = 15
-myRank: 26 i = 6
-myRank: 26 i = 7
-myRank: 26 i = 8
-myRank: 26 i = 9
-Generating and scattering weights 
-Generating and scattering weights 
-myRank: 20 i = 10
-myRank: 20 i = 11
-myRank: 20 i = 12
-myRank: 20 i = 13
-myRank: 20 i = 14
-myRank: 20 i = 15
-myRank: 20 i = 16
-myRank: 27 i = 5
-myRank: 27 i = 6
-myRank: 27 i = 7
-myRank: 27 i = 8
-myRank: 27 i = 9
-myRank: 27 i = 10
-myRank: 27 i = 11
-myRank: 27 i = 12
-myRank: 27 i = 13
-myRank: 27 i = 14
-myRank: 27 i = 15
-myRank: 27 i = 16
-myRank: 27 i = 17
-myRank: 27 i = 18
-myRank: 27 i = 19
-myRank: 27 i = 20
-Generating and scattering weights 
-Generating and scattering weights 
-myRank: 28 i = 6
-myRank: 28 i = 7
-myRank: 28 i = 8
-myRank: 28 i = 9
-myRank: 28 i = 10
-myRank: 28 i = 11
-myRank: 28 i = 12
-myRank: 28 i = 13
-myRank: 28 i = 14
-myRank: 28 i = 15
-myRank: 28 i = 16
-myRank: 28 i = 17
-myRank: 28 i = 18
-myRank: 28 i = 19
-myRank: 28 i = 20
-Generating and scattering weights 
-myRank: 13 i = 18
-myRank: 13 i = 19
-myRank: 13 i = 20
-myRank: 13 i = 21
-myRank: 13 i = 22
-myRank: 13 i = 23
-myRank: 13 i = 24
-myRank: 15 i = 19
-myRank: 15 i = 20
-myRank: 15 i = 21
-myRank: 15 i = 22
-myRank: 11 i = 20
-myRank: 11 i = 21
-myRank: 11 i = 22
-myRank: 11 i = 23
-myRank: 11 i = 24
 myRank: 16 i = 18
 myRank: 16 i = 19
 myRank: 16 i = 20
 myRank: 16 i = 21
-Generating and scattering weights 
+myRank: 14 i = 15
 myRank: 14 i = 16
 myRank: 14 i = 17
 myRank: 14 i = 18
 myRank: 14 i = 19
 myRank: 14 i = 20
-myRank: 14 i = 21
-myRank: 26 i = 10
-myRank: 26 i = 11
-myRank: 26 i = 12
-myRank: 26 i = 13
-Generating and scattering weights 
-Generating and scattering weights 
-myRank: 20 i = 17
-myRank: 20 i = 18
-myRank: 20 i = 19
-myRank: 20 i = 20
-myRank: 6 i = 18
-myRank: 6 i = 19
-myRank: 6 i = 20
-myRank: 6 i = 21
-myRank: 6 i = 22
-myRank: 6 i = 23
-myRank: 6 i = 24
-myRank: 6 i = 25
-myRank: 6 i = 26
-myRank: 6 i = 27
-myRank: 6 i = 28
-myRank: 6 i = 29
-myRank: 6 i = 30
-myRank: 7 i = 18
-myRank: 7 i = 19
-myRank: 7 i = 20
-myRank: 7 i = 21
-myRank: 7 i = 22
-myRank: 7 i = 23
-myRank: 7 i = 24
-myRank: 7 i = 25
-myRank: 7 i = 26
-myRank: 7 i = 27
-myRank: 7 i = 28
+myRank: 18 i = 16
+myRank: 18 i = 17
+myRank: 18 i = 18
+myRank: 20 i = 9
+myRank: 20 i = 10
+myRank: 20 i = 11
+myRank: 11 i = 21
+myRank: 11 i = 22
+myRank: 11 i = 23
+myRank: 11 i = 24
+myRank: 11 i = 25
+myRank: 13 i = 21
+myRank: 13 i = 22
+myRank: 13 i = 23
+myRank: 13 i = 24
 myRank: 13 i = 25
-myRank: 13 i = 26
-myRank: 13 i = 27
-myRank: 13 i = 28
+myRank: 15 i = 22
 myRank: 15 i = 23
 myRank: 15 i = 24
 myRank: 15 i = 25
-myRank: 15 i = 26
-myRank: 11 i = 25
-myRank: 11 i = 26
-myRank: 11 i = 27
-myRank: 11 i = 28
+myRank: 19 i = 21
+myRank: 19 i = 22
+myRank: 19 i = 23
+myRank: 19 i = 24
+myRank: 19 i = 25
+myRank: 5 i = 3
+myRank: 12 i = 23
+myRank: 12 i = 24
+myRank: 12 i = 25
+myRank: 12 i = 26
 myRank: 16 i = 22
 myRank: 16 i = 23
 myRank: 16 i = 24
+myRank: 14 i = 21
+myRank: 14 i = 22
+myRank: 14 i = 23
+myRank: 14 i = 24
+myRank: 18 i = 19
+myRank: 18 i = 20
+myRank: 18 i = 21
+myRank: 18 i = 22
+myRank: 18 i = 23
+myRank: 20 i = 12
+myRank: 20 i = 13
+myRank: 20 i = 14
+myRank: 20 i = 15
+myRank: 20 i = 16
+myRank: 20 i = 17
+myRank: 20 i = 18
+myRank: 20 i = 19
+myRank: 11 i = 26
+myRank: 11 i = 27
+myRank: 11 i = 28
+myRank: 11 i = 29
+myRank: 11 i = 30
+myRank: 11 i = 31
+myRank: 13 i = 26
+myRank: 13 i = 27
+myRank: 13 i = 28
+myRank: 13 i = 29
+myRank: 15 i = 26
+myRank: 15 i = 27
+myRank: 15 i = 28
+myRank: 15 i = 29
+myRank: 15 i = 30
+myRank: 15 i = 31
+myRank: 19 i = 26
+myRank: 19 i = 27
+myRank: 19 i = 28
+myRank: 5 i = 4
+myRank: 12 i = 27
+myRank: 12 i = 28
+myRank: 12 i = 29
+myRank: 12 i = 30
+myRank: 12 i = 31
 myRank: 16 i = 25
 myRank: 16 i = 26
 myRank: 16 i = 27
 myRank: 16 i = 28
-myRank: 14 i = 22
-myRank: 14 i = 23
-myRank: 14 i = 24
 myRank: 14 i = 25
 myRank: 14 i = 26
 myRank: 14 i = 27
 myRank: 14 i = 28
-myRank: 26 i = 14
-myRank: 26 i = 15
-myRank: 26 i = 16
-myRank: 26 i = 17
+myRank: 18 i = 24
+myRank: 18 i = 25
+myRank: 18 i = 26
+myRank: 20 i = 20
 myRank: 20 i = 21
 myRank: 20 i = 22
 myRank: 20 i = 23
 myRank: 20 i = 24
 myRank: 20 i = 25
-myRank: 20 i = 26
-myRank: 27 i = 21
-myRank: 27 i = 22
-myRank: 27 i = 23
-myRank: 27 i = 24
-myRank: 27 i = 25
-myRank: 27 i = 26
-myRank: 27 i = 27
-myRank: 27 i = 28
-myRank: 27 i = 29
-myRank: 27 i = 30
-myRank: 28 i = 21
-myRank: 28 i = 22
-myRank: 28 i = 23
-myRank: 28 i = 24
-myRank: 28 i = 25
-myRank: 28 i = 26
-myRank: 28 i = 27
-myRank: 28 i = 28
-myRank: 13 i = 29
+myRank: 11 i = 32
+myRank: 11 i = 33
+myRank: 11 i = 34
+myRank: 11 i = 35
 myRank: 13 i = 30
 myRank: 13 i = 31
 myRank: 13 i = 32
 myRank: 13 i = 33
 myRank: 13 i = 34
-myRank: 15 i = 27
-myRank: 15 i = 28
-myRank: 15 i = 29
-myRank: 15 i = 30
-myRank: 11 i = 29
-myRank: 11 i = 30
-myRank: 11 i = 31
-myRank: 11 i = 32
-myRank: 11 i = 33
-myRank: 11 i = 34
+myRank: 13 i = 35
+myRank: 13 i = 36
+myRank: 15 i = 32
+myRank: 15 i = 33
+myRank: 15 i = 34
+myRank: 15 i = 35
+myRank: 19 i = 29
+myRank: 19 i = 30
+myRank: 19 i = 31
+myRank: 19 i = 32
+myRank: 5 i = 5
+myRank: 12 i = 32
+myRank: 12 i = 33
+myRank: 12 i = 34
+myRank: 12 i = 35
 myRank: 16 i = 29
 myRank: 16 i = 30
 myRank: 16 i = 31
@@ -3218,6 +3241,7 @@ myRank: 16 i = 32
 myRank: 16 i = 33
 myRank: 16 i = 34
 myRank: 16 i = 35
+myRank: 16 i = 36
 myRank: 14 i = 29
 myRank: 14 i = 30
 myRank: 14 i = 31
@@ -3225,263 +3249,240 @@ myRank: 14 i = 32
 myRank: 14 i = 33
 myRank: 14 i = 34
 myRank: 14 i = 35
-myRank: 26 i = 18
-myRank: 26 i = 19
-myRank: 26 i = 20
-myRank: 26 i = 21
+myRank: 18 i = 27
+myRank: 18 i = 28
+myRank: 18 i = 29
+myRank: 18 i = 30
+myRank: 18 i = 31
+myRank: 18 i = 32
+myRank: 18 i = 33
+myRank: 18 i = 34
+myRank: 20 i = 26
 myRank: 20 i = 27
 myRank: 20 i = 28
 myRank: 20 i = 29
-myRank: 20 i = 30
-myRank: 20 i = 31
-myRank: 20 i = 32
-myRank: 6 i = 31
-myRank: 6 i = 32
-myRank: 6 i = 33
-myRank: 6 i = 34
-myRank: 6 i = 35
-myRank: 6 i = 36
-myRank: 6 i = 37
-myRank: 6 i = 38
-myRank: 6 i = 39
-myRank: 7 i = 29
-myRank: 7 i = 30
-myRank: 7 i = 31
-myRank: 7 i = 32
-myRank: 7 i = 33
-myRank: 7 i = 34
-myRank: 7 i = 35
-myRank: 7 i = 36
-myRank: 7 i = 37
-myRank: 13 i = 35
-myRank: 13 i = 36
-myRank: 13 i = 37
-myRank: 13 i = 38
-myRank: 15 i = 31
-myRank: 15 i = 32
-myRank: 15 i = 33
-myRank: 15 i = 34
-myRank: 15 i = 35
-myRank: 15 i = 36
-myRank: 11 i = 35
 myRank: 11 i = 36
 myRank: 11 i = 37
 myRank: 11 i = 38
-myRank: 16 i = 36
+myRank: 11 i = 39
+myRank: 11 i = 40
+myRank: 11 i = 41
+myRank: 13 i = 37
+myRank: 13 i = 38
+myRank: 13 i = 39
+myRank: 13 i = 40
+myRank: 13 i = 41
+myRank: 13 i = 42
+myRank: 13 i = 43
+myRank: 15 i = 36
+myRank: 15 i = 37
+myRank: 15 i = 38
+myRank: 15 i = 39
+myRank: 15 i = 40
+myRank: 19 i = 33
+myRank: 19 i = 34
+myRank: 19 i = 35
+myRank: 19 i = 36
+myRank: 19 i = 37
+myRank: 19 i = 38
+myRank: 19 i = 39
+myRank: 5 i = 6
+myRank: 12 i = 36
+myRank: 12 i = 37
+myRank: 12 i = 38
+myRank: 12 i = 39
+myRank: 12 i = 40
 myRank: 16 i = 37
 myRank: 16 i = 38
 myRank: 16 i = 39
+myRank: 16 i = 40
+myRank: 16 i = 41
 myRank: 14 i = 36
 myRank: 14 i = 37
 myRank: 14 i = 38
 myRank: 14 i = 39
 myRank: 14 i = 40
 myRank: 14 i = 41
-myRank: 26 i = 22
-myRank: 26 i = 23
-myRank: 26 i = 24
-myRank: 26 i = 25
+myRank: 18 i = 35
+myRank: 18 i = 36
+myRank: 18 i = 37
+myRank: 18 i = 38
+myRank: 18 i = 39
+myRank: 18 i = 40
+myRank: 20 i = 30
+myRank: 20 i = 31
+myRank: 20 i = 32
 myRank: 20 i = 33
-myRank: 20 i = 34
-myRank: 20 i = 35
-myRank: 20 i = 36
-myRank: 20 i = 37
-myRank: 27 i = 31
-myRank: 27 i = 32
-myRank: 27 i = 33
-myRank: 27 i = 34
-myRank: 27 i = 35
-myRank: 27 i = 36
-myRank: 27 i = 37
-myRank: 27 i = 38
-myRank: 28 i = 29
-myRank: 28 i = 30
-myRank: 28 i = 31
-myRank: 28 i = 32
-myRank: 28 i = 33
-myRank: 28 i = 34
-myRank: 28 i = 35
-myRank: 28 i = 36
-myRank: 28 i = 37
-myRank: 13 i = 39
-myRank: 13 i = 40
-myRank: 13 i = 41
-myRank: 13 i = 42
-myRank: 13 i = 43
-myRank: 15 i = 37
-myRank: 15 i = 38
-myRank: 15 i = 39
-myRank: 15 i = 40
-myRank: 11 i = 39
-myRank: 11 i = 40
-myRank: 11 i = 41
 myRank: 11 i = 42
-myRank: 16 i = 40
-myRank: 16 i = 41
+myRank: 11 i = 43
+myRank: 11 i = 44
+myRank: 11 i = 45
+myRank: 13 i = 44
+myRank: 13 i = 45
+myRank: 13 i = 46
+myRank: 13 i = 47
+myRank: 13 i = 48
+myRank: 15 i = 41
+myRank: 15 i = 42
+myRank: 15 i = 43
+myRank: 15 i = 44
+myRank: 19 i = 40
+myRank: 19 i = 41
+myRank: 19 i = 42
+myRank: 19 i = 43
+myRank: 19 i = 44
+myRank: 19 i = 45
+myRank: 5 i = 7
+myRank: 12 i = 41
+myRank: 12 i = 42
+myRank: 12 i = 43
+myRank: 12 i = 44
 myRank: 16 i = 42
 myRank: 16 i = 43
+myRank: 16 i = 44
+myRank: 16 i = 45
 myRank: 14 i = 42
 myRank: 14 i = 43
 myRank: 14 i = 44
 myRank: 14 i = 45
-myRank: 26 i = 26
-myRank: 26 i = 27
-myRank: 26 i = 28
-myRank: 26 i = 29
+myRank: 14 i = 46
+myRank: 14 i = 47
+myRank: 14 i = 48
+myRank: 18 i = 41
+myRank: 18 i = 42
+myRank: 18 i = 43
+myRank: 18 i = 44
+myRank: 18 i = 45
+myRank: 18 i = 46
+myRank: 18 i = 47
+myRank: 20 i = 34
+myRank: 20 i = 35
+myRank: 20 i = 36
+myRank: 20 i = 37
+myRank: 11 i = 46
+myRank: 11 i = 47
+myRank: 11 i = 48
+myRank: 11 i = 49
+myRank: 11 i = 50
+sending weights to master 
+myRank: 13 i = 49
+myRank: 13 i = 50
+sending weights to master 
+myRank: 15 i = 45
+myRank: 15 i = 46
+myRank: 15 i = 47
+myRank: 15 i = 48
+myRank: 15 i = 49
+myRank: 19 i = 46
+myRank: 19 i = 47
+myRank: 19 i = 48
+myRank: 19 i = 49
+myRank: 5 i = 8
+myRank: 12 i = 45
+myRank: 12 i = 46
+myRank: 12 i = 47
+myRank: 12 i = 48
+myRank: 12 i = 49
+myRank: 16 i = 46
+myRank: 16 i = 47
+myRank: 16 i = 48
+myRank: 16 i = 49
+myRank: 16 i = 50
+myRank: 14 i = 49
+myRank: 14 i = 50
+sending weights to master 
+myRank: 18 i = 48
+myRank: 18 i = 49
+myRank: 18 i = 50
+sending weights to master 
 myRank: 20 i = 38
 myRank: 20 i = 39
 myRank: 20 i = 40
 myRank: 20 i = 41
 myRank: 20 i = 42
 myRank: 20 i = 43
+Generating and scattering weights 
+Generating and scattering weights 
+myRank: 15 i = 50
+sending weights to master 
+myRank: 19 i = 50
+sending weights to master 
+myRank: 5 i = 9
+myRank: 12 i = 50
+sending weights to master 
+sending weights to master 
+Generating and scattering weights 
+Generating and scattering weights 
 myRank: 20 i = 44
 myRank: 20 i = 45
 myRank: 20 i = 46
-myRank: 6 i = 40
-myRank: 6 i = 41
-myRank: 6 i = 42
-myRank: 6 i = 43
-myRank: 6 i = 44
-myRank: 6 i = 45
-myRank: 6 i = 46
-myRank: 6 i = 47
-myRank: 7 i = 38
-myRank: 7 i = 39
-myRank: 7 i = 40
-myRank: 7 i = 41
-myRank: 7 i = 42
-myRank: 7 i = 43
-myRank: 7 i = 44
-myRank: 7 i = 45
-myRank: 7 i = 46
-myRank: 13 i = 44
-myRank: 13 i = 45
-myRank: 13 i = 46
-myRank: 13 i = 47
-myRank: 15 i = 41
-myRank: 15 i = 42
-myRank: 15 i = 43
-myRank: 15 i = 44
-myRank: 15 i = 45
-myRank: 15 i = 46
-myRank: 11 i = 43
-myRank: 11 i = 44
-myRank: 11 i = 45
-myRank: 11 i = 46
-myRank: 16 i = 44
-myRank: 16 i = 45
-myRank: 16 i = 46
-myRank: 16 i = 47
-myRank: 14 i = 46
-myRank: 14 i = 47
-myRank: 14 i = 48
-myRank: 14 i = 49
-myRank: 14 i = 50
-myRank: 26 i = 30
-myRank: 26 i = 31
-myRank: 26 i = 32
-myRank: 26 i = 33
-myRank: 26 i = 34
 myRank: 20 i = 47
 myRank: 20 i = 48
 myRank: 20 i = 49
 myRank: 20 i = 50
 sending weights to master 
-myRank: 27 i = 39
-myRank: 27 i = 40
-myRank: 27 i = 41
-myRank: 27 i = 42
-myRank: 27 i = 43
-myRank: 27 i = 44
-myRank: 27 i = 45
-myRank: 27 i = 46
-myRank: 28 i = 38
-myRank: 28 i = 39
-myRank: 28 i = 40
-myRank: 28 i = 41
-myRank: 28 i = 42
-myRank: 28 i = 43
-myRank: 28 i = 44
-myRank: 28 i = 45
-myRank: 28 i = 46
-myRank: 28 i = 47
-myRank: 28 i = 48
-myRank: 13 i = 48
-myRank: 13 i = 49
-myRank: 13 i = 50
-sending weights to master 
-myRank: 15 i = 47
-myRank: 15 i = 48
-myRank: 15 i = 49
-myRank: 15 i = 50
-sending weights to master 
-myRank: 11 i = 47
-myRank: 11 i = 48
-myRank: 11 i = 49
-myRank: 11 i = 50
-sending weights to master 
-myRank: 16 i = 48
-myRank: 16 i = 49
-myRank: 16 i = 50
-sending weights to master 
-sending weights to master 
+Generating and scattering weights 
+Generating and scattering weights 
+myRank: 5 i = 10
+Generating and scattering weights 
+Generating and scattering weights 
+Generating and scattering weights 
+myRank: 5 i = 11
+myRank: 5 i = 12
+Random numbers generated, j = 50
+ initialized vector for size 50 and rank 26
+myRank: 26 i = 1
+myRank: 26 i = 2
+myRank: 26 i = 3
+myRank: 26 i = 4
+myRank: 26 i = 5
+myRank: 26 i = 6
+myRank: 26 i = 7
+myRank: 26 i = 8
+myRank: 26 i = 9
+myRank: 26 i = 10
+myRank: 26 i = 11
+myRank: 26 i = 12
+myRank: 26 i = 13
+myRank: 26 i = 14
+myRank: 26 i = 15
+myRank: 26 i = 16
+myRank: 26 i = 17
+myRank: 26 i = 18
+myRank: 26 i = 19
+myRank: 26 i = 20
+myRank: 26 i = 21
+myRank: 26 i = 22
+myRank: 26 i = 23
+myRank: 26 i = 24
+myRank: 26 i = 25
+myRank: 26 i = 26
+myRank: 26 i = 27
+myRank: 26 i = 28
+myRank: 26 i = 29
+myRank: 26 i = 30
+myRank: 26 i = 31
+myRank: 26 i = 32
+myRank: 26 i = 33
+myRank: 26 i = 34
 myRank: 26 i = 35
 myRank: 26 i = 36
 myRank: 26 i = 37
-Generating and scattering weights 
-myRank: 6 i = 48
-myRank: 6 i = 49
-myRank: 6 i = 50
-sending weights to master 
-myRank: 7 i = 47
-myRank: 7 i = 48
-myRank: 7 i = 49
-myRank: 7 i = 50
-sending weights to master 
-Generating and scattering weights 
-Generating and scattering weights 
-Generating and scattering weights 
-Generating and scattering weights 
-Generating and scattering weights 
 myRank: 26 i = 38
 myRank: 26 i = 39
 myRank: 26 i = 40
-myRank: 27 i = 47
-myRank: 27 i = 48
-myRank: 27 i = 49
-myRank: 27 i = 50
-sending weights to master 
-myRank: 28 i = 49
-myRank: 28 i = 50
-sending weights to master 
 myRank: 26 i = 41
 myRank: 26 i = 42
 myRank: 26 i = 43
 myRank: 26 i = 44
-Generating and scattering weights 
-Generating and scattering weights 
 myRank: 26 i = 45
 myRank: 26 i = 46
 myRank: 26 i = 47
-Generating and scattering weights 
-Generating and scattering weights 
 myRank: 26 i = 48
 myRank: 26 i = 49
 myRank: 26 i = 50
 sending weights to master 
- initialized vector for size 50 and rank 5
-myRank: 5 i = 1
-myRank: 5 i = 2
-myRank: 5 i = 3
-myRank: 5 i = 4
-myRank: 5 i = 5
-myRank: 5 i = 6
-myRank: 5 i = 7
-myRank: 5 i = 8
-myRank: 5 i = 9
-myRank: 5 i = 10
-myRank: 5 i = 11
-myRank: 5 i = 12
+Generating and scattering weights 
 myRank: 5 i = 13
 myRank: 5 i = 14
 myRank: 5 i = 15
@@ -3522,7 +3523,6 @@ myRank: 5 i = 49
 myRank: 5 i = 50
 sending weights to master 
 Generating and scattering weights 
-Generating and scattering weights 
  sending yMatrix to master
  sending yMatrix to master
  sending yMatrix to master
@@ -3549,29 +3549,29 @@ Generating and scattering weights
  sending yMatrix back out to hosts 
  sending yMatrix back out to hosts 
  sending yMatrix back out to hosts 
- sending yMatrix to master
- sending yMatrix to master
- sending yMatrix to master
- sending yMatrix to master
  sending yMatrix back out to hosts 
  sending yMatrix back out to hosts 
  sending yMatrix to master
  sending yMatrix to master
  sending yMatrix back out to hosts 
  sending yMatrix to master
+ sending yMatrix back out to hosts 
+ sending yMatrix to master
+ sending yMatrix back out to hosts 
  sending yMatrix to master
  sending yMatrix to master
  sending yMatrix to master
  sending yMatrix to master
- sending yMatrix to master
  sending yMatrix back out to hosts 
  sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
+ sending yMatrix to master
  sending yMatrix back out to hosts 
  sending yMatrix back out to hosts 
  sending yMatrix back out to hosts 
  sending yMatrix back out to hosts 
- sending yMatrix back out to hosts 
- sending yMatrix back out to hosts 
+ sending yMatrix to master
  sending yMatrix back out to hosts 
  sending yMatrix back out to hosts 
  sending yMatrix back out to hosts 
@@ -3619,6 +3619,7 @@ Calculating C
 Calculating C
 Calculating C
 Calculating C
+finding min/max pairs
 finding min/max pairs
 finding min/max pairs
 finding min/max pairs
@@ -3651,365 +3652,364 @@ finding min/max pairs
 FOR J = 50 AND P = 32--------------------------------
 finding min/max pairs
 finding min/max pairs
-finding min/max pairs
-Cmax: 814699 CoreMax: 22 i_max: 1149 j_max 49
-Cmin: -5.66273e-316 CoreMin: 3 i_min: 199 j_min 1451
-My Rank was: 21 and I took 4.3789 seconds
-My Rank was: 23 and I took 4.24799 seconds
-My Rank was: 0 and I took 4.37279 seconds
-My Rank was: 4 and I took 3.07787 seconds
-My Rank was: 27 and I took 3.08665 seconds
-My Rank was: 12 and I took 3.03679 seconds
-My Rank was: 3 and I took 3.09153 seconds
-My Rank was: 31 and I took 3.08182 seconds
-My Rank was: 25 and I took 3.07527 seconds
-My Rank was: 7 and I took 3.09772 seconds
-My Rank was: 9 and I took 3.08431 seconds
-My Rank was: 18 and I took 3.02918 seconds
-My Rank was: 22 and I took 3.09523 seconds
-My Rank was: 13 and I took 3.04068 seconds
-My Rank was: 2 and I took 4.3252 seconds
-My Rank was: 11 and I took 3.04977 seconds
-My Rank was: 14 and I took 3.02008 seconds
-My Rank was: 24 and I took 3.08839 seconds
-My Rank was: 19 and I took 3.03719 seconds
-My Rank was: 30 and I took 3.0881 seconds
-My Rank was: 28 and I took 3.09704 seconds
-My Rank was: 15 and I took 3.02315 seconds
-My Rank was: 10 and I took 3.08992 seconds
-My Rank was: 6 and I took 3.08384 seconds
-My Rank was: 1 and I took 3.08329 seconds
-My Rank was: 17 and I took 3.1367 seconds
-My Rank was: 16 and I took 3.05279 seconds
-My Rank was: 8 and I took 3.09651 seconds
-My Rank was: 29 and I took 3.09455 seconds
-My Rank was: 20 and I took 3.38227 seconds
-My Rank was: 5 and I took 3.14554 seconds
-My Rank was: 26 and I took 4.07152 seconds
-Random numbers generated
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-01:24477] *** Process received signal ***
-[ch120-01:24477] Signal: Aborted (6)
-[ch120-01:24477] Signal code:  (-6)
-Random numbers generated
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-04:12477] *** Process received signal ***
-[ch120-04:12477] Signal: Aborted (6)
-[ch120-04:12477] Signal code:  (-6)
-Random numbers generated
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-04:12478] *** Process received signal ***
-[ch120-04:12478] Signal: Aborted (6)
-[ch120-04:12478] Signal code:  (-6)
-Random numbers generated
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-07:02040] *** Process received signal ***
-Random numbers generated
-[ch120-07:02040] Signal: Aborted (6)
-[ch120-07:02040] Signal code:  (-6)
-Random numbers generated
-Random numbers generated
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-06:19956] *** Process received signal ***
-[ch120-06:19956] Signal: Aborted (6)
-[ch120-06:19956] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-10:03487] *** Process received signal ***
-[ch120-10:03487] Signal: Aborted (6)
-[ch120-10:03487] Signal code:  (-6)
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-02:11203] *** Process received signal ***
-[ch120-02:11203] Signal: Aborted (6)
-[ch120-02:11203] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-19:09503] *** Process received signal ***
-[ch120-19:09503] Signal: Aborted (6)
-[ch120-19:09503] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-04:12479] *** Process received signal ***
-[ch120-04:12479] Signal: Aborted (6)
-[ch120-04:12479] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-12:08291] *** Process received signal ***
-[ch120-12:08291] Signal: Aborted (6)
-[ch120-12:08291] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-06:19957] *** Process received signal ***
-[ch120-06:19957] Signal: Aborted (6)
-[ch120-06:19957] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-08:21005] *** Process received signal ***
-[ch120-08:21005] Signal: Aborted (6)
-[ch120-08:21005] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-10:03488] *** Process received signal ***
-[ch120-10:03488] Signal: Aborted (6)
-[ch120-10:03488] Signal code:  (-6)
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-02:11204] *** Process received signal ***
-[ch120-02:11204] Signal: Aborted (6)
-[ch120-02:11204] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-05:16676] *** Process received signal ***
-[ch120-05:16676] Signal: Aborted (6)
-[ch120-05:16676] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-11:18934] *** Process received signal ***
-[ch120-11:18934] Signal: Aborted (6)
-[ch120-11:18934] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-16:06516] *** Process received signal ***
-[ch120-16:06516] Signal: Aborted (6)
-[ch120-16:06516] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-17:11050] *** Process received signal ***
-[ch120-17:11050] Signal: Aborted (6)
-[ch120-17:11050] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-15:01640] *** Process received signal ***
-[ch120-15:01640] Signal: Aborted (6)
-[ch120-15:01640] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-19:09504] *** Process received signal ***
-[ch120-19:09504] Signal: Aborted (6)
-[ch120-19:09504] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-21:32356] *** Process received signal ***
-[ch120-21:32356] Signal: Aborted (6)
-[ch120-21:32356] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-20:22436] *** Process received signal ***
-[ch120-20:22436] Signal: Aborted (6)
-[ch120-20:22436] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-12:08292] *** Process received signal ***
-[ch120-12:08292] Signal: Aborted (6)
-[ch120-12:08292] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-06:19958] *** Process received signal ***
-[ch120-06:19958] Signal: Aborted (6)
-[ch120-06:19958] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-22:23288] *** Process received signal ***
-[ch120-22:23288] Signal: Aborted (6)
-[ch120-22:23288] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-08:21007] *** Process received signal ***
-[ch120-08:21007] Signal: Aborted (6)
-[ch120-08:21007] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-10:03489] *** Process received signal ***
-[ch120-10:03489] Signal: Aborted (6)
-[ch120-10:03489] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-19:09505] *** Process received signal ***
-[ch120-19:09505] Signal: Aborted (6)
-[ch120-19:09505] Signal code:  (-6)
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-02:11205] *** Process received signal ***
-[ch120-02:11205] Signal: Aborted (6)
-[ch120-02:11205] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-05:16678] *** Process received signal ***
-[ch120-05:16678] Signal: Aborted (6)
-[ch120-05:16678] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-11:18936] *** Process received signal ***
-[ch120-11:18936] Signal: Aborted (6)
-[ch120-11:18936] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-16:06517] *** Process received signal ***
-[ch120-16:06517] Signal: Aborted (6)
-[ch120-16:06517] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-14:20377] *** Process received signal ***
-[ch120-14:20377] Signal: Aborted (6)
-[ch120-14:20377] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-09:10695] *** Process received signal ***
-[ch120-09:10695] Signal: Aborted (6)
-[ch120-09:10695] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-18:32031] *** Process received signal ***
-[ch120-18:32031] Signal: Aborted (6)
-[ch120-18:32031] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-17:11052] *** Process received signal ***
-[ch120-17:11052] Signal: Aborted (6)
-[ch120-17:11052] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-15:01641] *** Process received signal ***
-[ch120-15:01641] Signal: Aborted (6)
-[ch120-15:01641] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-21:32357] *** Process received signal ***
-[ch120-21:32357] Signal: Aborted (6)
-[ch120-21:32357] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-20:22438] *** Process received signal ***
-[ch120-20:22438] Signal: Aborted (6)
-[ch120-20:22438] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-12:08293] *** Process received signal ***
-[ch120-12:08293] Signal: Aborted (6)
-[ch120-12:08293] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-22:23289] *** Process received signal ***
-[ch120-22:23289] Signal: Aborted (6)
-[ch120-22:23289] Signal code:  (-6)
-[ch120-07:02038] *** Process received signal ***
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-08:21006] *** Process received signal ***
-[ch120-08:21006] Signal: Aborted (6)
-[ch120-08:21006] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-23:11748] *** Process received signal ***
-[ch120-23:11748] Signal: Aborted (6)
-[ch120-23:11748] Signal code:  (-6)
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-05:16677] *** Process received signal ***
-[ch120-05:16677] Signal: Aborted (6)
-[ch120-05:16677] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-11:18935] *** Process received signal ***
-[ch120-11:18935] Signal: Aborted (6)
-[ch120-11:18935] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-16:06518] *** Process received signal ***
-[ch120-16:06518] Signal: Aborted (6)
-[ch120-16:06518] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-14:20378] *** Process received signal ***
-[ch120-14:20378] Signal: Aborted (6)
-[ch120-14:20378] Signal code:  (-6)
-[ch120-07:02038] Signal: Aborted (6)
-[ch120-07:02038] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-09:10696] *** Process received signal ***
-[ch120-09:10696] Signal: Aborted (6)
-[ch120-09:10696] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-18:32032] *** Process received signal ***
-[ch120-18:32032] Signal: Aborted (6)
-[ch120-18:32032] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-17:11051] *** Process received signal ***
-[ch120-17:11051] Signal: Aborted (6)
-[ch120-17:11051] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-15:01642] *** Process received signal ***
-[ch120-15:01642] Signal: Aborted (6)
-[ch120-15:01642] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-21:32358] *** Process received signal ***
-[ch120-21:32358] Signal: Aborted (6)
-[ch120-21:32358] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-20:22437] *** Process received signal ***
-[ch120-20:22437] Signal: Aborted (6)
-[ch120-20:22437] Signal code:  (-6)
-Random numbers generated
-Random numbers generated
-Random numbers generated
-Random numbers generated
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-22:23290] *** Process received signal ***
-[ch120-22:23290] Signal: Aborted (6)
-[ch120-22:23290] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-09:10694] *** Process received signal ***
-[ch120-09:10694] Signal: Aborted (6)
-[ch120-09:10694] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-23:11749] *** Process received signal ***
-[ch120-23:11749] Signal: Aborted (6)
-[ch120-23:11749] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-14:20379] *** Process received signal ***
-[ch120-14:20379] Signal: Aborted (6)
-[ch120-14:20379] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-18:32033] *** Process received signal ***
-[ch120-18:32033] Signal: Aborted (6)
-[ch120-18:32033] Signal code:  (-6)
-Random numbers generated
-Random numbers generated
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-07:02039] *** Process received signal ***
-[ch120-07:02039] Signal: Aborted (6)
-[ch120-07:02039] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-23:11750] *** Process received signal ***
-[ch120-23:11750] Signal: Aborted (6)
-[ch120-23:11750] Signal code:  (-6)
-Random numbers generated
-Random numbers generated
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-01:24478] *** Process received signal ***
-[ch120-01:24478] Signal: Aborted (6)
-[ch120-01:24478] Signal code:  (-6)
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-01:24480] *** Process received signal ***
-[ch120-01:24480] Signal: Aborted (6)
-[ch120-01:24480] Signal code:  (-6)
-Random numbers generated
-main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
-[ch120-01:24479] *** Process received signal ***
-[ch120-01:24479] Signal: Aborted (6)
-[ch120-01:24479] Signal code:  (-6)
+Cmax: 776312 CoreMax: 17 i_max: 898 j_max 48
+Cmin: -4.76409e-316 CoreMin: 18 i_min: 949 j_min 701
+My Rank was: 21 and I took 4.1666 seconds
+My Rank was: 9 and I took 2.88309 seconds
+My Rank was: 0 and I took 4.16842 seconds
+My Rank was: 30 and I took 2.88534 seconds
+My Rank was: 4 and I took 2.87889 seconds
+My Rank was: 3 and I took 2.88791 seconds
+My Rank was: 27 and I took 2.89238 seconds
+My Rank was: 12 and I took 2.84571 seconds
+My Rank was: 18 and I took 2.83324 seconds
+My Rank was: 25 and I took 2.8822 seconds
+My Rank was: 13 and I took 2.83871 seconds
+My Rank was: 24 and I took 2.88649 seconds
+My Rank was: 6 and I took 2.88506 seconds
+My Rank was: 22 and I took 2.91303 seconds
+My Rank was: 11 and I took 2.84356 seconds
+My Rank was: 1 and I took 2.89781 seconds
+My Rank was: 31 and I took 2.89811 seconds
+My Rank was: 10 and I took 2.89394 seconds
+My Rank was: 23 and I took 4.14865 seconds
+My Rank was: 16 and I took 2.8511 seconds
+My Rank was: 2 and I took 3.84695 seconds
+My Rank was: 19 and I took 2.82476 seconds
+My Rank was: 15 and I took 2.83779 seconds
+My Rank was: 29 and I took 2.89562 seconds
+My Rank was: 8 and I took 2.88779 seconds
+My Rank was: 14 and I took 2.83178 seconds
+My Rank was: 26 and I took 3.98362 seconds
+My Rank was: 5 and I took 3.64158 seconds
+My Rank was: 28 and I took 2.8973 seconds
+My Rank was: 7 and I took 2.89294 seconds
+My Rank was: 17 and I took 2.94674 seconds
+My Rank was: 20 and I took 3.21761 seconds
+Random numbers generated, j = 25
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-01:24601] *** Process received signal ***
+[ch120-01:24601] Signal: Aborted (6)
+[ch120-01:24601] Signal code:  (-6)
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-04:13118] *** Process received signal ***
+[ch120-04:13118] Signal: Aborted (6)
+[ch120-04:13118] Signal code:  (-6)
+Random numbers generated, j = 25
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-04:13119] *** Process received signal ***
+[ch120-04:13119] Signal: Aborted (6)
+[ch120-04:13119] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-04:13117] *** Process received signal ***
+[ch120-04:13117] Signal: Aborted (6)
+[ch120-04:13117] Signal code:  (-6)
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-07:02582] *** Process received signal ***
+[ch120-07:02582] Signal: Aborted (6)
+[ch120-07:02582] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-07:02580] *** Process received signal ***
+[ch120-07:02580] Signal: Aborted (6)
+[ch120-07:02580] Signal code:  (-6)
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-06:20414] *** Process received signal ***
+[ch120-06:20414] Signal: Aborted (6)
+[ch120-06:20414] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-02:11811] *** Process received signal ***
+[ch120-02:11811] Signal: Aborted (6)
+[ch120-02:11811] Signal code:  (-6)
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-02:11813] *** Process received signal ***
+[ch120-02:11813] Signal: Aborted (6)
+[ch120-02:11813] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-01:24604] *** Process received signal ***
+[ch120-01:24604] Signal: Aborted (6)
+[ch120-01:24604] Signal code:  (-6)
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-06:20416] *** Process received signal ***
+[ch120-06:20416] Signal: Aborted (6)
+[ch120-06:20416] Signal code:  (-6)
+Random numbers generated, j = 25
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-15:02267] *** Process received signal ***
+[ch120-15:02267] Signal: Aborted (6)
+[ch120-15:02267] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-12:08771] *** Process received signal ***
+[ch120-12:08771] Signal: Aborted (6)
+[ch120-12:08771] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-08:21465] *** Process received signal ***
+[ch120-08:21465] Signal: Aborted (6)
+[ch120-08:21465] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-19:09833] *** Process received signal ***
+[ch120-19:09833] Signal: Aborted (6)
+[ch120-19:09833] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-05:17285] *** Process received signal ***
+[ch120-05:17285] Signal: Aborted (6)
+[ch120-05:17285] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-11:19391] *** Process received signal ***
+[ch120-11:19391] Signal: Aborted (6)
+[ch120-11:19391] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-02:11812] *** Process received signal ***
+[ch120-02:11812] Signal: Aborted (6)
+[ch120-02:11812] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-21:32670] *** Process received signal ***
+[ch120-21:32670] Signal: Aborted (6)
+[ch120-21:32670] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-10:03945] *** Process received signal ***
+[ch120-10:03945] Signal: Aborted (6)
+[ch120-10:03945] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-06:20415] *** Process received signal ***
+[ch120-06:20415] Signal: Aborted (6)
+[ch120-06:20415] Signal code:  (-6)
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-15:02269] *** Process received signal ***
+[ch120-15:02269] Signal: Aborted (6)
+[ch120-15:02269] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-22:23594] *** Process received signal ***
+[ch120-22:23594] Signal: Aborted (6)
+[ch120-22:23594] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-12:08772] *** Process received signal ***
+[ch120-12:08772] Signal: Aborted (6)
+[ch120-12:08772] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-08:21466] *** Process received signal ***
+[ch120-08:21466] Signal: Aborted (6)
+[ch120-08:21466] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-09:11153] *** Process received signal ***
+[ch120-09:11153] Signal: Aborted (6)
+[ch120-09:11153] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-19:09834] *** Process received signal ***
+[ch120-19:09834] Signal: Aborted (6)
+[ch120-19:09834] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-18:32492] *** Process received signal ***
+[ch120-18:32492] Signal: Aborted (6)
+[ch120-18:32492] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-05:17286] *** Process received signal ***
+[ch120-05:17286] Signal: Aborted (6)
+[ch120-05:17286] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-16:06972] *** Process received signal ***
+[ch120-16:06972] Signal: Aborted (6)
+[ch120-16:06972] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-14:20833] *** Process received signal ***
+[ch120-14:20833] Signal: Aborted (6)
+[ch120-14:20833] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-11:19392] *** Process received signal ***
+[ch120-11:19392] Signal: Aborted (6)
+[ch120-11:19392] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-21:32672] *** Process received signal ***
+[ch120-21:32672] Signal: Aborted (6)
+[ch120-21:32672] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-17:13499] *** Process received signal ***
+[ch120-17:13499] Signal: Aborted (6)
+[ch120-17:13499] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-10:03946] *** Process received signal ***
+[ch120-10:03946] Signal: Aborted (6)
+[ch120-10:03946] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-20:22743] *** Process received signal ***
+[ch120-20:22743] Signal: Aborted (6)
+[ch120-20:22743] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-01:24603] *** Process received signal ***
+[ch120-01:24603] Signal: Aborted (6)
+[ch120-01:24603] Signal code:  (-6)
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+[ch120-07:02581] *** Process received signal ***
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-15:02268] *** Process received signal ***
+[ch120-15:02268] Signal: Aborted (6)
+[ch120-15:02268] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-22:23596] *** Process received signal ***
+[ch120-22:23596] Signal: Aborted (6)
+[ch120-22:23596] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-12:08773] *** Process received signal ***
+[ch120-12:08773] Signal: Aborted (6)
+[ch120-12:08773] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-08:21467] *** Process received signal ***
+[ch120-08:21467] Signal: Aborted (6)
+[ch120-08:21467] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-09:11154] *** Process received signal ***
+[ch120-09:11154] Signal: Aborted (6)
+[ch120-09:11154] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-19:09835] *** Process received signal ***
+[ch120-19:09835] Signal: Aborted (6)
+[ch120-19:09835] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-05:17287] *** Process received signal ***
+[ch120-05:17287] Signal: Aborted (6)
+[ch120-05:17287] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-16:06974] *** Process received signal ***
+[ch120-16:06974] Signal: Aborted (6)
+[ch120-16:06974] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-14:20834] *** Process received signal ***
+[ch120-14:20834] Signal: Aborted (6)
+[ch120-14:20834] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-11:19393] *** Process received signal ***
+[ch120-11:19393] Signal: Aborted (6)
+[ch120-11:19393] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-21:32671] *** Process received signal ***
+[ch120-21:32671] Signal: Aborted (6)
+[ch120-21:32671] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-17:13500] *** Process received signal ***
+[ch120-17:13500] Signal: Aborted (6)
+[ch120-17:13500] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-10:03947] *** Process received signal ***
+[ch120-10:03947] Signal: Aborted (6)
+[ch120-10:03947] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-20:22744] *** Process received signal ***
+[ch120-20:22744] Signal: Aborted (6)
+[ch120-20:22744] Signal code:  (-6)
+[ch120-07:02581] Signal: Aborted (6)
+[ch120-07:02581] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-23:12111] *** Process received signal ***
+[ch120-23:12111] Signal: Aborted (6)
+[ch120-23:12111] Signal code:  (-6)
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+Random numbers generated, j = 25
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-18:32494] *** Process received signal ***
+[ch120-18:32494] Signal: Aborted (6)
+[ch120-18:32494] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-22:23595] *** Process received signal ***
+[ch120-22:23595] Signal: Aborted (6)
+[ch120-22:23595] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-09:11155] *** Process received signal ***
+[ch120-09:11155] Signal: Aborted (6)
+[ch120-09:11155] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-18:32493] *** Process received signal ***
+[ch120-18:32493] Signal: Aborted (6)
+[ch120-18:32493] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-16:06973] *** Process received signal ***
+[ch120-16:06973] Signal: Aborted (6)
+[ch120-16:06973] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-14:20835] *** Process received signal ***
+[ch120-14:20835] Signal: Aborted (6)
+[ch120-14:20835] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-17:13501] *** Process received signal ***
+[ch120-17:13501] Signal: Aborted (6)
+[ch120-17:13501] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-20:22745] *** Process received signal ***
+[ch120-20:22745] Signal: Aborted (6)
+[ch120-20:22745] Signal code:  (-6)
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-23:12112] *** Process received signal ***
+[ch120-23:12112] Signal: Aborted (6)
+[ch120-23:12112] Signal code:  (-6)
+Random numbers generated, j = 25
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-23:12113] *** Process received signal ***
+[ch120-23:12113] Signal: Aborted (6)
+[ch120-23:12113] Signal code:  (-6)
+Random numbers generated, j = 25
+main_exe: malloc.c:2451: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+[ch120-01:24602] *** Process received signal ***
+[ch120-01:24602] Signal: Aborted (6)
+[ch120-01:24602] Signal code:  (-6)
 mpiexec: killing job...
 
 --------------------------------------------------------------------------
-mpiexec noticed that process rank 0 with PID 24477 on node ch120-01 exited on signal 0 (Unknown signal 0).
+mpiexec noticed that process rank 0 with PID 24601 on node ch120-01 exited on signal 0 (Unknown signal 0).
 --------------------------------------------------------------------------
 mpiexec: clean termination accomplished
 
