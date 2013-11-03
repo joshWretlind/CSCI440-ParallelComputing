@@ -350,7 +350,14 @@ int main(int argc, char *argv[]){
     }
     
     delete[] rOfK;
-    for(int i = 0; i < p; i++){
+    cout << "deleted R" << endl;
+    cout << " deleting x" << endl;
+    for(int i = 0; i < j; ++i){
+        delete[] xMatrix[i];
+    }
+    delete[] xMatrix;
+    cout << "deleted x, deleting w" << endl;
+    for(int i = 0; i < p; ++i){
         delete[] wMatrix[i];
     }
     delete[] wMatrix;
