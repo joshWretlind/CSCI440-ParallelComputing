@@ -367,7 +367,7 @@ int main(int argc, char *argv[]){
     cout << "deleted yTranspose" << endl;
     cout << "deleting cMatrix" << endl;
     for(int i = 0; i < j; i++){
-        delete[] cMatrix;
+        delete[] cMatrix[j];
     }
     delete[] cMatrix;
     cout << "deleted c" << endl;
