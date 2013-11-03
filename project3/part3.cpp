@@ -227,7 +227,7 @@ int main(int argc, char *argv[]){
 		outputFile << "k,MIDPOINT_H,TRAPAZOIDAL_H,SIMPSON_H" << endl;
 		outputFile.precision(15);
 	}                 
-	for(int k = 100; k <= 10000; k++){
+	for(int k = 100; k <= 50000; k++){
 		double *partialSum = calculateIntegral(k,myRank);	
 		double sum[3] = {0,0,0};
 		MPI::COMM_WORLD.Reduce(partialSum,&sum,3,MPI::DOUBLE,MPI_SUM,master);
