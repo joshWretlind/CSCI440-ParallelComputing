@@ -1,7 +1,7 @@
 Author: Josh Wretlind
 
 In order to compile, run make. Note: uses C++11 standards(Sayers and Alamode's compilers work just fine for this)
-./run will run the  code for all of the J and P values we need
+./run will run the  code for all of the J and P values we need((j=2,p=4),(j=100,p=16),(j=50,p=32),(j=25,p=64))
 
 format of command:
 
