@@ -183,8 +183,8 @@ int main(int argc, char *argv[]){
         }
     }
     else{
-        for(int i = j; i < p*j; i++){
-            cout << " trying to recv " << j*p + i << " from " << ceil(i/p) << endl;
+        for(int i = j; i < p*j*(j); i++){
+            cout << " trying to recv " << j*(p-1) + i << " from " << ceil(((double)i)/p) << endl;
             MPI::Status myStatus;
             MPI::COMM_WORLD.Recv(yTranspose[i],j,MPI_DOUBLE,floor(i/p),i*j*p + i,myStatus);
         }
