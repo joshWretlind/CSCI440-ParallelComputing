@@ -1,7 +1,3 @@
 #!/bin/sh
 
-mpiexec -machinefile machines -np 100 ./part3 
-
-mpiexec -machinefile machines -np 150 ./part3 
-
 mpiexec -machinefile machines -np 176 ./part3 
