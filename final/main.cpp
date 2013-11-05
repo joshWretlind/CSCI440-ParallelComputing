@@ -1,7 +1,7 @@
 #include<iostream>
 #include<string>
 #include "mpi.h"
-#inlcude<cstdlib>
+#include<cstdlib>
 
 using namespace std;
 
@@ -20,7 +20,7 @@ int main(int argc, char *argv[]){
     myRank = MPI::COMM_WORLD.Get_rank();
     
     int digest = atoi(argv[1]);
-    string message = argv[1];
+    string message = argv[2];
     
     cout << message << endl;
     
