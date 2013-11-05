@@ -1,7 +1,7 @@
 #Compiler
 #--------------------
 
-GCC = g++
+mpiCC = mpiCC
 
 #Files
 #--------------------
@@ -13,6 +13,6 @@ main = main.cpp
 all: main_exe
 
 main_exe: $(main)
-	$(GCC) $(main) -o $@
+	$(mpiCC) $(main) -o $@
 		  
 clean: rm main_exe
