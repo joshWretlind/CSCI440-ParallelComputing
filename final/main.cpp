@@ -71,8 +71,8 @@ bool** convertAndBroadcastBits(string message){
     }
     
     if(myRank != master){
-	for(int i = 0; i <= (upperBound - lowerBound); i++){
-	    cout << "just sent " << myRank*((upperBound - lowerBound)) + i << "from " << myRank << endl;
+	for(int i = 0; i < (upperBound - lowerBound); i++){
+	    cout << "just sent " << myRank*(upperBound - lowerBound) + i << "from " << myRank << endl;
 	    MPI::COMM_WORLD.Send(myBits[i], 8, MPI_CHAR, master, myRank*((upperBound - lowerBound)) + i); 
 	}
     } else {
@@ -81,8 +81,8 @@ bool** convertAndBroadcastBits(string message){
 	}
 	MPI::Status myStatus;
 	for(int i = chunkPerWorker; i < message.length(); i++){
-	    cout << " Looking for " << i << " from " << floor(((double)i)/((double)chunkPerWorker)) << endl;
-	    MPI::COMM_WORLD.Recv(totalBits[i], 8, MPI_CHAR, floor(((double)i)/((double)chunkPerWorker)), i, myStatus);
+	    cout << " Looking for " << i << " from " << floor(((double)i)/((double)((upperBound - lowerBound)))) << endl;
+	    MPI::COMM_WORLD.Recv(totalBits[i], 8, MPI_CHAR, floor(((double)i)/((double)(upperBound - lowerBound))), i, myStatus);
 	}
     }
 
