@@ -122,7 +122,7 @@ int main(int argc, char *argv[]){
 	    messageInBinary[8*i + j] = messageBits[i][j];
 	}
     }
-    for(int i = 0; i < message.length(); i++){
+    for(int i = 0; i < message.size(); i++){
 	delete[] messageBits[i];
     }
     delete[] messageBits[];
