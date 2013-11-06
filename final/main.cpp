@@ -11,7 +11,7 @@
 #include "mpi.h"
 #include<cstdlib>
 #include<bitset>
-#include<math>
+#include<cmath>
 
 using namespace std;
 
