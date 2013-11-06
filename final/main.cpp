@@ -27,10 +27,9 @@ int myRank;
  *             Space: O()
  * *****************************************************/
 bitset<int> convertStringToBits(string str){
-    char* cStr = 
     
     int chunkPerWorker = ceil(((double)str.length())/((double)totalSize));
-    int lowerBound = rank*(chunkPerWorker);
+    int lowerBound = myRank*(chunkPerWorker);
     int upperBound = (rank+1)*(chunkPerWorker);
     if((rank+1) == totalSize){
 	upperBound = str.length();
@@ -42,7 +41,7 @@ bitset<int> convertStringToBits(string str){
 	lowerBound = str.length();
     }
     if(lowerBound == upperBound){
-	return;
+	return new bitset<0>();
     }
     bitset<8*(upperBound - lowerBound)> mainBitset;
     for(size_t i =lowerBound; i < upperBound; i++){
