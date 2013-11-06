@@ -13,12 +13,16 @@
 #include<bitset>
 #include<cmath>
 #include<vector>
+#include<stdbool>
 
 using namespace std;
 
 int master = 0;
 int totalSize;
 int myRank;
+int chunkPerWorker;
+int lowerBound;
+int upperBound;
 
 /*******************************************************
  * convertStringTobits
@@ -28,11 +32,11 @@ int myRank;
  * Complexity:  Time: O()
  *             Space: O()
  * *****************************************************/
-vector< bitset<8> > convertStringToBits(string str){
+bool** convertStringToBits(string str){
     
-    int chunkPerWorker = ceil(((double)str.length())/((double)totalSize));
-    int lowerBound = myRank*(chunkPerWorker);
-    int upperBound = (myRank+1)*(chunkPerWorker);
+    chunkPerWorker = ceil(((double)str.length())/((double)totalSize));
+    lowerBound = myRank*(chunkPerWorker);
+    upperBound = (myRank+1)*(chunkPerWorker);
     if((myRank+1) == totalSize){
 	upperBound = str.length();
     }
@@ -46,15 +50,50 @@ vector< bitset<8> > convertStringToBits(string str){
 	vector< bitset<8> > vect;
 	return vect;
     }
-    vector< bitset<8> > mainBitset;
+    bool** mainBitset = new bool*[upperBound - lowerBound];
+    for(int i = 0; i < (upperBound - lowerBound); i++){
+	mainBitset[i] = new bool[8];
+    }
     for(int i =lowerBound; i < upperBound; i++){
 	bitset<8> currentChar(str.c_str()[i]);
 	for(int j = 0; j < 8; j++){
-	    mainBitset.push_back(currentChar);
+	    mainBitset[i - lowerBound][j] = bitset[j];
 	} 
     }
     
     return mainBitset;
+}
+
+bool** convertAndBroadcastBits(string message){
+    bool** myBits = convertStringToBits(message);
+    bool** totalBits = new bool*[message.length()];
+    for(int i = 0; i < message.length(); i++){
+	totalBits[i] = new bool[8];
+    }
+    
+    if(myRank != master){
+	for(int i = 0; i < myBits.size(); i++){
+	    MPI::COMM_WORLD.Send(myBits[i], 8, MPI_CHAR, master, myRank*chunkPerWorker + i); 
+	}
+    } else {
+	for(int i = 0; i < chunkPerWorker; i++){
+	    totalBits[i] = myBits[i];
+	}
+	MPI::Status myStatus;
+	for(int i = chunkPerWorker; i < message.length(); i++){
+	    MPI::COMM_WORLD.Recv(totalBits[i], 8, MPI_CHAR, floor(((double)i)/((double)chunkPerWorker), i, myStatus);
+	}
+    }
+
+    for(int i = 0; i < message.length(); i++){
+	MPI::COMM_WORLD.Bcast(totalBits[i], 8, MPI_CHAR, master)
+    }
+    for(int i = 0; i < chunkPerWorker; i++){
+	delete[] myBits[i];
+    }
+    delete[] myBits;
+    
+    return totalBits;
 }
 
 int main(int argc, char *argv[]){
@@ -66,15 +105,18 @@ int main(int argc, char *argv[]){
     startTime = MPI::Wtime();
     totalSize = MPI::COMM_WORLD.Get_size();
     myRank = MPI::COMM_WORLD.Get_rank();
-    
-    if(myRank == master){
-    
-    }
-    
     int digest = atoi(argv[1]);
     string message = argv[2];
     
-    cout << message << endl;
+    
+    bool** messageBits = convertAndBroadcastBits(message);
+    
+    for(int i = 0; i < message.size(); i++){
+	for(int j = 0; j < 8; j++){
+	    cout << messageBits[i][j];
+	}
+	cout << endl;
+    }
     
     
     //Finish things, clean up after ourselves.
