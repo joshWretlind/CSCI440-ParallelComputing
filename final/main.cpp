@@ -69,7 +69,7 @@ bool** convertAndBroadcastBits(string message){
     for(int i = 0; i < message.length(); i++){
 	totalBits[i] = new bool[8];
     }
-    
+    cout << "MyRank " << myRank << " chunkPerWorker: " << chunkPerWorker << " bound dfference"  << (upperBound - lowerBound) << endl;
     if(myRank != master){
 	for(int i = 0; i < (upperBound - lowerBound); i++){
 	    cout << "just sent " << myRank*(upperBound - lowerBound) + i << "from " << myRank << endl;
