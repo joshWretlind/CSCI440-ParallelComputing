@@ -13,7 +13,7 @@
 #include<bitset>
 #include<cmath>
 #include<vector>
-#include<stdbool>
+#include<stdbool.h>
 
 using namespace std;
 
