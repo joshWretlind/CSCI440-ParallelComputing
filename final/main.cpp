@@ -47,8 +47,7 @@ bool** convertStringToBits(string str){
 	lowerBound = str.length();
     }
     if(lowerBound == upperBound){
-	vector< bitset<8> > vect;
-	return vect;
+	return NULL;
     }
     bool** mainBitset = new bool*[upperBound - lowerBound];
     for(int i = 0; i < (upperBound - lowerBound); i++){
@@ -57,7 +56,7 @@ bool** convertStringToBits(string str){
     for(int i =lowerBound; i < upperBound; i++){
 	bitset<8> currentChar(str.c_str()[i]);
 	for(int j = 0; j < 8; j++){
-	    mainBitset[i - lowerBound][j] = bitset[j];
+	    mainBitset[i - lowerBound][j] = currentChar[j];
 	} 
     }
     
@@ -72,7 +71,7 @@ bool** convertAndBroadcastBits(string message){
     }
     
     if(myRank != master){
-	for(int i = 0; i < myBits.size(); i++){
+	for(int i = 0; i < chunkPerWorker; i++){
 	    MPI::COMM_WORLD.Send(myBits[i], 8, MPI_CHAR, master, myRank*chunkPerWorker + i); 
 	}
     } else {
