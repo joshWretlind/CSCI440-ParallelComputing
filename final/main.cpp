@@ -109,7 +109,6 @@ int main(int argc, char *argv[]){
     
     
     bool** messageBits = convertAndBroadcastBits(message);
-    cout << chunkPerWorker << endl;
     for(int i = 0; i < message.size(); i++){
 	for(int j = 0; j < 8; j++){
 	    cout << messageBits[i][j];
