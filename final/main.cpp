@@ -71,9 +71,9 @@ bool** convertAndBroadcastBits(string message){
     }
     cout << "MyRank " << myRank << " chunkPerWorker: " << chunkPerWorker << " bound dfference"  << (upperBound - lowerBound) << endl;
     if(myRank != master){
-	for(int i = 0; i < (upperBound - lowerBound); i++){
-	    cout << "just sent " << myRank*(upperBound - lowerBound) + i << "from " << myRank << endl;
-	    MPI::COMM_WORLD.Send(myBits[i], 8, MPI_CHAR, master, myRank*((upperBound - lowerBound)) + i); 
+	for(int i = 0; i < chunkPerWorker; i++){
+	    cout << "just sent " << myRank*chunkPerWorker + i << "from " << myRank << endl;
+	    MPI::COMM_WORLD.Send(myBits[i], 8, MPI_CHAR, master, myRank*chunkPerWorker + i); 
 	}
     } else {
 	for(int i = 0; i < chunkPerWorker; i++){
