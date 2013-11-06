@@ -94,9 +94,7 @@ bool* convertAndBroadcastBits(string message){
 	delete[] totalBits;
     }
 
-    MPI::COMM_WORLD.Bcast(messageInBinary[i], 8*message.size(), MPI_CHAR, master);
-    
-
+    MPI::COMM_WORLD.Bcast(messageInBinary, 8*message.size(), MPI_CHAR, master);
 
     for(int i = 0; i < chunkPerWorker; i++){
 	delete[] myBits[i];
