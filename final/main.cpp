@@ -28,7 +28,7 @@ int myRank;
  * Complexity:  Time: O()
  *             Space: O()
  * *****************************************************/
-vector< bitset<int> > convertStringToBits(string str){
+vector< bitset<8> > convertStringToBits(string str){
     
     int chunkPerWorker = ceil(((double)str.length())/((double)totalSize));
     int lowerBound = myRank*(chunkPerWorker);
