@@ -72,7 +72,7 @@ bool** convertAndBroadcastBits(string message){
     
     if(myRank != master){
 	for(int i = 0; i < (upperBound - lowerBound); i++){
-	    cout << "just sent " << myRank*chunkPerWorker + i << "from " << myRank << endl;
+	    cout << "just sent " << myRank*((upperBound - lowerBound)) + i << "from " << myRank << endl;
 	    MPI::COMM_WORLD.Send(myBits[i], 8, MPI_CHAR, master, myRank*((upperBound - lowerBound)) + i); 
 	}
     } else {
