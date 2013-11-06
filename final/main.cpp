@@ -125,7 +125,7 @@ int main(int argc, char *argv[]){
     for(int i = 0; i < message.size(); i++){
 	delete[] messageBits[i];
     }
-    delete[] messageBits[];
+    delete[] messageBits;
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
     MPI::Finalize();
