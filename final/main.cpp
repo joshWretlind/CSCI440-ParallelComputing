@@ -105,7 +105,7 @@ int main(int argc, char *argv[]){
     myRank = MPI::COMM_WORLD.Get_rank();
     int digest = atoi(argv[1]);
     string message = argv[2];
-    messageSize = 8*message;
+    int messageSize = 8*message.size();
     
     bool** messageBits = convertAndBroadcastBits(message);
     
