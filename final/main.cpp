@@ -81,12 +81,12 @@ bool** convertAndBroadcastBits(string message){
 	}
 	MPI::Status myStatus;
 	for(int i = chunkPerWorker; i < message.length(); i++){
-	    MPI::COMM_WORLD.Recv(totalBits[i], 8, MPI_CHAR, floor(((double)i)/((double)chunkPerWorker), i, myStatus);
+	    MPI::COMM_WORLD.Recv(totalBits[i], 8, MPI_CHAR, floor(((double)i)/((double)chunkPerWorker)), i, myStatus);
 	}
     }
 
     for(int i = 0; i < message.length(); i++){
-	MPI::COMM_WORLD.Bcast(totalBits[i], 8, MPI_CHAR, master)
+	MPI::COMM_WORLD.Bcast(totalBits[i], 8, MPI_CHAR, master);
     }
     for(int i = 0; i < chunkPerWorker; i++){
 	delete[] myBits[i];
