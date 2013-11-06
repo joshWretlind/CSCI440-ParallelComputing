@@ -76,26 +76,31 @@ bool* convertAndBroadcastBits(string message){
 	for(int i = 0; i < message.size(); i++){
 	    totalBits[i] = new bool[8];
 	}
+	cout << "got total" << endl;
 	for(int i = 0; i < chunkPerWorker; i++){
 	    totalBits[i] = myBits[i];
 	}
+	cout << "assigned 0" << endl;
 	MPI::Status myStatus;
 	for(int i = (upperBound - lowerBound); i < message.length(); i++){
 	    MPI::COMM_WORLD.Recv(totalBits[i], 8, MPI_CHAR, floor(((double)i)/((double)(upperBound - lowerBound))), i, myStatus);
 	}
+	cout << "got all the results" << endl;
 	for(int i = 0; i < message.size(); i++){
 	    for(int j = 0; j < 8; j++){
 		messageInBinary[8*i + j] = totalBits[i][j];
 	    }
 	}
+	cout << "made message" << endl;
 	for(int i = 0; i < message.size(); i++){
 	    delete[] totalBits[i];
 	}
 	delete[] totalBits;
     }
-
+    cout << "bradcasting" << endl;
     MPI::COMM_WORLD.Bcast(messageInBinary, 8*message.size(), MPI_CHAR, master);
 
+    cout << "deleting chunks"  << endl;
     for(int i = 0; i < chunkPerWorker; i++){
 	delete[] myBits[i];
     }
