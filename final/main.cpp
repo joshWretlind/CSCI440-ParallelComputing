@@ -106,15 +106,7 @@ int main(int argc, char *argv[]){
     int digest = atoi(argv[1]);
     string message = argv[2];
     
-    
     bool** messageBits = convertAndBroadcastBits(message);
-    for(int i = 0; i < message.size(); i++){
-	cout << "MyRank: " << myRank << " ";
-	for(int j = 0; j < 8; j++){
-	    cout << messageBits[i][j];
-	}
-	cout << endl;
-    }
     
     bool* messageInBinary = new bool[8*message.size()];
     for(int i = 0; i < message.size(); i++){
@@ -126,6 +118,12 @@ int main(int argc, char *argv[]){
 	delete[] messageBits[i];
     }
     delete[] messageBits;
+    
+    cout << "MyRank " << myRank;
+    for(int i = 0; i < message.size(); i++){
+	cout << messageInBinary[i];
+    }
+    
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
     MPI::Finalize();
