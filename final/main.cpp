@@ -63,7 +63,7 @@ bool** convertStringToBits(string str){
     return mainBitset;
 }
 
-bool** convertAndBroadcastBits(string message){
+bool* convertAndBroadcastBits(string message){
     bool** myBits = convertStringToBits(message);
     bool* messageInBinary = new bool[8*message.size()];
 
