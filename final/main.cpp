@@ -111,7 +111,7 @@ int main(int argc, char *argv[]){
     bool* messageInBinary = new bool[8*message.size()];
     for(int i = 0; i < message.size(); i++){
 	for(int j = 0; j < 8; j++){
-	    messageInBinary[8*i + j] = messageBits[i][j];
+	    messageInBinary[8*i + j] = *messageBits[i][j];
 	}
     }
     for(int i = 0; i < message.size(); i++){
@@ -123,6 +123,7 @@ int main(int argc, char *argv[]){
     for(int i = 0; i < message.size(); i++){
 	cout << messageInBinary[i];
     }
+    cout << endl;
     
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
