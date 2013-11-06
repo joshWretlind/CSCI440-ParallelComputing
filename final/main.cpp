@@ -80,7 +80,7 @@ bool** convertAndBroadcastBits(string message){
 	    totalBits[i] = myBits[i];
 	}
 	MPI::Status myStatus;
-	for(int i = chunkPerWorker; i < message.length(); i++){
+	for(int i = (upperBound - lowerBound); i < message.length(); i++){
 	    cout << " Looking for " << i << " from " << floor(((double)i)/((double)((upperBound - lowerBound)))) << endl;
 	    MPI::COMM_WORLD.Recv(totalBits[i], 8, MPI_CHAR, floor(((double)i)/((double)(upperBound - lowerBound))), i, myStatus);
 	}
