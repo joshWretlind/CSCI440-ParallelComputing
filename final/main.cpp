@@ -23,6 +23,16 @@ int myRank;
 int chunkPerWorker;
 int lowerBound;
 int upperBound;
+//l is the power of the word length size. This directly impacts most of the
+//RAM requirements of this code
+int l = 6;
+//w is the word size. w=2^l
+int w;
+//c is the word "capacity". this is twice the imput number. Ex: SHA3-512 has c=1024
+int c;
+//r is the rate per permutation we need to do. r = 25*w - c
+int r;
+
 
 /*******************************************************
  * convertStringTobits
@@ -111,6 +121,11 @@ int main(int argc, char *argv[]){
     string message = argv[2];
     int messageSize = 8*message.size();
     
+    c = 2*digest;
+    w = pow(2.0,l);
+    
+    r = 25*w - c;
+    
     bool* messageInBinary = convertAndBroadcastBits(message);
     
     cout << "MyRank: " << myRank << " "; 
@@ -118,6 +133,8 @@ int main(int argc, char *argv[]){
 	cout << messageInBinary[i];
     }
     cout << endl;
+    
+    
     
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
