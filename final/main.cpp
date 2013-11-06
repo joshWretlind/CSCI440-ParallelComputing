@@ -65,10 +65,8 @@ bool** convertStringToBits(string str){
 
 bool** convertAndBroadcastBits(string message){
     bool** myBits = convertStringToBits(message);
-    bool** totalBits = new bool*[message.length()];
-    for(int i = 0; i < message.length(); i++){
-	totalBits[i] = new bool[8];
-    }
+    bool* messageInBinary = new bool[8*message.size()];
+
     if(myRank != master){
 	for(int i = 0; i < (upperBound - lowerBound); i++){
 	    MPI::COMM_WORLD.Send(myBits[i], 8, MPI_CHAR, master, myRank*chunkPerWorker + i); 
@@ -81,17 +79,29 @@ bool** convertAndBroadcastBits(string message){
 	for(int i = (upperBound - lowerBound); i < message.length(); i++){
 	    MPI::COMM_WORLD.Recv(totalBits[i], 8, MPI_CHAR, floor(((double)i)/((double)(upperBound - lowerBound))), i, myStatus);
 	}
+	for(int i = 0; i < message.size(); i++){
+	    for(int j = 0; j < 8; j++){
+		messageInBinary[8*i + j] = messageBits[i][j];
+	    }
+	}
+	for(int i = 0; i < message.size(); i++){
+	    delete[] totalBits[i];
+	}
+	delete[] totalBits;
     }
 
-    for(int i = 0; i < message.length(); i++){
-	MPI::COMM_WORLD.Bcast(totalBits[i], 8, MPI_CHAR, master);
-    }
-    /*for(int i = 0; i < chunkPerWorker; i++){
+    MPI::COMM_WORLD.Bcast(messageInBinary[i], 8*message.size(), MPI_CHAR, master);
+    
+
+
+    for(int i = 0; i < chunkPerWorker; i++){
 	delete[] myBits[i];
     }
     delete[] myBits;
-    */
-    return totalBits;
+
+    
+    
+    return messageInBinary;
 }
 
 int main(int argc, char *argv[]){
@@ -107,24 +117,10 @@ int main(int argc, char *argv[]){
     string message = argv[2];
     int messageSize = 8*message.size();
     
-    bool** messageBits = convertAndBroadcastBits(message);
+    bool* messageInBinary = convertAndBroadcastBits(message);
     
-    bool* messageInBinary = new bool[8*message.size()];
-    for(int i = 0; i < message.size(); i++){
-	for(int j = 0; j < 8; j++){
-	    messageInBinary[8*i + j] = messageBits[i][j];
-	}
-    }
-    for(int i = 0; i < message.size(); i++){
-	delete[] messageBits[i];
-    }
-    delete[] messageBits;
-    
-    cout << "MyRank " << myRank;
-    for(int i = 0; i < messageSize; i++){
-	cout << messageInBinary[i];
-    }
-    cout << endl;
+ 
+
     
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
