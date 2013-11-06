@@ -105,13 +105,14 @@ int main(int argc, char *argv[]){
     myRank = MPI::COMM_WORLD.Get_rank();
     int digest = atoi(argv[1]);
     string message = argv[2];
+    messageSize = 8*message;
     
     bool** messageBits = convertAndBroadcastBits(message);
     
     bool* messageInBinary = new bool[8*message.size()];
     for(int i = 0; i < message.size(); i++){
 	for(int j = 0; j < 8; j++){
-	    messageInBinary[8*i + j] = *messageBits[i][j];
+	    messageInBinary[8*i + j] = messageBits[i][j];
 	}
     }
     for(int i = 0; i < message.size(); i++){
@@ -120,7 +121,7 @@ int main(int argc, char *argv[]){
     delete[] messageBits;
     
     cout << "MyRank " << myRank;
-    for(int i = 0; i < message.size(); i++){
+    for(int i = 0; i < messageSize; i++){
 	cout << messageInBinary[i];
     }
     cout << endl;
