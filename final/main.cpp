@@ -87,11 +87,11 @@ bool** convertAndBroadcastBits(string message){
     for(int i = 0; i < message.length(); i++){
 	MPI::COMM_WORLD.Bcast(totalBits[i], 8, MPI_CHAR, master);
     }
-    for(int i = 0; i < chunkPerWorker; i++){
+    /*for(int i = 0; i < chunkPerWorker; i++){
 	delete[] myBits[i];
     }
     delete[] myBits;
-    
+    */
     return totalBits;
 }
 
