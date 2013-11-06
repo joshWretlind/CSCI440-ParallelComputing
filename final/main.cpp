@@ -28,7 +28,7 @@ int myRank;
  * Complexity:  Time: O()
  *             Space: O()
  * *****************************************************/
-vector<bitset<int>> convertStringToBits(string str){
+vector< bitset<int> > convertStringToBits(string str){
     
     int chunkPerWorker = ceil(((double)str.length())/((double)totalSize));
     int lowerBound = myRank*(chunkPerWorker);
@@ -43,11 +43,12 @@ vector<bitset<int>> convertStringToBits(string str){
 	lowerBound = str.length();
     }
     if(lowerBound == upperBound){
-	return NULL;
+	vector< bitset<8> > vect;
+	return vect;
     }
-    vector<bitset<8>> mainBitset = new bitset();
+    vector< bitset<8> > mainBitset;
     for(int i =lowerBound; i < upperBound; i++){
-	bitset<8> currentChar = new bitset<8>(str.c_str()[i]);
+	bitset<8> currentChar(str.c_str()[i]);
 	for(int j = 0; j < 8; j++){
 	    mainBitset.push_back(currentChar);
 	} 
