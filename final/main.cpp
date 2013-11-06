@@ -26,7 +26,7 @@ int myRank;
  * Complexity:  Time: O()
  *             Space: O()
  * *****************************************************/
-bitset convertStringToBits(string str){
+bitset<int> convertStringToBits(string str){
     char* cStr = str.c_str();
     
     chunkPerWorker = ceil(((double)str.length())/((double)totalSize));
