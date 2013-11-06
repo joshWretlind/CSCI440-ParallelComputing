@@ -110,6 +110,7 @@ int main(int argc, char *argv[]){
     
     bool** messageBits = convertAndBroadcastBits(message);
     for(int i = 0; i < message.size(); i++){
+	cout << "MyRank: " << myRank;
 	for(int j = 0; j < 8; j++){
 	    cout << messageBits[i][j];
 	}
