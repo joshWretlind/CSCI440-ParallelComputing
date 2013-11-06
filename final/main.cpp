@@ -12,6 +12,7 @@
 #include<cstdlib>
 #include<bitset>
 #include<cmath>
+#include<vector>
 
 using namespace std;
 
@@ -27,11 +28,11 @@ int myRank;
  * Complexity:  Time: O()
  *             Space: O()
  * *****************************************************/
-bitset<int> convertStringToBits(string str){
+vector<bitset<int>> convertStringToBits(string str){
     
     int chunkPerWorker = ceil(((double)str.length())/((double)totalSize));
-    const int lowerBound = myRank*(chunkPerWorker);
-    const int upperBound = (myRank+1)*(chunkPerWorker);
+    int lowerBound = myRank*(chunkPerWorker);
+    int upperBound = (myRank+1)*(chunkPerWorker);
     if((myRank+1) == totalSize){
 	upperBound = str.length();
     }
@@ -42,13 +43,13 @@ bitset<int> convertStringToBits(string str){
 	lowerBound = str.length();
     }
     if(lowerBound == upperBound){
-	return void;
+	return NULL;
     }
-    bitset<8*(upperBound - lowerBound)> mainBitset = new bitset();
+    vector<bitset<8>> mainBitset = new bitset();
     for(int i =lowerBound; i < upperBound; i++){
 	bitset<8> currentChar = new bitset<8>(str.c_str()[i]);
 	for(int j = 0; j < 8; j++){
-	    mainBitset.set(8*i + j, currentChar[j]);
+	    mainBitset.push_back(currentChar);
 	} 
     }
     
