@@ -114,7 +114,7 @@ int main(int argc, char *argv[]){
     bool* messageInBinary = convertAndBroadcastBits(message);
     
     cout << "MyRank: " << myRank << " "; 
-    for(int i = 0; i < messageSize(); i++){
+    for(int i = 0; i < messageSize; i++){
 	cout << messageInBinary[i];
     }
     cout << endl;
