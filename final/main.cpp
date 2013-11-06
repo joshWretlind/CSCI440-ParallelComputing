@@ -30,9 +30,9 @@ int myRank;
 bitset<int> convertStringToBits(string str){
     
     int chunkPerWorker = ceil(((double)str.length())/((double)totalSize));
-    int lowerBound = myRank*(chunkPerWorker);
-    int upperBound = (myRank+1)*(chunkPerWorker);
-    if((rank+1) == totalSize){
+    const int lowerBound = myRank*(chunkPerWorker);
+    const int upperBound = (myRank+1)*(chunkPerWorker);
+    if((myRank+1) == totalSize){
 	upperBound = str.length();
     }
     if(upperBound > str.length()){
@@ -42,9 +42,9 @@ bitset<int> convertStringToBits(string str){
 	lowerBound = str.length();
     }
     if(lowerBound == upperBound){
-	return new bitset<0>();
+	return void;
     }
-    bitset<8*(upperBound - lowerBound)> mainBitset;
+    bitset<8*(upperBound - lowerBound)> mainBitset = new bitset();
     for(int i =lowerBound; i < upperBound; i++){
 	bitset<8> currentChar = new bitset<8>(str.c_str()[i]);
 	for(int j = 0; j < 8; j++){
