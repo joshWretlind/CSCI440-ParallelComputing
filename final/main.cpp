@@ -66,12 +66,16 @@ bool** convertStringToBits(string str){
 bool* convertAndBroadcastBits(string message){
     bool** myBits = convertStringToBits(message);
     bool* messageInBinary = new bool[8*message.size()];
-
+    
     if(myRank != master){
 	for(int i = 0; i < (upperBound - lowerBound); i++){
 	    MPI::COMM_WORLD.Send(myBits[i], 8, MPI_CHAR, master, myRank*chunkPerWorker + i); 
 	}
     } else {
+	bool** totalBits = new bool*[message.size()];
+	for(int i = 0; i < message.size(); i++){
+	    totalBits[i] = new bool[8];
+	}
 	for(int i = 0; i < chunkPerWorker; i++){
 	    totalBits[i] = myBits[i];
 	}
@@ -81,7 +85,7 @@ bool* convertAndBroadcastBits(string message){
 	}
 	for(int i = 0; i < message.size(); i++){
 	    for(int j = 0; j < 8; j++){
-		messageInBinary[8*i + j] = messageBits[i][j];
+		messageInBinary[8*i + j] = totalBits[i][j];
 	    }
 	}
 	for(int i = 0; i < message.size(); i++){
