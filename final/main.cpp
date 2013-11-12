@@ -34,7 +34,7 @@ int c;
 int r;
 
 int messageSize;
-int padedSize;
+int paddedSize;
 
 /*******************************************************
  * convertStringTobits
@@ -68,7 +68,7 @@ bool** convertStringToBits(string str){
     for(int i =lowerBound; i < upperBound; i++){
 	bitset<8> currentChar(str.c_str()[i]);
 	for(int j = 0; j < 8; j++){
-	    mainBitset[i - lowerBound][j] = currentChar[7-j];
+	    mainBitset[i - lowerBound][j] = currentChar[j];
 	} 
     }
     
@@ -77,7 +77,7 @@ bool** convertStringToBits(string str){
 
 bool* convertAndBroadcastBits(string message){
     int padding = ceil(((double)messageSize)/((double)r));
-    padedSize = messageSize*r;
+    paddedSize = messageSize*r;
     
     bool** myBits = convertStringToBits(message);
     bool* messageInBinary = new bool[padedSize];
