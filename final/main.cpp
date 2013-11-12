@@ -80,7 +80,7 @@ bool* convertAndBroadcastBits(string message){
     paddedSize = messageSize*r;
     
     bool** myBits = convertStringToBits(message);
-    bool* messageInBinary = new bool[padedSize];
+    bool* messageInBinary = new bool[paddedSize];
     
     if(myRank != master){
 	for(int i = 0; i < (upperBound - lowerBound); i++){
