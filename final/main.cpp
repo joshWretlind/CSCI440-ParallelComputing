@@ -106,7 +106,6 @@ bool* convertAndBroadcastBits(string message){
 	    cout << endl;
 	}
 	
-	for(int i = messageSize; i < paddedSize; i++){
 	    if((paddedSize - messageSize) == 1) {
 		messageInBinary[paddedSize -1 ] = true;
 	    } else if((paddedSize - messageSize) > 1) {
@@ -115,7 +114,6 @@ bool* convertAndBroadcastBits(string message){
 		    messageInBinary[i] = false;
 		}
 		messageInBinary[paddedSize - 1] = true; 
-	    }
 	}
 	for(int i = 0; i < message.size(); i++){
 	    delete[] totalBits[i];
