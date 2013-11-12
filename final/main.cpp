@@ -33,6 +33,8 @@ int c;
 //r is the rate per permutation we need to do. r = 25*w - c
 int r;
 
+int messageSize;
+int padedSize;
 
 /*******************************************************
  * convertStringTobits
@@ -66,7 +68,7 @@ bool** convertStringToBits(string str){
     for(int i =lowerBound; i < upperBound; i++){
 	bitset<8> currentChar(str.c_str()[i]);
 	for(int j = 0; j < 8; j++){
-	    mainBitset[i - lowerBound][j] = currentChar[7-j];
+	    mainBitset[i - lowerBound][j] = currentChar[j];
 	} 
     }
     
@@ -74,8 +76,11 @@ bool** convertStringToBits(string str){
 }
 
 bool* convertAndBroadcastBits(string message){
+    int padding = ceil(((double)messageSize)/((double)r));
+    padedSize = messageSize*r;
+    
     bool** myBits = convertStringToBits(message);
-    bool* messageInBinary = new bool[8*message.size()];
+    bool* messageInBinary = new bool[padedSize];
     
     if(myRank != master){
 	for(int i = 0; i < (upperBound - lowerBound); i++){
@@ -96,6 +101,18 @@ bool* convertAndBroadcastBits(string message){
 	for(int i = 0; i < message.size(); i++){
 	    for(int j = 0; j < 8; j++){
 		messageInBinary[8*i + j] = totalBits[i][j];
+	    }
+	}
+	
+	for(int i = messageSize; i < paddedSize; i++){
+	    if((paddedSize - messageSize) == 1) {
+		messageInBinary[paddedSize -1 ] = true;
+	    } else if((paddedSize - messageSize) > 1) {
+		messageInBinary[messageSize] = true;
+		for(int i = messageSize + 1; i < (paddedSize - 1); i++) {
+		    messageInBinary[i] = false;
+		}
+		messageInBinary[paddedSize - 1] = true; 
 	    }
 	}
 	for(int i = 0; i < message.size(); i++){
@@ -119,7 +136,7 @@ int main(int argc, char *argv[]){
     myRank = MPI::COMM_WORLD.Get_rank();
     int digest = atoi(argv[1]);
     string message = argv[2];
-    int messageSize = 8*message.size();
+    messageSize = 8*message.size();
     
     c = 2*digest;
     w = pow(2.0,l);
@@ -129,10 +146,12 @@ int main(int argc, char *argv[]){
     bool* messageInBinary = convertAndBroadcastBits(message);
     
     cout << "MyRank: " << myRank << " "; 
-    for(int i = 0; i < messageSize; i++){
+    for(int i = 0; i < paddedSize; i++){
 	cout << messageInBinary[i];
     }
     cout << endl;
+    
+    
     
     
     
