@@ -120,7 +120,7 @@ bool* convertAndBroadcastBits(string message){
 	}
 	delete[] totalBits;
     }
-    MPI::COMM_WORLD.Bcast(messageInBinary, 8*message.size(), MPI_CHAR, master);
+    MPI::COMM_WORLD.Bcast(messageInBinary, paddedSize), MPI_CHAR, master);
 
     return messageInBinary;
 }
@@ -145,12 +145,13 @@ int main(int argc, char *argv[]){
     
     bool* messageInBinary = convertAndBroadcastBits(message);
     
+    if(myRank == master){
     cout << "MyRank: " << myRank << " "; 
     for(int i = 0; i < paddedSize; i++){
 	cout << messageInBinary[i];
     }
     cout << endl;
-    
+}
     
     
     
