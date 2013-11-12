@@ -120,7 +120,7 @@ bool* convertAndBroadcastBits(string message){
 	}
 	delete[] totalBits;
     }
-    MPI::COMM_WORLD.Bcast(messageInBinary, paddedSize), MPI_CHAR, master);
+    MPI::COMM_WORLD.Bcast(messageInBinary, paddedSize, MPI_CHAR, master);
 
     return messageInBinary;
 }
