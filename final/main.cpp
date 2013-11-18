@@ -13,6 +13,7 @@
 #include<cmath>
 #include<vector>
 #include<stdbool.h>
+#include<iomanip>
 
 using namespace std;
 
@@ -400,7 +401,7 @@ void permuteState(bool* message){
 }
 
 string squeeze(){
-    string output = "";
+    std::stringstream output;
     for(int i = 0; i < c/8; i++){
 	string temp = "";
 	bool tripped = false;
@@ -417,7 +418,7 @@ string squeeze(){
 			cout << temp << endl;
 		    }
 		    if((l+1)%4 == 0){
-			output += strtol(temp.c_str(), NULL, 2);
+			output << hex << strtol(temp.c_str(),NULL,2);
 			temp = "";
 		    }
 		}
@@ -437,7 +438,7 @@ string squeeze(){
 	delete[] state[i];
     }
     delete[] state;
-    return output;
+    return output.str();
 }
 
 int main(int argc, char *argv[]){
@@ -469,7 +470,7 @@ int main(int argc, char *argv[]){
     string out = squeeze();
     
     if(myRank == master){
-	//cout << out << endl;
+	cout << out << endl;
     }
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
