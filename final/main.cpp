@@ -400,17 +400,7 @@ void permuteState(bool* message){
 	
 	keccakSponge(b,state);
     }
-    cout << myRank << " trying to delete state" << endl;
-    for(int i = 0; i < 5; i++){
-	for(int j = 0; j < 5; j++){
-	    cout << myRank << " deleting [][] " << endl;
-	    delete[] state[i][j];
-	}
-	cout << myRank << " deleting []" << endl;
-	delete[] state[i];
-    }
-    cout << myRank << " deleting base" << endl;
-    //delete[] state;
+
 }
 
 string squeeze(){
@@ -441,12 +431,16 @@ string squeeze(){
 	
     }
     
+    cout << myRank << " trying to delete state" << endl;
     for(int i = 0; i < 5; i++){
 	for(int j = 0; j < 5; j++){
+	    cout << myRank << " deleting [][] " << endl;
 	    delete[] state[i][j];
 	}
+	cout << myRank << " deleting []" << endl;
 	delete[] state[i];
     }
+    cout << myRank << " deleting base" << endl;
     delete[] state;
 }
 
