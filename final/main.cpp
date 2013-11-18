@@ -390,7 +390,7 @@ void permuteState(bool* message){
 		}
 		for(int l = 0; l < w; l++){
 			cout << "MyRank : " << myRank << " getting index " << r*i + 5*k + j << endl;
-			state[i][j][k] = state[i][j][k] ^ message[r*i + 5*k + j];
+			state[j][k][l] = state[j][k][l] ^ message[r*i + 5*k + j];
 		}
 	    }
 	    if(tripped){
@@ -403,10 +403,13 @@ void permuteState(bool* message){
     cout << myRank << " trying to delete state" << endl;
     for(int i = 0; i < 5; i++){
 	for(int j = 0; j < 5; j++){
+	    cout << myRank << " deleting [][] " << endl;
 	    delete[] state[i][j];
 	}
+	cout << myRank << " deleting []" << endl;
 	delete[] state[i];
     }
+    cout << myRank << " deleting base" << endl;
     delete[] state;
 }
 
