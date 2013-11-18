@@ -159,7 +159,55 @@ bool* convertAndBroadcastBits(string message){
  * 
  * 
  *********************************/
-void thetaStep(int totalKeccakSize, bool*** tempState){
+void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
+    bool** c = new bool*[5];
+    bool** d = new bool*[5];
+    for(int i = 0; i < 5; i++){
+	c[i] = new bool[w];
+	d[i] = new bool[w];
+    }
+    
+    for(int i = 0; i < 5; i++){
+	for(int k = 0; k < w; k++){
+	    c[i][k] = tempState[i][0][k] ^ tempState[i][1][k] ^
+		      tempState[i][2][k] ^ tempState[i][3][k] ^
+		      tempState[i][4][k];
+	}
+    }
+    
+    for(int i = 0; i < 5; i++){
+	for(int j = 0; j < w; j++){
+	    int backPos = i - 1 ;
+	    if(backPos == -1){
+		backPos = 4;
+	    }
+	    d[i][j] = c[backPos][j] ^ c[(i + 1)%5][(j+1)%w];
+	}
+    }
+    
+    for(int i = 0; i < 5; i++){
+	for(int j = 0; j < 5; j++){
+	    for(int k = 0; k < w; k++){
+		tempState[i][j][k] = tempState[i][j][k] ^ d[i][k];
+	    }
+	}
+    }
+    
+    for(int i = 0; i < 5; i++){
+	delete[] c[i];
+	delete[] d[i];
+    }
+    delete[] c;
+    delete[] d;
+}
+
+/**************************************
+ * 
+ * 
+ * 
+ * 
+ **************************************/
+void piAndRhoSteps(int totalKeccakSize, bool*** tempState, long rc){
 
 }
 
@@ -169,17 +217,7 @@ void thetaStep(int totalKeccakSize, bool*** tempState){
  * 
  * 
  **************************************/
-void piAndRhoSteps(int totalKeccakSize, bool*** tempState){
-
-}
-
-/**************************************
- * 
- * 
- * 
- * 
- **************************************/
-void chiStep(int totalKeccakSize, bool*** tempState){
+void chiStep(int totalKeccakSize, bool*** tempState, long rc){
 
 }
 
@@ -189,8 +227,11 @@ void chiStep(int totalKeccakSize, bool*** tempState){
  * 
  * 
  **************************************/
-void iotaStep(int totalKeccakSize, bool*** tempState){
-
+void iotaStep(int totalKeccakSize, bool*** tempState, long rc){
+    bitset<64> rcVal(rc);
+    for(int i = 0; i < w; i++){
+	tempState[0][0][i] = rcVal[i] ^ tempState[0][0][i];
+    }
 }
 
 /**************************************
@@ -200,10 +241,10 @@ void iotaStep(int totalKeccakSize, bool*** tempState){
  * 
  **************************************/
 void keccakRound(int totalKeccakSize, bool*** tempState, long rc){
-    thetaStep    (totalKeccakSize, tempState);
-    piAndRhoSteps(totalKeccakSize, tempState);
-    chiStep      (totalKeccakSize, tempState);
-    iotaStep     (totalKeccakSize, tempState);
+    thetaStep    (totalKeccakSize, tempState, rc);
+    piAndRhoSteps(totalKeccakSize, tempState, rc);
+    chiStep      (totalKeccakSize, tempState, rc);
+    iotaStep     (totalKeccakSize, tempState, rc);
 }
 
 /***************************************
