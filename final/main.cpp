@@ -364,8 +364,6 @@ void setupCyclicConstants(){
  * 
  * *******************************/
 void permuteState(bool* message){
-    cout << myRank << " making state" << endl;
-
     state = new bool**[5];
     for(int i = 0; i < 5; i++){
 	state[i] = new bool*[5];
@@ -376,7 +374,6 @@ void permuteState(bool* message){
 	    }
 	}
     }
-    cout << " made state" << endl;
     
     for(int i = 0; i < paddedSize/r; i++){
 	bool tripped = false;
