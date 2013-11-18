@@ -406,7 +406,7 @@ void permuteState(bool* message){
 
 string squeeze(){
     string output = "";
-    for(int i = 0; i < digest/4; i++){
+    for(int i = 0; i < c/8; i++){
 	string temp = "";
 	bool tripped = false;
 	for(int j = 0; j < 5; j++){
@@ -419,7 +419,7 @@ string squeeze(){
 		for(int l = 0; l < w; l++){
 		    temp += state[j][k][l];
 		    if((l+1)%4 == 0){
-			output += strtol(temp, null, 2);
+			output += strtol(temp, NULL, 2);
 			temp = "";
 		    }
 		}
