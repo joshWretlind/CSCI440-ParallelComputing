@@ -14,7 +14,7 @@
 #include<vector>
 #include<stdbool.h>
 #include<iomanip>
-
+#include<sstream>
 using namespace std;
 
 int master = 0;
