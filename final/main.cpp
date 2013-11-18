@@ -39,6 +39,8 @@ int b;
 long *rc;
 int cycleOffset[5][5];
 
+bool*** b;
+
 int messageSize;
 int paddedSize;
 /*******************************************************
@@ -159,6 +161,19 @@ bool* convertAndBroadcastBits(string message){
  * 
  * 
  *********************************/
+bool* rotate(bool* bitsToRotate, int howMuchToRotate,int lengthOfBitsToRotate){
+    bool* rotated = new bool[lengthOfBitsToRotate];
+    for(int i = 0; i < lengthOfBitsToRotate; i++){
+	rotated[i] = bitsToRotate[(i+howMuchToRotate)%lengthOfBitsToRotate];
+    }
+    return rotated;
+}
+
+/*********************************
+ * 
+ * 
+ * 
+ *********************************/
 void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
     bool** c = new bool*[5];
     bool** d = new bool*[5];
@@ -208,7 +223,22 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
  * 
  **************************************/
 void piAndRhoSteps(int totalKeccakSize, bool*** tempState, long rc){
-
+    b = new bool**[5];
+    for(int i = 0; i < 5; i++){
+	b[i] = new bool*[5];
+	for(int j = 0; j < 5; j++){
+	    b[i][j] = new bool[w];
+	}
+    }
+    
+    for(int i = 0; i < 5; i++){
+	for(int j = 0; j < 5; j++){
+	    bool* rotated = rotate(tempState[i][j],cycleOffset[i][j],w);
+	    for(int k = 0; k < w; k++){
+		b[j][(2*i + 3*y)%5][k] = rotated[k];
+	    }
+	}
+    }
 }
 
 /**************************************
@@ -218,7 +248,13 @@ void piAndRhoSteps(int totalKeccakSize, bool*** tempState, long rc){
  * 
  **************************************/
 void chiStep(int totalKeccakSize, bool*** tempState, long rc){
-
+    for(int i = 0; i < 5; i++){
+	for(int j = 0; j < 5; j++){
+	    for(int k = 0; k < w; k++){
+		tempState[i][j][k] = b[i][j][k] ^ ((!b[(i+1)%5][j][k]) & b[(i+2)%5][j][k]);
+	    }
+	}
+    }
 }
 
 /**************************************
