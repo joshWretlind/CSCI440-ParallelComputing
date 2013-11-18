@@ -419,7 +419,7 @@ string squeeze(){
 		for(int l = 0; l < w; l++){
 		    temp += state[j][k][l];
 		    if((l+1)%4 == 0){
-			output += strtol(temp, NULL, 2);
+			output += strtol(temp.c_str(), NULL, 2);
 			temp = "";
 		    }
 		}
