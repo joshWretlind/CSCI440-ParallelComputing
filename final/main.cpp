@@ -374,7 +374,7 @@ void permuteState(bool* message){
     }
 
     
-    for(int i = 0; i < paddedSize)/r; i++){
+    for(int i = 0; i < paddedSize/r; i++){
     
     }
     
