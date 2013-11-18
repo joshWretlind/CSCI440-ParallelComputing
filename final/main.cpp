@@ -145,7 +145,6 @@ bool* convertAndBroadcastBits(string message){
 	    }
 	    messageInBinary[paddedSize - 1] = true; 
 	}
-	cout << " deleting total bits" << endl;
 	//Clean up our memory
 	for(int i = 0; i < message.size(); i++){
 	    delete[] totalBits[i];
@@ -210,7 +209,6 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
 	}
     }
     
-    cout << myRank << " trying to delete c and d" << endl;
     for(int i = 0; i < 5; i++){
 	delete[] c[i];
 	delete[] d[i];
@@ -267,14 +265,13 @@ void chiStep(int totalKeccakSize, bool*** tempState, long rc){
 	}
     }
     
-    cout << myRank << " trying to delete my bBlock" << endl;
     for(int i = 0; i < 5; i++){
 	for(int j = 0; j < 5; j++){
 	    delete[] bBlockPermuation[i][j];
 	}
 	delete[] bBlockPermuation[i];
     }
-    delete bBlockPermuation;
+    delete[] bBlockPermuation;
 }
 
 /**************************************
@@ -431,17 +428,13 @@ string squeeze(){
 	
     }
     
-    cout << myRank << " trying to delete state" << endl;
     for(int i = 0; i < 5; i++){
 	for(int j = 0; j < 5; j++){
-	    cout << myRank << " deleting [][] " << endl;
 	    delete[] state[i][j];
 	}
-	cout << myRank << " deleting []" << endl;
 	delete[] state[i];
     }
-    cout << myRank << " deleting base" << endl;
-    //delete[] state;
+    delete[] state;
     return output;
 }
 
