@@ -415,6 +415,7 @@ string squeeze(){
 		    temp += state[j][k][l];
 		    if(myRank == master){
 			cout << temp;
+		    }
 		    if((l+1)%4 == 0){
 			output += strtol(temp.c_str(), NULL, 2);
 			temp = "";
