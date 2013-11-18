@@ -158,7 +158,7 @@ bool* convertAndBroadcastBits(string message){
  * 
  * 
  *********************************/
-void thetaStep(int totalKeccakSize, int*** tempState){
+void thetaStep(int totalKeccakSize, bool*** tempState){
 
 }
 
@@ -168,7 +168,7 @@ void thetaStep(int totalKeccakSize, int*** tempState){
  * 
  * 
  **************************************/
-void piAndRhoSteps(int totalKeccakSize, int*** tempState){
+void piAndRhoSteps(int totalKeccakSize, bool*** tempState){
 
 }
 
@@ -178,7 +178,7 @@ void piAndRhoSteps(int totalKeccakSize, int*** tempState){
  * 
  * 
  **************************************/
-void chiStep(int totalKeccakSize, int*** tempState){
+void chiStep(int totalKeccakSize, bool*** tempState){
 
 }
 
@@ -188,7 +188,7 @@ void chiStep(int totalKeccakSize, int*** tempState){
  * 
  * 
  **************************************/
-void iotaStep(int totalKeccakSize, int*** tempState){
+void iotaStep(int totalKeccakSize, bool*** tempState){
 
 }
 
@@ -198,7 +198,7 @@ void iotaStep(int totalKeccakSize, int*** tempState){
  * 
  * 
  **************************************/
-void keccakRound(int totalKeccakSize, int*** tempState, long rc){
+void keccakRound(int totalKeccakSize, bool*** tempState, long rc){
     thetaStep    (totalKeccakSize, tempState);
     piAndRhoSteps(totalKeccakSize, tempState);
     chiStep      (totalKeccakSize, tempState);
@@ -210,7 +210,7 @@ void keccakRound(int totalKeccakSize, int*** tempState, long rc){
  * 
  * 
  **************************************/
-void keccakSponge(int totalKeccakSize, int*** absorbedState){
+void keccakSponge(int totalKeccakSize, bool*** absorbedState){
     for(int i = 0; i < numOfRounds; i++){
 	keccakRound(b,absorbedState,rc[i]);
     }
@@ -272,7 +272,7 @@ int main(int argc, char *argv[]){
     
     bool* messageInBinary = convertAndBroadcastBits(message);
     
-    
+    cout << -1%5 << endl;
     
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
