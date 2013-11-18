@@ -147,10 +147,10 @@ bool* convertAndBroadcastBits(string message){
 	}
 	cout << " deleting total bits" << endl;
 	//Clean up our memory
-	for(int i = 0; i < message.size(); i++){
+	/*for(int i = 0; i < message.size(); i++){
 	    delete[] totalBits[i];
 	}
-	delete[] totalBits;
+	delete[] totalBits;*/
     }
     //every one recieves the final message
     MPI::COMM_WORLD.Bcast(messageInBinary, paddedSize, MPI_CHAR, master);
