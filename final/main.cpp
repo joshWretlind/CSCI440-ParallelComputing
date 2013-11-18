@@ -414,9 +414,6 @@ string squeeze(){
 		
 		for(int l = 0; l < w; l++){
 		    temp += char('0' + ((bool)state[j][k][l]));
-		    if(myRank == master){
-			cout << temp << endl;
-		    }
 		    if((l+1)%4 == 0){
 			output << hex << strtol(temp.c_str(),NULL,2);
 			temp = "";
