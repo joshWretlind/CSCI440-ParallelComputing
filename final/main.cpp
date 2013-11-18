@@ -151,28 +151,69 @@ bool* convertAndBroadcastBits(string message){
 
     return messageInBinary;
 }
+
+/*********************************
+ * 
+ * 
+ * 
+ *********************************/
+void thetaStep(int totalKeccakSize, int*** tempState){
+
+}
+
 /**************************************
  * 
  * 
  * 
  * 
- * ************************************/
-void keccakRound(int b, int*** tempState){
- 
+ **************************************/
+void piAndRhoSteps(int totalKeccakSize, int*** tempState){
+
+}
+
+/**************************************
+ * 
+ * 
+ * 
+ * 
+ **************************************/
+void chiStep(int totalKeccakSize, int*** tempState){
+
+}
+
+/**************************************
+ *
+ * 
+ * 
+ * 
+ **************************************/
+void iotaStep(int totalKeccakSize, int*** tempState){
+
+}
+
+/**************************************
+ * keccakRound
+ * 
+ * 
+ * 
+ **************************************/
+void keccakRound(int totalKeccakSize, int*** tempState){
+    thetaStep    (totalKeccakSize, tempState);
+    piAndRhoSteps(totalKeccakSize, tempState);
+    chiStep      (totalKeccakSize, tempState);
+    iotaStep     (totalKeccaksize, tempState);
 }
 
 /***************************************
+ * keccakSponge
  * 
  * 
- * 
- * ************************************/
-void keccakSponge(int b, int*** absorbedState){
+ **************************************/
+void keccakSponge(int totalKeccakSize, int*** absorbedState){
     for(int i = 0; i < numOfRounds; i++){
 	keccakRound(b,absorbedState);
     }
 }
-
-
 
 int main(int argc, char *argv[]){
     double startTime;
