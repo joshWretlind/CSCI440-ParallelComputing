@@ -442,6 +442,7 @@ string squeeze(){
     }
     cout << myRank << " deleting base" << endl;
     //delete[] state;
+    return output;
 }
 
 int main(int argc, char *argv[]){
