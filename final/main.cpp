@@ -412,7 +412,12 @@ int main(int argc, char *argv[]){
     setupCyclicConstants();
     
     bool* messageInBinary = convertAndBroadcastBits(message);
-        
+    if(myRank == master){
+	for(int i = 0; i < paddedSize; i++){
+	    cout << messageInBinary[i];
+	}
+	cout << endl;
+    }
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
     MPI::Finalize();
