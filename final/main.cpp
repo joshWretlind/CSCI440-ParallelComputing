@@ -414,7 +414,7 @@ string squeeze(){
 		for(int l = 0; l < w; l++){
 		    temp += char('0' + ((bool)state[j][k][l]));
 		    if(myRank == master){
-			cout << temp;
+			cout << temp << endl;
 		    }
 		    if((l+1)%4 == 0){
 			output += strtol(temp.c_str(), NULL, 2);
@@ -469,7 +469,7 @@ int main(int argc, char *argv[]){
     string out = squeeze();
     
     if(myRank == master){
-	cout << out << endl;
+	//cout << out << endl;
     }
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
