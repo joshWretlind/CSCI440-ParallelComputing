@@ -412,7 +412,7 @@ string squeeze(){
 		}
 		
 		for(int l = 0; l < w; l++){
-		    temp += state[j][k][l];
+		    temp += '0' + state[j][k][l];
 		    if(myRank == master){
 			cout << temp;
 		    }
