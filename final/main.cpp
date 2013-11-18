@@ -157,7 +157,7 @@ bool* convertAndBroadcastBits(string message){
  * 
  * 
  * ************************************/
-void keccakSponge(int b, int*** &absorbedState){
+void keccakSponge(int b, int*** absorbedState){
     for(int i = 0; i < numOfRounds; i++){
 	keccakRound(b,absorbedState);
     }
@@ -169,7 +169,7 @@ void keccakSponge(int b, int*** &absorbedState){
  * 
  * 
  * ************************************/
-void keccakRound(int b, int*** &tempState){
+void keccakRound(int b, int*** tempState){
  
 }
 
