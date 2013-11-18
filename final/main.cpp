@@ -255,6 +255,14 @@ void chiStep(int totalKeccakSize, bool*** tempState, long rc){
 	    }
 	}
     }
+    
+    for(int i = 0; i < 5; i++){
+	for(int j = 0; j < 5; j++){
+	    delete[] bBlockPermuation[i][j];
+	}
+	delete[] bBlockPermuation[i];
+    }
+    delete[] bBlockPermuation;
 }
 
 /**************************************
