@@ -386,7 +386,6 @@ void permuteState(bool* message){
 		    break;
 		}
 		for(int l = 0; l < w; l++){
-			cout << "MyRank : " << myRank << " getting index " << r*i + 5*k + j << endl;
 			state[j][k][l] = state[j][k][l] ^ message[r*i + 5*k + j];
 		}
 	    }
@@ -414,6 +413,9 @@ string squeeze(){
 		
 		for(int l = 0; l < w; l++){
 		    temp += state[j][k][l];
+		    if(myRank == master){
+			cout << state[j][k][l];
+		    }
 		    if((l+1)%4 == 0){
 			output += strtol(temp.c_str(), NULL, 2);
 			temp = "";
