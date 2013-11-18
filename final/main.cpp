@@ -201,7 +201,7 @@ void keccakRound(int totalKeccakSize, int*** tempState){
     thetaStep    (totalKeccakSize, tempState);
     piAndRhoSteps(totalKeccakSize, tempState);
     chiStep      (totalKeccakSize, tempState);
-    iotaStep     (totalKeccaksize, tempState);
+    iotaStep     (totalKeccakSize, tempState);
 }
 
 /***************************************
