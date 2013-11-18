@@ -256,11 +256,11 @@ void setupRoundConstants(){
  * 
  * *******************************/
 void setupCyclicConstants(){
-    *r[0] = {0,1,62,28,27};
-    *r[1] = {36,44,6, 55,20};
-    *r[2] = {3,13,43,25,39};
-    *r[3] = {41,45,15,21,8};
-    *r[4] = {18,2,61,56,14};
+    cycleOffset[0] = {0,1,62,28,27};
+    cycleOffset[1] = {36,44,6, 55,20};
+    cycleOffset[2] = {3,13,43,25,39};
+    cycleOffset[3] = {41,45,15,21,8};
+    cycleOffset[4] = {18,2,61,56,14};
 }
 
 int main(int argc, char *argv[]){
