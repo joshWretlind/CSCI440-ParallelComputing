@@ -35,10 +35,11 @@ int r;
 int numOfRounds;
 //b is the width of each state permutation, 25*w
 int b;
+//RC is an array of 64-bit round constants
+long *rc;
 
 int messageSize;
 int paddedSize;
-
 /*******************************************************
  * convertStringTobits
  * Purpose: This method converts a string into straight binary bits
@@ -197,7 +198,7 @@ void iotaStep(int totalKeccakSize, int*** tempState){
  * 
  * 
  **************************************/
-void keccakRound(int totalKeccakSize, int*** tempState){
+void keccakRound(int totalKeccakSize, int*** tempState, long rc){
     thetaStep    (totalKeccakSize, tempState);
     piAndRhoSteps(totalKeccakSize, tempState);
     chiStep      (totalKeccakSize, tempState);
@@ -211,8 +212,41 @@ void keccakRound(int totalKeccakSize, int*** tempState){
  **************************************/
 void keccakSponge(int totalKeccakSize, int*** absorbedState){
     for(int i = 0; i < numOfRounds; i++){
-	keccakRound(b,absorbedState);
+	keccakRound(b,absorbedState,rc[i]);
     }
+}
+/**************************************
+ * 
+ * 
+ * 
+ **************************************/
+void setupRoundConstants(){
+    rc = new long[24];
+    
+    rc[0] = 0x1;
+    rc[1] = 0x8082;
+    rc[2] = 0x800000000000808A;
+    rc[3] = 0x8000000080008000;
+    rc[4] = 0x808B;
+    rc[5] = 0x80000001;
+    rc[6] = 0x8000000080008081;
+    rc[7] = 0x8000000000008009;
+    rc[8] = 0x8A;
+    rc[9] = 0x88;
+    rc[10] = 0x80008009;
+    rc[11] = 0x8000000A;
+    rc[12] = 0x8000808B;
+    rc[13] = 0x800000000000008B;
+    rc[14] = 0x8000000000008089;
+    rc[15] = 0x8000000000008003;
+    rc[16] = 0x8000000000008003;
+    rc[17] = 0x8000000000008003;
+    rc[18] = 0x800A;
+    rc[19] = 0x800000008000000A;
+    rc[20] = 0x8000000080008081;
+    rc[21] = 0x8000000000008080;
+    rc[22] = 0x80000001;
+    rc[23] = 0x8000000080008008;
 }
 
 int main(int argc, char *argv[]){
@@ -234,6 +268,7 @@ int main(int argc, char *argv[]){
     r = 25*w - c;
     b = 25*w;
     numOfRounds = 12 + 2*l;
+    setupRoundConstants();
     
     bool* messageInBinary = convertAndBroadcastBits(message);
     
