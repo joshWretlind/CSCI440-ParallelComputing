@@ -37,6 +37,7 @@ int numOfRounds;
 int b;
 //RC is an array of 64-bit round constants
 long *rc;
+int cycleOffset[5][5];
 
 int messageSize;
 int paddedSize;
@@ -248,6 +249,19 @@ void setupRoundConstants(){
     rc[22] = 0x80000001;
     rc[23] = 0x8000000080008008;
 }
+/*********************************
+ * 
+ * 
+ * 
+ * 
+ * *******************************/
+void setupCyclicConstants(){
+    r[0] = {0,1,62,28,27};
+    r[1] = {36,44,6, 55,20};
+    r[2] = {3,13,43,25,39};
+    r[3] = {41,45,15,21,8};
+    r[4] = {18,2,61,56,14};
+}
 
 int main(int argc, char *argv[]){
     double startTime;
@@ -268,12 +282,12 @@ int main(int argc, char *argv[]){
     r = 25*w - c;
     b = 25*w;
     numOfRounds = 12 + 2*l;
+    
     setupRoundConstants();
+    setupCyclicConstants();
     
     bool* messageInBinary = convertAndBroadcastBits(message);
-    
-    cout << -1%5 << endl;
-    
+        
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
     MPI::Finalize();
