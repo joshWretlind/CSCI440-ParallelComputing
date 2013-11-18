@@ -40,6 +40,7 @@ long *rc;
 int cycleOffset[5][5];
 
 bool*** bBlockPermuation;
+bool*** state;
 
 int messageSize;
 int paddedSize;
@@ -362,7 +363,7 @@ void setupCyclicConstants(){
  * 
  * *******************************/
 void permuteState(bool* message){
-    bool*** state = new bool**[5];
+    state = new bool**[5];
     for(int i = 0; i < 5; i++){
 	state[i] = new bool*[5];
 	for(int j = 0; j < 5; i++){
@@ -375,7 +376,23 @@ void permuteState(bool* message){
 
     
     for(int i = 0; i < paddedSize/r; i++){
-    
+	bool tripped = false;
+	for(int j = 0; j < 5; j++){
+	    for(int k = 0; k < 5; k++){
+		if((5*k + j) >= (r/w)){
+		    tripped = true;
+		    break;
+		}
+		for(int l = 0; l < w; l++){
+			state[i][j][k] = state[i][j][k] ^ message[r*i + 5*k + j];
+		}
+	    }
+	    if(tripped){
+		break;
+	    }
+	}
+	
+	keccakSponge(b,state);
     }
     
     for(int i = 0; i < 5; i++){
@@ -387,6 +404,42 @@ void permuteState(bool* message){
     delete[] state;
 }
 
+string squeeze(){
+    string output = "";
+    for(int i = 0; i < digest/4; i++){
+	string temp = "";
+	bool tripped = false;
+	for(int j = 0; j < 5; j++){
+	    for(int k = 0; k < 5; k++){
+		if((5 * k + j) >= r/w){
+		    tripped = true;
+		    break;
+		}
+		
+		for(int l = 0; l < w; l++){
+		    temp += state[j][k][l];
+		    if((l+1)%4 == 0){
+			output += strtol(temp, null, 2);
+			temp = "";
+		    }
+		}
+	    }
+	    if(tripped){
+		break;
+	    }
+	}
+	keccakSponge(b,state);
+	
+    }
+    
+    for(int i = 0; i < 5; i++){
+	for(int j = 0; j < 5; j++){
+	    delete[] state[i][j];
+	}
+	delete[] state[i];
+    }
+    delete[] state;
+}
 
 int main(int argc, char *argv[]){
     double startTime;
