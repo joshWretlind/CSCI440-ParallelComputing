@@ -103,7 +103,7 @@ bool** convertStringToBits(string str){
  **************************************************/
 bool* convertAndBroadcastBits(string message){
     int padding = ceil(((double)messageSize)/((double)r));
-    paddedSize = messageSize*r;
+    paddedSize = padding*r;
     
     bool** myBits = convertStringToBits(message);
     bool* messageInBinary = new bool[paddedSize];
@@ -233,6 +233,14 @@ void piAndRhoSteps(int totalKeccakSize, bool*** tempState, long rc){
     
     for(int i = 0; i < 5; i++){
 	for(int j = 0; j < 5; j++){
+	    for(int k = 0; k < w; k++){
+		
+	    }
+	}
+    }
+    
+    for(int i = 0; i < 5; i++){
+	for(int j = 0; j < 5; j++){
 	    bool* rotated = rotate(tempState[i][j],cycleOffset[i][j],w);
 	    for(int k = 0; k < w; k++){
 		bBlockPermuation[j][(2*i + 3*j)%5][k] = rotated[k];
@@ -347,6 +355,38 @@ void setupCyclicConstants(){
                              {41,45,15,21,8},
                              {18,2,61,56,14}};
 }
+
+/**********************************
+ * 
+ * 
+ * 
+ * *******************************/
+void permuteState(bool* message){
+    bool*** state = new bool**[5];
+    for(int i = 0; i < 5; i++){
+	state[i] = new bool*[5];
+	for(int j = 0; j < 5; i++){
+	    state[i][j] = new bool[w];
+	    for(int k = 0; k < w; k++){
+		state[i][j][k] = false;
+	    }
+	}
+    }
+
+    
+    for(int i = 0; i < paddedSize)/r; i++){
+    
+    }
+    
+    for(int i = 0; i < 5; i++){
+	for(int j = 0; j < 5; j++){
+	    delete[] state[i][j];
+	}
+	delete[] state[i];
+    }
+    delete[] state;
+}
+
 
 int main(int argc, char *argv[]){
     double startTime;
