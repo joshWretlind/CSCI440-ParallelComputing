@@ -147,10 +147,10 @@ bool* convertAndBroadcastBits(string message){
 	}
 	cout << " deleting total bits" << endl;
 	//Clean up our memory
-	/*for(int i = 0; i < message.size(); i++){
+	for(int i = 0; i < message.size(); i++){
 	    delete[] totalBits[i];
 	}
-	delete[] totalBits;*/
+	delete[] totalBits;
     }
     //every one recieves the final message
     MPI::COMM_WORLD.Bcast(messageInBinary, paddedSize, MPI_CHAR, master);
@@ -366,6 +366,8 @@ void setupCyclicConstants(){
  * 
  * *******************************/
 void permuteState(bool* message){
+    cout << myRank << " making state" << endl;
+
     state = new bool**[5];
     for(int i = 0; i < 5; i++){
 	state[i] = new bool*[5];
@@ -376,7 +378,7 @@ void permuteState(bool* message){
 	    }
 	}
     }
-
+    cout << " made state" << endl;
     
     for(int i = 0; i < paddedSize/r; i++){
 	bool tripped = false;
@@ -387,6 +389,7 @@ void permuteState(bool* message){
 		    break;
 		}
 		for(int l = 0; l < w; l++){
+			cout << "MyRank : " << myRank << " getting index " << r*i + 5*k + j << endl;
 			state[i][j][k] = state[i][j][k] ^ message[r*i + 5*k + j];
 		}
 	    }
