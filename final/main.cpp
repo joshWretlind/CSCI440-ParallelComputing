@@ -151,6 +151,15 @@ bool* convertAndBroadcastBits(string message){
 
     return messageInBinary;
 }
+/**************************************
+ * 
+ * 
+ * 
+ * 
+ * ************************************/
+void keccakRound(int b, int*** tempState){
+ 
+}
 
 /***************************************
  * 
@@ -163,15 +172,7 @@ void keccakSponge(int b, int*** absorbedState){
     }
 }
 
-/**************************************
- * 
- * 
- * 
- * 
- * ************************************/
-void keccakRound(int b, int*** tempState){
- 
-}
+
 
 int main(int argc, char *argv[]){
     double startTime;
