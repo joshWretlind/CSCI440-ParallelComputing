@@ -402,7 +402,7 @@ void permuteState(bool* message){
 
 string squeeze(){
     std::stringstream output;
-    for(int i = 0; output.str().length() < c/2; i++){
+    for(int i = 0; output.str().length() < c/8; i++){
 	string temp = "";
 	bool tripped = false;
 	for(int j = 0; j < 5; j++){
