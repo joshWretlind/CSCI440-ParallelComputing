@@ -5,7 +5,6 @@
  *          (Performing SHA-3 hashing in parallel)
  ***************************************/
 
-
 #include<iostream>
 #include<string>
 #include "mpi.h"
@@ -32,6 +31,10 @@ int w;
 int c;
 //r is the rate per permutation we need to do. r = 25*w - c
 int r;
+//Number of Rounds per each block, 2*l + 12
+int numOfRounds;
+//b is the width of each state permutation, 25*w
+int b;
 
 int messageSize;
 int paddedSize;
@@ -41,14 +44,18 @@ int paddedSize;
  * Purpose: This method converts a string into straight binary bits
  * Arguments: string str: This is the string we wish to convert
  * Return value: bitset: the set of bits for the final result
- * Complexity:  Time: O()
- *             Space: O()
- * *****************************************************/
+ * Complexity:  Time: O(N)
+ *             Space: O(N)
+ *******************************************************/
 bool** convertStringToBits(string str){
     
+    //Figure out how mand chunks per worker there should be
+    //As well as figure out what the lower and upper bounds should be
     chunkPerWorker = ceil(((double)str.length())/((double)totalSize));
     lowerBound = myRank*(chunkPerWorker);
     upperBound = (myRank+1)*(chunkPerWorker);
+    
+    //Handle the cases on the edge of the string
     if((myRank+1) == totalSize){
 	upperBound = str.length();
     }
@@ -58,13 +65,18 @@ bool** convertStringToBits(string str){
     if(lowerBound > str.length()){
 	lowerBound = str.length();
     }
+    
+    //If our lowerBound == upperBound, we shouldn't do any conversion
+    //Let this worker short circuit
     if(lowerBound == upperBound){
 	return NULL;
     }
+    //Initiallize our bits
     bool** mainBitset = new bool*[upperBound - lowerBound];
     for(int i = 0; i < (upperBound - lowerBound); i++){
 	mainBitset[i] = new bool[8];
     }
+    //Convert the string into bits
     for(int i =lowerBound; i < upperBound; i++){
 	bitset<8> currentChar(str.c_str()[i]);
 	for(int j = 0; j < 8; j++){
@@ -75,6 +87,16 @@ bool** convertStringToBits(string str){
     return mainBitset;
 }
 
+/***************************************************
+ * convertAndBroadcastBits
+ * Purpose: This function basically is the wrapper for converting the
+ *          message into bits, padding it, and then sending back the padded
+ *          message back to all the hosts.
+ * Input: string message: This is the message comming in from the command line
+ * Output: an array representing the padded output message
+ * Complexity: Time:  O(N)
+ *             Space: O(N)
+ **************************************************/
 bool* convertAndBroadcastBits(string message){
     int padding = ceil(((double)messageSize)/((double)r));
     paddedSize = messageSize*r;
@@ -83,46 +105,72 @@ bool* convertAndBroadcastBits(string message){
     bool* messageInBinary = new bool[paddedSize];
     
     if(myRank != master){
+	//Send our stuff to master
 	for(int i = 0; i < (upperBound - lowerBound); i++){
 	    MPI::COMM_WORLD.Send(myBits[i], 8, MPI_CHAR, master, myRank*chunkPerWorker + i); 
 	}
     } else {
+	//Initialize our message array
 	bool** totalBits = new bool*[message.size()];
 	for(int i = 0; i < message.size(); i++){
 	    totalBits[i] = new bool[8];
 	}
+	//Set the first rows to the bits we calculated
 	for(int i = 0; i < chunkPerWorker; i++){
 	    totalBits[i] = myBits[i];
 	}
+	//recieve all the bits from the hosts/slaves
 	MPI::Status myStatus;
 	for(int i = (upperBound - lowerBound); i < message.length(); i++){
 	    MPI::COMM_WORLD.Recv(totalBits[i], 8, MPI_CHAR, floor(((double)i)/((double)(upperBound - lowerBound))), i, myStatus);
 	}
+	//Flatten our array from a 2D array to a 1D array
 	for(int i = 0; i < message.size(); i++){
 	    for(int j = 0; j < 8; j++){
 		messageInBinary[8*i + j] = totalBits[i][j];
-		cout << " + " << 8*i+j << " messageSize " << messageSize << " paddedSize " << paddedSize;
 	    }
-	    cout << endl;
 	}
-	
-	    if((paddedSize - messageSize) == 1) {
-		messageInBinary[paddedSize -1 ] = true;
-	    } else if((paddedSize - messageSize) > 1) {
-		messageInBinary[messageSize] = true;
-		for(int i = messageSize + 1; i < (paddedSize - 1); i++) {
-		    messageInBinary[i] = false;
-		}
-		messageInBinary[paddedSize - 1] = true; 
+	//Handle padding
+	if((paddedSize - messageSize) == 1) {
+	    messageInBinary[paddedSize -1 ] = true;
+	} else if((paddedSize - messageSize) > 1) {
+	    messageInBinary[messageSize] = true;
+	    for(int i = messageSize + 1; i < (paddedSize - 1); i++) {
+		messageInBinary[i] = false;
+	    }
+	    messageInBinary[paddedSize - 1] = true; 
 	}
+	//Clean up our memory
 	for(int i = 0; i < message.size(); i++){
 	    delete[] totalBits[i];
 	}
 	delete[] totalBits;
     }
+    //every one recieves the final message
     MPI::COMM_WORLD.Bcast(messageInBinary, paddedSize, MPI_CHAR, master);
 
     return messageInBinary;
+}
+
+/***************************************
+ * 
+ * 
+ * 
+ * ************************************/
+void keccakSponge(int b, int*** &absorbedState){
+    for(int i = 0; i < numOfRounds; i++){
+	keccakRound(b,absorbedState);
+    }
+}
+
+/**************************************
+ * 
+ * 
+ * 
+ * 
+ * ************************************/
+void keccakRound(int b, int*** &tempState){
+ 
 }
 
 int main(int argc, char *argv[]){
@@ -138,21 +186,14 @@ int main(int argc, char *argv[]){
     string message = argv[2];
     messageSize = 8*message.size();
     
+    //Set up some constants for keccak
     c = 2*digest;
     w = pow(2.0,l);
-    
     r = 25*w - c;
+    b = 25*w;
+    numOfRounds = 12 + 2*l;
     
     bool* messageInBinary = convertAndBroadcastBits(message);
-    
-    if(myRank == master){
-    cout << "MyRank: " << myRank << " "; 
-    for(int i = 0; i < paddedSize; i++){
-	cout << messageInBinary[i];
-    }
-    cout << endl;
-}
-    
     
     
     
