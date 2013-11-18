@@ -235,14 +235,6 @@ void piAndRhoSteps(int totalKeccakSize, bool*** tempState, long rc){
     
     for(int i = 0; i < 5; i++){
 	for(int j = 0; j < 5; j++){
-	    for(int k = 0; k < w; k++){
-		
-	    }
-	}
-    }
-    
-    for(int i = 0; i < 5; i++){
-	for(int j = 0; j < 5; j++){
 	    bool* rotated = rotate(tempState[i][j],cycleOffset[i][j],w);
 	    for(int k = 0; k < w; k++){
 		bBlockPermuation[j][(2*i + 3*j)%5][k] = rotated[k];
@@ -384,7 +376,7 @@ void permuteState(bool* message){
 		    break;
 		}
 		for(int l = 0; l < w; l++){
-			state[j][k][l] = state[j][k][l] ^ message[r*i + 5*k + j];
+			state[j][k][l] = state[j][k][l] ^ message[l + w*(5*k + j)];
 		}
 	    }
 	    if(tripped){
