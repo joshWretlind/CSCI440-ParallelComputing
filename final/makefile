@@ -6,6 +6,9 @@ mpiCC = mpiCC
 #Files
 #--------------------
 main = main.cpp
+#Compiler Flags
+#--------------------
+flags = -std=c++0x
 
 #Commands
 #--------------------
@@ -13,6 +16,6 @@ main = main.cpp
 all: main_exe
 
 main_exe: $(main)
-	$(mpiCC) $(main) -o $@
+	$(mpiCC) $(flags) $(main) -o $@
 		  
 clean: rm main_exe
