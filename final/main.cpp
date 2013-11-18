@@ -274,7 +274,7 @@ void chiStep(int totalKeccakSize, bool*** tempState, long rc){
 	}
 	delete[] bBlockPermuation[i];
     }
-    delete[] bBlockPermuation;
+    delete bBlockPermuation;
 }
 
 /**************************************
@@ -431,17 +431,17 @@ string squeeze(){
 	
     }
     
-    //cout << myRank << " trying to delete state" << endl;
-    //for(int i = 0; i < 5; i++){
-	//for(int j = 0; j < 5; j++){
-	    //cout << myRank << " deleting [][] " << endl;
-	    //delete[] state[i][j];
-	//}
-	//cout << myRank << " deleting []" << endl;
-	//delete[] state[i];
-    //}
-    //cout << myRank << " deleting base" << endl;
-    ////delete[] state;
+    cout << myRank << " trying to delete state" << endl;
+    for(int i = 0; i < 5; i++){
+	for(int j = 0; j < 5; j++){
+	    cout << myRank << " deleting [][] " << endl;
+	    delete[] state[i][j];
+	}
+	cout << myRank << " deleting []" << endl;
+	delete[] state[i];
+    }
+    cout << myRank << " deleting base" << endl;
+    //delete[] state;
 }
 
 int main(int argc, char *argv[]){
