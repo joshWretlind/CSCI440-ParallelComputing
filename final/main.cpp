@@ -410,7 +410,7 @@ void permuteState(bool* message){
 	delete[] state[i];
     }
     cout << myRank << " deleting base" << endl;
-    delete[] state;
+    //delete[] state;
 }
 
 string squeeze(){
