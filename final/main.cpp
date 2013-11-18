@@ -209,6 +209,7 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
 	}
     }
     
+    cout << myRank << " trying to delete c and d" << endl;
     for(int i = 0; i < 5; i++){
 	delete[] c[i];
 	delete[] d[i];
@@ -265,6 +266,7 @@ void chiStep(int totalKeccakSize, bool*** tempState, long rc){
 	}
     }
     
+    cout << myRank << " trying to delete my bBlock" << endl;
     for(int i = 0; i < 5; i++){
 	for(int j = 0; j < 5; j++){
 	    delete[] bBlockPermuation[i][j];
@@ -394,7 +396,7 @@ void permuteState(bool* message){
 	
 	keccakSponge(b,state);
     }
-    
+    cout << myRank << " trying to delete state" << endl;
     for(int i = 0; i < 5; i++){
 	for(int j = 0; j < 5; j++){
 	    delete[] state[i][j];
