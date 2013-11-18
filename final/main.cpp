@@ -371,7 +371,7 @@ void permuteState(bool* message){
     state = new bool**[5];
     for(int i = 0; i < 5; i++){
 	state[i] = new bool*[5];
-	for(int j = 0; j < 5; i++){
+	for(int j = 0; j < 5; j++){
 	    state[i][j] = new bool[w];
 	    for(int k = 0; k < w; k++){
 		state[i][j][k] = false;
