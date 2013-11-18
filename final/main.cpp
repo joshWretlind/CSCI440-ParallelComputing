@@ -465,11 +465,12 @@ int main(int argc, char *argv[]){
     setupCyclicConstants();
     
     bool* messageInBinary = convertAndBroadcastBits(message);
+    
+    permuteState(messageInBinary);
+    string out = squeeze();
+    
     if(myRank == master){
-	for(int i = 0; i < paddedSize; i++){
-	    cout << messageInBinary[i];
-	}
-	cout << endl;
+	cout << out << endl;
     }
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
