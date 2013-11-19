@@ -205,7 +205,7 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
 	    }
 	}
     }
-    
+    cout << myRank << " deleting c and d" << endl;
     for(int i = 0; i < 5; i++){
 	delete[] c[i];
 	delete[] d[i];
