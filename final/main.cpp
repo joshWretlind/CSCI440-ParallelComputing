@@ -194,7 +194,7 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
     
     for(int i = 0; i < 5; i++){
 	for(int j = 0; j < w; j++){
-	    d[i][j] = c[(i+4)%5][j] ^ rotate(c[(i+1)%5],1,1)[j];
+	    d[i][j] = c[(i+4)%5][j] ^ rotate(c[(i+1)%5],1,w)[j];
 	}
     }
     
