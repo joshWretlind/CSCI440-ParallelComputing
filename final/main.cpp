@@ -194,11 +194,7 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
     
     for(int i = 0; i < 5; i++){
 	for(int j = 0; j < w; j++){
-	    int backPos = i - 1 ;
-	    if(backPos == -1){
-		backPos = 4;
-	    }
-	    d[i][j] = c[backPos][j] ^ c[(i + 1)%5][(j+1)%w];
+	    d[i][j] = c[(i+4)%5][j] ^ rotate(c,1,1)[j];
 	}
     }
     
@@ -237,7 +233,7 @@ void piAndRhoSteps(int totalKeccakSize, bool*** tempState, long rc){
 	for(int j = 0; j < 5; j++){
 	    bool* rotated = rotate(tempState[i][j],cycleOffset[i][j],w);
 	    for(int k = 0; k < w; k++){
-		bBlockPermuation[j][(2*i + 3*j)%5][k] = rotated[k];
+		tempState[j][(2*i + 3*j)%5][k] = rotated[k];
 	    }
 	}
     }
@@ -253,11 +249,18 @@ void chiStep(int totalKeccakSize, bool*** tempState, long rc){
     for(int i = 0; i < 5; i++){
 	for(int j = 0; j < 5; j++){
 	    for(int k = 0; k < w; k++){
-		tempState[i][j][k] = bBlockPermuation[i][j][k] ^ ((!bBlockPermuation[(i+1)%5][j][k]) & bBlockPermuation[(i+2)%5][j][k]);
+		bBlockPermuation[i][j][k] = tempState[i][j][k] ^ ((!tempState[(i+1)%5][j][k]) & tempState[(i+2)%5][j][k]);
 	    }
 	}
     }
     
+    for(int i = 0; i < 5; i++){
+	for(int j = 0; j < 5; j++){
+	    for(int k = 0; k < w; k++){    
+		tempState[i][j][k] = bBlockPermuation[i][j][k]
+	    }
+	}
+    }
     for(int i = 0; i < 5; i++){
 	for(int j = 0; j < 5; j++){
 	    delete[] bBlockPermuation[i][j];
