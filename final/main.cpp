@@ -210,13 +210,11 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
 	}
 	if(myRank != master){
 	    for(int i = lowerBound; i < upperBound; i++){
-		cout << "myRank " << myRank << " trying to send " << i << " with tag " << i << endl;
 		MPI::COMM_WORLD.Send(c[i], w, MPI_CHAR, master,  i);
 	    }
 	} else {
 	    MPI::Status myStatus;
 	    for(int i = upperBound; i < 5; i++){
-		cout << "myRank " << myRank << "trying to recieve tag " << i << " from host " << floor(((double)i)/((double)(upperBound - lowerBound))) << endl;
 		MPI::COMM_WORLD.Recv(c[i], w, MPI_CHAR, floor(((double)i)/((double)(upperBound - lowerBound))), i, myStatus);
 	    }
 	}
@@ -233,10 +231,26 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
     }
     
     for(int i = 0; i < 5; i++){
-	for(int j = 0; j < 5; j++){
-	    for(int k = 0; k < w; k++){
-		tempState[i][j][k] = tempState[i][j][k] ^ d[i][k];
+	if(lowerBound != upperBound){
+	    for(int j = lowerBound; j < upperBound; j++){
+		for(int k = 0; k < w; k++){
+		    tempState[i][j][k] = tempState[i][j][k] ^ d[i][k];
+		}
 	    }
+	}
+	if(myRank != master){
+	    for(int j = lowerBound; j < upperBound; j++){
+		MPI::COMM_WORLD.Send(tempState[i][j], w, MPI_CHAR, master,  j);
+	    }
+	} else {
+	    MPI::Status myStatus;
+	    for(int j = upperBound; j < 5; j++){
+		MPI::COMM_WORLD.Recv(tempState[i][j], w, MPI_CHAR, floor(((double)j)/((double)(upperBound - lowerBound))), j, myStatus);
+	    }
+	}
+	
+	for(int j = 0; j < 5; j++){
+	    MPI::COMM_WORLD.Bcast(tempState[i][j], w, MPI_CHAR, master);
 	}
     }
     for(int i = 0; i < 5; i++){
