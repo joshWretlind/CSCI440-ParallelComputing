@@ -294,18 +294,36 @@ void piAndRhoSteps(int totalKeccakSize, bool*** tempState, long rc){
  **************************************/
 void chiStep(int totalKeccakSize, bool*** tempState, long rc){
     for(int i = 0; i < 5; i++){
-	for(int j = 0; j < 5; j++){
-	    for(int k = 0; k < w; k++){
-		bBlockPermuation[i][j][k] = tempState[i][j][k] ^ ((!tempState[(i+1)%5][j][k]) & tempState[(i+2)%5][j][k]);
+	if(lowerBound != upperBound){
+	    for(int j = lowerBound; j < upperBound; j++){
+		for(int k = 0; k < w; k++){
+		    bBlockPermuation[i][j][k] = tempState[i][j][k] ^ ((!tempState[(i+1)%5][j][k]) & tempState[(i+2)%5][j][k]);
+		}
 	    }
 	}
     }
     
     for(int i = 0; i < 5; i++){
-	for(int j = 0; j < 5; j++){
-	    for(int k = 0; k < w; k++){    
-		tempState[i][j][k] = bBlockPermuation[i][j][k];
+	if(lowerBound != upperBound){
+	    for(int j = lowerBound; j < upperBound; j++){
+		for(int k = 0; k < w; k++){    
+		    tempState[i][j][k] = bBlockPermuation[i][j][k];
+		}
 	    }
+	}
+	if(myRank != master){
+	    for(int j = lowerBound; j < upperBound; j++){
+		MPI::COMM_WORLD.Send(tempState[i][j], w, MPI_CHAR, master,  j);
+	    }
+	} else {
+	    MPI::Status myStatus;
+	    for(int j = upperBound; j < 5; j++){
+		MPI::COMM_WORLD.Recv(tempState[i][j], w, MPI_CHAR, floor(((double)j)/((double)(upperBound - lowerBound))), j, myStatus);
+	    }
+	}
+	
+	for(int j = 0; j < 5; j++){
+	    MPI::COMM_WORLD.Bcast(tempState[i][j], w, MPI_CHAR, master);
 	}
     }
     for(int i = 0; i < 5; i++){
