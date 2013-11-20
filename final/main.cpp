@@ -189,8 +189,7 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
     lowerBound = myRank*(chunkPerWorker);
     upperBound = (myRank+1)*(chunkPerWorker);
     
-    //Handle the cases on the edge of the string
-    if((myRank+1) == totalSize){
+=    if((myRank+1) == totalSize){
 	upperBound = 5;
     }
     if(upperBound > 5){
@@ -348,7 +347,6 @@ void iotaStep(int totalKeccakSize, bool*** tempState, long rc){
     lowerBound = myRank*(chunkPerWorker);
     upperBound = (myRank+1)*(chunkPerWorker);
     
-    //Handle the cases on the edge of the string
     if((myRank+1) == totalSize){
 	upperBound = w;
     }
@@ -453,6 +451,21 @@ void setupCyclicConstants(){
  * 
  * *******************************/
 void permuteState(bool* message){
+    chunkPerWorker = ceil(((double)5)/((double)totalSize));
+    lowerBound = myRank*(chunkPerWorker);
+    upperBound = (myRank+1)*(chunkPerWorker);
+    
+    //Handle the cases on the edge of the string
+    if((myRank+1) == totalSize){
+	upperBound = 5;
+    }
+    if(upperBound > 5){
+	upperBound = 5;
+    }
+    if(lowerBound >5 ){
+	lowerBound = 5;
+    }
+    
     state = new bool**[5];
     for(int i = 0; i < 5; i++){
 	state[i] = new bool*[5];
@@ -466,20 +479,35 @@ void permuteState(bool* message){
     
     for(int i = 0; i < paddedSize/r; i++){
 	bool tripped = false;
-	for(int j = 0; j < 5; j++){
-	    for(int k = 0; k < 5; k++){
-		if((5 * k + j) >= r/w){
-		    tripped = true;
+	if(lowerBound != upperBound){
+	    for(int j = 0; j < 5; j++){
+		for(int k = 0; k < 5; k++){
+		    if((5 * k + j) >= r/w){
+			tripped = true;
+			break;
+		    }
+		    for(int l = 0; l < w; l++){
+			    state[j][k][l] = state[j][k][l] ^ message[i*r + l + w*k + 5*w*j];
+		    }
+		}
+		if(tripped){
 		    break;
 		}
-		for(int l = 0; l < w; l++){
-		    
-			state[j][k][l] = state[j][k][l] ^ message[i*r + l + w*k + 5*w*j];
-		}
 	    }
-	    if(tripped){
-		break;
+	}
+	if(myRank != master){
+	    for(int j = lowerBound; j < upperBound; j++){
+		MPI::COMM_WORLD.Send(state[i][j], w, MPI_CHAR, master,  j);
 	    }
+	} else {
+	    MPI::Status myStatus;
+	    for(int j = upperBound; j < 5; j++){
+		MPI::COMM_WORLD.Recv(state[i][j], w, MPI_CHAR, floor(((double)j)/((double)(upperBound - lowerBound))), j, myStatus);
+	    }
+	}
+	
+	for(int j = 0; j < 5; j++){
+	    MPI::COMM_WORLD.Bcast(state[i][j], w, MPI_CHAR, master);
 	}
 	
 	keccakSponge(b,state);
