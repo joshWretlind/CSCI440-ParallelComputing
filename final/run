@@ -92,4 +92,4 @@
 
 string=$(cat completeWorksOfShakespear.txt)
 echo \"$string\"
-mpiexec -machinefile machines -np 1 ./main_exe 256 \"$string\"
+mpiexec -machinefile machines -np 1 ./main_exe 256 "$string"
