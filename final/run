@@ -90,6 +90,6 @@
 #mpiexec -machinefile machines -np 20 ./main_exe 512 \"$string\"
 #echo " "
 
-string=$(cat completeWorksOfShakespear.txt | tr "\"" "\\"\" | tr "'" "\'" | tr "\\\`" "\\\\\`")
+string=$(cat completeWorksOfShakespear.txt)
 echo \"$string\"
 mpiexec -machinefile machines -np 1 ./main_exe 256 \"$string\"
