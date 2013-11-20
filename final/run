@@ -1,8 +1,11 @@
 #!/bin/sh
 
-#mpiexec -machinefile machines -np 1 ./main_exe 512 "This is a really really long string that I plan on using for testing purposes, as well as to help test scaling related issues with the code.  There is no real purpose to this string other than that. In additiona, one of the strings that I plan on using is basically the text of we;; known literature, like paradise lost."
+mpiexec -machinefile machines -np 1 ./main_exe 256 "The quick brown fox jumps over the lazy dog"
+
+echo " "
 
 string=$(cat paradiseLost.txt | tr "\"" "\\"\" | tr "'" "\'")
 mpiexec -machinefile machines -np 1 ./main_exe 256 \"$string\"
+echo " "
 string=$(cat completeWorksOfShakespear.txt | tr "\"" "\\"\" | tr "'" "\'")
 mpiexec -machinefile machines -np 1 ./main_exe 256 \"$string\"
