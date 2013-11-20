@@ -9,7 +9,7 @@ echo "using 256 bit outputs: "
 for i in `seq 1 10`;
 do
     foobar=$(cat paradiseLost.txt | tr "\"" "\\"\" | tr "'" "\'")
-    let string+=\"$foobar\"
+    string+=$foobar
 done    
 mpiexec -machinefile machines -np 1 ./main_exe 256 \"$string\"
 echo " "
