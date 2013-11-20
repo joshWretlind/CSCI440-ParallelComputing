@@ -366,12 +366,12 @@ void iotaStep(int totalKeccakSize, bool*** tempState, long rc){
     }
     if(myRank != master){
 	for(int j = lowerBound; j < upperBound; j++){
-	    MPI::COMM_WORLD.Send(*tempState[0][0][j], 1, MPI_CHAR, master,  j);
+	    MPI::COMM_WORLD.Send(tempState[0][0][j]*, 1, MPI_CHAR, master,  j);
 	}
     } else {
 	MPI::Status myStatus;
 	for(int j = upperBound; j < w; j++){
-	    MPI::COMM_WORLD.Recv(*tempState[0][0][j], 1, MPI_CHAR, floor(((double)j)/((double)(upperBound - lowerBound))), j, myStatus);
+	    MPI::COMM_WORLD.Recv(tempState[0][0][j]*, 1, MPI_CHAR, floor(((double)j)/((double)(upperBound - lowerBound))), j, myStatus);
 	}
     }
     MPI::COMM_WORLD.Bcast(tempState[0][0], w, MPI_CHAR, master);
