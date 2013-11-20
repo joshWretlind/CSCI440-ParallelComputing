@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 mpiexec -machinefile machines -np 1 ./main_exe 256 "The quick brown fox jumps over the lazy dog"
 
@@ -9,7 +9,7 @@ echo "using 256 bit outputs: "
 for i in `seq 1 10`;
 do
     foobar=$(cat paradiseLost.txt | tr "\"" "\\"\" | tr "'" "\'")
-    string+=$foobar
+    let string+=$foobar
 done    
 mpiexec -machinefile machines -np 1 ./main_exe 256 \"$string\"
 echo " "
