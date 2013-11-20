@@ -189,7 +189,7 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
     lowerBound = myRank*(chunkPerWorker);
     upperBound = (myRank+1)*(chunkPerWorker);
     
-=    if((myRank+1) == totalSize){
+    if((myRank+1) == totalSize){
 	upperBound = 5;
     }
     if(upperBound > 5){
