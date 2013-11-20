@@ -5,12 +5,11 @@ mpiexec -machinefile machines -np 1 ./main_exe 256 "The quick brown fox jumps ov
 echo " "
 
 echo "Let's hash Paradise Lost, by John Milton"
+foobar=$(cat paradiseLost.txt | tr "\"" "\\"\" | tr "'" "\'")
+string+=$foobar 
+string+=$foobar   
 echo "using 256 bit outputs: "
-for i in `seq 1 2`;
-do
-    foobar=$(cat paradiseLost.txt | tr "\"" "\\"\" | tr "'" "\'")
-    string+=$foobar
-done    
+
 mpiexec -machinefile machines -np 1 ./main_exe 256 \"$string\"
 echo " "
 mpiexec -machinefile machines -np 2 ./main_exe 256 \"$string\"
