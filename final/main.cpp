@@ -86,7 +86,7 @@ bool** convertStringToBits(string str){
     for(int i =lowerBound; i < upperBound; i++){
 	bitset<8> currentChar(str.c_str()[i]);
 	for(int j = 0; j < 8; j++){
-	    mainBitset[i - lowerBound][j] = currentChar[j];
+	    mainBitset[i - lowerBound][j] = currentChar[7-j];
 	} 
     }
     
@@ -135,6 +135,12 @@ bool* convertAndBroadcastBits(string message){
 	    for(int j = 0; j < 8; j++){
 		messageInBinary[8*i + j] = totalBits[i][j];
 	    }
+	}
+	
+	for(int i = 0; i < (4*message.size()); i++){
+	    bool temp = messageInBinary[i];
+	    messageInBinary[i] = messageInBinary[(messageSize() - 1) - i];
+	    messageInBinary[(messageSize() - 1) - i] = temp;
 	}
 	//Handle padding
 	if((paddedSize - messageSize) == 1) {
