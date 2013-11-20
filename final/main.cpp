@@ -86,7 +86,7 @@ bool** convertStringToBits(string str){
     for(int i =lowerBound; i < upperBound; i++){
 	bitset<8> currentChar(str.c_str()[i]);
 	for(int j = 0; j < 8; j++){
-	    mainBitset[i - lowerBound][j] = currentChar[7-j];
+	    mainBitset[i - lowerBound][j] = currentChar[j];
 	} 
     }
     
