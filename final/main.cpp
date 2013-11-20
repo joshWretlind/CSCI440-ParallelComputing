@@ -343,9 +343,38 @@ void chiStep(int totalKeccakSize, bool*** tempState, long rc){
  **************************************/
 void iotaStep(int totalKeccakSize, bool*** tempState, long rc){
     bitset<64> rcVal(rc);
-    for(int i = 0; i < w; i++){
-	tempState[0][0][i] = rcVal[i] ^ tempState[0][0][i];
+    
+    chunkPerWorker = ceil(((double)w)/((double)totalSize));
+    lowerBound = myRank*(chunkPerWorker);
+    upperBound = (myRank+1)*(chunkPerWorker);
+    
+    //Handle the cases on the edge of the string
+    if((myRank+1) == totalSize){
+	upperBound = w;
     }
+    if(upperBound > w){
+	upperBound = w;
+    }
+    if(lowerBound > w ){
+	lowerBound = w;
+    }
+    
+    if(lowerBound != upperBound){
+	for(int i = lowerBound; i < upperBound; i++){
+	    tempState[0][0][i] = rcVal[i] ^ tempState[0][0][i];
+	}
+    }
+    if(myRank != master){
+	for(int j = lowerBound; j < upperBound; j++){
+	    MPI::COMM_WORLD.Send(tempState[0][0][i], 1, MPI_CHAR, master,  j);
+	}
+    } else {
+	MPI::Status myStatus;
+	for(int j = upperBound; j < w; j++){
+	    MPI::COMM_WORLD.Recv(tempState[0][0][j], 1, MPI_CHAR, floor(((double)j)/((double)(upperBound - lowerBound))), j, myStatus);
+	}
+    }
+    MPI::COMM_WORLD.Bcast(tempState[0][0], w, MPI_CHAR, master);
 }
 
 /**************************************
