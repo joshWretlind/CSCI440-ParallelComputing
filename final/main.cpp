@@ -191,13 +191,13 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
     
     //Handle the cases on the edge of the string
     if((myRank+1) == totalSize){
-	upperBound = 5
+	upperBound = 5;
     }
     if(upperBound > str.length()){
-	upperBound = 5
+	upperBound = 5;
     }
     if(lowerBound > str.length()){
-	lowerBound = 5
+	lowerBound = 5;
     }
     
     if(lowerBound != upperBound){
@@ -209,7 +209,7 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
 	    }
 	}
 	if(myRank != master){
-	    for(int i = loweBound; i < upperBound; i++){
+	    for(int i = lowerBound; i < upperBound; i++){
 		MPI::COMM_WORLD.Send(c[i], w, MPI_CHAR, master, myRank*chunkPerWorker + i);
 	    }
 	] else {
