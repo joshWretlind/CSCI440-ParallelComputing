@@ -214,7 +214,7 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
 	    }
 	} else {
 	    MPI::Status myStatus;
-	    for(int i = (upperBound - lowerBound); i < 5; i++){
+	    for(int i = upperBound; i < 5; i++){
 		MPI::COMM_WORLD.Recv(c[i], w, MPI_CHAR, floor(((double)i)/((double)(upperBound - lowerBound))), i, myStatus);
 	    }
 	}
