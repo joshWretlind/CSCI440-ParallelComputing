@@ -210,8 +210,8 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
 	}
 	if(myRank != master){
 	    for(int i = lowerBound; i < upperBound; i++){
-		cout << "myRank " << myRank << " trying to send " << i << " with tag " << myRank*chunkPerWorker + i << endl;
-		MPI::COMM_WORLD.Send(c[i], w, MPI_CHAR, master, myRank*chunkPerWorker + i);
+		cout << "myRank " << myRank << " trying to send " << i << " with tag " << i << endl;
+		MPI::COMM_WORLD.Send(c[i], w, MPI_CHAR, master,  i);
 	    }
 	} else {
 	    MPI::Status myStatus;
