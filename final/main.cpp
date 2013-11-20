@@ -383,7 +383,7 @@ void permuteState(bool* message){
 	}
 	
 	keccakSponge(b,state);
-    //}
+    }
 
 }
 
