@@ -137,16 +137,6 @@ bool* convertAndBroadcastBits(string message){
 	    }
 	}
 	
-	//for(int i = 0; i < (4*message.size()); i++){
-	    //bool temp = messageInBinary[i];
-	    //messageInBinary[i] = messageInBinary[(8*message.size() - 1) - i];
-	    //messageInBinary[(8*message.size() - 1) - i] = temp;
-	//}
-	//for(int i = 0; i < 8*message.size(); i++){
-	    //cout << messageInBinary[i];
-	//}
-	//cout << endl;
-	//Handle padding
 	if((paddedSize - messageSize) == 1) {
 	    messageInBinary[paddedSize -1 ] = true;
 	} else if((paddedSize - messageSize) > 1) {
@@ -195,12 +185,43 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
 	d[i] = new bool[w];
     }
     
-    for(int i = 0; i < 5; i++){
-	for(int k = 0; k < w; k++){
-	    c[i][k] = tempState[i][0][k] ^ tempState[i][1][k] ^
-		      tempState[i][2][k] ^ tempState[i][3][k] ^
-		      tempState[i][4][k];
+    chunkPerWorker = ceil(((double)5)/((double)totalSize));
+    lowerBound = myRank*(chunkPerWorker);
+    upperBound = (myRank+1)*(chunkPerWorker);
+    
+    //Handle the cases on the edge of the string
+    if((myRank+1) == totalSize){
+	upperBound = str.length();
+    }
+    if(upperBound > str.length()){
+	upperBound = str.length();
+    }
+    if(lowerBound > str.length()){
+	lowerBound = str.length();
+    }
+    
+    if(loweBound != upperBound){
+	for(int i = lowerBound; i < upperBound; i++){
+	    for(int k = 0; k < w; k++){
+		c[i][k] = tempState[i][0][k] ^ tempState[i][1][k] ^
+			  tempState[i][2][k] ^ tempState[i][3][k] ^
+			  tempState[i][4][k];
+	    }
 	}
+	if(myRank != master){
+	    for(int i = loweBound; i < upperBound; i++){
+		MPI::Send(c[i], w, MPI_CHAR, master, myRank*chunkPerWorker + i
+	    }
+	] else {
+	    MPI::Status myStatus;
+	    for(int i = (upperBound - lowerBound); i < 5; i++){
+		MPI::COMM_WORLD.Recv(c[i], w, MPI_CHAR, floor(((double)i)/((double)(upperBound - lowerBound))), i, myStatus);
+	    }
+	}
+    }
+    
+    for(int i = 0; i < 5; i++){
+	MPI::COMM_WORLD.Bcast(c[i], w, MPI_CHAR, master);
     }
     
     for(int i = 0; i < 5; i++){
