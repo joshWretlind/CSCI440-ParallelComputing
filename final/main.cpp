@@ -86,7 +86,7 @@ bool** convertStringToBits(string str){
     for(int i =lowerBound; i < upperBound; i++){
 	bitset<8> currentChar(str.c_str()[i]);
 	for(int j = 0; j < 8; j++){
-	    mainBitset[i - lowerBound][j] = currentChar[7-j];
+	    mainBitset[i - lowerBound][j] = currentChar[j];
 	} 
     }
     
@@ -137,15 +137,15 @@ bool* convertAndBroadcastBits(string message){
 	    }
 	}
 	
-	for(int i = 0; i < (4*message.size()); i++){
-	    bool temp = messageInBinary[i];
-	    messageInBinary[i] = messageInBinary[(8*message.size() - 1) - i];
-	    messageInBinary[(8*message.size() - 1) - i] = temp;
-	}
-	for(int i = 0; i < 8*message.size(); i++){
-	    cout << messageInBinary[i];
-	}
-	cout << endl;
+	//for(int i = 0; i < (4*message.size()); i++){
+	    //bool temp = messageInBinary[i];
+	    //messageInBinary[i] = messageInBinary[(8*message.size() - 1) - i];
+	    //messageInBinary[(8*message.size() - 1) - i] = temp;
+	//}
+	//for(int i = 0; i < 8*message.size(); i++){
+	    //cout << messageInBinary[i];
+	//}
+	//cout << endl;
 	//Handle padding
 	if((paddedSize - messageSize) == 1) {
 	    messageInBinary[paddedSize -1 ] = true;
