@@ -6,7 +6,7 @@ echo " "
 
 echo "Let's hash Paradise Lost, by John Milton"
 echo "using 256 bit outputs: "
-for i in `seq 1 10`;
+for i in `seq 1 5`;
 do
     foobar=$(cat paradiseLost.txt | tr "\"" "\\"\" | tr "'" "\'")
     string+=$foobar
