@@ -142,6 +142,10 @@ bool* convertAndBroadcastBits(string message){
 	    messageInBinary[i] = messageInBinary[(8*message.size() - 1) - i];
 	    messageInBinary[(8*message.size() - 1) - i] = temp;
 	}
+	for(int i = 0; i < 8*message.size(); i++){
+	    cout << messageInBinary[i];
+	}
+	cout << endl;
 	//Handle padding
 	if((paddedSize - messageSize) == 1) {
 	    messageInBinary[paddedSize -1 ] = true;
@@ -153,6 +157,7 @@ bool* convertAndBroadcastBits(string message){
 	    messageInBinary[paddedSize - 1] = true; 
 	}
 	//Clean up our memory
+	
 	for(int i = 0; i < message.size(); i++){
 	    delete[] totalBits[i];
 	}
