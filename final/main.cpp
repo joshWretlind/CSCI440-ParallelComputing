@@ -139,8 +139,8 @@ bool* convertAndBroadcastBits(string message){
 	
 	for(int i = 0; i < (4*message.size()); i++){
 	    bool temp = messageInBinary[i];
-	    messageInBinary[i] = messageInBinary[(message.size() - 1) - i];
-	    messageInBinary[(message.size() - 1) - i] = temp;
+	    messageInBinary[i] = messageInBinary[(8*message.size() - 1) - i];
+	    messageInBinary[(8*message.size() - 1) - i] = temp;
 	}
 	//Handle padding
 	if((paddedSize - messageSize) == 1) {
