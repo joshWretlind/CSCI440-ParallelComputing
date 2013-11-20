@@ -587,4 +587,6 @@ int main(int argc, char *argv[]){
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
     MPI::Finalize();
+    
+    cout << endTime - startTime; -
 }
