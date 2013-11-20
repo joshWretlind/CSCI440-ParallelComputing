@@ -394,10 +394,10 @@ string squeeze(){
 	bool tripped = false;
 	for(int j = 0; j < 5; j++){
 	    for(int k = 0; k < 5; k++){
-		if((5 * k + j) >= r/w){
-		    tripped = true;
-		    break;
-		}
+		//if((5 * k + j) >= r/w){
+		    //tripped = true;
+		    //break;
+		//}
 		
 		for(int l = 0; l < w; l++){
 		    temp += char('0' + ((bool)state[j][k][l]));
