@@ -13,7 +13,7 @@ done
 
 echo "using 256 bit outputs: "
 
-xargs mpiexec -machinefile machines -np 1 ./main_exe 256 \"$string\"
+mpiexec -machinefile machines -np 1 ./main_exe 256 \"$string\"
 echo " "
 mpiexec -machinefile machines -np 2 ./main_exe 256 \"$string\"
 echo " "
