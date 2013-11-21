@@ -15,7 +15,7 @@ do
     for j in `seq 1 100`;
     do
         echo "n = $j"
-        mpiexec -machinefile machines -np j ./main_exe 256 \"$string\"
+        mpiexec -machinefile machines -np $j ./main_exe 256 \"$string\"
         echo " "
     done    
 
@@ -24,7 +24,7 @@ do
     for j in `seq 1 100`;
     do
         echo "n = $j"
-        mpiexec -machinefile machines -np j ./main_exe 512 \"$string\"
+        mpiexec -machinefile machines -np $j ./main_exe 512 \"$string\"
         echo " "
     done   
 done    
