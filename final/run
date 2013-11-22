@@ -1,10 +1,5 @@
 #!/bin/bash
 
-mpiexec -machinefile machines -np 1 ./main_exe 256 "The quick brown fox jumps over the lazy dog"
-
-echo " "
-
-echo "Let's hash Paradise Lost, by John Milton"
 foobar=$(cat paradiseLost.txt | tr "\"" "\\"\" | tr "'" "\'")
 for i in `seq 1 3`;
 do
@@ -14,7 +9,6 @@ do
 
     for j in `seq 1 80`;
     do
-        echo "n = $j"
         mpiexec -machinefile machines -np $j ./main_exe 256 \"$string\"
         echo " "
     done    
@@ -23,7 +17,6 @@ do
 
     for j in `seq 1 80`;
     do
-        echo "n = $j"
         mpiexec -machinefile machines -np $j ./main_exe 512 \"$string\"
         echo " "
     done   

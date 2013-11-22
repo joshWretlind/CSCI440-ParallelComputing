@@ -580,10 +580,7 @@ int main(int argc, char *argv[]){
     
     permuteState(messageInBinary);
     string out = squeeze();
-    
-    if(myRank == master){
-	cout << out << endl;
-    }
+
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
     MPI::Finalize();
