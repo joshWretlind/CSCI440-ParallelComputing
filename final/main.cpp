@@ -514,7 +514,7 @@ void permuteState(bool* message){
     }
 
 }
-typename
+
 string squeeze(){
     std::stringstream output;
     for(int i = 0; output.str().length() < c/8; i++){
