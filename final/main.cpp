@@ -209,18 +209,18 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
 	}
 	if(myRank != master){
 	    for(int i = lowerBound; i < upperBound; i++){
-		MPI::COMM_WORLD.Send(c[i], w, MPI_CHAR, master,  i);
+		MPI::COMM_WORLD.Send(c[i], w/8, MPI_CHAR, master,  i);
 	    }
 	} else {
 	    MPI::Status myStatus;
 	    for(int i = upperBound; i < 5; i++){
-		MPI::COMM_WORLD.Recv(c[i], w, MPI_CHAR, floor(((double)i)/((double)(upperBound - lowerBound))), i, myStatus);
+		MPI::COMM_WORLD.Recv(c[i], w/8, MPI_CHAR, floor(((double)i)/((double)(upperBound - lowerBound))), i, myStatus);
 	    }
 	}
     }
     
     for(int i = 0; i < 5; i++){
-	MPI::COMM_WORLD.Bcast(c[i], w, MPI_CHAR, master);
+	MPI::COMM_WORLD.Bcast(c[i], w/8, MPI_CHAR, master);
     }
     
     for(int i = 0; i < 5; i++){
@@ -514,7 +514,7 @@ void permuteState(bool* message){
     }
 
 }
-
+typename
 string squeeze(){
     std::stringstream output;
     for(int i = 0; output.str().length() < c/8; i++){
