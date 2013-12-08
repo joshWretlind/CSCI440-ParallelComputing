@@ -1,7 +1,7 @@
 /***************************************
  * Author: Josh Wretlind
  * Date: 11/05/13
- * Purpose: This is the main file for my final project for CSCI 440
+ * Purpose: This is the main file for my final project for MATH 440
  *          (Performing SHA-3 hashing in parallel)
  ***************************************/
 
@@ -45,6 +45,7 @@ bool*** state;
 
 int messageSize;
 int paddedSize;
+
 /*******************************************************
  * convertStringTobits
  * Purpose: This method converts a string into straight binary bits
@@ -160,9 +161,16 @@ bool* convertAndBroadcastBits(string message){
 }
 
 /*********************************
- * 
- * 
- * 
+ * rotate
+ * Purpose: This method is basically to perform a bitwise bit rotation where
+ *          the input is an array of bits rather than a bit string itself
+ *          (rotates to the right)
+ * Inputs: bool* bitsToRotate: This is the array of the bits that you want to rotate
+ *         int howMuchToRotate: This is how many positions you want to rotate the array
+ *         int lengthOfBitsToRotate: Thisi s the total length of the bitsToRotate array
+ * Output: bool*: The rotated bit array
+ * Complexity: Time:  O(N) where N is the length of bits to rotate
+ *             Space: O(N) where N is the length of bits to rotate
  *********************************/
 bool* rotate(bool* bitsToRotate, int howMuchToRotate,int lengthOfBitsToRotate){
     bool* rotated = new bool[lengthOfBitsToRotate];
@@ -173,9 +181,14 @@ bool* rotate(bool* bitsToRotate, int howMuchToRotate,int lengthOfBitsToRotate){
 }
 
 /*********************************
- * 
- * 
- * 
+ * thetaStep
+ * Purpose: This performs the theta step of a keccak round
+ * Input: int totalKeccakSize: This is the total size of the keccak function(25*w)
+ *        bool*** tempState: This is the current state array(an array of bits)
+ *        long rc: The round constant for this keccak round
+ * Output: None, this mehthod modifies tempState in place
+ * Complexity: Time:  O(N) where N is the totalKeccakSize
+ *             Space: O(N) where N is the totalKeccakSize
  *********************************/
 void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
     bool** c = new bool*[5];
@@ -260,12 +273,16 @@ void thetaStep(int totalKeccakSize, bool*** tempState, long rc){
     delete[] d;
 }
 
-/**************************************
- * 
- * 
- * 
- * 
- **************************************/
+/*********************************
+ * piAndRhoSteps
+ * Purpose: This performs the pi and rho steps of a keccak round
+ * Input: int totalKeccakSize: This is the total size of the keccak function(25*w)
+ *        bool*** tempState: This is the current state array(an array of bits)
+ *        long rc: The round constant for this keccak round
+ * Output: None, this mehthod modifies tempState in place
+ * Complexity: Time:  O(N) where N is the totalKeccakSize
+ *             Space: O(N) where N is the totalKeccakSize
+ *********************************/
 void piAndRhoSteps(int totalKeccakSize, bool*** tempState, long rc){
     bBlockPermuation = new bool**[5];
     for(int i = 0; i < 5; i++){
@@ -277,20 +294,26 @@ void piAndRhoSteps(int totalKeccakSize, bool*** tempState, long rc){
     
     for(int i = 0; i < 5; i++){
 	for(int j = 0; j < 5; j++){
+	    //Pi Step
 	    bool* rotated = rotate(tempState[i][j],cycleOffset[i][j],w);
 	    for(int k = 0; k < w; k++){
+		//Rho Step
 		tempState[j][(2*i + 3*j)%5][k] = rotated[k];
 	    }
 	}
     }
 }
 
-/**************************************
- * 
- * 
- * 
- * 
- **************************************/
+/*********************************
+ * chiStep
+ * Purpose: This performs the chi step of a keccak round
+ * Input: int totalKeccakSize: This is the total size of the keccak function(25*w)
+ *        bool*** tempState: This is the current state array(an array of bits)
+ *        long rc: The round constant for this keccak round
+ * Output: None, this mehthod modifies tempState in place
+ * Complexity: Time:  O(N) where N is the totalKeccakSize
+ *             Space: O(1)
+ *********************************/
 void chiStep(int totalKeccakSize, bool*** tempState, long rc){
     for(int i = 0; i < 5; i++){
 	if(lowerBound != upperBound){
@@ -334,12 +357,16 @@ void chiStep(int totalKeccakSize, bool*** tempState, long rc){
     delete[] bBlockPermuation;
 }
 
-/**************************************
- *
- * 
- * 
- * 
- **************************************/
+/*********************************
+ * iotaStep
+ * Purpose: This performs the iota step of a keccak round
+ * Input: int totalKeccakSize: This is the total size of the keccak function(25*w)
+ *        bool*** tempState: This is the current state array(an array of bits)
+ *        long rc: The round constant for this keccak round
+ * Output: None, this mehthod modifies tempState in place
+ * Complexity: Time:  O(N) where N is the lane width(w)
+ *             Space: O(N) where N is the lane width(w)
+ *********************************/
 void iotaStep(int totalKeccakSize, bool*** tempState, long rc){
     bitset<64> rcVal(rc);
     
@@ -377,9 +404,13 @@ void iotaStep(int totalKeccakSize, bool*** tempState, long rc){
 
 /**************************************
  * keccakRound
- * 
- * 
- * 
+ * Purpose: This is a wrapper method for performming a single iteration of the keccak round
+ * Input: int totalKeccakSize: the total keccak size(25*w)
+ *        bool*** tempState: This is the current state array
+ *        long rc: The round constant for this round of the keccak function
+ * Output: None, this function mutates the tempState array in place
+ * Complexity: Time:  O(1)
+ *             Space: O(1)
  **************************************/
 void keccakRound(int totalKeccakSize, bool*** tempState, long rc){
     thetaStep    (totalKeccakSize, tempState, rc);
@@ -390,8 +421,12 @@ void keccakRound(int totalKeccakSize, bool*** tempState, long rc){
 
 /***************************************
  * keccakSponge
- * 
- * 
+ * Purpose: This method wraps up a single sponge iteration, performing 12+2*l keccakRounds on the state
+ * Inputs: int totalKeccakSize: This is the total size of the kecak function
+ *         bool*** absorbedState: Thisi s the current state array for the function
+ * Output: None
+ * Complexity: Time:  O(N) where N is the number of rounds
+ *             Space: O(1)
  **************************************/
 void keccakSponge(int totalKeccakSize, bool*** absorbedState){
     for(int i = 0; i < numOfRounds; i++){
@@ -399,9 +434,14 @@ void keccakSponge(int totalKeccakSize, bool*** absorbedState){
     }
 }
 /**************************************
- * 
- * 
- * 
+ * setupRoundConstants
+ * Purpose: This method basically sets up all of the round constant values specified in the keccak definition
+ *          (There is a way to generalize these round constants, involving raising triangular matricies to powers
+ *           However, given the SHA3 standard has a set value for this array, I didn't concern myself with generalization)
+ * Inputs: None
+ * Output: None
+ * Complexity: Time:  O(1)
+ *             Space: O(1)
  **************************************/
 void setupRoundConstants(){
     rc = new long[24];
@@ -432,10 +472,12 @@ void setupRoundConstants(){
     rc[23] = 0x8000000080008008;
 }
 /*********************************
- * 
- * 
- * 
- * 
+ * setupCyclicConstants
+ * Purpose: This sets up the cyclic rotation constants for the keccak rounds
+ * Inputs: None
+ * Output: None
+ * Complexity: Time:  O(1)
+ *             Space: O(1)
  * *******************************/
 void setupCyclicConstants(){
     int cycleOffset[5][5] = {{0,1,62,28,27},
@@ -446,9 +488,13 @@ void setupCyclicConstants(){
 }
 
 /**********************************
- * 
- * 
- * 
+ * permutateState
+ * Purpose: This method basically performs all of the absorbing rounds for keccak.
+ * Inputs: bool* message: The padded message which we would like to absorb into the state
+ * Output: None
+ * Complexity: Time:  O(N) where N is the number of r-bit chuncks the message can
+ *                         be broken up into
+ *             Space: O(1);
  * *******************************/
 void permuteState(bool* message){
     chunkPerWorker = ceil(((double)5)/((double)totalSize));
@@ -515,6 +561,15 @@ void permuteState(bool* message){
 
 }
 
+/**********************************************
+ * squeeze
+ * Purpose: This performs the squeezing phase for keccak, producing the output
+ *          hash and returning it as a string
+ * Inputs: None
+ * Output: The output binary string converted into hex
+ * Complexity: Time:  O(N) where N is the number of bits requested as the output string length
+ *             Space: O(N) where N is the number of bits requested as the output string length
+ * ********************************************/
 string squeeze(){
     std::stringstream output;
     for(int i = 0; output.str().length() < c/8; i++){
@@ -572,18 +627,23 @@ int main(int argc, char *argv[]){
     r = 25*w - c;
     b = 25*w;
     numOfRounds = 12 + 2*l;
-    
+    //Set up some more constants
     setupRoundConstants();
     setupCyclicConstants();
     
+    //Convert the message to binary and pad
     bool* messageInBinary = convertAndBroadcastBits(message);
     
+    //Absorbing phase
     permuteState(messageInBinary);
+    
+    //Squeezing phase
     string out = squeeze();
 
     //Finish things, clean up after ourselves.
     endTime = MPI::Wtime();
     MPI::Finalize();
     
+    //Give us the time it took to run
     cout << endTime - startTime <<", "; 
 }
